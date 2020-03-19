@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="热工基础1. 基本概念和定义1.1 机械能物体的动能与势能 1.2 热能物质分子运动，动能与位能之和，即不涉及到化学变化和核反应的热力学能：内热能 1.3 热机工作热能 $\rightarrow$ 机械能   1.4 工质实现热能和机械能相互转换的媒介物质（气态） 1.5 热源工质从中吸取或向之排出热能的物质系统 1.6 热力系统人为分割出来，作为热力学研究对象的有限物质系统（外界、内界）  闭口">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Engineering Thermodynamics and Heat Transfer - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="热工基础1. 基本概念和定义1.1 机械能物体的动能与势能 1.2 热能物质分子运动，动能与位能之和，即不涉及到化学变化和核反应的热力学能：内热能 1.3 热机工作热能 $\rightarrow$ 机械能   1.4 工质实现热能和机械能相互转换的媒介物质（气态） 1.5 热源工质从中吸取或向之排出热能的物质系统 1.6 热力系统人为分割出来，作为热力学研究对象的有限物质系统（外界、内界）  闭口">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rj.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/ztcst.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/qy.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zjt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/pzg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rlxh.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zxh.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rxht.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zxh.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zlxht.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gnxht.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rlxn.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/bkxt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/ldg.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/kkxt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/jsg.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/hb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/dlj.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/pg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gnjr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/jrzz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zlxht.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rxht.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/knxh.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/nknxh.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/s1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/s2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/sfc1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/sfc2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/brr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zsbrr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/pjbrr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/lxqt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/lxqts.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/szq.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rlgc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/djyqj.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/yx.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/djys.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/yls.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/pbdr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/fsrjh.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/pbdrd.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/crgc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/jcrz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/dcpb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/jxywdr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/ldr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/lxl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/nse.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/ljlns.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gzbmcrxs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gsbmcrxs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gndlhr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gnjs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zrdl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zrdl2.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Engineering Thermodynamics and Heat Transfer - APS">
+<meta name="twitter:description" content="热工基础1. 基本概念和定义1.1 机械能物体的动能与势能 1.2 热能物质分子运动，动能与位能之和，即不涉及到化学变化和核反应的热力学能：内热能 1.3 热机工作热能 $\rightarrow$ 机械能   1.4 工质实现热能和机械能相互转换的媒介物质（气态） 1.5 热源工质从中吸取或向之排出热能的物质系统 1.6 热力系统人为分割出来，作为热力学研究对象的有限物质系统（外界、内界）  闭口">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rj.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Engineering Thermodynamics and Heat Transfer - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/12/01/wjkz/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/12/01/kzgc/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&text=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&is_video=false&description=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Engineering Thermodynamics and Heat Transfer - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&name=Engineering Thermodynamics and Heat Transfer - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#热工基础"><span class="toc-number">1.</span> <span class="toc-text">热工基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基本概念和定义"><span class="toc-number">2.</span> <span class="toc-text">1. 基本概念和定义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-机械能"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 机械能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-热能"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 热能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-热机工作"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 热机工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-工质"><span class="toc-number">2.4.</span> <span class="toc-text">1.4 工质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-热源"><span class="toc-number">2.5.</span> <span class="toc-text">1.5 热源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-热力系统"><span class="toc-number">2.6.</span> <span class="toc-text">1.6 热力系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-热力状态"><span class="toc-number">2.7.</span> <span class="toc-text">1.7 热力状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8-状态参数"><span class="toc-number">2.8.</span> <span class="toc-text">1.8 状态参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-9-状态参数图"><span class="toc-number">2.9.</span> <span class="toc-text">1.9 状态参数图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-10-热力学第0定律（测温基础）"><span class="toc-number">2.10.</span> <span class="toc-text">1.10 热力学第0定律（测温基础）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-11-热力学温标"><span class="toc-number">2.11.</span> <span class="toc-text">1.11 热力学温标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-12-压力-Pa"><span class="toc-number">2.12.</span> <span class="toc-text">1.12 压力 Pa</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-13-绝对压力P，当地大气压Pb，表压力Pe，真空度Pv"><span class="toc-number">2.13.</span> <span class="toc-text">1.13 绝对压力P，当地大气压Pb，表压力Pe，真空度Pv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-14-比体积（工质）-upsilon"><span class="toc-number">2.14.</span> <span class="toc-text">1.14 比体积（工质）$\upsilon$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-15-标准状态"><span class="toc-number">2.15.</span> <span class="toc-text">1.15 标准状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-16-理想气体"><span class="toc-number">2.16.</span> <span class="toc-text">1.16 理想气体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-17-理想气体状态方程（克拉贝龙方程）"><span class="toc-number">2.17.</span> <span class="toc-text">1.17 理想气体状态方程（克拉贝龙方程）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-18-准静态"><span class="toc-number">2.18.</span> <span class="toc-text">1.18 准静态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-19-膨胀功（容积功）-W"><span class="toc-number">2.19.</span> <span class="toc-text">1.19 膨胀功（容积功）$W$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-20-轴功-W-s"><span class="toc-number">2.20.</span> <span class="toc-text">1.20 轴功$W_s$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-21-热量-Q"><span class="toc-number">2.21.</span> <span class="toc-text">1.21 热量$Q$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-22-热力循环"><span class="toc-number">2.22.</span> <span class="toc-text">1.22 热力循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-23-热力学能-U"><span class="toc-number">2.23.</span> <span class="toc-text">1.23 热力学能$U$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-24-闭口系统能量方程"><span class="toc-number">2.24.</span> <span class="toc-text">1.24 闭口系统能量方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-25-流动功（推动功）-W-f"><span class="toc-number">2.25.</span> <span class="toc-text">1.25 流动功（推动功）$W_f$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-26-开口系统能量方程"><span class="toc-number">2.26.</span> <span class="toc-text">1.26 开口系统能量方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-27-焓H"><span class="toc-number">2.27.</span> <span class="toc-text">1.27 焓H</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-28-开口系统稳态稳流能量方程"><span class="toc-number">2.28.</span> <span class="toc-text">1.28 开口系统稳态稳流能量方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-29-技术功"><span class="toc-number">2.29.</span> <span class="toc-text">1.29 技术功</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-30-理想气体焓变"><span class="toc-number">2.30.</span> <span class="toc-text">1.30 理想气体焓变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-31-稳态稳流应用"><span class="toc-number">2.31.</span> <span class="toc-text">1.31 稳态稳流应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-32-热功异同"><span class="toc-number">2.32.</span> <span class="toc-text">1.32 热功异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-33-管内绝热流动"><span class="toc-number">2.33.</span> <span class="toc-text">1.33 管内绝热流动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-34-绝热滞止"><span class="toc-number">2.34.</span> <span class="toc-text">1.34 绝热滞止</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-热一律和热二率"><span class="toc-number">3.</span> <span class="toc-text">2. 热一律和热二率</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-热二率"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 热二率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-卡诺循环"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 卡诺循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-逆卡诺循环"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 逆卡诺循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-卡诺定理"><span class="toc-number">3.4.</span> <span class="toc-text">2.4 卡诺定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-熵"><span class="toc-number">3.5.</span> <span class="toc-text">2.5 熵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-熵方程"><span class="toc-number">3.6.</span> <span class="toc-text">2.6 熵方程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-1-闭口系统"><span class="toc-number">3.6.1.</span> <span class="toc-text">2.6.1 闭口系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-2-开口"><span class="toc-number">3.6.2.</span> <span class="toc-text">2.6.2 开口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-3-稳态稳流"><span class="toc-number">3.6.3.</span> <span class="toc-text">2.6.3 稳态稳流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-4-孤立系统"><span class="toc-number">3.6.4.</span> <span class="toc-text">2.6.4 孤立系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-热力性质"><span class="toc-number">4.</span> <span class="toc-text">3. 热力性质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-比热容"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 比热容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-定容比热容-c-v-、定压比热容-c-p"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 定容比热容$c_v$、定压比热容$c_p$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-定值比热容-C-v-m-C-p-m"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 定值比热容$C_{v,m}$,$C_{p,m}$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-真实比热容"><span class="toc-number">4.4.</span> <span class="toc-text">3.4 真实比热容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-平均比热容"><span class="toc-number">4.5.</span> <span class="toc-text">3.5 平均比热容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-理想气体热力学能、焓、熵"><span class="toc-number">4.6.</span> <span class="toc-text">3.6 理想气体热力学能、焓、熵</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-水蒸气"><span class="toc-number">5.</span> <span class="toc-text">4. 水蒸气</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-三相点"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 三相点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-水蒸气定压过程"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 水蒸气定压过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-汽化潜热"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 汽化潜热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-q计算"><span class="toc-number">5.4.</span> <span class="toc-text">4.4 q计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-u、s计算"><span class="toc-number">5.5.</span> <span class="toc-text">4.5 u、s计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-混合气体"><span class="toc-number">5.6.</span> <span class="toc-text">4.6 混合气体</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-热力过程"><span class="toc-number">6.</span> <span class="toc-text">5. 热力过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-多变过程"><span class="toc-number">6.1.</span> <span class="toc-text">5.1 多变过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-P-V，T-S"><span class="toc-number">6.2.</span> <span class="toc-text">5.2 P-V，T-S</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-多变下的u-h-s-c-w-wt-q"><span class="toc-number">6.3.</span> <span class="toc-text">5.3 多变下的u, h, s, c, w, wt,q</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-压气机"><span class="toc-number">6.4.</span> <span class="toc-text">5.4 压气机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-1-单级"><span class="toc-number">6.4.1.</span> <span class="toc-text">5.4.1 单级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-2-余隙"><span class="toc-number">6.4.2.</span> <span class="toc-text">5.4.2 余隙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-3-多级压缩，级间冷却"><span class="toc-number">6.4.3.</span> <span class="toc-text">5.4.3 多级压缩，级间冷却</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-4-压气机效率"><span class="toc-number">6.4.4.</span> <span class="toc-text">5.4.4 压气机效率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-5-叶轮式"><span class="toc-number">6.4.5.</span> <span class="toc-text">5.4.5 叶轮式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-传热机理与传热速率方程"><span class="toc-number">7.</span> <span class="toc-text">6. 传热机理与传热速率方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-傅里叶定律"><span class="toc-number">7.1.</span> <span class="toc-text">6.1 傅里叶定律</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-1-传热："><span class="toc-number">7.1.1.</span> <span class="toc-text">6.1.1 传热：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-2-温度场"><span class="toc-number">7.1.2.</span> <span class="toc-text">6.1.2 温度场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-3-温度梯度"><span class="toc-number">7.1.3.</span> <span class="toc-text">6.1.3 温度梯度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-平壁一维导热"><span class="toc-number">7.2.</span> <span class="toc-text">6.2 平壁一维导热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-热流量-Phi"><span class="toc-number">7.2.1.</span> <span class="toc-text">6.2.1 热流量$\Phi$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-傅里叶定律"><span class="toc-number">7.2.2.</span> <span class="toc-text">6.2.2 傅里叶定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-3-热流密度-vec-q"><span class="toc-number">7.2.3.</span> <span class="toc-text">6.2.3 热流密度$\vec{q}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-4-导热系数-lambda"><span class="toc-number">7.2.4.</span> <span class="toc-text">6.2.4 导热系数$\lambda$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-5-材料热物性"><span class="toc-number">7.2.5.</span> <span class="toc-text">6.2.5 材料热物性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-6-热扩散率a"><span class="toc-number">7.2.6.</span> <span class="toc-text">6.2.6 热扩散率a</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-对流换热"><span class="toc-number">7.3.</span> <span class="toc-text">6.3 对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-热辐射"><span class="toc-number">7.4.</span> <span class="toc-text">6.4 热辐射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-辐射热交换"><span class="toc-number">7.5.</span> <span class="toc-text">6.5 辐射热交换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-6-复合换热-综合换热"><span class="toc-number">7.6.</span> <span class="toc-text">6.6 复合换热/综合换热</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-稳态导热"><span class="toc-number">8.</span> <span class="toc-text">7. 稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-稳态导热微分方程"><span class="toc-number">8.1.</span> <span class="toc-text">7.1 稳态导热微分方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-边界条件"><span class="toc-number">8.2.</span> <span class="toc-text">7.2 边界条件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-1-第一类边界条件"><span class="toc-number">8.2.1.</span> <span class="toc-text">7.2.1 第一类边界条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-2-第二类边界条件"><span class="toc-number">8.2.2.</span> <span class="toc-text">7.2.2 第二类边界条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-3-第三类边界条件（对流边界条件）"><span class="toc-number">8.2.3.</span> <span class="toc-text">7.2.3 第三类边界条件（对流边界条件）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-热阻"><span class="toc-number">8.3.</span> <span class="toc-text">7.3 热阻</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-1-平壁导热热阻"><span class="toc-number">8.3.1.</span> <span class="toc-text">7.3.1 平壁导热热阻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-2-对流换热热阻"><span class="toc-number">8.3.2.</span> <span class="toc-text">7.3.2 对流换热热阻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-3-表面辐射换热当量热阻"><span class="toc-number">8.3.3.</span> <span class="toc-text">7.3.3 表面辐射换热当量热阻</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-传热过程"><span class="toc-number">8.4.</span> <span class="toc-text">7.4 传热过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-接触热阻"><span class="toc-number">8.5.</span> <span class="toc-text">7.5 接触热阻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-6-多层平壁"><span class="toc-number">8.6.</span> <span class="toc-text">7.6 多层平壁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-7-径向一维导热"><span class="toc-number">8.7.</span> <span class="toc-text">7.7 径向一维导热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-1-单层"><span class="toc-number">8.7.1.</span> <span class="toc-text">7.7.1 单层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-2-多层"><span class="toc-number">8.7.2.</span> <span class="toc-text">7.7.2 多层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-3-球壳"><span class="toc-number">8.7.3.</span> <span class="toc-text">7.7.3 球壳</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-8-肋的导热传热"><span class="toc-number">8.8.</span> <span class="toc-text">7.8 肋的导热传热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-1-过余温度：-theta-t-t-f"><span class="toc-number">8.8.1.</span> <span class="toc-text">7.8.1 过余温度：$\theta=t-t_f$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-2-任意处温度"><span class="toc-number">8.8.2.</span> <span class="toc-text">7.8.2 任意处温度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-3-全肋散热量-肋基导入热量"><span class="toc-number">8.8.3.</span> <span class="toc-text">7.8.3 全肋散热量=肋基导入热量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-9-肋高修正"><span class="toc-number">8.9.</span> <span class="toc-text">7.9 肋高修正</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-10-肋效率"><span class="toc-number">8.10.</span> <span class="toc-text">7.10 肋效率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-非稳态导热"><span class="toc-number">9.</span> <span class="toc-text">8. 非稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-集总参数法"><span class="toc-number">9.1.</span> <span class="toc-text">8.1 集总参数法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-毕渥数"><span class="toc-number">9.2.</span> <span class="toc-text">8.2 毕渥数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-非稳态热量"><span class="toc-number">9.3.</span> <span class="toc-text">8.3 非稳态热量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-单相对流换热"><span class="toc-number">10.</span> <span class="toc-text">9. 单相对流换热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-传热系数"><span class="toc-number">10.1.</span> <span class="toc-text">9.1 传热系数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-1-表面传热系数-q-x"><span class="toc-number">10.1.1.</span> <span class="toc-text">9.1.1 表面传热系数$q_x$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-2-局部传热系数-h-x"><span class="toc-number">10.1.2.</span> <span class="toc-text">9.1.2 局部传热系数$h_x$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-3-平均表面传热系数"><span class="toc-number">10.1.3.</span> <span class="toc-text">9.1.3 平均表面传热系数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-流动定义"><span class="toc-number">10.2.</span> <span class="toc-text">9.2 流动定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-1-流动起因"><span class="toc-number">10.2.1.</span> <span class="toc-text">9.2.1 流动起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-2-流动状态"><span class="toc-number">10.2.2.</span> <span class="toc-text">9.2.2 流动状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-3-相变判断"><span class="toc-number">10.2.3.</span> <span class="toc-text">9.2.3 相变判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-4-热物理性质"><span class="toc-number">10.2.4.</span> <span class="toc-text">9.2.4 热物理性质</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-普朗特数"><span class="toc-number">10.3.</span> <span class="toc-text">9.3 普朗特数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-4-边界层"><span class="toc-number">10.4.</span> <span class="toc-text">9.4 边界层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-1-壁面"><span class="toc-number">10.4.1.</span> <span class="toc-text">9.4.1 壁面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-2-流体的过余温度比"><span class="toc-number">10.4.2.</span> <span class="toc-text">9.4.2 流体的过余温度比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-5-努塞尔数"><span class="toc-number">10.5.</span> <span class="toc-text">9.5 努塞尔数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-5-1-恒壁温"><span class="toc-number">10.5.1.</span> <span class="toc-text">9.5.1 恒壁温</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-5-2-恒热流边界"><span class="toc-number">10.5.2.</span> <span class="toc-text">9.5.2 恒热流边界</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-6-绕流圆柱体对流换热"><span class="toc-number">10.6.</span> <span class="toc-text">9.6 绕流圆柱体对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-7-管内对流换热"><span class="toc-number">10.7.</span> <span class="toc-text">9.7 管内对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-8-当量直径"><span class="toc-number">10.8.</span> <span class="toc-text">9.8 当量直径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-9-自然对流换热"><span class="toc-number">10.9.</span> <span class="toc-text">9.9 自然对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-10-对流换热强化"><span class="toc-number">10.10.</span> <span class="toc-text">9.10 对流换热强化</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Engineering Thermodynamics and Heat Transfer - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-12-01T09:21:33.000Z" itemprop="datePublished">2015-12-01</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="热工基础"><a href="#热工基础" class="headerlink" title="热工基础"></a>热工基础</h1><h1 id="1-基本概念和定义"><a href="#1-基本概念和定义" class="headerlink" title="1. 基本概念和定义"></a>1. 基本概念和定义</h1><h2 id="1-1-机械能"><a href="#1-1-机械能" class="headerlink" title="1.1 机械能"></a>1.1 机械能</h2><p>物体的动能与势能</p>
+<h2 id="1-2-热能"><a href="#1-2-热能" class="headerlink" title="1.2 热能"></a>1.2 热能</h2><p>物质分子运动，动能与位能之和，即不涉及到化学变化和核反应的热力学能：内热能</p>
+<h2 id="1-3-热机工作"><a href="#1-3-热机工作" class="headerlink" title="1.3 热机工作"></a>1.3 热机工作</h2><p>热能 $\rightarrow$ 机械能 </p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rj.png" width="400"></p>
+<h2 id="1-4-工质"><a href="#1-4-工质" class="headerlink" title="1.4 工质"></a>1.4 工质</h2><p>实现热能和机械能相互转换的媒介物质（气态）</p>
+<h2 id="1-5-热源"><a href="#1-5-热源" class="headerlink" title="1.5 热源"></a>1.5 热源</h2><p>工质从中吸取或向之排出热能的物质系统</p>
+<h2 id="1-6-热力系统"><a href="#1-6-热力系统" class="headerlink" title="1.6 热力系统"></a>1.6 热力系统</h2><p>人为分割出来，作为热力学研究对象的有限物质系统（外界、内界）</p>
+<ul>
+<li>闭口：有Q无M（控制质量CM）</li>
+<li>开口：有Q有M（控制体积CV）</li>
+<li>绝热：无Q可有M</li>
+<li>孤立：无Q无M</li>
+</ul>
+<h2 id="1-7-热力状态"><a href="#1-7-热力状态" class="headerlink" title="1.7 热力状态"></a>1.7 热力状态</h2><p>力平衡、热平衡、热力平衡=平衡状态=热平衡+力平衡</p>
+<h2 id="1-8-状态参数"><a href="#1-8-状态参数" class="headerlink" title="1.8 状态参数"></a>1.8 状态参数</h2><p>P、T、V、U、H、S，</p>
+<p>$$\oint dZ=0$$</p>
+<p>$$\int_{1a2}dz=\int_{1b2}dz$$</p>
+<ul>
+<li><p>强度量$\notin$物质的量：T、P</p>
+</li>
+<li><p>广延量$\propto$物质的量：V、U、H、S</p>
+<p>其比性质有强度特性，例：$\upsilon$比体积</p>
+</li>
+</ul>
+<h2 id="1-9-状态参数图"><a href="#1-9-状态参数图" class="headerlink" title="1.9 状态参数图"></a>1.9 状态参数图</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/ztcst.png" width="600"></p>
+<ul>
+<li>温度作为热平衡的一个依据</li>
+</ul>
+<h2 id="1-10-热力学第0定律（测温基础）"><a href="#1-10-热力学第0定律（测温基础）" class="headerlink" title="1.10 热力学第0定律（测温基础）"></a>1.10 热力学第0定律（测温基础）</h2><p>A与C热平衡，B与C热平衡，则A与B热平衡</p>
+<h2 id="1-11-热力学温标"><a href="#1-11-热力学温标" class="headerlink" title="1.11 热力学温标"></a>1.11 热力学温标</h2><p>2731.16K$\rightarrow$273.15=0$\circ$C，温度的数值表示法</p>
+<h2 id="1-12-压力-Pa"><a href="#1-12-压力-Pa" class="headerlink" title="1.12 压力 Pa"></a>1.12 压力 Pa</h2><p> 1 Pa=1 N/m2, 1 at=98066.5 Pa, 1 mmH2O=9.80615 Pa, 1 atm= 101325 Pa, 1 bar= 1e5 Pa, 1 mmHg=133.3224 Pa</p>
+<h2 id="1-13-绝对压力P，当地大气压Pb，表压力Pe，真空度Pv"><a href="#1-13-绝对压力P，当地大气压Pb，表压力Pe，真空度Pv" class="headerlink" title="1.13 绝对压力P，当地大气压Pb，表压力Pe，真空度Pv"></a>1.13 绝对压力P，当地大气压Pb，表压力Pe，真空度Pv</h2><p>P1=Pb+Pe, P2=Pb-Pv</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/qy.png" width="300"></p>
+<h2 id="1-14-比体积（工质）-upsilon"><a href="#1-14-比体积（工质）-upsilon" class="headerlink" title="1.14 比体积（工质）$\upsilon$"></a>1.14 比体积（工质）$\upsilon$</h2><p>$\upsilon=\frac{V}{m}$ ，$\rho=\frac{1}{\upsilon}$ （m3/Kg）</p>
+<h2 id="1-15-标准状态"><a href="#1-15-标准状态" class="headerlink" title="1.15 标准状态"></a>1.15 标准状态</h2><p>P0=101325 Pa, T0=0 C=273.15 K</p>
+<h2 id="1-16-理想气体"><a href="#1-16-理想气体" class="headerlink" title="1.16 理想气体"></a>1.16 理想气体</h2><p>弹性不占体积，分子之间无作用力（引力、斥力）</p>
+<h2 id="1-17-理想气体状态方程（克拉贝龙方程）"><a href="#1-17-理想气体状态方程（克拉贝龙方程）" class="headerlink" title="1.17 理想气体状态方程（克拉贝龙方程）"></a>1.17 理想气体状态方程（克拉贝龙方程）</h2><p>$PV=R_gT$</p>
+<ul>
+<li>P : Pa</li>
+<li>V:  m3/Kg</li>
+<li>$R_g$:  气体常数，J/(Kg K)，只与种类有关</li>
+<li>T：K</li>
+</ul>
+<p>$\Downarrow​$</p>
+<p>$pMv=MR_gT$</p>
+<p>$pV_m=RT$：$V_m$</p>
+<ul>
+<li>$V_m=Mv$：摩尔体积，m3/mol</li>
+<li>$R=MR_g$：摩尔气体常数，J/(mol K)，标准状态下：8.3145 J/mol</li>
+</ul>
+<h2 id="1-18-准静态"><a href="#1-18-准静态" class="headerlink" title="1.18 准静态"></a>1.18 准静态</h2><p>一系列非常接近平衡态的状态组成</p>
+<ul>
+<li><p>热力过程：工质从某一状态过渡到另一状态所经历的全部状态变化</p>
+</li>
+<li><p>可逆过程：运动无摩擦，传热无温差的准平衡过程，=准静+无耗散</p>
+<p>正反两个过程，系统与外界均能完全回复到初始状态</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zjt.jpg" width="400"></p>
+<h2 id="1-19-膨胀功（容积功）-W"><a href="#1-19-膨胀功（容积功）-W" class="headerlink" title="1.19 膨胀功（容积功）$W$"></a>1.19 膨胀功（容积功）$W$</h2><ul>
+<li><p>对外界做功+，外界对系统做功-</p>
+</li>
+<li><p>由于系统工质容积发生变化而传递的机械功</p>
+</li>
+<li><p>容积变化$\Leftrightarrow$做膨胀功</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/pzg.png" width="500"></p>
+</li>
+</ul>
+<h2 id="1-20-轴功-W-s"><a href="#1-20-轴功-W-s" class="headerlink" title="1.20 轴功$W_s$"></a>1.20 轴功$W_s$</h2><p>机械轴与外界传递的机械功，刚性闭口系统不能对外输出轴功，输出+，输入-</p>
+<h2 id="1-21-热量-Q"><a href="#1-21-热量-Q" class="headerlink" title="1.21 热量$Q$"></a>1.21 热量$Q$</h2><p>与过程有关</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rl.png" width="500"></p>
+<h2 id="1-22-热力循环"><a href="#1-22-热力循环" class="headerlink" title="1.22 热力循环"></a>1.22 热力循环</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rlxh.png" width="300"></p>
+<p>$\mu=\frac{收益}{代价}$（实线为可逆，虚线不可）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">循环</th>
+<th style="text-align:center">别称</th>
+<th style="text-align:center">循环图</th>
+<th style="text-align:left">表达式</th>
+<th style="text-align:center">热循环图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">正循环动力循环</td>
+<td style="text-align:center">内燃机燃气轮</td>
+<td style="text-align:center"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zxh.png" width="200"></td>
+<td style="text-align:left">循环热效率=$\frac{功}{吸热}$$$\mu_t=\frac{W_0}{Q_1}​$$$$=\frac{Q_1-Q_2}{Q_1}​$$$$=1-\frac{Q_2}{Q_1}&lt;1​$$</td>
+<td style="text-align:center"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rxht.png" width="250"></td>
+</tr>
+<tr>
+<td style="text-align:center">逆循环</td>
+<td style="text-align:center">制冷</td>
+<td style="text-align:center"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zxh.png" width="200"></td>
+<td style="text-align:left">制冷系数$$\epsilon_1=\frac{Q_2}{W_0}=\frac{Q_2}{Q_1-Q_2}$$</td>
+<td style="text-align:center"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/zlxht.png" width="250"></td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center">热泵</td>
+<td style="text-align:center"></td>
+<td style="text-align:left">供暖系数 $$\epsilon_2=\frac{Q_1}{W_0}=\frac{Q_1}{Q_1-Q_2}$$</td>
+<td style="text-align:center"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gnxht.png" width="250"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-23-热力学能-U"><a href="#1-23-热力学能-U" class="headerlink" title="1.23 热力学能$U$"></a>1.23 热力学能$U$</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/rlxn.png" width="500"></p>
+<p>总能： $E=U+E_k+E_p​$</p>
+<p>$$e=u+\frac{c^2}{2}+gz$$</p>
+<h2 id="1-24-闭口系统能量方程"><a href="#1-24-闭口系统能量方程" class="headerlink" title="1.24 闭口系统能量方程"></a>1.24 闭口系统能量方程</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/bkxt.jpg" width="400"></p>
+<p>$q=w+du$， J/kg</p>
+<p>$$取热=膨胀功+热力学能变化​$$</p>
+<h2 id="1-25-流动功（推动功）-W-f"><a href="#1-25-流动功（推动功）-W-f" class="headerlink" title="1.25 流动功（推动功）$W_f$"></a>1.25 流动功（推动功）$W_f$</h2><ul>
+<li>工质进出控制体界面时，后面流体推开前面流体前进，因工质出入开口系统而传递的功</li>
+<li>系统引进或排除工质而传递的功率</li>
+<li>维持流动花费的代价</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/ldg.jpeg" width="400"></p>
+<p>$W_f=P_2V_2-P_1V_1​$</p>
+<h2 id="1-26-开口系统能量方程"><a href="#1-26-开口系统能量方程" class="headerlink" title="1.26 开口系统能量方程"></a>1.26 开口系统能量方程</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/kkxt.jpg" width="500"></p>
+<p>$dQ=dU+\delta W​$</p>
+<p>其中，(1)为</p>
+<p><a name="1">$\delta Q=(U_2+P_2V_2+\frac{1}{2}c^2_2+gz_2)\delta m_2-(U_1+P_1V_1+\frac{1}{2}c^2_1+gz_1)\delta m_1$</a></p>
+<h2 id="1-27-焓H"><a href="#1-27-焓H" class="headerlink" title="1.27 焓H"></a>1.27 焓H</h2><p>$H=U+PV​$, $h=u+pv​$, J/kg，状参</p>
+<p>理想气体：$h=u+pv=u+RT=f(T)$</p>
+<p>因而1.26<a href="#1">(1)</a>变为(2)：</p>
+<p><a name="2">$\delta Q=(h_2+\frac{c^2_2}{2}+gz_2)\delta m_2-(h_1+\frac{c^2_1}{2}+gz_1)\delta m_1+\delta W_3+d E_{cv} $</a></p>
+<h2 id="1-28-开口系统稳态稳流能量方程"><a href="#1-28-开口系统稳态稳流能量方程" class="headerlink" title="1.28 开口系统稳态稳流能量方程"></a>1.28 开口系统稳态稳流能量方程</h2><p><strong>稳态定义</strong>：状参、宏观运动参数一定</p>
+<ul>
+<li>$\delta m_1=\delta m_2\dots=\delta m​$</li>
+<li>$dE_{cv}=0​$</li>
+</ul>
+<p><a href="#2">(2)</a>变为(3)</p>
+<p><a name="3">$q=(h_2-h_1)+\frac{1}{2}(c^2_2-c^2_1)+g(z_2-z_1)+w_s$</a></p>
+<h2 id="1-29-技术功"><a href="#1-29-技术功" class="headerlink" title="1.29 技术功"></a>1.29 技术功</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/jsg.jpg" width="400"></p>
+<p>技术功=膨胀功+流动功：$w_t=q-\Delta h=w+p_1v_1+p_2v_2​$</p>
+<p>可逆：$\delta w_t=-vdp​$</p>
+<h2 id="1-30-理想气体焓变"><a href="#1-30-理想气体焓变" class="headerlink" title="1.30 理想气体焓变"></a>1.30 理想气体焓变</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/hb.jpg" width="400"></p>
+<ul>
+<li>定压：$\Delta h=\int_1^2 c_pdT​$</li>
+<li>定制定压比热容：$\Delta h=c_p(T_2-T_1)​$</li>
+<li>平均定压比热容：$\Delta h=c_{pm}|_0^{t_2}t_2-c_{pm}|^{t_1}_0t_1​$</li>
+</ul>
+<h2 id="1-31-稳态稳流应用"><a href="#1-31-稳态稳流应用" class="headerlink" title="1.31 稳态稳流应用"></a>1.31 稳态稳流应用</h2><p>$$q=\Delta h +\frac{1}{2}\Delta c^2 +g\Delta z+w_s$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">动力机、汽轮机</th>
+<th><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\dlj.png" width="200"></th>
+<th>$g\Delta z\approx 0$, ​$\frac{1}{2}\Delta c^2\approx 0​$, ​$q\approx 0​$</th>
+<th>$$w_s=h_1-h_2 $$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">压气机</td>
+<td></td>
+<td>$g\Delta z\approx 0$, ​$\frac{1}{2}\Delta c^2\approx 0​$$, ​$$q\approx 0​$</td>
+<td>$$-w_s=h_1-h_2$$</td>
+</tr>
+<tr>
+<td style="text-align:center">热交换机、锅炉</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\gl.png" width="200"></td>
+<td>$$w_s=0$$, $$g\Delta z\approx 0​$$, $$\frac{1}{2}\Delta c^2\approx 0​$$</td>
+<td>$$q=h_1-h_2$$</td>
+</tr>
+<tr>
+<td style="text-align:center">喷管</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\pg.png" width="200"></td>
+<td>$$w_s=0$$, $$g\Delta z\approx 0$$</td>
+<td>$$\frac{1}{2}(c^2_2-c^2_1)=h_1-h_2$$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-32-热功异同"><a href="#1-32-热功异同" class="headerlink" title="1.32 热功异同"></a>1.32 热功异同</h2><ol>
+<li><p>均边界传能</p>
+</li>
+<li><p>过程量</p>
+</li>
+<li><p>压力差-&gt;功传递，比体积改变</p>
+<p>误差-&gt;热传递， 比熵变</p>
+</li>
+<li><p>功：宏观相互作用</p>
+<p>热：紊乱的微粒运动相互作用</p>
+</li>
+<li><p>功无条件变热，热有条件有限度变功</p>
+</li>
+</ol>
+<h2 id="1-33-管内绝热流动"><a href="#1-33-管内绝热流动" class="headerlink" title="1.33 管内绝热流动"></a>1.33 管内绝热流动</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/gnjr.jpg" width="500"></p>
+<h2 id="1-34-绝热滞止"><a href="#1-34-绝热滞止" class="headerlink" title="1.34 绝热滞止"></a>1.34 绝热滞止</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc/jrzz.jpg" width="500"></p>
+<h1 id="2-热一律和热二率"><a href="#2-热一律和热二率" class="headerlink" title="2. 热一律和热二率"></a>2. 热一律和热二率</h1><h2 id="2-1-热二率"><a href="#2-1-热二率" class="headerlink" title="2.1 热二率"></a>2.1 热二率</h2><ul>
+<li>自发过程不可逆</li>
+<li>逆过程有补偿过程</li>
+</ul>
+<p>表述：</p>
+<ol>
+<li><p>Clausius: 不可能把热量从低温物体传到高温物体而不引起其他变化</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\zlxht.png" width="200"></p>
+</li>
+<li><p>Kelvin-Plank：不可能制造只从一个热源取热使之完全变成机械能，而不引起其他变化的循环发动机(第二类永动机)</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\rxht.png" width="200"></p>
+</li>
+</ol>
+<h2 id="2-2-卡诺循环"><a href="#2-2-卡诺循环" class="headerlink" title="2.2 卡诺循环"></a>2.2 卡诺循环</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\knxh.jpg" width="500"></p>
+<p>循环热效率：$\mu_t=\frac{w_0}{q_1}=1-\frac{q_2}{q_1}​$， 一切工质，任意循环</p>
+<p>卡诺循环热效率：$\mu_{tc}=1-\frac{T_2}{T_1}​$，卡诺循环，任意工质</p>
+<h2 id="2-3-逆卡诺循环"><a href="#2-3-逆卡诺循环" class="headerlink" title="2.3 逆卡诺循环"></a>2.3 逆卡诺循环</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\nknxh.jpg" width="500"></p>
+<ul>
+<li><p>制冷循环：</p>
+<p>$\epsilon_{1,c}=\frac{T_2}{T_1-T_2}=\frac{q_2}{q_1-q_2}​$</p>
+</li>
+<li><p>热泵循环：</p>
+<p>$\epsilon_{2,c}=\frac{T_1}{T_1-T_2}=\frac{q_1}{q_1-q_2}​$</p>
+</li>
+</ul>
+<h2 id="2-4-卡诺定理"><a href="#2-4-卡诺定理" class="headerlink" title="2.4 卡诺定理"></a>2.4 卡诺定理</h2><p>工作于同温热源与同温冷源的所有热机，以可逆热机的热效率最高</p>
+<ul>
+<li>可逆热机效率仅与$T_1,T_2​$有关</li>
+<li>$$T_1,T_2$$下，$$\mu_{不可逆}&lt;\mu_{可逆}$$</li>
+</ul>
+<h2 id="2-5-熵"><a href="#2-5-熵" class="headerlink" title="2.5 熵"></a>2.5 熵</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\s1.jpg" width="500"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\s2.jpg" width="500"></p>
+<p>$$\oint(\frac{\delta q}{T})_{irr}\le\oint ds&lt;0$$</p>
+<h2 id="2-6-熵方程"><a href="#2-6-熵方程" class="headerlink" title="2.6 熵方程"></a>2.6 熵方程</h2><p>流入系统的熵-流出系统的熵+熵产=系统熵增</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\sfc1.jpg" width="500"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\sfc2.jpg" width="500"></p>
+<p><strong>定义</strong></p>
+<p>$$ds=\frac{\delta q’}{T}+\frac{delta w- \delta w’}{T}=\delta s_f+\delta s_g$$</p>
+<ul>
+<li>熵流（吸+）：$$\delta s_f=\frac{\delta q’}{T}$$</li>
+<li>熵产（非负，可逆0）：$$\delta s_g=\frac{\delta w-\delta w’}{T}$$</li>
+</ul>
+<h3 id="2-6-1-闭口系统"><a href="#2-6-1-闭口系统" class="headerlink" title="2.6.1 闭口系统"></a>2.6.1 闭口系统</h3><p>$$d s_{sys}=\delta s_f+\delta s_g$$</p>
+<h3 id="2-6-2-开口"><a href="#2-6-2-开口" class="headerlink" title="2.6.2 开口"></a>2.6.2 开口</h3><p>$$dS_cv=(s_1\delta \dot{m_1}-s_2\delta \dot{m_2})+\delta s_f+\delta s_g$$</p>
+<h3 id="2-6-3-稳态稳流"><a href="#2-6-3-稳态稳流" class="headerlink" title="2.6.3 稳态稳流"></a>2.6.3 稳态稳流</h3><p>$$s_f+s_g+(s_1-s_2)=0$$</p>
+<h3 id="2-6-4-孤立系统"><a href="#2-6-4-孤立系统" class="headerlink" title="2.6.4 孤立系统"></a>2.6.4 孤立系统</h3><p>$$\Delta s_{iso}=s_g\ge0$$， 可逆为0</p>
+<p><strong>熵增原理</strong></p>
+<p># </p>
+<h1 id="3-热力性质"><a href="#3-热力性质" class="headerlink" title="3. 热力性质"></a>3. 热力性质</h1><h2 id="3-1-比热容"><a href="#3-1-比热容" class="headerlink" title="3.1 比热容"></a>3.1 比热容</h2><p>$$c=\frac{\delta q}{dT}$$</p>
+<ul>
+<li>质量比热容$c$：kJ/kg/K</li>
+<li>体积比热容$c’$：kJ/N/m3/K，$$c’=\frac{M_c}{22.4}=c\rho_0$$</li>
+<li>摩尔比热容$M_c/C_M$：kJ/kmol/K</li>
+</ul>
+<h2 id="3-2-定容比热容-c-v-、定压比热容-c-p"><a href="#3-2-定容比热容-c-v-、定压比热容-c-p" class="headerlink" title="3.2 定容比热容$c_v$、定压比热容$c_p$"></a>3.2 定容比热容$c_v$、定压比热容$c_p$</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\brr.jpg" width="500"></p>
+<p>$$c_v=\frac{\delta q}{dT}  理想气体\Rightarrow =\frac{du}{dT}$$</p>
+<p>$$c_p=\frac{\delta q_p}{dT}=\frac{dh}{dT}$$</p>
+<p>梅耶公式：$$c_p-c_v=R_g$$，$$C_{p,m}-C_{v,m}=MR_g=R$$<br>气体常数：$$R_g=\frac{R}{M}$$<br>通用气体常数：$$R=8.314 J/(mol k)$$</p>
+<h2 id="3-3-定值比热容-C-v-m-C-p-m"><a href="#3-3-定值比热容-C-v-m-C-p-m" class="headerlink" title="3.3 定值比热容$C_{v,m}$,$C_{p,m}$"></a>3.3 定值比热容$C_{v,m}$,$C_{p,m}$</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th style="text-align:center">单原子</th>
+<th style="text-align:center">双原子</th>
+<th style="text-align:center">多原子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>摩尔定容比热容</td>
+<td>$C_{v,m}=\frac{i}{2}R$</td>
+<td style="text-align:center">$\frac{3}{2}R$</td>
+<td style="text-align:center">$\frac{5}{2}R$</td>
+<td style="text-align:center">$\frac{7}{2}R$</td>
+</tr>
+<tr>
+<td>摩尔定压比热容</td>
+<td>$C_{p,m}=\frac{i+2}{2}R$</td>
+<td style="text-align:center">$\frac{5}{2}R$</td>
+<td style="text-align:center">$\frac{7}{2}R$</td>
+<td style="text-align:center">$\frac{9}{2}R$</td>
+</tr>
+<tr>
+<td>比热容比、绝热指数</td>
+<td>$\kappa=\frac{c_p}{c_v}$</td>
+<td style="text-align:center">1.66</td>
+<td style="text-align:center">1.4</td>
+<td style="text-align:center">1.29</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-4-真实比热容"><a href="#3-4-真实比热容" class="headerlink" title="3.4 真实比热容"></a>3.4 真实比热容</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\zsbrr.jpg" width="500"></p>
+<h2 id="3-5-平均比热容"><a href="#3-5-平均比热容" class="headerlink" title="3.5 平均比热容"></a>3.5 平均比热容</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\pjbrr.jpg" width="500"></p>
+<h2 id="3-6-理想气体热力学能、焓、熵"><a href="#3-6-理想气体热力学能、焓、熵" class="headerlink" title="3.6 理想气体热力学能、焓、熵"></a>3.6 理想气体热力学能、焓、熵</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\lxqt.jpg" width="500"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\lxqts.jpg" width="500"></p>
+<p>$$\Delta h= c_p(T_2-T_1)$$</p>
+<p>$$\Delta u=c_v(T_2-T_1)$$</p>
+<p><a name="s"><strong>熵三式</strong></a></p>
+<p>$$\Delta  s_{1-2}=c_vIn\frac{T_2}{T_1}+R_gIn\frac{v_2}{v_1}$$</p>
+<p>$$\Delta  s_{1-2}=c_pIn\frac{T_2}{T_1}-R_gIn\frac{p_2}{p_1}$$</p>
+<p>$$\Delta  s_{1-2}=c_vIn\frac{p_2}{p_1}+c_pIn\frac{v_2}{v_1}$$</p>
+<h1 id="4-水蒸气"><a href="#4-水蒸气" class="headerlink" title="4. 水蒸气"></a>4. 水蒸气</h1><h2 id="4-1-三相点"><a href="#4-1-三相点" class="headerlink" title="4.1 三相点"></a>4.1 三相点</h2><p>t=273.16 K=0.01 度</p>
+<h2 id="4-2-水蒸气定压过程"><a href="#4-2-水蒸气定压过程" class="headerlink" title="4.2 水蒸气定压过程"></a>4.2 水蒸气定压过程</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\szq.jpg" width="500"></p>
+<p>规定三相内饱和水的热力学能和熵为0</p>
+<h2 id="4-3-汽化潜热"><a href="#4-3-汽化潜热" class="headerlink" title="4.3 汽化潜热"></a>4.3 汽化潜热</h2><p>饱和状态下，1kg饱和液体全部转变为同温度的干饱和蒸气所吸收的热量</p>
+<h2 id="4-4-q计算"><a href="#4-4-q计算" class="headerlink" title="4.4 q计算"></a>4.4 q计算</h2><table>
+<thead>
+<tr>
+<th>预热</th>
+<th>$q_l=h’-h_0\approx c_p(t_s-t)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>汽化</td>
+<td>$r=h’’-h’$</td>
+</tr>
+<tr>
+<td>过热</td>
+<td>$q_{sup}=h-h’’$</td>
+</tr>
+<tr>
+<td>总</td>
+<td>$q=q_L+r+q_{sup}=h-h_0$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-5-u、s计算"><a href="#4-5-u、s计算" class="headerlink" title="4.5 u、s计算"></a>4.5 u、s计算</h2><p>$$v_x=xv’’+(1-x)v’=v’+(v’’-v’)x$$</p>
+<p>$$u_x=xh’’+(1-x)h’=h’+xr$$</p>
+<p>$$u_x=hx+pv_x$$</p>
+<p>$$s_x=xs’’+(1-x)s’=s’+x(s’’-s’)$$</p>
+<h2 id="4-6-混合气体"><a href="#4-6-混合气体" class="headerlink" title="4.6 混合气体"></a>4.6 混合气体</h2><ul>
+<li><p>$R_{g,eq}​$ 平均气体常数 $=\frac{R}{M_{eq}}​$</p>
+</li>
+<li><p>$M_{eq}$ 平均气体常数 $=\frac{\sum m_i}{\sum n_i}=\sum x_iM_i$</p>
+</li>
+<li><p>$\Delta u=c_v|^{t_2}_{t_1}(t_2-t_1)$</p>
+<p> $\Delta h=c_p|^{t_2}_{t_1}(t_2-t_1)$</p>
+</li>
+<li><p>同 T，V，$p_i=\frac{n_iRT}{V}$， $p=\sum p_i$</p>
+<p> 同P，V，$v=\sum v_i$</p>
+</li>
+<li><p>$w_i=\frac{m_i}{m}, \sum w_i=1$<br> $$c=\sum c_iw_i$$</p>
+<p> $$u=\sum u_iw_i$$</p>
+<p> $$h=\sum h_iw_i$$</p>
+<p> $$s=\sum s_iw_i$$</p>
+</li>
+<li><p>比熵变 $ds=\sum w_ic_{pi}\frac{dT}{T}-\sum w_i R_{gi}\frac{dp_i}{p_i}$</p>
+</li>
+<li><p>体积分数 $\varphi_i=\frac{v_i}{v},\sum \varphi_i =1$</p>
+<p> 摩尔分数 $x_i=\frac{n_i}{n}, \sum x_i=1$</p>
+<p> $\varphi_i=w_i\frac{R_{gi}}{R_{g,eq}}$</p>
+<p> $\varphi_i=x_i$</p>
+<p> $\frac{p_i}{p}=\frac{v_i}{v}=\varphi_i=x_i$</p>
+</li>
+</ul>
+<h1 id="5-热力过程"><a href="#5-热力过程" class="headerlink" title="5. 热力过程"></a>5. 热力过程</h1><h2 id="5-1-多变过程"><a href="#5-1-多变过程" class="headerlink" title="5.1 多变过程"></a>5.1 多变过程</h2><p>$pv^n=C$</p>
+<table>
+<thead>
+<tr>
+<th>n=0</th>
+<th>$p=c$</th>
+<th>定压</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n=1</td>
+<td>$pv=C=nRT$</td>
+<td>定温</td>
+</tr>
+<tr>
+<td>$n=\kappa$</td>
+<td>$pv^\kappa=C$</td>
+<td>定熵</td>
+</tr>
+<tr>
+<td>$n=\pm\infty$</td>
+<td>v=C</td>
+<td>定容</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>绝热</p>
+<p> $\delta q=d u+pdv=c_vdT+pdv=0$</p>
+<p> $\delta q=du-vdp=c_pdT-cdp=0$</p>
+<p> $\kappa \frac{dv}{v}+\frac{dp}{p}=0$</p>
+<p> $n=\frac{InP_2-InP_1}{InV_1-InV_2}$</p>
+</li>
+<li><p>定容</p>
+<p> $1^{\frac{1}{n}}v=c^{\frac{1}{n}}​$</p>
+</li>
+</ul>
+<h2 id="5-2-P-V，T-S"><a href="#5-2-P-V，T-S" class="headerlink" title="5.2 P-V，T-S"></a>5.2 P-V，T-S</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\rlgc.jpg" width="600"></p>
+<h2 id="5-3-多变下的u-h-s-c-w-wt-q"><a href="#5-3-多变下的u-h-s-c-w-wt-q" class="headerlink" title="5.3 多变下的u, h, s, c, w, wt,q"></a>5.3 多变下的u, h, s, c, w, wt,q</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">多变</th>
+<th style="text-align:center">$n=\infty$</th>
+<th style="text-align:center">n=0</th>
+<th style="text-align:center">n=1</th>
+<th style="text-align:center">$n=\kappa$</th>
+<th style="text-align:center">n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">$\Delta u$</td>
+<td style="text-align:center">$c_v(t_2-t_1)$</td>
+<td style="text-align:center"><code></code></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><code></code></td>
+<td style="text-align:center"><code></code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Delta h$</td>
+<td style="text-align:center">$c_p(t_2-t_1)$</td>
+<td style="text-align:center"><code></code></td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><code></code></td>
+<td style="text-align:center"><code></code></td>
+</tr>
+<tr>
+<td style="text-align:center">$\Delta s$</td>
+<td style="text-align:center">$c_vIn\frac{T_2}{T_1}$</td>
+<td style="text-align:center">$c_pIn\frac{T_2}{T_1}$</td>
+<td style="text-align:center">$\frac{q}{T}$, $R_gIn\frac{v_2}{v_1}$, $R_gIn\frac{p_1}{p_2}$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><a href="#3">三式</a></td>
+</tr>
+<tr>
+<td style="text-align:center">c</td>
+<td style="text-align:center">$c_v=\frac{R_g}{\kappa^{-1}}$</td>
+<td style="text-align:center">$c_p=\frac{\kappa R_g}{\kappa^{-1}}$</td>
+<td style="text-align:center">$\infty$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">$\frac{n-\kappa}{n-1}c_v$</td>
+</tr>
+<tr>
+<td style="text-align:center">过程功$w=\int_1^2pdv$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">$p(v_2-v_1)$,$R_g(T_2-T_1)$</td>
+<td style="text-align:center">$R_gTIn\frac{v_2}{v_1}$, $R_gIn\frac{p_1}{p_2}$</td>
+<td style="text-align:center">$-\Delta u$, $\frac{R_s}{\kappa-a}(T_1-T_2)$</td>
+<td style="text-align:center">$\frac{R_g}{n-1}(T_1-T_2)$, $\frac{R_gT_1}{n-1}[1-(\frac{p_2}{p_1})^{\frac{n-1}{n}}]$</td>
+</tr>
+<tr>
+<td style="text-align:center">技术功$w_t=\int_1^2vdp$</td>
+<td style="text-align:center">$v(p_1-p_2)$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">$w_t=w$</td>
+<td style="text-align:center">$-\Delta h$, $\frac{\kappa R_g}{\kappa-1}(T_1-T_2)$, $w_t=\kappa w$</td>
+<td style="text-align:center">$\frac{nR_g}{n-1}(T_1-T_2)$, $nw$</td>
+</tr>
+<tr>
+<td style="text-align:center">q</td>
+<td style="text-align:center">$\Delta u$</td>
+<td style="text-align:center">$\Delta h$</td>
+<td style="text-align:center">$w_t=w=T(s_2-s_1)$</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">$\frac{n-\kappa}{n-1}c_v(T_2-T_1)$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-4-压气机"><a href="#5-4-压气机" class="headerlink" title="5.4 压气机"></a>5.4 压气机</h2><p>活塞式、叶轮式、引射式压缩器</p>
+<h3 id="5-4-1-单级"><a href="#5-4-1-单级" class="headerlink" title="5.4.1 单级"></a>5.4.1 单级</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\djyqj.jpg" width="600"></p>
+<p>$$w_{s,n}=-\int_1^{2n}=\frac{n}{n-1}p_1v_1[1-(\frac{p_2}{p_1})^{\frac{n-1}{n}}]=\frac{n}{n-1}mR(T_1-T_2)$$</p>
+<h3 id="5-4-2-余隙"><a href="#5-4-2-余隙" class="headerlink" title="5.4.2 余隙"></a>5.4.2 余隙</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\yx.jpg" width="600"></p>
+<ul>
+<li>容积效率：$\mu_v=\frac{v_1-v_4}{v_1-v_3}=1-\sigma[(\pi^{\frac{1}{n}}-1]$</li>
+<li>余隙容积比：$\sigma=\frac{v_3}{v_1-v_3}$</li>
+<li>压力比：$\pi=\frac{p_2}{p_1}$</li>
+</ul>
+<p>$\pi\uparrow, \quad\mu_v\downarrow$</p>
+<h3 id="5-4-3-多级压缩，级间冷却"><a href="#5-4-3-多级压缩，级间冷却" class="headerlink" title="5.4.3 多级压缩，级间冷却"></a>5.4.3 多级压缩，级间冷却</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\djys.jpg" width="600"></p>
+<p>$T_{2’}=T_1$</p>
+<p>$$w_s=\frac{n}{n-1}p_1v_1[2-(\frac{p_2}{p_1})^{\frac{n-1}{n}}-(\frac{p_3}{p_2})^{\frac{n-1}{n}}]$$</p>
+<p>求导$\frac{dw_s}{dp_2}=0$，所需轴功最小</p>
+<p>$$p_w=\sqrt{p_2p_3}\Rightarrow\beta_1=\frac{p_2}{p_3}=\beta_2=\frac{p_3}{p_2}$$</p>
+<p>$$\beta_1\beta_2=\beta^2=\frac{p_3}{p_1}$$</p>
+<p>$\downarrow$类推</p>
+<p>$$\beta=^z\sqrt{\frac{p_z}{p_1}}$$</p>
+<ul>
+<li>升压比：$\beta$</li>
+<li>特点：<ul>
+<li>各级气缸排气温度相等：$T_2=T_3$</li>
+<li>各级耗轴功相等：$w_s=zw_{s1}$</li>
+<li>每级向外放热相等</li>
+<li>提高容积效率</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-4-4-压气机效率"><a href="#5-4-4-压气机效率" class="headerlink" title="5.4.4 压气机效率"></a>5.4.4 压气机效率</h3><p>$$\mu_{c,T}=\frac{w_{s,T}}{w_s’}$$</p>
+<p>$$\mu_{c,s}=\frac{w_{s,s}}{w’_{s,s}}$$</p>
+<p>忽略$E_k,E_p$</p>
+<p>$$\mu_{c,s}=\frac{h_1-h_2}{h_1-h_2’}$$</p>
+<p>$\downarrow$理想气体</p>
+<p>$$\mu_{c,s}=\frac{T_1-T_2}{T_1-T_2’}$$</p>
+<h3 id="5-4-5-叶轮式"><a href="#5-4-5-叶轮式" class="headerlink" title="5.4.5 叶轮式"></a>5.4.5 叶轮式</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\yls.jpg" width="600"></p>
+<p>$$\mu_{c,s}=\frac{w_{cs}}{w_c’}=定值比热容=\frac{T_{2s}-T_1}{T_2’-T_1}$$</p>
+<h1 id="6-传热机理与传热速率方程"><a href="#6-传热机理与传热速率方程" class="headerlink" title="6. 传热机理与传热速率方程"></a>6. 传热机理与传热速率方程</h1><h2 id="6-1-傅里叶定律"><a href="#6-1-傅里叶定律" class="headerlink" title="6.1 傅里叶定律"></a>6.1 傅里叶定律</h2><h3 id="6-1-1-传热："><a href="#6-1-1-传热：" class="headerlink" title="6.1.1 传热："></a>6.1.1 传热：</h3><ul>
+<li>导热：连续介质</li>
+<li>对流：接触表面与流体</li>
+<li>辐射</li>
+</ul>
+<h3 id="6-1-2-温度场"><a href="#6-1-2-温度场" class="headerlink" title="6.1.2 温度场"></a>6.1.2 温度场</h3><ul>
+<li>三维：$t=f(x,y,z,\tau)$， 等温面</li>
+<li>一维：$t=f(x)$，等温域</li>
+</ul>
+<h3 id="6-1-3-温度梯度"><a href="#6-1-3-温度梯度" class="headerlink" title="6.1.3 温度梯度"></a>6.1.3 温度梯度</h3><p>$$grad t=\frac{\alpha t}{\alpha n}\vec{n}=\frac{\alpha t}{\alpha x}\vec{i}+\frac{\alpha t}{\alpha y}\vec{j}+\frac{\alpha t}{\alpha z}\vec{k}$$</p>
+<h2 id="6-2-平壁一维导热"><a href="#6-2-平壁一维导热" class="headerlink" title="6.2 平壁一维导热"></a>6.2 平壁一维导热</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\pbdr.jpg" width="200"></p>
+<h3 id="6-2-1-热流量-Phi"><a href="#6-2-1-热流量-Phi" class="headerlink" title="6.2.1 热流量$\Phi$"></a>6.2.1 热流量$\Phi$</h3><p>$$\Phi=qA=\lambda A\frac{t_1-t_2}{\delta}=\frac{\lambda}{\delta}A\Delta t$$</p>
+<p>$\downarrow \delta\rightarrow 0$</p>
+<h3 id="6-2-2-傅里叶定律"><a href="#6-2-2-傅里叶定律" class="headerlink" title="6.2.2 傅里叶定律"></a>6.2.2 傅里叶定律</h3><p>$$\Phi=-\lambda A\frac{dt}{dx}$$</p>
+<p>$$\vec{q}=\frac{\Phi}{A}=-\lambda\frac{dt}{dx}$$</p>
+<h3 id="6-2-3-热流密度-vec-q"><a href="#6-2-3-热流密度-vec-q" class="headerlink" title="6.2.3 热流密度$\vec{q}$"></a>6.2.3 热流密度$\vec{q}$</h3><p>W/m2，矢量 </p>
+<h3 id="6-2-4-导热系数-lambda"><a href="#6-2-4-导热系数-lambda" class="headerlink" title="6.2.4 导热系数$\lambda$"></a>6.2.4 导热系数$\lambda$</h3><p><strong>定义</strong>：加热/冷却过程中物体内温度趋于均匀一致的能力 W/(m$\cdot$K)</p>
+<p>通常 $\lambda=\lambda_0(1+bt)$</p>
+<ul>
+<li>b：导热系数的温度变化率</li>
+</ul>
+<h3 id="6-2-5-材料热物性"><a href="#6-2-5-材料热物性" class="headerlink" title="6.2.5 材料热物性"></a>6.2.5 材料热物性</h3><ul>
+<li>热力学性质：$\rho,c$</li>
+<li>输运性质：$\lambda$</li>
+</ul>
+<h3 id="6-2-6-热扩散率a"><a href="#6-2-6-热扩散率a" class="headerlink" title="6.2.6 热扩散率a"></a>6.2.6 热扩散率a</h3><p>$$a=\frac{\lambda}{\rho c}$$</p>
+<p>单位体积内储存热量能力的大小，m2/s</p>
+<h2 id="6-3-对流换热"><a href="#6-3-对流换热" class="headerlink" title="6.3 对流换热"></a>6.3 对流换热</h2><ul>
+<li>存在温差，绝对流体宏移，冷热场互相渗透而导致热量迁移</li>
+<li>=导热+热对流</li>
+<li>非基本方式</li>
+<li>分类<ul>
+<li>强迫对流</li>
+<li>自然对流</li>
+</ul>
+</li>
+<li>对流换热的表面传热系数$h$，W/(m$^2\cdot$K)</li>
+</ul>
+<p>$$\Phi=hA(t_w-t_f)$$</p>
+<h2 id="6-4-热辐射"><a href="#6-4-热辐射" class="headerlink" title="6.4 热辐射"></a>6.4 热辐射</h2><p><strong>定义</strong>：物质内部同微观粒子热运动而激发出来的电磁波能量</p>
+<ul>
+<li><p>黑体</p>
+<p> 斯忒藩-波尔兹曼定律：$$q_b=\sigma T^4_b$$</p>
+<ul>
+<li>黑体辐射常数：$\sigma$， 5.67$\times 10^{-8}W/m^2\cdot K^4$</li>
+</ul>
+</li>
+<li><p>实际</p>
+<p> $$q=\varepsilon\sigma T^4$$</p>
+<ul>
+<li>$\varepsilon$：发射率，黑度</li>
+</ul>
+</li>
+<li><p>投射辐射</p>
+<p> $\Phi_{abs}=AG\alpha$</p>
+<ul>
+<li>吸收比：$\alpha$，黑体=100%</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-5-辐射热交换"><a href="#6-5-辐射热交换" class="headerlink" title="6.5 辐射热交换"></a>6.5 辐射热交换</h2><p>净交换量=0$\Rightarrow$辐射热平衡</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\fsrjh.jpg" width="200"></p>
+<p>净辐射热流密度</p>
+<p>$$q=\varepsilon\sigma(T^4_w-T^4_{sur})$$</p>
+<h2 id="6-6-复合换热-综合换热"><a href="#6-6-复合换热-综合换热" class="headerlink" title="6.6 复合换热/综合换热"></a>6.6 <a name="fh">复合换热/综合换热</a></h2><p>$$\Phi=辐射+对流=\Phi_r+\Phi_c=A\varepsilon\sigma (T^4_w-T^4_{sur})+h_cA(T_w-T_f)​$$</p>
+<p>$$=(h_r+h_c)A(T_w-T_f)=hA(T_w-T_f)$$</p>
+<ul>
+<li>辐射表面传热系数：$h_r=\frac{\varepsilon\sigma(T^4_w-T^4_{sur})}{T_w-T_f}​$</li>
+<li>复合换热表面传热系数：$h$</li>
+</ul>
+<h1 id="7-稳态导热"><a href="#7-稳态导热" class="headerlink" title="7. 稳态导热"></a>7. 稳态导热</h1><h2 id="7-1-稳态导热微分方程"><a href="#7-1-稳态导热微分方程" class="headerlink" title="7.1 稳态导热微分方程"></a>7.1 稳态导热微分方程</h2><p>$$\frac{\partial t}{\partial \tau}=a(\frac{\partial^2 t}{\partial x^2}+\frac{\partial^2 t}{\partial y^2}+\frac{\partial^2 t}{\partial z^2})+\frac{\dot{\Phi_v}}{\rho_c}$$</p>
+<ul>
+<li><p>a：热扩散率，导温系数，m2/s</p>
+</li>
+<li><p>$\Phi_v$：体内热源功率，N/m3</p>
+</li>
+<li><p>特点</p>
+<ul>
+<li><p>常数性：三维有内热源的稳态导热，$\frac{\alpha t}{\alpha t}=0$</p>
+<p> $$\nabla^2t+\frac{\Phi^2_v}{\lambda}=0$$</p>
+</li>
+<li><p>常物性：三维无内热源，$\nabla^2 t=0$</p>
+</li>
+<li><p>需要单值性条件（特解）</p>
+<ul>
+<li>几何条件</li>
+<li>物理条件</li>
+<li>时间条件（非稳态）</li>
+<li>边界条件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-2-边界条件"><a href="#7-2-边界条件" class="headerlink" title="7.2 边界条件"></a>7.2 边界条件</h2><h3 id="7-2-1-第一类边界条件"><a href="#7-2-1-第一类边界条件" class="headerlink" title="7.2.1 第一类边界条件"></a>7.2.1 第一类边界条件</h3><p>$\tau&gt;0$，$t_w=f(x,y,z,\tau)$</p>
+<ul>
+<li>若$t_w=0\Rightarrow$恒壁温边界条件</li>
+</ul>
+<h3 id="7-2-2-第二类边界条件"><a href="#7-2-2-第二类边界条件" class="headerlink" title="7.2.2 第二类边界条件"></a>7.2.2 第二类边界条件</h3><p>$\tau&gt;0$，$q_w=-\lambda\frac{\alpha t}{\alpha n}|_w=f(x,y,z,\tau)$</p>
+<ul>
+<li><p>若$q_w=c\Rightarrow$恒热流边界条件</p>
+</li>
+<li><p>若$q_w=0\Rightarrow$绝热边界条件</p>
+</li>
+</ul>
+<h3 id="7-2-3-第三类边界条件（对流边界条件）"><a href="#7-2-3-第三类边界条件（对流边界条件）" class="headerlink" title="7.2.3 第三类边界条件（对流边界条件）"></a>7.2.3 第三类边界条件（对流边界条件）</h3><p>给出流体t，h</p>
+<p>$$-\lambda\frac{\partial t}{\partial n}|_w=h(t_w-t_f)$$</p>
+<ul>
+<li><a href="#fh">h：复合表面传热系数</a></li>
+</ul>
+<h2 id="7-3-热阻"><a href="#7-3-热阻" class="headerlink" title="7.3 热阻"></a>7.3 热阻</h2><h3 id="7-3-1-平壁导热热阻"><a href="#7-3-1-平壁导热热阻" class="headerlink" title="7.3.1 平壁导热热阻"></a>7.3.1 平壁导热热阻</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\pbdrd.jpg" width="200"></p>
+<p>$\Phi=-\lambda A\frac{dt}{dx}$</p>
+<p>积分</p>
+<p>$$\Phi=\lambda A\frac{t_{w1}-t_{w2}}{\delta}=\frac{t_{w1}-t_{w2}}{\frac{\delta}{\lambda A}}$$</p>
+<p>$$R_\lambda=\frac{\delta}{\lambda A}$$</p>
+<h3 id="7-3-2-对流换热热阻"><a href="#7-3-2-对流换热热阻" class="headerlink" title="7.3.2 对流换热热阻"></a>7.3.2 对流换热热阻</h3><p>$$\Phi=\frac{t_w-t_f}{\frac{1}{hA}}$$</p>
+<p>$$R_c=\frac{1}{hA}$$</p>
+<h3 id="7-3-3-表面辐射换热当量热阻"><a href="#7-3-3-表面辐射换热当量热阻" class="headerlink" title="7.3.3 表面辐射换热当量热阻"></a>7.3.3 表面辐射换热当量热阻</h3><p>$$R_{rad}=\frac{1}{h_rA}$$</p>
+<h2 id="7-4-传热过程"><a href="#7-4-传热过程" class="headerlink" title="7.4 传热过程"></a>7.4 传热过程</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\crgc.jpg" width="250"></p>
+<p><strong>定义</strong>：从一侧流体经壁面传到另一侧流体</p>
+<p>$$\Phi=\frac{t_{f1}-t_{w1}}{\frac{1}{h_1A}}=\frac{t_{f1}-t_{w1}}{\frac{1}{h_1A}}=\frac{t_{f1}-t_{f2}}{R_{net}}=kA(t_{f1}-t_{f2})$$</p>
+<p>$$R_{net}=\frac{1}{h_1A}+\frac{\sigma}{\lambda A}+\frac{1}{h_2A}$$</p>
+<ul>
+<li>k：总传热系数 W/(m$^2\cdot$K)</li>
+</ul>
+<h2 id="7-5-接触热阻"><a href="#7-5-接触热阻" class="headerlink" title="7.5 接触热阻"></a>7.5 接触热阻</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\jcrz.jpg" width="400"></p>
+<p>$$R_c=\frac{t_A-t_B}{q}$$</p>
+<ul>
+<li>材料种类</li>
+<li>硬度轮廓</li>
+<li>材料表面粗糙度</li>
+<li>缝隙中介质</li>
+<li>接触面正压力</li>
+</ul>
+<h2 id="7-6-多层平壁"><a href="#7-6-多层平壁" class="headerlink" title="7.6 多层平壁"></a>7.6 多层平壁</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\dcpb.jpg" width="300"></p>
+<p>$$q=\frac{\Delta t}{\frac{\sum R_i}{A}}=\frac{t_{f1}-t_{f2}}{\frac{1}{h_1}+\sum\frac{\delta }{\lambda_i}+\frac{1}{h_2}}$$</p>
+<h2 id="7-7-径向一维导热"><a href="#7-7-径向一维导热" class="headerlink" title="7.7 径向一维导热"></a>7.7 径向一维导热</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\jxywdr.jpg" width="200"></p>
+<h3 id="7-7-1-单层"><a href="#7-7-1-单层" class="headerlink" title="7.7.1 单层"></a>7.7.1 单层</h3><p>$$\Phi=-\lambda A\frac{dt}{dr}=\frac{t_{w1}-t_{w2}}{\frac{1}{2\pi\lambda L}In(\frac{r_2}{r_1})}$$</p>
+<p>$$q_L=\frac{t_{w1}-t_{w2}}{\frac{1}{2\pi\lambda}In(\frac{r_2}{r_1})}$$</p>
+<h3 id="7-7-2-多层"><a href="#7-7-2-多层" class="headerlink" title="7.7.2 多层"></a>7.7.2 多层</h3><p>$$\Phi=\frac{t_{f1}-t_{f2}}{\frac{1}{h_1\pi d_1L}+\sum\frac{1}{2\pi\lambda_iL}In(\frac{r_2}{r_1})+\frac{1}{h_2\pi d_{n+1}L}}$$</p>
+<h3 id="7-7-3-球壳"><a href="#7-7-3-球壳" class="headerlink" title="7.7.3 球壳"></a>7.7.3 球壳</h3><p>$$\Phi=\frac{t_{w1}-t_{w2}}{\frac{1}{2\pi\lambda L}In(\frac{r_2}{r_1})}$$,$$$$</p>
+<h2 id="7-8-肋的导热传热"><a href="#7-8-肋的导热传热" class="headerlink" title="7.8 肋的导热传热"></a>7.8 肋的导热传热</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\ldr.jpg" width="600"></p>
+<h3 id="7-8-1-过余温度：-theta-t-t-f"><a href="#7-8-1-过余温度：-theta-t-t-f" class="headerlink" title="7.8.1 过余温度：$\theta=t-t_f$"></a>7.8.1 过余温度：$\theta=t-t_f$</h3><h3 id="7-8-2-任意处温度"><a href="#7-8-2-任意处温度" class="headerlink" title="7.8.2 任意处温度"></a>7.8.2 任意处温度</h3><p>$$\theta_b=\frac{cosh[m(l-x)]}{cosh(ml)}$$</p>
+<p>$$\theta_L=\frac{\theta_b}{coshml}$$</p>
+<p>$$cosh(x)=\frac{e^x+e^{-x}}{2}$$</p>
+<h3 id="7-8-3-全肋散热量-肋基导入热量"><a href="#7-8-3-全肋散热量-肋基导入热量" class="headerlink" title="7.8.3 全肋散热量=肋基导入热量"></a>7.8.3 全肋散热量=肋基导入热量</h3><p>$$\Phi=-\lambda A\frac{d\theta}{dx}|_{x=0}=\lambda A\theta_btanh(ml)=\frac{hP}{m}\theta_btanh(ml)$$</p>
+<p>$$tanh(x)=\frac{e^x-e^{-x}}{e^x+e^{-x}}$$</p>
+<h2 id="7-9-肋高修正"><a href="#7-9-肋高修正" class="headerlink" title="7.9 肋高修正"></a>7.9 肋高修正</h2><p>$$L’=L+\frac{\delta }{2}/\frac{d}{4}$$</p>
+<h2 id="7-10-肋效率"><a href="#7-10-肋效率" class="headerlink" title="7.10 肋效率"></a>7.10 肋效率</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\lxl.jpg" width="300"></p>
+<p>$$\mu_t=\frac{\Phi}{\Phi_t}=\frac{hA_f\theta_m}{hA_f\theta_b}=\frac{(t-t_f)m}{t_b-t_f}=\frac{\theta_m}{\theta_l}$$</p>
+<p>$$\Phi_t=hA_b\theta_b+hnA_f\theta_m=hA_b\theta_b+hnA_f\mu_t\theta_m=hA_t\mu_0\theta_b$$</p>
+<ul>
+<li>n个肋面</li>
+<li>$A_t=A_b+A_f$</li>
+<li>肋面总效率：$\mu_0=\frac{\Phi}{hA_t\theta_b}=\frac{A_b+nA_f\mu_f}{A_t}$</li>
+</ul>
+<p>$$\Phi=\frac{t_{fi}-t_{fo}}{\frac{1}{h_iA_i}+\frac{\delta}{\lambda A_i}+\frac{1}{h_0A_t\mu_0}}=k_iA_i(t_{fi}-t_{f0})=k_0A_t(t_{fi}-t_{f0})$$</p>
+<ul>
+<li><p>$k_i$：无肋的光表面面积$A_i$的总传热系数</p>
+<p> $$k_i=(\frac{1}{h_i}+\frac{\delta }{\lambda}+\frac{A_i}{h_0A_t\mu_0})^{-1}=(\frac{1}{h_i}+\frac{\delta }{\lambda}+\frac{1}{h_0\mu_0\beta})^{-1}$$</p>
+<ul>
+<li>$\beta=\frac{A_t}{A_i}$：肋化系数</li>
+</ul>
+</li>
+<li><p>$k_0$：有肋侧的总表面积$A_0$的总传热系数</p>
+<p> $$k_0=(\frac{A_t}{h_iA_i}+\frac{\delta A_t}{\lambda A_i}+\frac{A_t}{h_0A_t\mu_0})^{-1}=(\frac{1}{h_i/\beta}+\frac{\delta }{\lambda/\beta}+\frac{1}{h_0\mu_0})^{-1}$$</p>
+</li>
+</ul>
+<h1 id="8-非稳态导热"><a href="#8-非稳态导热" class="headerlink" title="8. 非稳态导热"></a>8. 非稳态导热</h1><p>瞬态导热和周期性导热</p>
+<h2 id="8-1-集总参数法"><a href="#8-1-集总参数法" class="headerlink" title="8.1 集总参数法"></a>8.1 集总参数法</h2><p>温度场只是时间的函数，与几何位置无关（0维问题）$t=f(\tau)$</p>
+<ul>
+<li><p>能量平衡：$-\rho c V\frac{dt}{d\tau}=hA(t-t_f)$</p>
+</li>
+<li><p>过余温度：$-\rho c V\frac{d\theta}{d\tau}=hA\theta$</p>
+<p> $$\frac{\theta}{\theta_0}=\frac{t-t_f}{t_0-t_f}=e^{-\frac{hA}{\rho c V}\tau}$$</p>
+<ul>
+<li>量纲：$\frac{hA}{\rho c V}=\frac{W}{J}=\frac{1}{S}$</li>
+<li>时间常数：$\tau_c=\frac{\rho V c}{hA}$，描述温度响应<ul>
+<li>温度响应：描述导热问题对外界温度瞬间变化做反应</li>
+</ul>
+</li>
+<li>$\tau=-\tau_0In\frac{\theta}{\theta_0}$</li>
+<li>$\theta=\theta_0\times 36.8\%$</li>
+</ul>
+</li>
+</ul>
+<h2 id="8-2-毕渥数"><a href="#8-2-毕渥数" class="headerlink" title="8.2 毕渥数"></a>8.2 <a name="bi">毕渥数</a></h2><p><strong>定义</strong>：物体内的导热热阻与外部对流换热热阻相对大小</p>
+<p>$$Bi=\frac{L_c/\lambda}{1/h}=\frac{hL_c}{\lambda}&lt;0.1$$</p>
+<p>可用集总参数法</p>
+<h2 id="8-3-非稳态热量"><a href="#8-3-非稳态热量" class="headerlink" title="8.3 非稳态热量"></a>8.3 非稳态热量</h2><p>$$\Phi=-\rho c V\frac{d\theta}{d\tau}=hA\theta_0exp(-\frac{hA}{\rho cV}\tau)$$</p>
+<h1 id="9-单相对流换热"><a href="#9-单相对流换热" class="headerlink" title="9. 单相对流换热"></a>9. 单相对流换热</h1><h2 id="9-1-传热系数"><a href="#9-1-传热系数" class="headerlink" title="9.1 传热系数"></a>9.1 传热系数</h2><h3 id="9-1-1-表面传热系数-q-x"><a href="#9-1-1-表面传热系数-q-x" class="headerlink" title="9.1.1 表面传热系数$q_x$"></a>9.1.1 表面传热系数$q_x$</h3><p>$$q_x=h_x(t_w-t_f)=-\lambda(\frac{\alpha t}{\alpha y})_{y=0,x}$$</p>
+<h3 id="9-1-2-局部传热系数-h-x"><a href="#9-1-2-局部传热系数-h-x" class="headerlink" title="9.1.2 局部传热系数$h_x$"></a>9.1.2 局部传热系数$h_x$</h3><p>$$h_x=-\frac{\lambda}{\Delta t_x}(\frac{\alpha t}{\alpha y})_{y=0,x}$$</p>
+<h3 id="9-1-3-平均表面传热系数"><a href="#9-1-3-平均表面传热系数" class="headerlink" title="9.1.3 平均表面传热系数"></a>9.1.3 平均表面传热系数</h3><p>$$h=\frac{1}{h}\int_A h_x dA_x$$</p>
+<h2 id="9-2-流动定义"><a href="#9-2-流动定义" class="headerlink" title="9.2 流动定义"></a>9.2 流动定义</h2><h3 id="9-2-1-流动起因"><a href="#9-2-1-流动起因" class="headerlink" title="9.2.1 流动起因"></a>9.2.1 流动起因</h3><ul>
+<li>自然对流</li>
+<li>受迫对流</li>
+</ul>
+<h3 id="9-2-2-流动状态"><a href="#9-2-2-流动状态" class="headerlink" title="9.2.2 流动状态"></a>9.2.2 流动状态</h3><ul>
+<li>层流</li>
+<li>紊流</li>
+</ul>
+<h3 id="9-2-3-相变判断"><a href="#9-2-3-相变判断" class="headerlink" title="9.2.3 相变判断"></a>9.2.3 相变判断</h3><p>$$h_{相变}&gt;h_{单相}$$</p>
+<h3 id="9-2-4-热物理性质"><a href="#9-2-4-热物理性质" class="headerlink" title="9.2.4 热物理性质"></a>9.2.4 热物理性质</h3><table>
+<thead>
+<tr>
+<th>$\lambda$</th>
+<th>W/(mK)</th>
+<th>导热系数</th>
+<th>$\uparrow$</th>
+<th>h$\uparrow$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\rho$</td>
+<td>kg/m3</td>
+<td>密度</td>
+<td>$\uparrow$</td>
+<td>h$\uparrow$</td>
+</tr>
+<tr>
+<td>c</td>
+<td>J/(kg K)</td>
+<td>比热容</td>
+<td>$\uparrow$</td>
+<td>h$\uparrow$</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td>Ns/m2</td>
+<td>动力粘度</td>
+<td>$\uparrow$</td>
+<td>h$\downarrow$</td>
+</tr>
+<tr>
+<td>$v=\frac{\mu}{\rho}$</td>
+<td>m2/s</td>
+<td>运动粘度</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$\alpha$</td>
+<td>1/K</td>
+<td>体积膨胀系数</td>
+<td>$\uparrow$</td>
+<td>自然对流换热$\uparrow$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>定性温度<ul>
+<li>流体平均温度<ul>
+<li>外部流动：$t_m=\frac{t_w+t_f}{2}$</li>
+<li>管内换热：$t_m=\frac{t_{in}+t_{out}}{2}$</li>
+</ul>
+</li>
+<li>单向温度</li>
+<li>流体和壁面的算数平均</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-3-普朗特数"><a href="#9-3-普朗特数" class="headerlink" title="9.3 普朗特数"></a>9.3 普朗特数</h2><p><strong>定义</strong>：表流体扩散动量的能力与扩散热量能力的相对大小</p>
+<p>$$P_\sigma=\frac{v}{a}$$</p>
+<h2 id="9-4-边界层"><a href="#9-4-边界层" class="headerlink" title="9.4 边界层"></a>9.4 边界层</h2><h3 id="9-4-1-壁面"><a href="#9-4-1-壁面" class="headerlink" title="9.4.1 壁面"></a>9.4.1 壁面</h3><p>$t|_{y=0}=t_w$</p>
+<h3 id="9-4-2-流体的过余温度比"><a href="#9-4-2-流体的过余温度比" class="headerlink" title="9.4.2 流体的过余温度比"></a>9.4.2 流体的过余温度比</h3><p>$$\frac{t_w-t}{t_w-t_f}=0.9t$$的高壁距离$\rightarrow$热边界层厚度</p>
+<ul>
+<li>流场<ul>
+<li>热边界层</li>
+<li>近似等温流动区</li>
+</ul>
+</li>
+</ul>
+<h2 id="9-5-努塞尔数"><a href="#9-5-努塞尔数" class="headerlink" title="9.5 努塞尔数"></a>9.5 努塞尔数</h2><p><strong>定义</strong>：代表流体在壁面上的无量纲温度梯度，对流换热表面传热系数的无量纲表示</p>
+<p>$$Nu=f(Re,Pr)$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\nse.jpg" width="600"></p>
+<p>$Nu_x=\frac{h_xX}{\lambda}=\frac{\alpha \theta}{\alpha Y}|_{Y=0,X}$</p>
+<p><a href="#bi">毕渥数</a></p>
+<ul>
+<li><p>雷诺数：$Re_x=\frac{u_\infty x}{v}$</p>
+</li>
+<li><p>临界雷诺数：</p>
+<p> <img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\ljlns.jpg" width="600"></p>
+</li>
+</ul>
+<h3 id="9-5-1-恒壁温"><a href="#9-5-1-恒壁温" class="headerlink" title="9.5.1 恒壁温"></a>9.5.1 恒壁温</h3><ul>
+<li>某处努塞尔</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>层流</th>
+<th>$Re_x&lt;5\times 10^5$,  $0.6\le Pr\le 15$</th>
+<th>$Nu_x=0.332Re_x^{\frac{1}{2}}Pr^{\frac{1}{3}}$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>紊流</td>
+<td>$5\times  10^5&lt;Re_x$</td>
+<td>$Nu_x=0.0296Re_x^{\frac{4}{5}}Pr^{1}{3}$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>平均</p>
+<p> 层流：$Nu_L=\frac{hL}{\lambda}=0.664Re_L^{\frac{1}{2}}Pr^{\frac{1}{3}}$</p>
+<p> 紊流</p>
+<ul>
+<li><p>全段：$Nu_L=\frac{hL}{\lambda}=0.037Re_L^{0.8}Pr^{\frac{1}{3}}$</p>
+</li>
+<li><p>非全段：</p>
+<p> $h=\frac{1}{L}(\int_0^{x_c}h_cdx+\int_{x_c}^Lh_tdx)=\frac{\lambda}{L}[0.332(\frac{u_\infty}{v})^{\frac{1}{2}}\int_0^{x_c}x^{\frac{1}{2}dx}+0.0296(\frac{u_\infty}{v})^{\frac{4}{5}}\int_{x_c}^xx^{-\frac{1}{5}}dx]$</p>
+<p> $5\times 10^5&lt;Re$, $Nu_L=\frac{hL}{\lambda}=(0.037Re_L^{0.8}-871)Pr^{\frac{1}{3}}$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="9-5-2-恒热流边界"><a href="#9-5-2-恒热流边界" class="headerlink" title="9.5.2 恒热流边界"></a>9.5.2 恒热流边界</h3><ul>
+<li><p>层流：$Nu_x=0.453Re_x^{\frac{1}{2}}Pr^{\frac{1}{3}}$</p>
+<p> $Nu_L=0.68Re_L^{\frac{1}{2}}Pr^{\frac{1}{3}}$</p>
+</li>
+<li><p>湍流：$Nu_x=0.0308Re_x^{\frac{4}{3}}Pr^{\frac{1}{3}}$</p>
+</li>
+</ul>
+<h2 id="9-6-绕流圆柱体对流换热"><a href="#9-6-绕流圆柱体对流换热" class="headerlink" title="9.6 绕流圆柱体对流换热"></a>9.6 绕流圆柱体对流换热</h2><p>$t_m=\frac{t_w+t_f}{2}$</p>
+<p>$Re=\frac{u_fd}{v}$</p>
+<p>$Nu=\frac{hd}{\lambda}$</p>
+<ul>
+<li><p>管子全面平均表面传热系数</p>
+<p> <img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\gzbmcrxs.jpg" width="600"></p>
+</li>
+<li><p>管束平均表面传热系数</p>
+<p> <img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\gsbmcrxs.jpg" width="600"></p>
+<p> $$\Delta t_m=\frac{(t_w-t_i)-(t_w-t_0)}{In[(t_w-t_i)/(t_w-t_0)]}$$</p>
+<p> $$\Phi=nh\pi d \Delta t_m$$</p>
+</li>
+</ul>
+<h2 id="9-7-管内对流换热"><a href="#9-7-管内对流换热" class="headerlink" title="9.7 管内对流换热"></a>9.7 管内对流换热</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\gndlhr.jpg" width="600"></p>
+<ol start="6">
+<li><p>管内流动压降</p>
+<p>   $$\Delta P=f\frac{L}{d}\frac{\rho u_m^2}{2}$$</p>
+<p>   层流摩擦系数： $f=\frac{64}{Re}$</p>
+</li>
+<li><p>管内对流换热计算关联式</p>
+<p>   <img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\gnjs.jpg" width="600"></p>
+</li>
+</ol>
+<h2 id="9-8-当量直径"><a href="#9-8-当量直径" class="headerlink" title="9.8 当量直径"></a>9.8 当量直径</h2><p>$de=\frac{4A_c}{P}$</p>
+<ul>
+<li>圆管：$de=d$</li>
+<li>圆环：$de=d_0-d_i$</li>
+</ul>
+<h2 id="9-9-自然对流换热"><a href="#9-9-自然对流换热" class="headerlink" title="9.9 自然对流换热"></a>9.9 自然对流换热</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\zrdl.jpg" width="600"><br><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/aps/rgjc\zrdl2.jpg" width="600"></p>
+<ul>
+<li>格拉晓夫系数：$Gr=\frac{g\alpha_v(t_w-t_\infty)x^3}{v^2}$</li>
+<li>瑞利数：$Ra=GrPr$</li>
+</ul>
+<h2 id="9-10-对流换热强化"><a href="#9-10-对流换热强化" class="headerlink" title="9.10 对流换热强化"></a>9.10 对流换热强化</h2><p>主导热阻原理，决定性热阻</p>
+<p>途径：</p>
+<ul>
+<li>改变流体流动状态/边界层状态</li>
+<li>改变换热表面的几何形状（肋化、粗糙化）</li>
+<li>改变流体的物性（$\lambda ,c$）</li>
+<li>外力强化</li>
+</ul>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#热工基础"><span class="toc-number">1.</span> <span class="toc-text">热工基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1-基本概念和定义"><span class="toc-number">2.</span> <span class="toc-text">1. 基本概念和定义</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-机械能"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 机械能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-热能"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 热能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-热机工作"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 热机工作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-工质"><span class="toc-number">2.4.</span> <span class="toc-text">1.4 工质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-热源"><span class="toc-number">2.5.</span> <span class="toc-text">1.5 热源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-热力系统"><span class="toc-number">2.6.</span> <span class="toc-text">1.6 热力系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-热力状态"><span class="toc-number">2.7.</span> <span class="toc-text">1.7 热力状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-8-状态参数"><span class="toc-number">2.8.</span> <span class="toc-text">1.8 状态参数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-9-状态参数图"><span class="toc-number">2.9.</span> <span class="toc-text">1.9 状态参数图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-10-热力学第0定律（测温基础）"><span class="toc-number">2.10.</span> <span class="toc-text">1.10 热力学第0定律（测温基础）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-11-热力学温标"><span class="toc-number">2.11.</span> <span class="toc-text">1.11 热力学温标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-12-压力-Pa"><span class="toc-number">2.12.</span> <span class="toc-text">1.12 压力 Pa</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-13-绝对压力P，当地大气压Pb，表压力Pe，真空度Pv"><span class="toc-number">2.13.</span> <span class="toc-text">1.13 绝对压力P，当地大气压Pb，表压力Pe，真空度Pv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-14-比体积（工质）-upsilon"><span class="toc-number">2.14.</span> <span class="toc-text">1.14 比体积（工质）$\upsilon$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-15-标准状态"><span class="toc-number">2.15.</span> <span class="toc-text">1.15 标准状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-16-理想气体"><span class="toc-number">2.16.</span> <span class="toc-text">1.16 理想气体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-17-理想气体状态方程（克拉贝龙方程）"><span class="toc-number">2.17.</span> <span class="toc-text">1.17 理想气体状态方程（克拉贝龙方程）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-18-准静态"><span class="toc-number">2.18.</span> <span class="toc-text">1.18 准静态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-19-膨胀功（容积功）-W"><span class="toc-number">2.19.</span> <span class="toc-text">1.19 膨胀功（容积功）$W$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-20-轴功-W-s"><span class="toc-number">2.20.</span> <span class="toc-text">1.20 轴功$W_s$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-21-热量-Q"><span class="toc-number">2.21.</span> <span class="toc-text">1.21 热量$Q$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-22-热力循环"><span class="toc-number">2.22.</span> <span class="toc-text">1.22 热力循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-23-热力学能-U"><span class="toc-number">2.23.</span> <span class="toc-text">1.23 热力学能$U$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-24-闭口系统能量方程"><span class="toc-number">2.24.</span> <span class="toc-text">1.24 闭口系统能量方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-25-流动功（推动功）-W-f"><span class="toc-number">2.25.</span> <span class="toc-text">1.25 流动功（推动功）$W_f$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-26-开口系统能量方程"><span class="toc-number">2.26.</span> <span class="toc-text">1.26 开口系统能量方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-27-焓H"><span class="toc-number">2.27.</span> <span class="toc-text">1.27 焓H</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-28-开口系统稳态稳流能量方程"><span class="toc-number">2.28.</span> <span class="toc-text">1.28 开口系统稳态稳流能量方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-29-技术功"><span class="toc-number">2.29.</span> <span class="toc-text">1.29 技术功</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-30-理想气体焓变"><span class="toc-number">2.30.</span> <span class="toc-text">1.30 理想气体焓变</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-31-稳态稳流应用"><span class="toc-number">2.31.</span> <span class="toc-text">1.31 稳态稳流应用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-32-热功异同"><span class="toc-number">2.32.</span> <span class="toc-text">1.32 热功异同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-33-管内绝热流动"><span class="toc-number">2.33.</span> <span class="toc-text">1.33 管内绝热流动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-34-绝热滞止"><span class="toc-number">2.34.</span> <span class="toc-text">1.34 绝热滞止</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-热一律和热二率"><span class="toc-number">3.</span> <span class="toc-text">2. 热一律和热二率</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-热二率"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 热二率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-卡诺循环"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 卡诺循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-逆卡诺循环"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 逆卡诺循环</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-卡诺定理"><span class="toc-number">3.4.</span> <span class="toc-text">2.4 卡诺定理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-熵"><span class="toc-number">3.5.</span> <span class="toc-text">2.5 熵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-熵方程"><span class="toc-number">3.6.</span> <span class="toc-text">2.6 熵方程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-1-闭口系统"><span class="toc-number">3.6.1.</span> <span class="toc-text">2.6.1 闭口系统</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-2-开口"><span class="toc-number">3.6.2.</span> <span class="toc-text">2.6.2 开口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-3-稳态稳流"><span class="toc-number">3.6.3.</span> <span class="toc-text">2.6.3 稳态稳流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-4-孤立系统"><span class="toc-number">3.6.4.</span> <span class="toc-text">2.6.4 孤立系统</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-热力性质"><span class="toc-number">4.</span> <span class="toc-text">3. 热力性质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-比热容"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 比热容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-定容比热容-c-v-、定压比热容-c-p"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 定容比热容$c_v$、定压比热容$c_p$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-定值比热容-C-v-m-C-p-m"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 定值比热容$C_{v,m}$,$C_{p,m}$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-真实比热容"><span class="toc-number">4.4.</span> <span class="toc-text">3.4 真实比热容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-平均比热容"><span class="toc-number">4.5.</span> <span class="toc-text">3.5 平均比热容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-理想气体热力学能、焓、熵"><span class="toc-number">4.6.</span> <span class="toc-text">3.6 理想气体热力学能、焓、熵</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-水蒸气"><span class="toc-number">5.</span> <span class="toc-text">4. 水蒸气</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-三相点"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 三相点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-水蒸气定压过程"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 水蒸气定压过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-汽化潜热"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 汽化潜热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-q计算"><span class="toc-number">5.4.</span> <span class="toc-text">4.4 q计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-u、s计算"><span class="toc-number">5.5.</span> <span class="toc-text">4.5 u、s计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-混合气体"><span class="toc-number">5.6.</span> <span class="toc-text">4.6 混合气体</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-热力过程"><span class="toc-number">6.</span> <span class="toc-text">5. 热力过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-多变过程"><span class="toc-number">6.1.</span> <span class="toc-text">5.1 多变过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-P-V，T-S"><span class="toc-number">6.2.</span> <span class="toc-text">5.2 P-V，T-S</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-多变下的u-h-s-c-w-wt-q"><span class="toc-number">6.3.</span> <span class="toc-text">5.3 多变下的u, h, s, c, w, wt,q</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-压气机"><span class="toc-number">6.4.</span> <span class="toc-text">5.4 压气机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-1-单级"><span class="toc-number">6.4.1.</span> <span class="toc-text">5.4.1 单级</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-2-余隙"><span class="toc-number">6.4.2.</span> <span class="toc-text">5.4.2 余隙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-3-多级压缩，级间冷却"><span class="toc-number">6.4.3.</span> <span class="toc-text">5.4.3 多级压缩，级间冷却</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-4-压气机效率"><span class="toc-number">6.4.4.</span> <span class="toc-text">5.4.4 压气机效率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-5-叶轮式"><span class="toc-number">6.4.5.</span> <span class="toc-text">5.4.5 叶轮式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-传热机理与传热速率方程"><span class="toc-number">7.</span> <span class="toc-text">6. 传热机理与传热速率方程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-傅里叶定律"><span class="toc-number">7.1.</span> <span class="toc-text">6.1 傅里叶定律</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-1-传热："><span class="toc-number">7.1.1.</span> <span class="toc-text">6.1.1 传热：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-2-温度场"><span class="toc-number">7.1.2.</span> <span class="toc-text">6.1.2 温度场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-3-温度梯度"><span class="toc-number">7.1.3.</span> <span class="toc-text">6.1.3 温度梯度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-平壁一维导热"><span class="toc-number">7.2.</span> <span class="toc-text">6.2 平壁一维导热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-热流量-Phi"><span class="toc-number">7.2.1.</span> <span class="toc-text">6.2.1 热流量$\Phi$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-傅里叶定律"><span class="toc-number">7.2.2.</span> <span class="toc-text">6.2.2 傅里叶定律</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-3-热流密度-vec-q"><span class="toc-number">7.2.3.</span> <span class="toc-text">6.2.3 热流密度$\vec{q}$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-4-导热系数-lambda"><span class="toc-number">7.2.4.</span> <span class="toc-text">6.2.4 导热系数$\lambda$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-5-材料热物性"><span class="toc-number">7.2.5.</span> <span class="toc-text">6.2.5 材料热物性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-6-热扩散率a"><span class="toc-number">7.2.6.</span> <span class="toc-text">6.2.6 热扩散率a</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-对流换热"><span class="toc-number">7.3.</span> <span class="toc-text">6.3 对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-热辐射"><span class="toc-number">7.4.</span> <span class="toc-text">6.4 热辐射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-辐射热交换"><span class="toc-number">7.5.</span> <span class="toc-text">6.5 辐射热交换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-6-复合换热-综合换热"><span class="toc-number">7.6.</span> <span class="toc-text">6.6 复合换热/综合换热</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-稳态导热"><span class="toc-number">8.</span> <span class="toc-text">7. 稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-稳态导热微分方程"><span class="toc-number">8.1.</span> <span class="toc-text">7.1 稳态导热微分方程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-边界条件"><span class="toc-number">8.2.</span> <span class="toc-text">7.2 边界条件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-1-第一类边界条件"><span class="toc-number">8.2.1.</span> <span class="toc-text">7.2.1 第一类边界条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-2-第二类边界条件"><span class="toc-number">8.2.2.</span> <span class="toc-text">7.2.2 第二类边界条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-3-第三类边界条件（对流边界条件）"><span class="toc-number">8.2.3.</span> <span class="toc-text">7.2.3 第三类边界条件（对流边界条件）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-热阻"><span class="toc-number">8.3.</span> <span class="toc-text">7.3 热阻</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-1-平壁导热热阻"><span class="toc-number">8.3.1.</span> <span class="toc-text">7.3.1 平壁导热热阻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-2-对流换热热阻"><span class="toc-number">8.3.2.</span> <span class="toc-text">7.3.2 对流换热热阻</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-3-表面辐射换热当量热阻"><span class="toc-number">8.3.3.</span> <span class="toc-text">7.3.3 表面辐射换热当量热阻</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-传热过程"><span class="toc-number">8.4.</span> <span class="toc-text">7.4 传热过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-接触热阻"><span class="toc-number">8.5.</span> <span class="toc-text">7.5 接触热阻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-6-多层平壁"><span class="toc-number">8.6.</span> <span class="toc-text">7.6 多层平壁</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-7-径向一维导热"><span class="toc-number">8.7.</span> <span class="toc-text">7.7 径向一维导热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-1-单层"><span class="toc-number">8.7.1.</span> <span class="toc-text">7.7.1 单层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-2-多层"><span class="toc-number">8.7.2.</span> <span class="toc-text">7.7.2 多层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-3-球壳"><span class="toc-number">8.7.3.</span> <span class="toc-text">7.7.3 球壳</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-8-肋的导热传热"><span class="toc-number">8.8.</span> <span class="toc-text">7.8 肋的导热传热</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-1-过余温度：-theta-t-t-f"><span class="toc-number">8.8.1.</span> <span class="toc-text">7.8.1 过余温度：$\theta=t-t_f$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-2-任意处温度"><span class="toc-number">8.8.2.</span> <span class="toc-text">7.8.2 任意处温度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-3-全肋散热量-肋基导入热量"><span class="toc-number">8.8.3.</span> <span class="toc-text">7.8.3 全肋散热量=肋基导入热量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-9-肋高修正"><span class="toc-number">8.9.</span> <span class="toc-text">7.9 肋高修正</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-10-肋效率"><span class="toc-number">8.10.</span> <span class="toc-text">7.10 肋效率</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-非稳态导热"><span class="toc-number">9.</span> <span class="toc-text">8. 非稳态导热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-集总参数法"><span class="toc-number">9.1.</span> <span class="toc-text">8.1 集总参数法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-毕渥数"><span class="toc-number">9.2.</span> <span class="toc-text">8.2 毕渥数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-非稳态热量"><span class="toc-number">9.3.</span> <span class="toc-text">8.3 非稳态热量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-单相对流换热"><span class="toc-number">10.</span> <span class="toc-text">9. 单相对流换热</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#9-1-传热系数"><span class="toc-number">10.1.</span> <span class="toc-text">9.1 传热系数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-1-表面传热系数-q-x"><span class="toc-number">10.1.1.</span> <span class="toc-text">9.1.1 表面传热系数$q_x$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-2-局部传热系数-h-x"><span class="toc-number">10.1.2.</span> <span class="toc-text">9.1.2 局部传热系数$h_x$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-3-平均表面传热系数"><span class="toc-number">10.1.3.</span> <span class="toc-text">9.1.3 平均表面传热系数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-2-流动定义"><span class="toc-number">10.2.</span> <span class="toc-text">9.2 流动定义</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-1-流动起因"><span class="toc-number">10.2.1.</span> <span class="toc-text">9.2.1 流动起因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-2-流动状态"><span class="toc-number">10.2.2.</span> <span class="toc-text">9.2.2 流动状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-3-相变判断"><span class="toc-number">10.2.3.</span> <span class="toc-text">9.2.3 相变判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-4-热物理性质"><span class="toc-number">10.2.4.</span> <span class="toc-text">9.2.4 热物理性质</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-3-普朗特数"><span class="toc-number">10.3.</span> <span class="toc-text">9.3 普朗特数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-4-边界层"><span class="toc-number">10.4.</span> <span class="toc-text">9.4 边界层</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-1-壁面"><span class="toc-number">10.4.1.</span> <span class="toc-text">9.4.1 壁面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-2-流体的过余温度比"><span class="toc-number">10.4.2.</span> <span class="toc-text">9.4.2 流体的过余温度比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-5-努塞尔数"><span class="toc-number">10.5.</span> <span class="toc-text">9.5 努塞尔数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-5-1-恒壁温"><span class="toc-number">10.5.1.</span> <span class="toc-text">9.5.1 恒壁温</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-5-2-恒热流边界"><span class="toc-number">10.5.2.</span> <span class="toc-text">9.5.2 恒热流边界</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-6-绕流圆柱体对流换热"><span class="toc-number">10.6.</span> <span class="toc-text">9.6 绕流圆柱体对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-7-管内对流换热"><span class="toc-number">10.7.</span> <span class="toc-text">9.7 管内对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-8-当量直径"><span class="toc-number">10.8.</span> <span class="toc-text">9.8 当量直径</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-9-自然对流换热"><span class="toc-number">10.9.</span> <span class="toc-text">9.9 自然对流换热</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-10-对流换热强化"><span class="toc-number">10.10.</span> <span class="toc-text">9.10 对流换热强化</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&text=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&is_video=false&description=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Engineering Thermodynamics and Heat Transfer - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&title=Engineering Thermodynamics and Heat Transfer - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/&name=Engineering Thermodynamics and Heat Transfer - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1. Mechanical Properties of materialsTensile test: $F-\Delta L​$,Dumbbell 1.1 Elasticity/Stiffness  $\sigma_p$ : proportional limit, MPa $\sigma_e$ : elastic limit $E$ : Elastic Modulus, $1.9-2.2\time">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Engineering Material - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1. Mechanical Properties of materialsTensile test: $F-\Delta L​$,Dumbbell 1.1 Elasticity/Stiffness  $\sigma_p$ : proportional limit, MPa $\sigma_e$ : elastic limit $E$ : Elastic Modulus, $1.9-2.2\time">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/stiffness.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/stressstrain.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/brinell.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/impact.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/fatigue.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/unitcell.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/crystalstructure2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/crystalstructure.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/pointdefect.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/lineardefect.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/crystallization.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/casting.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/phasediagram.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/isomorphous.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/lever.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/eutectic.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/eutectoid.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/ironcarbon.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/metal.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/cinflu.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/slip.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/twinning.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/deformation.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/criticalt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/austenitizing.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/ttt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/pst.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/ttt2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/cct.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/temper.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/turn.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/example.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/40cr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/sum.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Engineering Material - APS">
+<meta name="twitter:description" content="1. Mechanical Properties of materialsTensile test: $F-\Delta L​$,Dumbbell 1.1 Elasticity/Stiffness  $\sigma_p$ : proportional limit, MPa $\sigma_e$ : elastic limit $E$ : Elastic Modulus, $1.9-2.2\time">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl/stiffness.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Engineering Material - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/09/11/pregnancy/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/12/03/jxsj/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&text=Engineering Material - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&is_video=false&description=Engineering Material - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Engineering Material - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&name=Engineering Material - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Mechanical-Properties-of-materials"><span class="toc-number">1.</span> <span class="toc-text">1. Mechanical Properties of materials</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Elasticity-Stiffness"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Elasticity/Stiffness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Strength"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Strength</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Plasticity"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Plasticity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Hardness"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Hardness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Impact-test"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Impact test</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-Fatigue-strength"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 Fatigue strength</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Metal-crystal-structure-and-crystallization"><span class="toc-number">2.</span> <span class="toc-text">2. Metal crystal structure and crystallization</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Crystal-structure"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Crystal structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Unit-cell"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Unit cell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Crystal-Defect"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Crystal Defect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Crystallization"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Crystallization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-Thermodynamic-conditions"><span class="toc-number">2.4.1.</span> <span class="toc-text">2.4.1 Thermodynamic conditions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-Progress"><span class="toc-number">2.4.2.</span> <span class="toc-text">2.4.2 Progress</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-3-Casting"><span class="toc-number">2.4.3.</span> <span class="toc-text">2.4.3 Casting</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Binary-alloy-and-Phase-Diagrams"><span class="toc-number">3.</span> <span class="toc-text">3. Binary alloy and Phase Diagrams</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Phase-Structure"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Phase Structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Binary-phase-diagram"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Binary phase diagram</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Isomorphous-phase-diagram"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 Isomorphous phase diagram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-Eutectic-phase-diagram"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2 Eutectic phase diagram</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Iron-carbon-alloy"><span class="toc-number">4.</span> <span class="toc-text">4. Iron carbon alloy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Phase-diagram"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Phase diagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Carbon-steel"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Carbon steel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-Impurity"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1 Impurity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-Classification"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2 Classification</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Metal-plastic-deformation-and-recrystallization"><span class="toc-number">5.</span> <span class="toc-text">5. Metal plastic deformation and recrystallization</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Single-crystal-plastic-deformation"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Single crystal plastic deformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Polycrystal-plastic-deformation"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Polycrystal plastic deformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Influence-of-Metal"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Influence of Metal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-High-T-influence"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 High T influence</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Heat-treatment-of-steel"><span class="toc-number">6.</span> <span class="toc-text">6. Heat treatment of steel</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Critical-temperature"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Critical temperature</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Heating"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Heating</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-Austenitizing"><span class="toc-number">6.2.1.</span> <span class="toc-text">6.2.1 Austenitizing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-Control-grain-size"><span class="toc-number">6.2.2.</span> <span class="toc-text">6.2.2 Control grain size</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Cooling"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Cooling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Normal-heat-treatment"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Normal heat treatment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-Surface-treatment"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 Surface treatment</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Alloy-steel"><span class="toc-number">7.</span> <span class="toc-text">7. Alloy steel</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-With-iron"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 With iron</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Strengthening"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 Strengthening</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Alloy-structural-steel"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Alloy structural steel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4Tool-steel"><span class="toc-number">7.4.</span> <span class="toc-text">7.4Tool steel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-Special-steel"><span class="toc-number">7.5.</span> <span class="toc-text">7.5 Special steel</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Engineering Material - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-12-08T13:03:40.000Z" itemprop="datePublished">2015-12-08</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-Mechanical-Properties-of-materials"><a href="#1-Mechanical-Properties-of-materials" class="headerlink" title="1. Mechanical Properties of materials"></a>1. Mechanical Properties of materials</h1><p>Tensile test: $F-\Delta L​$,Dumbbell</p>
+<h2 id="1-1-Elasticity-Stiffness"><a href="#1-1-Elasticity-Stiffness" class="headerlink" title="1.1 Elasticity/Stiffness"></a>1.1 Elasticity/Stiffness</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\stiffness.jpg" width="400"></p>
+<ul>
+<li>$\sigma_p$ : proportional limit, MPa</li>
+<li>$\sigma_e$ : elastic limit</li>
+<li>$E$ : Elastic Modulus, $1.9-2.2\times10^5$MPa<ul>
+<li>$E=\dfrac{\sigma}{\varepsilon}$, $\sigma=\dfrac{F}{S_0}$, $\varepsilon=\dfrac{\Delta L}{L}$</li>
+<li>stress/strain</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\stressstrain.jpg" width="300"></p>
+<h2 id="1-2-Strength"><a href="#1-2-Strength" class="headerlink" title="1.2 Strength"></a>1.2 Strength</h2><p>must at static, anti deformation,fracture</p>
+<ul>
+<li>$\sigma_s$ : yield strength<ul>
+<li>low-carbon steel : see</li>
+<li>$\sigma_{r0.2}$high-carbon steel : <strong>0.2% Residual elongation, conditional yield strength</strong></li>
+<li>out of work condition, the size change</li>
+</ul>
+</li>
+<li>$\sigma_b$ : ultimate tensile strength</li>
+</ul>
+<h2 id="1-3-Plasticity"><a href="#1-3-Plasticity" class="headerlink" title="1.3 Plasticity"></a>1.3 Plasticity</h2><ul>
+<li><p>Elongation /Cauchy strain </p>
+<p>$\delta=\dfrac{L-L_0}{L_0}\times 100\%$</p>
+<ul>
+<li>5%</li>
+</ul>
+</li>
+<li><p>Shrinkage of the Section</p>
+<p>$\psi=\dfrac{S_0-S}{S_0}\times100\%$</p>
+</li>
+</ul>
+<h2 id="1-4-Hardness"><a href="#1-4-Hardness" class="headerlink" title="1.4 Hardness"></a>1.4 Hardness</h2><ul>
+<li><p>Brinell Scale : HB S/W</p>
+<ul>
+<li>Soft : low-carbon steel, non-ferrous alloy</li>
+<li>Hardened steel sphere/ alloy sphere</li>
+<li>$HB=0.102\dfrac{F}{S}$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\brinell.jpg" width="200"></p>
+</li>
+<li><p>Rockwell Scale : HR B/C/A, hard to soft</p>
+<ul>
+<li>120 degree diamond spheroconical : C/A</li>
+<li>steel sphere : B</li>
+</ul>
+</li>
+<li><p>Vickers hardness</p>
+<ul>
+<li>thin, component</li>
+<li>a right pyramid with a square base136 degree </li>
+</ul>
+</li>
+</ul>
+<h2 id="1-5-Impact-test"><a href="#1-5-Impact-test" class="headerlink" title="1.5 Impact test"></a>1.5 Impact test</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\impact.jpg" width="400"></p>
+<p>Impact energy : $A_k=G(H_1-H_2)$</p>
+<p>Impact toughness : $a_k=A_k/S$</p>
+<h2 id="1-6-Fatigue-strength"><a href="#1-6-Fatigue-strength" class="headerlink" title="1.6 Fatigue strength"></a>1.6 Fatigue strength</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\fatigue.jpg" width="400"></p>
+<p>$\sigma_{-1}$</p>
+<ul>
+<li>$10^7$ : steel</li>
+<li>$10^8$ : non-ferrous alloy</li>
+</ul>
+<h1 id="2-Metal-crystal-structure-and-crystallization"><a href="#2-Metal-crystal-structure-and-crystallization" class="headerlink" title="2. Metal crystal structure and crystallization"></a>2. Metal crystal structure and crystallization</h1><ul>
+<li>crystalline</li>
+<li>noncrystaliine</li>
+</ul>
+<h2 id="2-1-Crystal-structure"><a href="#2-1-Crystal-structure" class="headerlink" title="2.1 Crystal structure"></a>2.1 Crystal structure</h2><p>The atoms/ions/molecule of the crystal are periodically arranged according to a certain geometric law.</p>
+<ul>
+<li>Ordered sort</li>
+<li>Anisotropy (Isotropic)</li>
+<li>fixed melting point</li>
+</ul>
+<h2 id="2-2-Unit-cell"><a href="#2-2-Unit-cell" class="headerlink" title="2.2 Unit cell"></a>2.2 Unit cell</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\unitcell.jpg" width="300"></p>
+<ul>
+<li>lattice 晶格</li>
+<li>lattice parameters</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\crystalstructure2.jpg" width="500"></p>
+<ul>
+<li>bode-centered cubic structure, bcc, chromium, alpha-iron(&lt;912 degree)</li>
+<li>face-centered cubic structure, fcc, copper, gamma-iron(912&lt;&lt;1394)</li>
+<li>hexagonal close-packed structure, hcp, sliver</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\crystalstructure.jpg" width="500"></p>
+<ul>
+<li>number of atoms per cell</li>
+<li><em>APF</em>, the atomic packing factor, =Sum of atomic volumes/Volume of cell.</li>
+<li><em>CN</em>, the coordination number配位</li>
+<li>closed-packed plane</li>
+<li>closed-packe direction</li>
+</ul>
+<h2 id="2-3-Crystal-Defect"><a href="#2-3-Crystal-Defect" class="headerlink" title="2.3 Crystal Defect"></a>2.3 Crystal Defect</h2><ul>
+<li><p>point defecet</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\pointdefect.jpg" width="300"></p>
+<ul>
+<li>vacancy</li>
+<li>interstitial atom</li>
+<li>impurity atom</li>
+</ul>
+</li>
+<li><p>linear defect</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\lineardefect.jpg" width="400"></p>
+<ul>
+<li>edge dislocation</li>
+<li>screw dislocation</li>
+<li>the more, the strength down</li>
+</ul>
+</li>
+<li><p>planar defect</p>
+<ul>
+<li>grain boundary</li>
+<li>subgrain boundary</li>
+<li><strong>Polycrystalline</strong> : real material<ul>
+<li>grain</li>
+<li>grain boundary</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-4-Crystallization"><a href="#2-4-Crystallization" class="headerlink" title="2.4 Crystallization"></a>2.4 Crystallization</h2><h3 id="2-4-1-Thermodynamic-conditions"><a href="#2-4-1-Thermodynamic-conditions" class="headerlink" title="2.4.1 Thermodynamic conditions"></a>2.4.1 Thermodynamic conditions</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\crystallization.jpg" width="400"></p>
+<ul>
+<li>$T_0$ : melting temperature<ul>
+<li>$&lt;T_0$ start nucleation</li>
+</ul>
+</li>
+<li>$T_n$ : real,</li>
+<li>$\Delta T=T_0-T_n$ </li>
+<li>$\Delta T+\Delta G_v&gt;latent heat$</li>
+</ul>
+<h3 id="2-4-2-Progress"><a href="#2-4-2-Progress" class="headerlink" title="2.4.2 Progress"></a>2.4.2 Progress</h3><ul>
+<li>nucleation<ul>
+<li>homogeneous nucleation</li>
+<li>heterogeneous nucleation : Impurity</li>
+<li>Size-&gt;control<ul>
+<li>$\Delta T$ : pos</li>
+<li>impurity : neg</li>
+<li>vibration : neg</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>growth<ul>
+<li>closed-packed plane</li>
+<li>like tree</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-4-3-Casting"><a href="#2-4-3-Casting" class="headerlink" title="2.4.3 Casting"></a>2.4.3 Casting</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\casting.jpg" width="400"></p>
+<ul>
+<li>chill zone : $\Delta T$, impurity</li>
+<li>columnar zone : grow in the direction, that t changes the most </li>
+<li>central zone : $\Delta T$</li>
+</ul>
+<h1 id="3-Binary-alloy-and-Phase-Diagrams"><a href="#3-Binary-alloy-and-Phase-Diagrams" class="headerlink" title="3. Binary alloy and Phase Diagrams"></a>3. Binary alloy and Phase Diagrams</h1><ul>
+<li>alloy system : 2 (more) element<ul>
+<li>components / elements</li>
+<li>compounds</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-1-Phase-Structure"><a href="#3-1-Phase-Structure" class="headerlink" title="3.1 Phase Structure"></a>3.1 Phase Structure</h2><ul>
+<li>Solid solution<ul>
+<li>interstitial solid solution</li>
+<li>substition solid solution</li>
+<li>Hardness, strength$\uparrow$</li>
+</ul>
+</li>
+<li>Compound<ul>
+<li>Non-metallic compound</li>
+<li>matallic compound</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-Binary-phase-diagram"><a href="#3-2-Binary-phase-diagram" class="headerlink" title="3.2 Binary phase diagram"></a>3.2 Binary phase diagram</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\phasediagram.jpg" width="600"></p>
+<h3 id="3-2-1-Isomorphous-phase-diagram"><a href="#3-2-1-Isomorphous-phase-diagram" class="headerlink" title="3.2.1 Isomorphous phase diagram"></a>3.2.1 Isomorphous phase diagram</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\isomorphous.jpg" width="500"></p>
+<ul>
+<li><p>liquidus</p>
+</li>
+<li><p>solidus</p>
+</li>
+<li><p>freezing range</p>
+<ul>
+<li><p>Lever rule</p>
+<p>  <img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\lever.jpg" width="300"></p>
+</li>
+</ul>
+</li>
+<li><p>interdendritic seregation晶内偏析</p>
+</li>
+<li><p>homogenization heat treatment退火扩散</p>
+</li>
+<li><p>Equilibrium crystallization 平衡结晶</p>
+<ul>
+<li>Thermodynamic equilibrium</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-2-2-Eutectic-phase-diagram"><a href="#3-2-2-Eutectic-phase-diagram" class="headerlink" title="3.2.2 Eutectic phase diagram"></a>3.2.2 Eutectic phase diagram</h3><p>eutectic reaction</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\eutectic.jpg" width="500"></p>
+<ul>
+<li>E : eutectic point</li>
+<li>CED : solidus,  3 phase</li>
+<li><p>CF,DG: solvus, secondary phases</p>
+</li>
+<li><p>Eutectoid reaction</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\eutectoid.jpg" width="400"></p>
+</li>
+</ul>
+<h1 id="4-Iron-carbon-alloy"><a href="#4-Iron-carbon-alloy" class="headerlink" title="4. Iron carbon alloy"></a>4. Iron carbon alloy</h1><ul>
+<li>carbon steel</li>
+<li>cast iron</li>
+</ul>
+<h2 id="4-1-Phase-diagram"><a href="#4-1-Phase-diagram" class="headerlink" title="4.1 Phase diagram"></a>4.1 Phase diagram</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\ironcarbon.jpg" width="400"></p>
+<ul>
+<li><p>Ferrite : alpha-iron, solid solution</p>
+<ul>
+<li>strength, hardness so-so low, plasticity toughness so-so high</li>
+</ul>
+</li>
+<li><p>Austenite : gamma-iron, solid solution</p>
+<ul>
+<li>hardness low, plasticity high</li>
+</ul>
+</li>
+<li><p>Cementite : $Fe_3C$, compound</p>
+</li>
+<li><p>AECF : solidus</p>
+</li>
+<li><p>ECF : eutectic line</p>
+</li>
+<li><p>PSK : eutectoid line</p>
+</li>
+<li><p>A : iron melting point</p>
+</li>
+<li><p>D : $Fe_3C$ melting point ss</p>
+</li>
+<li><p>C : $L=^{1148^\circ}Le(A_E+Fe_3C)$</p>
+</li>
+<li><p>S : $A=^{727^\circ}P(F+Fe_3C)$</p>
+<ul>
+<li>$Le’=(P+Fe_3C_{II}+Fe_3C)$</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\metal.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\cinflu.jpg" width="400"></p>
+<h2 id="4-2-Carbon-steel"><a href="#4-2-Carbon-steel" class="headerlink" title="4.2 Carbon steel"></a>4.2 Carbon steel</h2><h3 id="4-2-1-Impurity"><a href="#4-2-1-Impurity" class="headerlink" title="4.2.1 Impurity"></a>4.2.1 Impurity</h3><ul>
+<li>:star: :star: Mn manganese : $\downarrow$ brittleness, $\uparrow$hardness, strength</li>
+<li>:star:Si silicon : $\downarrow$ plasticity, toughness, $\uparrow$ hardness, strength</li>
+<li>:no_entry::no_entry: S sulfur : $\uparrow$ brittleness, high T</li>
+<li>:no_entry: P phosphorus : $\uparrow$ brittleness, low T</li>
+</ul>
+<h3 id="4-2-2-Classification"><a href="#4-2-2-Classification" class="headerlink" title="4.2.2 Classification"></a>4.2.2 Classification</h3><ul>
+<li>&lt;0.25 : low carbon steel, 15, Q235</li>
+<li>0.25-0.6 : medium carbon steel, 45</li>
+<li><p>0.6 : high carbon steel, T10, T12</p>
+</li>
+<li><p>structural steel : low medium</p>
+</li>
+<li><p>tool steel : high</p>
+</li>
+<li><p>$Q$ : structural steel, $\sigma_s=235MPa$</p>
+</li>
+<li>45 : good structral steel, 0.45% C</li>
+<li>T12 : tool steel, 1.2%</li>
+<li>ZG230-450 : minial,$\sigma_s/\sigma_{r0.2}=230MPa,\sigma_b=450MPa$</li>
+</ul>
+<h1 id="5-Metal-plastic-deformation-and-recrystallization"><a href="#5-Metal-plastic-deformation-and-recrystallization" class="headerlink" title="5. Metal plastic deformation and recrystallization"></a>5. Metal plastic deformation and recrystallization</h1><h2 id="5-1-Single-crystal-plastic-deformation"><a href="#5-1-Single-crystal-plastic-deformation" class="headerlink" title="5.1 Single crystal plastic deformation"></a>5.1 Single crystal plastic deformation</h2><ul>
+<li><p>[Main] Slip</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\slip.jpg" width="400"></p>
+<ul>
+<li>Shear stress</li>
+<li>inside </li>
+<li>the distance = distence between the atoms</li>
+<li>along closed-packed plane and closed-packed direction</li>
+<li>slip direction $\uparrow$, plasticity$\uparrow$</li>
+</ul>
+</li>
+<li><p>twinning</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\twinning.jpg" width="400"></p>
+<ul>
+<li>when slip hard</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-Polycrystal-plastic-deformation"><a href="#5-2-Polycrystal-plastic-deformation" class="headerlink" title="5.2 Polycrystal plastic deformation"></a>5.2 Polycrystal plastic deformation</h2><p>defend more&gt; single</p>
+<ul>
+<li>grain boundary</li>
+<li>grain finer</li>
+<li>defect less</li>
+<li>inside stress</li>
+</ul>
+<h2 id="5-3-Influence-of-Metal"><a href="#5-3-Influence-of-Metal" class="headerlink" title="5.3 Influence of Metal"></a>5.3 Influence of Metal</h2><ul>
+<li>structure<ul>
+<li>Fibrous tissue 纤维组织</li>
+<li>Substructure : linear defect</li>
+<li>Texture : Anisotropy</li>
+</ul>
+</li>
+<li>Capability<ul>
+<li>Working hardening : <ul>
+<li>hardness,strength $\uparrow$, plasticity,toughness$\downarrow$</li>
+<li>linear defect $\uparrow$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Residual internal stress<ol>
+<li>Macro, deformation</li>
+<li>grain, uneven deformation, flaw</li>
+<li>linear defect, vacancy, working hardening</li>
+</ol>
+</li>
+</ul>
+<h2 id="5-4-High-T-influence"><a href="#5-4-High-T-influence" class="headerlink" title="5.4 High T influence"></a>5.4 High T influence</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\deformation.jpg" width="300"></p>
+<ul>
+<li>recovery<ul>
+<li>h.s little$\uparrow$, p little$\downarrow$</li>
+<li>remove 1.2 residual internel stress</li>
+<li>Stress relief annealing</li>
+</ul>
+</li>
+<li>recrystallization<ul>
+<li>recrystallization temperature</li>
+<li>recrystallization annealing</li>
+</ul>
+</li>
+<li>grain growth</li>
+</ul>
+<h1 id="6-Heat-treatment-of-steel"><a href="#6-Heat-treatment-of-steel" class="headerlink" title="6. Heat treatment of steel"></a>6. Heat treatment of steel</h1><p>when solid, heating, holding, cooling to change structure</p>
+<h2 id="6-1-Critical-temperature"><a href="#6-1-Critical-temperature" class="headerlink" title="6.1 Critical temperature"></a>6.1 Critical temperature</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\criticalt.jpg" width="400"></p>
+<ul>
+<li>Lag</li>
+<li>calefaction</li>
+<li>refrigeration</li>
+</ul>
+<h2 id="6-2-Heating"><a href="#6-2-Heating" class="headerlink" title="6.2 Heating"></a>6.2 Heating</h2><h3 id="6-2-1-Austenitizing"><a href="#6-2-1-Austenitizing" class="headerlink" title="6.2.1 Austenitizing"></a>6.2.1 Austenitizing</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\austenitizing.jpg" width="400"></p>
+<ul>
+<li>P$\rightarrow$A, $Fe_3C\rightarrow$A, </li>
+<li>crystallizatioin$\rightarrow$ growth$\rightarrow Fe_3C$ dissolved $\rightarrow$ Homogenization</li>
+</ul>
+<h3 id="6-2-2-Control-grain-size"><a href="#6-2-2-Control-grain-size" class="headerlink" title="6.2.2 Control grain size"></a>6.2.2 Control grain size</h3><ul>
+<li>T, t : pos</li>
+<li>Speed : neg</li>
+<li>C : neg</li>
+<li>alloy<ul>
+<li>Al, Ti : neg</li>
+<li>Mn, P : pos</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-3-Cooling"><a href="#6-3-Cooling" class="headerlink" title="6.3 Cooling"></a>6.3 Cooling</h2><p><strong>Supercooled austenite</strong> : under A1 austenite</p>
+<ul>
+<li>continuous cooling transformation</li>
+<li><p>isothermal transformation</p>
+</li>
+<li><p>Time-Temperature-Transformation [Eutectoid steel]</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\ttt.jpg" width="300"></p>
+<ul>
+<li><p>P Pearlite : A1-650</p>
+</li>
+<li><p>S Sorbite : 650-600</p>
+</li>
+<li><p>T Troostite : 600-550</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\pst.jpg" width="400"></p>
+</li>
+<li><p>B Bainite: 550-Ms</p>
+</li>
+<li><p>M Martensite : Ms-Mf</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\ttt2.jpg" width="500"></p>
+</li>
+<li><p>Continuous-Cooling-Transformation [Eutectoid steel]</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\cct.jpg" width="300"></p>
+<ul>
+<li>P : Ps-Pf</li>
+<li>M : under Ms</li>
+</ul>
+</li>
+<li><p>CCT right down of TTT</p>
+</li>
+</ul>
+<h2 id="6-4-Normal-heat-treatment"><a href="#6-4-Normal-heat-treatment" class="headerlink" title="6.4 Normal heat treatment"></a>6.4 Normal heat treatment</h2><ul>
+<li><p>Annealing : heating, holding, stove cooling</p>
+<ul>
+<li>lowen strength for cutting</li>
+<li>remove residual inherent stress avoiding fracture</li>
+<li>refine grain for next</li>
+<li>full / partial : less eutectoid</li>
+<li>spheroidizing : over eutectoid</li>
+<li>diffusion / relief /recrystallization : casting</li>
+</ul>
+</li>
+<li><p>normaling : GSP + 30-50, air cooloing</p>
+<ul>
+<li>uniformize / homogenize structure &amp; hardness</li>
+<li>remove residual inside stress</li>
+<li>for next step </li>
+</ul>
+</li>
+<li><p>quenching : Ac1/ Ac3, get martensite, water cooling for carbon steel, oil for alloy steel</p>
+<ul>
+<li>hardenability : ability get M, $v&gt;v_k$</li>
+</ul>
+</li>
+<li><p>tempering : under A1, holding, M+Ar</p>
+<ul>
+<li><p>after quenching</p>
+</li>
+<li><p>remove residual inside stress</p>
+</li>
+<li><p>150-250 tempered M, 60 HRC</p>
+</li>
+<li><p>350-500 tempered T, 40 HRC</p>
+</li>
+<li><p>500-650 tempered S, 30 HRC</p>
+</li>
+<li><p>temper brittleness</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\temper.jpg" width="400"></p>
+<ol>
+<li>avoid this T</li>
+<li>fast cooling</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\turn.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\example.jpg" width="600"></p>
+<h2 id="6-5-Surface-treatment"><a href="#6-5-Surface-treatment" class="headerlink" title="6.5 Surface treatment"></a>6.5 Surface treatment</h2><ul>
+<li>surface quenching<ul>
+<li>face : h.s</li>
+<li>inside : p.t</li>
+</ul>
+</li>
+<li>chemical heattreatment<ul>
+<li>carburizing : after normaling</li>
+<li>nitriding : after mill, &gt;carburizing</li>
+<li>carbonitriding</li>
+</ul>
+</li>
+</ul>
+<h1 id="7-Alloy-steel"><a href="#7-Alloy-steel" class="headerlink" title="7. Alloy steel"></a>7. Alloy steel</h1><p>add alloy, eutectic point right move, S,E left move</p>
+<ul>
+<li>carbon steel : not good enough at strength, hardenability, stability after normaling</li>
+</ul>
+<h2 id="7-1-With-iron"><a href="#7-1-With-iron" class="headerlink" title="7.1 With iron"></a>7.1 With iron</h2><ul>
+<li>increase A area : Ni, Mn, Co, help get A</li>
+<li>decrease A area : Cr, V, B</li>
+</ul>
+<h2 id="7-2-Strengthening"><a href="#7-2-Strengthening" class="headerlink" title="7.2 Strengthening"></a>7.2 Strengthening</h2><ul>
+<li>Solid solution strengthening : add alloy, defend slip</li>
+<li>Dispersion strengthening : unsolved in base body</li>
+<li>Working hardening : add resistance of </li>
+<li>Grain boundary strengthening </li>
+</ul>
+<h2 id="7-3-Alloy-structural-steel"><a href="#7-3-Alloy-structural-steel" class="headerlink" title="7.3 Alloy structural steel"></a>7.3 Alloy structural steel</h2><ul>
+<li><p>structure steel + Mn + V + Cr</p>
+<ul>
+<li>bridge</li>
+<li>s.p.t $\uparrow$</li>
+<li>low T cutting</li>
+<li>melding</li>
+<li>anti corrosion</li>
+<li>Q345</li>
+</ul>
+</li>
+<li><p>Carburized steel + Cr +Mn+Ni +B</p>
+<ul>
+<li>Gear</li>
+<li>surface h. resist wear</li>
+<li>inside enough s.p.t</li>
+<li>variable force</li>
+<li>20Cr</li>
+</ul>
+</li>
+<li><p>Quenched and tempered steel +Mn+Si+Cr</p>
+<ul>
+<li><p>axis</p>
+</li>
+<li><p>high h. good p.t</p>
+</li>
+<li><p>40Cr</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\40cr.jpg" width="400"></p>
+</li>
+</ul>
+</li>
+<li><p>Spring</p>
+<ul>
+<li>65, 60SiMn</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-4Tool-steel"><a href="#7-4Tool-steel" class="headerlink" title="7.4Tool steel"></a>7.4Tool steel</h2><ul>
+<li>Cutting tool steel : W,V<ul>
+<li>hardness</li>
+<li>wear resistance</li>
+<li>Red hardness</li>
+<li>low alloy tool steel : 9SiCr</li>
+<li>high speed steel : W18Cr4V</li>
+</ul>
+</li>
+<li>Die steel<ul>
+<li>cold-working die steel : 9SiCr</li>
+<li>hot-working die steel : 5CrMnMo</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-5-Special-steel"><a href="#7-5-Special-steel" class="headerlink" title="7.5 Special steel"></a>7.5 Special steel</h2><ul>
+<li>Stainless steel + Cr Ni</li>
+<li>Refactory steel and oxidation-resistant steel + Cr+Mo+W+V</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/aps/gccl\sum.jpg" width="600"></p>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Mechanical-Properties-of-materials"><span class="toc-number">1.</span> <span class="toc-text">1. Mechanical Properties of materials</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Elasticity-Stiffness"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Elasticity/Stiffness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Strength"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Strength</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Plasticity"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Plasticity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Hardness"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Hardness</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Impact-test"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Impact test</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-Fatigue-strength"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 Fatigue strength</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Metal-crystal-structure-and-crystallization"><span class="toc-number">2.</span> <span class="toc-text">2. Metal crystal structure and crystallization</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Crystal-structure"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Crystal structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Unit-cell"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Unit cell</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Crystal-Defect"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Crystal Defect</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Crystallization"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Crystallization</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-Thermodynamic-conditions"><span class="toc-number">2.4.1.</span> <span class="toc-text">2.4.1 Thermodynamic conditions</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-Progress"><span class="toc-number">2.4.2.</span> <span class="toc-text">2.4.2 Progress</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-3-Casting"><span class="toc-number">2.4.3.</span> <span class="toc-text">2.4.3 Casting</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Binary-alloy-and-Phase-Diagrams"><span class="toc-number">3.</span> <span class="toc-text">3. Binary alloy and Phase Diagrams</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Phase-Structure"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Phase Structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Binary-phase-diagram"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Binary phase diagram</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Isomorphous-phase-diagram"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 Isomorphous phase diagram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-Eutectic-phase-diagram"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2 Eutectic phase diagram</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Iron-carbon-alloy"><span class="toc-number">4.</span> <span class="toc-text">4. Iron carbon alloy</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Phase-diagram"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Phase diagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Carbon-steel"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Carbon steel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-Impurity"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1 Impurity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-Classification"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2 Classification</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Metal-plastic-deformation-and-recrystallization"><span class="toc-number">5.</span> <span class="toc-text">5. Metal plastic deformation and recrystallization</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Single-crystal-plastic-deformation"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Single crystal plastic deformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Polycrystal-plastic-deformation"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Polycrystal plastic deformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Influence-of-Metal"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Influence of Metal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-High-T-influence"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 High T influence</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Heat-treatment-of-steel"><span class="toc-number">6.</span> <span class="toc-text">6. Heat treatment of steel</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Critical-temperature"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Critical temperature</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Heating"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Heating</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-Austenitizing"><span class="toc-number">6.2.1.</span> <span class="toc-text">6.2.1 Austenitizing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-Control-grain-size"><span class="toc-number">6.2.2.</span> <span class="toc-text">6.2.2 Control grain size</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Cooling"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Cooling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Normal-heat-treatment"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Normal heat treatment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-Surface-treatment"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 Surface treatment</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Alloy-steel"><span class="toc-number">7.</span> <span class="toc-text">7. Alloy steel</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-With-iron"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 With iron</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Strengthening"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 Strengthening</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Alloy-structural-steel"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Alloy structural steel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4Tool-steel"><span class="toc-number">7.4.</span> <span class="toc-text">7.4Tool steel</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-Special-steel"><span class="toc-number">7.5.</span> <span class="toc-text">7.5 Special steel</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&text=Engineering Material - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&is_video=false&description=Engineering Material - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Engineering Material - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&title=Engineering Material - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/08/gccl/&name=Engineering Material - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

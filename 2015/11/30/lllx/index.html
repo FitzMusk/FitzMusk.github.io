@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1 Statics1.1 Force modulus direction effect point  constraint Soft body constraint : belt Smooth contact surface : gear meshing Hinge Chain constraint Fixed end constraint bearing   1.2 Concurrent for">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Theoretical Mechanics B - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1 Statics1.1 Force modulus direction effect point  constraint Soft body constraint : belt Smooth contact surface : gear meshing Hinge Chain constraint Fixed end constraint bearing   1.2 Concurrent for">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/forcea.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/torque.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/couple.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/forcet.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/simplify.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/result.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/distributedl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/centerog.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/fsb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/trussn.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/zero.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/trusss.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/overturn.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/rollr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/point.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/pc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/rigidb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/rigidbv.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/particlemde.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/particlemdee.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/centroidmt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/centroidmte.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/momentumt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/momentumte.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/momentummp.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/angularm.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/angularmp.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/angularmpe.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/rbfarde.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/rbpmde.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/kineticete.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/collision.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/heartc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/inertialfs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/dalembertpe.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/vdg.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/vda.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/generalizedf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/generalkee.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/lagrangeee.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Theoretical Mechanics B - APS">
+<meta name="twitter:description" content="1 Statics1.1 Force modulus direction effect point  constraint Soft body constraint : belt Smooth contact surface : gear meshing Hinge Chain constraint Fixed end constraint bearing   1.2 Concurrent for">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx/forcea.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Theoretical Mechanics B - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/30/ltlx/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/30/jxzd/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&text=Theoretical Mechanics B - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&is_video=false&description=Theoretical Mechanics B - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Theoretical Mechanics B - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&name=Theoretical Mechanics B - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Statics"><span class="toc-number">1.</span> <span class="toc-text">1 Statics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Force"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Force</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#constraint"><span class="toc-number">1.1.1.</span> <span class="toc-text">constraint</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Concurrent-force-system"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Concurrent force system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Torque-amp-Couple"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Torque &amp; Couple</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Torque"><span class="toc-number">1.3.1.</span> <span class="toc-text">Torque</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Couple"><span class="toc-number">1.3.2.</span> <span class="toc-text">Couple</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Any-force-system"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Any force system</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Force-translation"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1 Force translation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Simplify"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 Simplify</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-Distributed-load"><span class="toc-number">1.4.3.</span> <span class="toc-text">1.4.3 Distributed load</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-4-Center-of-gravity"><span class="toc-number">1.4.4.</span> <span class="toc-text">1.4.4 Center of gravity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-5-Force-system-balance"><span class="toc-number">1.4.5.</span> <span class="toc-text">1.4.5 Force system balance</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Application"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Application</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-1-Truss"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.5.1 Truss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-2-Friction"><span class="toc-number">1.5.2.</span> <span class="toc-text">1.5.2 Friction</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Kinematics"><span class="toc-number">2.</span> <span class="toc-text">2 Kinematics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Particle"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Particle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Velocity-composition"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 Velocity composition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-Acceleration-composition"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 Acceleration composition</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Rigid-Body"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Rigid Body</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Dynamics"><span class="toc-number">3.</span> <span class="toc-text">3 Dynamics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Particle-motion-differential-equation"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Particle motion differential equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Centroid-motion-theorem"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Centroid motion theorem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Momentum-theorem"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Momentum theorem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Angular-momentum-principle"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Angular momentum principle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Rigid-body-fixed-axis-rotation-differential-equation"><span class="toc-number">3.4.1.</span> <span class="toc-text">Rigid body fixed axis rotation differential equation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rigid-body-plane-motion-differential-equation"><span class="toc-number">3.4.2.</span> <span class="toc-text">Rigid body plane motion differential equation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-Kinetic-energy-theorem"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 Kinetic energy theorem</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-1-Work-for-different-force"><span class="toc-number">3.5.1.</span> <span class="toc-text">3.5.1 Work for different force</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-2-Kinetic-energy"><span class="toc-number">3.5.2.</span> <span class="toc-text">3.5.2 Kinetic energy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-3-Kinetic-energy-theorem"><span class="toc-number">3.5.3.</span> <span class="toc-text">3.5.3 Kinetic energy theorem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-4-Potential-Energy-and-Mechanical-energy-conservation"><span class="toc-number">3.5.4.</span> <span class="toc-text">3.5.4 Potential Energy and Mechanical energy conservation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-Collision"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 Collision</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-D’Alembert’s-principle"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 D’Alembert’s principle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Inertial-force-system-simplify"><span class="toc-number">3.7.1.</span> <span class="toc-text">Inertial force system simplify</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-8-Virtual-work-principle"><span class="toc-number">3.8.</span> <span class="toc-text">3.8 Virtual work principle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-1-Virtual-displacement"><span class="toc-number">3.8.1.</span> <span class="toc-text">3.8.1 Virtual displacement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-2-Principle-of-virtual-work"><span class="toc-number">3.8.2.</span> <span class="toc-text">3.8.2 Principle of virtual work</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-3-Generalized-force-balance"><span class="toc-number">3.8.3.</span> <span class="toc-text">3.8.3 Generalized force balance</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-9-General-kinetic-equation-amp-Lagrange-equation"><span class="toc-number">3.9.</span> <span class="toc-text">3.9 General kinetic equation &amp; Lagrange equation</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Theoretical Mechanics B - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-30T14:00:05.000Z" itemprop="datePublished">2015-11-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-Statics"><a href="#1-Statics" class="headerlink" title="1 Statics"></a>1 Statics</h1><h2 id="1-1-Force"><a href="#1-1-Force" class="headerlink" title="1.1 Force"></a>1.1 Force</h2><ul>
+<li>modulus</li>
+<li>direction</li>
+<li>effect point</li>
+</ul>
+<h3 id="constraint"><a href="#constraint" class="headerlink" title="constraint"></a>constraint</h3><ul>
+<li>Soft body constraint : belt</li>
+<li>Smooth contact surface : gear meshing</li>
+<li>Hinge</li>
+<li>Chain constraint</li>
+<li>Fixed end constraint</li>
+<li>bearing</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\forcea.jpg" width="300px"></p>
+<h2 id="1-2-Concurrent-force-system"><a href="#1-2-Concurrent-force-system" class="headerlink" title="1.2 Concurrent force system"></a>1.2 Concurrent force system</h2><p>all force start at one point</p>
+<p>$$\begin{cases}\sum F_x=0\\sum F_y=0\\sum F_z=0\end{cases}$$</p>
+<h2 id="1-3-Torque-amp-Couple"><a href="#1-3-Torque-amp-Couple" class="headerlink" title="1.3 Torque &amp; Couple"></a>1.3 Torque &amp; Couple</h2><h3 id="Torque"><a href="#Torque" class="headerlink" title="Torque"></a>Torque</h3><ul>
+<li>point</li>
+</ul>
+<p>$\mathbf{M_o(F)}=\mathbf r\times \mathbf F$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\torque.jpg" width="500px"></p>
+<ul>
+<li><p>axis : parallel part = 0</p>
+<p>$$M_z(\mathbf F)=(\mathbf r \times\mathbf F)\cdot \mathbf k$$</p>
+</li>
+<li><p>sum :  vector sum</p>
+</li>
+</ul>
+<h3 id="Couple"><a href="#Couple" class="headerlink" title="Couple"></a>Couple</h3><p>two force same length, reverse direction, the effective line parallel, the combination of the two torque</p>
+<p>$$\mathbf M=\mathbf r_{BA}\times F$$</p>
+<p>put any where</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\couple.jpg" width="500px"></p>
+<p>$$\begin{cases}\sum M_x=0\\sum M_y=0\\sum M_z=0\end{cases}$$</p>
+<h2 id="1-4-Any-force-system"><a href="#1-4-Any-force-system" class="headerlink" title="1.4 Any force system"></a>1.4 Any force system</h2><p><strong>rigid body</strong></p>
+<h3 id="1-4-1-Force-translation"><a href="#1-4-1-Force-translation" class="headerlink" title="1.4.1 Force translation"></a>1.4.1 Force translation</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\forcet.jpg" width="400px"></p>
+<h3 id="1-4-2-Simplify"><a href="#1-4-2-Simplify" class="headerlink" title="1.4.2 Simplify"></a>1.4.2 Simplify</h3><p>$$\mathbf M=\sum \mathbf M_o(\mathbf F_i)\\mathbf F_R=\sum \mathbf F_i$$</p>
+<ul>
+<li>$\mathbf  F_R$: major vector, free of position</li>
+<li>$\mathbf  M$ : major torque</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\simplify.jpg" width="400px"></p>
+<p>result</p>
+<ul>
+<li>$\mathbf F_R=0, \mathbf M\neq 0$ : change with position</li>
+<li>$\mathbf F_R\neq0, \mathbf M=0$ </li>
+<li>$\mathbf F_R\neq0, \mathbf M\neq0$<ul>
+<li>perpendicular : sum force to another O</li>
+<li>parallel : spiral Force<ul>
+<li>same direction : dextral</li>
+<li>reverse : sinistral</li>
+</ul>
+</li>
+<li>combination : to another point of spiral force</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\result.jpg" width="400px"></p>
+<h3 id="1-4-3-Distributed-load"><a href="#1-4-3-Distributed-load" class="headerlink" title="1.4.3 Distributed load"></a>1.4.3 Distributed load</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\distributedl.jpg" width="300px"></p>
+<h3 id="1-4-4-Center-of-gravity"><a href="#1-4-4-Center-of-gravity" class="headerlink" title="1.4.4 Center of gravity"></a>1.4.4 Center of gravity</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\centerog.jpg" width="350px"></p>
+<h3 id="1-4-5-Force-system-balance"><a href="#1-4-5-Force-system-balance" class="headerlink" title="1.4.5 Force system balance"></a>1.4.5 Force system balance</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\fsb.jpg" width="400px"></p>
+<h2 id="1-5-Application"><a href="#1-5-Application" class="headerlink" title="1.5 Application"></a>1.5 Application</h2><h3 id="1-5-1-Truss"><a href="#1-5-1-Truss" class="headerlink" title="1.5.1 Truss"></a>1.5.1 Truss</h3><ul>
+<li><p>Node : 2 unknown can resolved</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\trussn.jpg" width="400px"></p>
+<ul>
+<li><p>zero chain</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\zero.jpg" width="200px"></p>
+</li>
+</ul>
+</li>
+<li><p>Cutting section : 3 unknown can resolved</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\trusss.jpg" width="400px"></p>
+</li>
+</ul>
+<h3 id="1-5-2-Friction"><a href="#1-5-2-Friction" class="headerlink" title="1.5.2 Friction"></a>1.5.2 Friction</h3><ul>
+<li><p>static friction : $F_{max}=f_sF_N$</p>
+<ul>
+<li>$f_s$ : coefficient of friction</li>
+</ul>
+</li>
+<li><p>kinetic friction : $F_k=f_kF_N$</p>
+<ul>
+<li>$f_k&lt;f_s$</li>
+</ul>
+</li>
+<li><p>angle of friction : $\tan\theta=f_s$</p>
+<ul>
+<li>auto lock</li>
+</ul>
+</li>
+<li><p>Overturn or slide</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\overturn.jpg" width="500px"></p>
+</li>
+<li><p>Roll resistance : $M_f=\delta F_N$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\rollr.jpg" width="300px"></p>
+<ul>
+<li>pure roll $F_s&lt;F_{max}, M=M_f$</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Kinematics"><a href="#2-Kinematics" class="headerlink" title="2 Kinematics"></a>2 Kinematics</h1><h2 id="2-1-Particle"><a href="#2-1-Particle" class="headerlink" title="2.1 Particle"></a>2.1 Particle</h2><ul>
+<li><p>Vector</p>
+</li>
+<li><p>Rectangular coordinates</p>
+</li>
+<li><p>Natural coordinates</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\point.jpg" width="400px"></p>
+<h3 id="2-1-1-Velocity-composition"><a href="#2-1-1-Velocity-composition" class="headerlink" title="2.1.1 Velocity composition"></a>2.1.1 Velocity composition</h3><ul>
+<li>Implicated motion</li>
+<li>Relative motion</li>
+</ul>
+<p>$$\overrightarrow{v_a}=\overrightarrow{v_e}+\overrightarrow{v_r}$$</p>
+<h3 id="2-1-2-Acceleration-composition"><a href="#2-1-2-Acceleration-composition" class="headerlink" title="2.1.2 Acceleration composition"></a>2.1.2 Acceleration composition</h3><ul>
+<li>Coriolis acceleration</li>
+</ul>
+<p>$$\overrightarrow{a_a}=\overrightarrow{a_e}+\overrightarrow{a_r}+\overrightarrow{a_c}$$</p>
+<ul>
+<li>$\overrightarrow{a_c}=2\overrightarrow{w_e}\times\overrightarrow{v_r}$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\pc.jpg" width="400px"></p>
+<h2 id="2-2-Rigid-Body"><a href="#2-2-Rigid-Body" class="headerlink" title="2.2 Rigid Body"></a>2.2 Rigid Body</h2><ul>
+<li>translation</li>
+<li>rotation</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\rigidb.jpg" width="300px"></p>
+<ul>
+<li><p>Plane movement</p>
+<ul>
+<li><p>velocity</p>
+<ul>
+<li>speed synthesis</li>
+<li>speed projection</li>
+<li>instantaneous center</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\rigidbv.jpg" width="300px"></p>
+</li>
+<li><p>acceleration : $\overrightarrow{a_B}=\overrightarrow{a_A}+\overrightarrow{a_{BAn}}+\overrightarrow{a_{BAt}}$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-Dynamics"><a href="#3-Dynamics" class="headerlink" title="3 Dynamics"></a>3 Dynamics</h1><h2 id="3-1-Particle-motion-differential-equation"><a href="#3-1-Particle-motion-differential-equation" class="headerlink" title="3.1 Particle motion differential equation"></a>3.1 Particle motion differential equation</h2><p>Newton law</p>
+<ul>
+<li>Inertial system</li>
+<li>Non-inertial system</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\particlemde.jpg" width="300px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\particlemdee.jpg" width="400px"></p>
+<h2 id="3-2-Centroid-motion-theorem"><a href="#3-2-Centroid-motion-theorem" class="headerlink" title="3.2 Centroid motion theorem"></a>3.2 Centroid motion theorem</h2><p>two inference</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\centroidmt.jpg" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\centroidmte.jpg" width="400px"></p>
+<h2 id="3-3-Momentum-theorem"><a href="#3-3-Momentum-theorem" class="headerlink" title="3.3 Momentum theorem"></a>3.3 Momentum theorem</h2><ul>
+<li>momentum p</li>
+<li>impulse I</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\momentumt.jpg" width="300px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\momentumte.jpg" width="400px"></p>
+<h2 id="3-4-Angular-momentum-principle"><a href="#3-4-Angular-momentum-principle" class="headerlink" title="3.4 Angular momentum principle"></a>3.4 Angular momentum principle</h2><ul>
+<li>Moment of inertia : $J$</li>
+<li>Parallel axis theorem</li>
+<li>Radius of gyration : $\rho$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\momentummp.jpg" width="300px"></p>
+<ul>
+<li>angular momentum <ul>
+<li>unit : kgm2/s</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\angularm.jpg" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\angularmp.jpg" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\angularmpe.jpg" width="400px"></p>
+<h3 id="Rigid-body-fixed-axis-rotation-differential-equation"><a href="#Rigid-body-fixed-axis-rotation-differential-equation" class="headerlink" title="Rigid body fixed axis rotation differential equation"></a>Rigid body fixed axis rotation differential equation</h3><p>$$J_z\alpha=\sum M^e_{zi}$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\rbfarde.jpg" width="400px"></p>
+<h3 id="Rigid-body-plane-motion-differential-equation"><a href="#Rigid-body-plane-motion-differential-equation" class="headerlink" title="Rigid body plane motion differential equation"></a>Rigid body plane motion differential equation</h3><p>$$\begin{cases}ma_{cx}=m\ddot{x_c}=\sum F_{xi}\ma_{cy}=m\ddot{y_c}=\sum F_{yi}\J_c\alpha=J_c\ddot{\varphi}=\sum M_{ci}\end{cases}$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\rbpmde.jpg" width="400px"></p>
+<h2 id="3-5-Kinetic-energy-theorem"><a href="#3-5-Kinetic-energy-theorem" class="headerlink" title="3.5 Kinetic energy theorem"></a>3.5 Kinetic energy theorem</h2><h3 id="3-5-1-Work-for-different-force"><a href="#3-5-1-Work-for-different-force" class="headerlink" title="3.5.1 Work for different force"></a>3.5.1 Work for different force</h3><ul>
+<li>Weight : $W=\int(-G)dz=G(z_1-z_2)$</li>
+<li>Spring : $W=\dfrac{k}{2}(\delta^2_1-\delta^2_2)$</li>
+<li>Gravity : $W=Gm_0m(\dfrac{1}{r_2}-\dfrac{1}{r_1})$</li>
+<li>Rotation : $W=\int\limits^{\varphi_2}_{\varphi_2}md\varphi$</li>
+</ul>
+<h3 id="3-5-2-Kinetic-energy"><a href="#3-5-2-Kinetic-energy" class="headerlink" title="3.5.2 Kinetic energy"></a>3.5.2 Kinetic energy</h3><ul>
+<li>Translation : $T=\dfrac{1}{2}mv^2$</li>
+<li>Fixed axis rotation : $T=\dfrac{1}{2}J_zw^2$</li>
+<li>Combination : $T=\dfrac{1}{2}mv_c^2+\dfrac{1}{2}J_cw^2$</li>
+</ul>
+<h3 id="3-5-3-Kinetic-energy-theorem"><a href="#3-5-3-Kinetic-energy-theorem" class="headerlink" title="3.5.3 Kinetic energy theorem"></a>3.5.3 Kinetic energy theorem</h3><p>$$T_2-T_1=\sum W_i$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\kineticete.jpg" width="400px"></p>
+<h3 id="3-5-4-Potential-Energy-and-Mechanical-energy-conservation"><a href="#3-5-4-Potential-Energy-and-Mechanical-energy-conservation" class="headerlink" title="3.5.4 Potential Energy and Mechanical energy conservation"></a>3.5.4 Potential Energy and Mechanical energy conservation</h3><ul>
+<li>Potential E<ul>
+<li>weight: $V=mg(z-z_0)$</li>
+<li>spring : $V=\frac{1}{2}k\delta^2$</li>
+<li>gravity : $V=-\dfrac{Gm_0m}{r}$</li>
+</ul>
+</li>
+<li>Mechanical energy conservation : $T_1+V_1=T_2+V_2$</li>
+</ul>
+<h2 id="3-6-Collision"><a href="#3-6-Collision" class="headerlink" title="3.6 Collision"></a>3.6 Collision</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\collision.jpg" width="200px"></p>
+<ul>
+<li><p>Recovery factor : $e=\dfrac{v_{2n}’-v_{1n}’}{v_{1n}-v_{2n}},0\le e\le 1$</p>
+</li>
+<li><p>impulse and angular momentum</p>
+<p>$$mv_c’-mv_c=\sum \mathbf{I_i^e}\L_{c2}-L_{c1}=\sum M_c(\mathbf{I_i^e})$$</p>
+</li>
+<li><p>Heart collision</p>
+<ul>
+<li>e=1</li>
+<li>e=0</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\heartc.jpg" width="400px"></p>
+</li>
+<li><p>collision center : $h=\dfrac{J_z}{ma}$</p>
+<ul>
+<li>a : rotation center to centroid</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-7-D’Alembert’s-principle"><a href="#3-7-D’Alembert’s-principle" class="headerlink" title="3.7 D’Alembert’s principle"></a>3.7 D’Alembert’s principle</h2><p>add inertial force, make dynamic problem to statics problem</p>
+<h3 id="Inertial-force-system-simplify"><a href="#Inertial-force-system-simplify" class="headerlink" title="Inertial force system simplify"></a>Inertial force system simplify</h3><p>Major vector : $\mathbf{F_I}=-m\mathbf{a_c}$</p>
+<p>Major torque : $\mathbf{M_O(F_I)}=-\dfrac{d\mathbf{L_O}}{dt}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\inertialfs.jpg" width="300px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\dalembertpe.jpg" width="400px"></p>
+<h2 id="3-8-Virtual-work-principle"><a href="#3-8-Virtual-work-principle" class="headerlink" title="3.8 Virtual work principle"></a>3.8 Virtual work principle</h2><p>generalized coordinates : make sure the position$\rightarrow$dof</p>
+<h3 id="3-8-1-Virtual-displacement"><a href="#3-8-1-Virtual-displacement" class="headerlink" title="3.8.1 Virtual displacement"></a>3.8.1 Virtual displacement</h3><p>small movement $\delta r$</p>
+<ul>
+<li><p>geometry : instantaneous center</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\vdg.jpg" width="400px"></p>
+</li>
+<li><p>analytic : get position function</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\vda.jpg" width="400px"></p>
+</li>
+</ul>
+<h3 id="3-8-2-Principle-of-virtual-work"><a href="#3-8-2-Principle-of-virtual-work" class="headerlink" title="3.8.2 Principle of virtual work"></a>3.8.2 Principle of virtual work</h3><p>$$\delta W=\sum\limits^n_1F_i\delta r_i=0$$</p>
+<h3 id="3-8-3-Generalized-force-balance"><a href="#3-8-3-Generalized-force-balance" class="headerlink" title="3.8.3 Generalized force balance"></a>3.8.3 Generalized force balance</h3><p>lock other virtual displacement</p>
+<p>$Q_j=\dfrac{\delta W_j}{\delta q_j}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\generalizedf.jpg" width="400px"></p>
+<h2 id="3-9-General-kinetic-equation-amp-Lagrange-equation"><a href="#3-9-General-kinetic-equation-amp-Lagrange-equation" class="headerlink" title="3.9 General kinetic equation &amp; Lagrange equation"></a>3.9 General kinetic equation &amp; Lagrange equation</h2><ul>
+<li><p>General kinetic equation</p>
+<p>$$\sum\limits^n_1[(F_{ix}-m_i\ddot{x_i})\delta x_i+(F_{iy}-m_i\ddot{y_i})\delta y_i+(F_{iz}-m_i\ddot{z_i})\delta z_i]=0$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\generalkee.jpg" width="400px"></p>
+</li>
+<li><p>Lagrange equation</p>
+<p>$$\dfrac{d}{dt}\cdot\dfrac{\partial T}{\partial \dot{q_j}}-\dfrac{\partial T}{\partial q_j}=Q_j=-\dfrac{\partial V}{\partial q_j}$$</p>
+<p>$$\dfrac{d}{dt}\cdot\dfrac{\partial L}{\partial \dot{q_j}}-\dfrac{\partial L}{\partial q_j}=0, L=T-V$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/aps/lllx\lagrangeee.jpg" width="400px"></p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Statics"><span class="toc-number">1.</span> <span class="toc-text">1 Statics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Force"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Force</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#constraint"><span class="toc-number">1.1.1.</span> <span class="toc-text">constraint</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Concurrent-force-system"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Concurrent force system</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Torque-amp-Couple"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Torque &amp; Couple</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Torque"><span class="toc-number">1.3.1.</span> <span class="toc-text">Torque</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Couple"><span class="toc-number">1.3.2.</span> <span class="toc-text">Couple</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Any-force-system"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Any force system</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Force-translation"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1 Force translation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Simplify"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 Simplify</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-Distributed-load"><span class="toc-number">1.4.3.</span> <span class="toc-text">1.4.3 Distributed load</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-4-Center-of-gravity"><span class="toc-number">1.4.4.</span> <span class="toc-text">1.4.4 Center of gravity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-5-Force-system-balance"><span class="toc-number">1.4.5.</span> <span class="toc-text">1.4.5 Force system balance</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Application"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Application</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-1-Truss"><span class="toc-number">1.5.1.</span> <span class="toc-text">1.5.1 Truss</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-2-Friction"><span class="toc-number">1.5.2.</span> <span class="toc-text">1.5.2 Friction</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Kinematics"><span class="toc-number">2.</span> <span class="toc-text">2 Kinematics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Particle"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Particle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Velocity-composition"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 Velocity composition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-Acceleration-composition"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 Acceleration composition</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Rigid-Body"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Rigid Body</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Dynamics"><span class="toc-number">3.</span> <span class="toc-text">3 Dynamics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Particle-motion-differential-equation"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Particle motion differential equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Centroid-motion-theorem"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Centroid motion theorem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Momentum-theorem"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Momentum theorem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Angular-momentum-principle"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Angular momentum principle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Rigid-body-fixed-axis-rotation-differential-equation"><span class="toc-number">3.4.1.</span> <span class="toc-text">Rigid body fixed axis rotation differential equation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Rigid-body-plane-motion-differential-equation"><span class="toc-number">3.4.2.</span> <span class="toc-text">Rigid body plane motion differential equation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-Kinetic-energy-theorem"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 Kinetic energy theorem</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-1-Work-for-different-force"><span class="toc-number">3.5.1.</span> <span class="toc-text">3.5.1 Work for different force</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-2-Kinetic-energy"><span class="toc-number">3.5.2.</span> <span class="toc-text">3.5.2 Kinetic energy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-3-Kinetic-energy-theorem"><span class="toc-number">3.5.3.</span> <span class="toc-text">3.5.3 Kinetic energy theorem</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-4-Potential-Energy-and-Mechanical-energy-conservation"><span class="toc-number">3.5.4.</span> <span class="toc-text">3.5.4 Potential Energy and Mechanical energy conservation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-Collision"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 Collision</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-D’Alembert’s-principle"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 D’Alembert’s principle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Inertial-force-system-simplify"><span class="toc-number">3.7.1.</span> <span class="toc-text">Inertial force system simplify</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-8-Virtual-work-principle"><span class="toc-number">3.8.</span> <span class="toc-text">3.8 Virtual work principle</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-1-Virtual-displacement"><span class="toc-number">3.8.1.</span> <span class="toc-text">3.8.1 Virtual displacement</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-2-Principle-of-virtual-work"><span class="toc-number">3.8.2.</span> <span class="toc-text">3.8.2 Principle of virtual work</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-3-Generalized-force-balance"><span class="toc-number">3.8.3.</span> <span class="toc-text">3.8.3 Generalized force balance</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-9-General-kinetic-equation-amp-Lagrange-equation"><span class="toc-number">3.9.</span> <span class="toc-text">3.9 General kinetic equation &amp; Lagrange equation</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&text=Theoretical Mechanics B - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&is_video=false&description=Theoretical Mechanics B - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Theoretical Mechanics B - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&title=Theoretical Mechanics B - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/lllx/&name=Theoretical Mechanics B - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

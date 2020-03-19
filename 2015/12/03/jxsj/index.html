@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1. Design criteria Strength c Stiffness c Life c Vibration stability c Reliability c  2. Component StrengthFailure: can not reach working requirment Damage $\rightarrow$ Failure 2.1 Load Classificatio">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Design of Mechanics - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1. Design criteria Strength c Stiffness c Life c Vibration stability c Reliability c  2. Component StrengthFailure: can not reach working requirment Damage $\rightarrow$ Failure 2.1 Load Classificatio">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/load.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/stress.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/stressstrain.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/sigman.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/life.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/rc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/sigmam.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/sigmamin.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/key.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/saddle.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/spline.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/thread.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/thread2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/threadcon.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/horizon.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/nogap.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/f0.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/f.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/allow.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/v.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/beltforce.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/beltstress.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/belt.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/gearf.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/root.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/contouch.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/gearcal.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/gearcal2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/worm.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/wormstrength.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearing.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearingchoose.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearingcode.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearinglife.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearingcal.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/axistorque.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/axisgraph.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/axiscal.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Design of Mechanics - APS">
+<meta name="twitter:description" content="1. Design criteria Strength c Stiffness c Life c Vibration stability c Reliability c  2. Component StrengthFailure: can not reach working requirment Damage $\rightarrow$ Failure 2.1 Load Classificatio">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/load.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Design of Mechanics - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/12/08/gccl/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/12/01/jxylks/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&text=Design of Mechanics - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&is_video=false&description=Design of Mechanics - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Design of Mechanics - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&name=Design of Mechanics - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Design-criteria"><span class="toc-number">1.</span> <span class="toc-text">1. Design criteria</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Component-Strength"><span class="toc-number">2.</span> <span class="toc-text">2. Component Strength</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Load-Classification"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Load Classification</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Load-Classification"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.2.1 Load Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Stress-Classification"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.2.2 Stress Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-Stress"><span class="toc-number">2.1.3.</span> <span class="toc-text">2.2.3 Stress</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Component-Design-Criteria"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Component Design Criteria</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Fatigue-strength"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Fatigue strength</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-sigma-N-Fatigue-Curve"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 $\sigma-N$ Fatigue Curve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-Equal-life-Curve-A’G’C"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 Equal life Curve A’G’C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-Comprehensive-influence-coefficient"><span class="toc-number">2.3.3.</span> <span class="toc-text">2.3.3 Comprehensive influence coefficient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-Component-AGC"><span class="toc-number">2.3.4.</span> <span class="toc-text">2.3.4 Component AGC</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Key"><span class="toc-number">3.</span> <span class="toc-text">3. Key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Threaded-connection"><span class="toc-number">4.</span> <span class="toc-text">4. Threaded connection</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Parameter"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Parameter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Connection"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Connection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Force-analysis"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Force analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Strength"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Strength</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-Material"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-Allowable-stress"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 Allowable stress</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Belt-drive"><span class="toc-number">5.</span> <span class="toc-text">5.Belt drive</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Classification"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-V-Belt-Parameter"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 V-Belt Parameter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Force-Analysis"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Force Analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Stress-Analysis"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Stress Analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Design"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-Material"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-V-Pulley"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 V Pulley</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Gear"><span class="toc-number">6.</span> <span class="toc-text">6. Gear</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Material"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Force-Analysis"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Force Analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Design"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-1-Root-bending-fatigue-strength-Hard"><span class="toc-number">6.3.1.</span> <span class="toc-text">6.3.1 Root bending fatigue strength [Hard]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-2-Tooth-surface-contact-fatigue-strength-Soft"><span class="toc-number">6.3.2.</span> <span class="toc-text">6.3.2 Tooth surface contact fatigue strength [Soft]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Design"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Design</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Worm-gear"><span class="toc-number">7.</span> <span class="toc-text">7.Worm gear</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-Classification"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Parameters"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 Parameters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Material"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-Strength-design"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 Strength design</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-Bearing"><span class="toc-number">8.</span> <span class="toc-text">8. Bearing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-Classification"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-Rolling"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 Rolling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-Bearing-code"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 Bearing code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-Life"><span class="toc-number">8.4.</span> <span class="toc-text">8.4 Life</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-Accessories"><span class="toc-number">8.5.</span> <span class="toc-text">8.5 Accessories</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-Coupling"><span class="toc-number">9.</span> <span class="toc-text">9. Coupling</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Classification"><span class="toc-number">9.1.</span> <span class="toc-text">Classification</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-Axis"><span class="toc-number">10.</span> <span class="toc-text">10. Axis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-Classification"><span class="toc-number">10.1.</span> <span class="toc-text">10.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-Component"><span class="toc-number">10.2.</span> <span class="toc-text">10.2 Component</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-3-Calculation"><span class="toc-number">10.3.</span> <span class="toc-text">10.3 Calculation</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Design of Mechanics - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-12-03T09:33:47.000Z" itemprop="datePublished">2015-12-03</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-Design-criteria"><a href="#1-Design-criteria" class="headerlink" title="1. Design criteria"></a>1. Design criteria</h1><ul>
+<li>Strength c</li>
+<li>Stiffness c</li>
+<li>Life c</li>
+<li>Vibration stability c</li>
+<li>Reliability c</li>
+</ul>
+<h1 id="2-Component-Strength"><a href="#2-Component-Strength" class="headerlink" title="2. Component Strength"></a>2. Component Strength</h1><p>Failure: can not reach working requirment</p>
+<p>Damage $\rightarrow$ Failure</p>
+<h2 id="2-1-Load-Classification"><a href="#2-1-Load-Classification" class="headerlink" title="2.1 Load Classification"></a>2.1 Load Classification</h2><h3 id="2-2-1-Load-Classification"><a href="#2-2-1-Load-Classification" class="headerlink" title="2.2.1 Load Classification"></a>2.2.1 Load Classification</h3><ul>
+<li>static l</li>
+<li>variable l<ul>
+<li>periodic</li>
+<li>aperiodic</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Nominal l : F</li>
+<li>Actual l</li>
+<li>Calculated l : $F_{ck}=kF$<ul>
+<li>k : load factor</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/load.jpg" width="400"></p>
+<h3 id="2-2-2-Stress-Classification"><a href="#2-2-2-Stress-Classification" class="headerlink" title="2.2.2 Stress Classification"></a>2.2.2 Stress Classification</h3><ul>
+<li>Static Stress $\leftarrow$ Static l</li>
+<li>Variable Stress $\leftarrow$ S/V l<ul>
+<li>periodic s</li>
+<li>aperiodic s<ul>
+<li>regular s</li>
+<li>irregular s</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-3-Stress"><a href="#2-2-3-Stress" class="headerlink" title="2.2.3 Stress"></a>2.2.3 Stress</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/stress.jpg" width="500"></p>
+<p>$\sigma_{max}=\sigma_m+\sigma_a\\sigma_{min}=\sigma_m-\sigma_a$</p>
+<ul>
+<li>Stress ratio : Cycle characteristics $r=\dfrac{\sigma_{min}}{\sigma_{max}}$<ul>
+<li>$-1\leq r\leq1$</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>One-way asymmetric cyclic stress</li>
+<li>Static s</li>
+<li>Pulsating cyclic stress</li>
+<li>Bidirectional asymmetric cyclic stress</li>
+<li>Symmetric cyclic stress</li>
+</ol>
+<h2 id="2-2-Component-Design-Criteria"><a href="#2-2-Component-Design-Criteria" class="headerlink" title="2.2 Component Design Criteria"></a>2.2 Component Design Criteria</h2><p>$\sigma\leq [\sigma]=\dfrac{\sigma_{lim}}{[S]}$</p>
+<ul>
+<li><p>$\sigma_{lim}$：Ultimate s</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/stressstrain.jpg" width="400"></p>
+<ul>
+<li>Static s<ul>
+<li>Ductile material : $\sigma_{s}$ yield Strength</li>
+<li>Brittle material: $\sigma_b$ ultimate Strength</li>
+</ul>
+</li>
+<li>Variable s<ul>
+<li>$\sigma_{rN}$ Fatigue limit</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>$[S]$：Safety factor</p>
+</li>
+</ul>
+<h2 id="2-3-Fatigue-strength"><a href="#2-3-Fatigue-strength" class="headerlink" title="2.3 Fatigue strength"></a>2.3 Fatigue strength</h2><h3 id="2-3-1-sigma-N-Fatigue-Curve"><a href="#2-3-1-sigma-N-Fatigue-Curve" class="headerlink" title="2.3.1 $\sigma-N$ Fatigue Curve"></a>2.3.1 $\sigma-N$ Fatigue Curve</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/sigman.jpg" width="400"></p>
+<ul>
+<li>CD : $\sigma^m_{rN}N=C$</li>
+<li>D : $\sigma_{rN}=\sigma_\infty$</li>
+<li>$\sigma_{rN}=\sigma_r \sqrt[m]{\dfrac{N_0}{N}}\\quad=K_N\sigma_r$<ul>
+<li>$K_N$ : Life factor</li>
+<li>m : experiment 6-20</li>
+<li>$N_0$ : 10^6 magnitude</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-2-Equal-life-Curve-A’G’C"><a href="#2-3-2-Equal-life-Curve-A’G’C" class="headerlink" title="2.3.2 Equal life Curve A’G’C"></a>2.3.2 Equal life Curve A’G’C</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/life.jpg" width="400"></p>
+<ul>
+<li>A : r=-1, s.c.s</li>
+<li>D : r=0, p.s</li>
+</ul>
+<p>A’G’: $\sigma_{-1}=\sigma_a’+\varphi_\sigma\sigma_m’$</p>
+<p>CG’ : $\sigma_m’+\sigma_a’=\sigma_s$</p>
+<h3 id="2-3-3-Comprehensive-influence-coefficient"><a href="#2-3-3-Comprehensive-influence-coefficient" class="headerlink" title="2.3.3 Comprehensive influence coefficient"></a>2.3.3 Comprehensive influence coefficient</h3><p>$K_\sigma=(\dfrac{k_\sigma}{\varepsilon_\sigma}+\dfrac{1}{\beta_\sigma}-1)\dfrac{1}{\beta_q}$</p>
+<ul>
+<li>$k_\sigma=1+q_\sigma(\alpha_\sigma-1)$ : Effective stress concentration factor</li>
+<li>$\varepsilon_\sigma$ : Size f</li>
+<li>$\beta_\sigma$ : Surface quality factor</li>
+<li>$\beta_q$ : Enhancement factor</li>
+</ul>
+<h3 id="2-3-4-Component-AGC"><a href="#2-3-4-Component-AGC" class="headerlink" title="2.3.4 Component AGC"></a>2.3.4 Component AGC</h3><p>$\sigma_{-1e}=\dfrac{\sigma_{-1}}{K_\sigma}$</p>
+<ul>
+<li><p>r=C</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/rc.jpg" width="400"></p>
+<p>$S_{ca}=\dfrac{\sigma_{max}’}{\sigma_{max}}$</p>
+</li>
+<li><p>$\sigma_m=C$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/sigmam.jpg" width="400"></p>
+</li>
+<li><p>$\sigma_{min}=C$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/sigmamin.jpg" width="400"></p>
+</li>
+</ul>
+<h1 id="3-Key"><a href="#3-Key" class="headerlink" title="3. Key"></a>3. Key</h1><ul>
+<li><p>Sunk Key</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/key.jpg" width="400"></p>
+<ul>
+<li>Flat Key</li>
+<li>Woodruff K [Torque]</li>
+<li>Taper</li>
+</ul>
+</li>
+<li><p>Saddle Key</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/saddle.jpg" width="300"></p>
+</li>
+<li><p>Spline</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/spline.jpg" width="300"></p>
+</li>
+</ul>
+<h1 id="4-Threaded-connection"><a href="#4-Threaded-connection" class="headerlink" title="4. Threaded connection"></a>4. Threaded connection</h1><h2 id="4-1-Parameter"><a href="#4-1-Parameter" class="headerlink" title="4.1 Parameter"></a>4.1 Parameter</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/thread.jpg" width="300"></p>
+<ul>
+<li>d : Major diameter</li>
+<li>$d_1$ : Minor diameter</li>
+<li>$d_2$ : Pitch diameter</li>
+<li>P : Pitch</li>
+<li>$P_n$ : lead</li>
+<li>$\alpha$ : angle</li>
+<li>$\phi$ : flank angle</li>
+<li>h : depth</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/thread2.jpg" width="400"></p>
+<h2 id="4-2-Connection"><a href="#4-2-Connection" class="headerlink" title="4.2 Connection"></a>4.2 Connection</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/threadcon.jpeg" width="400"></p>
+<ul>
+<li>Bolt</li>
+<li>Stud</li>
+<li>Screw</li>
+</ul>
+<p>Nut</p>
+<h2 id="4-3-Force-analysis"><a href="#4-3-Force-analysis" class="headerlink" title="4.3 Force analysis"></a>4.3 Force analysis</h2><p>Preload $F_0$ - Wrench</p>
+<ul>
+<li><p>Horizontal </p>
+<ul>
+<li>Reamer bolt : $F=\dfrac{F_\sum}{zz}$</li>
+<li>normal : $F_0\ge \dfrac{K_s F_\sum}{fzi}$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/horizon.jpeg" width="400"></p>
+<ul>
+<li>$K_s$ : Skid resistance coefficient</li>
+<li>z : number</li>
+<li>i : number of joint surface</li>
+<li>f : Coefficient of friction</li>
+</ul>
+</li>
+<li><p>Torque</p>
+<ul>
+<li>Reamer Bolt : $F_{max}=\dfrac{Tr_{max}}{\sum r^2}$</li>
+<li>normal : $F_0\ge\dfrac{K_sT}{f\sum r}$</li>
+</ul>
+</li>
+<li><p>Axial  : $F=\dfrac{F_\sum}{z}$</p>
+</li>
+<li><p>Overturning moment : $F_{max}=\dfrac{ML_{max}}{\sum L^2}$</p>
+<ul>
+<li><p>No gap</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/nogap.jpg" width="400"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-4-Strength"><a href="#4-4-Strength" class="headerlink" title="4.4 Strength"></a>4.4 Strength</h2><ul>
+<li><p>Loose b : $\sigma=\dfrac{F}{\pi d^2_1/4}\le[\sigma]$</p>
+</li>
+<li><p>Tight b</p>
+<ul>
+<li><p>$F_0$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/f0.jpg" width="400"></p>
+</li>
+<li><p>$F_0+Work$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/f.jpg" width="400"></p>
+<ul>
+<li>$C_b$ : Bolt Stiffness</li>
+<li>$C_m$ : Material Stiffness</li>
+<li>$\lambda_b$ : Bolt Elongation</li>
+<li>$\lambda_m$ : Material Elongation</li>
+<li>$F_1$ : Residual preload</li>
+<li>up $\Delta F\downarrow$ : $C_b\downarrow, C_m\uparrow,F_0\uparrow$</li>
+</ul>
+</li>
+<li><p>Shear force</p>
+<p>$\sigma_p=\dfrac{F}{d_0L_{min}}\le[\sigma_p]\\tau=\dfrac{F}{\pi d^2_0/4}\le[\tau]$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-Material"><a href="#4-5-Material" class="headerlink" title="4.5 Material"></a>4.5 Material</h2><p>Q235, 35, 45</p>
+<p>15Cr, 40Cr</p>
+<h2 id="4-6-Allowable-stress"><a href="#4-6-Allowable-stress" class="headerlink" title="4.6 Allowable stress"></a>4.6 Allowable stress</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/allow.jpg" width="400"></p>
+<h1 id="5-Belt-drive"><a href="#5-Belt-drive" class="headerlink" title="5.Belt drive"></a>5.Belt drive</h1><p>simple, absorb vibration, Overload protection</p>
+<p>transmission ratio is unstable</p>
+<h2 id="5-1-Classification"><a href="#5-1-Classification" class="headerlink" title="5.1 Classification"></a>5.1 Classification</h2><ul>
+<li>flat</li>
+<li>V</li>
+<li>Toothed</li>
+<li>Rund</li>
+</ul>
+<h2 id="5-2-V-Belt-Parameter"><a href="#5-2-V-Belt-Parameter" class="headerlink" title="5.2 V-Belt Parameter"></a>5.2 V-Belt Parameter</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/v.jpeg" width="400"></p>
+<ul>
+<li>Cross-sectional area</li>
+<li>thickness</li>
+<li>width</li>
+<li>wedge angle</li>
+</ul>
+<h2 id="5-3-Force-Analysis"><a href="#5-3-Force-Analysis" class="headerlink" title="5.3 Force Analysis"></a>5.3 Force Analysis</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/beltforce.jpg" width="400"></p>
+<ul>
+<li>$F_e$ : effective pull</li>
+<li>Ultimate $F_1=F_2e^{f\alpha}$$\rightarrow F_{ec}$</li>
+</ul>
+<h2 id="5-4-Stress-Analysis"><a href="#5-4-Stress-Analysis" class="headerlink" title="5.4 Stress Analysis"></a>5.4 Stress Analysis</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/beltstress.jpg" width="400"></p>
+<ul>
+<li>Tensile stress</li>
+<li>Bending stress</li>
+<li>Centrifugal tensile stress</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/belt.jpeg" width="400"></p>
+<h2 id="5-5-Design"><a href="#5-5-Design" class="headerlink" title="5.5 Design"></a>5.5 Design</h2><ul>
+<li>Pca=KaP<ul>
+<li>Work factor</li>
+</ul>
+</li>
+<li>V belt type : ABCDE YZ(Pca, n)<ul>
+<li>recalculate n$\rightarrow$v</li>
+</ul>
+</li>
+<li>set center distance a $\rightarrow$ L from kind</li>
+<li>P$\rightarrow$number z</li>
+<li>Pca, z,v$\rightarrow$F0</li>
+<li>$F_p=2zF_0sin\frac{\alpha}{2}$</li>
+</ul>
+<h2 id="5-6-Material"><a href="#5-6-Material" class="headerlink" title="5.6 Material"></a>5.6 Material</h2><p>HT150</p>
+<p>HT200</p>
+<h2 id="5-7-V-Pulley"><a href="#5-7-V-Pulley" class="headerlink" title="5.7 V Pulley"></a>5.7 V Pulley</h2><ul>
+<li>0-2.5d : Solid</li>
+<li>2.5d-300mm: Web</li>
+<li>300-400:Orifice plate</li>
+<li>400+ : Spoke</li>
+</ul>
+<h1 id="6-Gear"><a href="#6-Gear" class="headerlink" title="6. Gear"></a>6. Gear</h1><ul>
+<li>Gear accuracy :12 </li>
+<li>Pressure angle : 20</li>
+<li>Soft tooth surface &lt;2=350HBS/38HRC<ul>
+<li>HBS : Hardened steel ball</li>
+<li>HRC : 120degree diamond cone</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-1-Material"><a href="#6-1-Material" class="headerlink" title="6.1 Material"></a>6.1 Material</h2><ul>
+<li>Forged steel: 20CrMnTi</li>
+<li>Cast steel</li>
+<li>Cast iron</li>
+<li>Non-metal </li>
+</ul>
+<h2 id="6-2-Force-Analysis"><a href="#6-2-Force-Analysis" class="headerlink" title="6.2 Force Analysis"></a>6.2 Force Analysis</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/gearf.jpeg" width="400"></p>
+<ul>
+<li>Circumferential force Ft</li>
+<li>Radial force Fr</li>
+<li>Axial f</li>
+</ul>
+<h2 id="6-3-Design"><a href="#6-3-Design" class="headerlink" title="6.3 Design"></a>6.3 Design</h2><h3 id="6-3-1-Root-bending-fatigue-strength-Hard"><a href="#6-3-1-Root-bending-fatigue-strength-Hard" class="headerlink" title="6.3.1 Root bending fatigue strength [Hard]"></a>6.3.1 Root bending fatigue strength [Hard]</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/root.jpg" width="400"></p>
+<ul>
+<li>tooth shape f Yfa$\leftarrow$Modification coefficient</li>
+<li>Stress correction factor Ysa$\leftarrow$Modification coefficient</li>
+<li>Coincidence coefficient $Y_\varepsilon$</li>
+</ul>
+<h3 id="6-3-2-Tooth-surface-contact-fatigue-strength-Soft"><a href="#6-3-2-Tooth-surface-contact-fatigue-strength-Soft" class="headerlink" title="6.3.2 Tooth surface contact fatigue strength [Soft]"></a>6.3.2 Tooth surface contact fatigue strength [Soft]</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/contouch.jpg" width="400"></p>
+<ul>
+<li>Regional coefficient Zh</li>
+<li>Elastic influence coefficient</li>
+<li>Coincidence coefficient Z</li>
+</ul>
+<h2 id="6-4-Design"><a href="#6-4-Design" class="headerlink" title="6.4 Design"></a>6.4 Design</h2><ul>
+<li><p>material</p>
+</li>
+<li><p>z,$\phi_b=b/d_1$,K</p>
+</li>
+<li><p>Contact Fatigue Strength$\rightarrow$d</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/gearcal.jpg" width="400"></p>
+</li>
+<li><p>adjust the smaller Index circle diameter</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/gearcal2.jpg" width="200"></p>
+</li>
+<li><p>Root bending strength$\rightarrow$m</p>
+<ul>
+<li>adjust m</li>
+</ul>
+</li>
+<li><p>get the final d1 d2, a</p>
+</li>
+</ul>
+<p><strong>helical gear</strong> </p>
+<ul>
+<li>add Helix angle coffeint in RBS, and TCS</li>
+<li>add $cos^2\beta$ in RBS</li>
+</ul>
+<h1 id="7-Worm-gear"><a href="#7-Worm-gear" class="headerlink" title="7.Worm gear"></a>7.Worm gear</h1><ul>
+<li>$\eta=\eta_1\eta_2\eta_3$<ul>
+<li>engagement friction</li>
+<li>bearing friction</li>
+<li>Splashing oil</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-1-Classification"><a href="#7-1-Classification" class="headerlink" title="7.1 Classification"></a>7.1 Classification</h2><ul>
+<li>Cylinder<ul>
+<li>ZA</li>
+<li>ZN</li>
+<li>ZI</li>
+<li>ZK</li>
+</ul>
+</li>
+<li>ZC</li>
+<li>Cone worm</li>
+</ul>
+<h2 id="7-2-Parameters"><a href="#7-2-Parameters" class="headerlink" title="7.2 Parameters"></a>7.2 Parameters</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/worm.jpeg" width="400"></p>
+<ul>
+<li>mt=ma : end modulus, axis modulus</li>
+<li>$\alpha_t=\alpha_a $：pressure a, za=20 nik<ul>
+<li>$tan a_a=\dfrac{tan a_n}{cos\gamma}$</li>
+<li>gamma :Lead angle</li>
+</ul>
+</li>
+<li>q=d1/m for worm</li>
+<li>z1:1,2,4,6</li>
+<li>a</li>
+</ul>
+<h2 id="7-3-Material"><a href="#7-3-Material" class="headerlink" title="7.3 Material"></a>7.3 Material</h2><ul>
+<li>Worm<ul>
+<li>high speed : 15Cr 20Cr + carburization, Quenching 渗碳淬火</li>
+<li>low speed : 40 45, temper</li>
+</ul>
+</li>
+<li>Worm Wheel : Cast tin bronze</li>
+</ul>
+<h2 id="7-4-Strength-design"><a href="#7-4-Strength-design" class="headerlink" title="7.4 Strength design"></a>7.4 Strength design</h2><p>like gear</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/wormstrength.jpg" width="400"></p>
+<h1 id="8-Bearing"><a href="#8-Bearing" class="headerlink" title="8. Bearing"></a>8. Bearing</h1><h2 id="8-1-Classification"><a href="#8-1-Classification" class="headerlink" title="8.1 Classification"></a>8.1 Classification</h2><ul>
+<li>Sliding</li>
+<li>Rolling</li>
+</ul>
+<ul>
+<li>Thrust bearing</li>
+<li>Radial bearing</li>
+</ul>
+<h2 id="8-2-Rolling"><a href="#8-2-Rolling" class="headerlink" title="8.2 Rolling"></a>8.2 Rolling</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearing.jpg" width="500"></p>
+<ul>
+<li>1 Self-aligning ball bearing</li>
+<li>2 Spherical roller bearing</li>
+<li>3 Tapered Roller Bearings</li>
+<li>5 Thrust ball bearing</li>
+<li>6 Deep groove ball bearing</li>
+<li>7 Angular contact ball bearings<ul>
+<li>forward assemble</li>
+<li>backward assemble</li>
+</ul>
+</li>
+<li>N Cylinder Roller</li>
+<li>NA Needle Roller Bearing</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearingchoose.jpg" width="300"></p>
+<h2 id="8-3-Bearing-code"><a href="#8-3-Bearing-code" class="headerlink" title="8.3 Bearing code"></a>8.3 Bearing code</h2><p>Type- width- diameter- inside diameter- contact angle - Tolerance level- clearance</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearingcode.jpg" width="300"></p>
+<h2 id="8-4-Life"><a href="#8-4-Life" class="headerlink" title="8.4 Life"></a>8.4 Life</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearinglife.jpg" width="300"></p>
+<ul>
+<li><p>C : rated dynamic load </p>
+</li>
+<li><p>$P=f_d(XF_r+YF_a)$</p>
+<ul>
+<li>radial</li>
+<li>axial</li>
+</ul>
+</li>
+<li><p>Derived axial force $F_d$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/bearingcal.jpeg" width="400"></p>
+</li>
+</ul>
+<h2 id="8-5-Accessories"><a href="#8-5-Accessories" class="headerlink" title="8.5 Accessories"></a>8.5 Accessories</h2><ul>
+<li>Retaining ring</li>
+<li>Felt ring</li>
+</ul>
+<h1 id="9-Coupling"><a href="#9-Coupling" class="headerlink" title="9. Coupling"></a>9. Coupling</h1><h2 id="Classification"><a href="#Classification" class="headerlink" title="Classification"></a>Classification</h2><ul>
+<li>Rigid coupling<ul>
+<li>Sleeve 套筒+key</li>
+<li>Flange coupling 凸缘</li>
+</ul>
+</li>
+<li>Flexible coupling<ul>
+<li>Universal coupling 万向</li>
+<li>Gear</li>
+<li>Jaw</li>
+<li>Tire</li>
+</ul>
+</li>
+</ul>
+<h1 id="10-Axis"><a href="#10-Axis" class="headerlink" title="10. Axis"></a>10. Axis</h1><h2 id="10-1-Classification"><a href="#10-1-Classification" class="headerlink" title="10.1 Classification"></a>10.1 Classification</h2><ul>
+<li>T</li>
+<li>W</li>
+<li>TW</li>
+<li>Crankshaft</li>
+<li>Straight axis</li>
+<li>Step axis</li>
+<li>stick</li>
+</ul>
+<h2 id="10-2-Component"><a href="#10-2-Component" class="headerlink" title="10.2 Component"></a>10.2 Component</h2><ul>
+<li>key</li>
+<li>Retaining ring</li>
+<li>End cap</li>
+</ul>
+<h2 id="10-3-Calculation"><a href="#10-3-Calculation" class="headerlink" title="10.3 Calculation"></a>10.3 Calculation</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/axistorque.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/axisgraph.jpeg" width="300"></p>
+<ul>
+<li><p>Bending Moment &amp; Torque</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/aps/jxsj/axiscal.jpg" width="400"></p>
+<p>W : Bending section coefficient</p>
+</li>
+</ul>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Design-criteria"><span class="toc-number">1.</span> <span class="toc-text">1. Design criteria</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Component-Strength"><span class="toc-number">2.</span> <span class="toc-text">2. Component Strength</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Load-Classification"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Load Classification</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Load-Classification"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.2.1 Load Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Stress-Classification"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.2.2 Stress Classification</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-Stress"><span class="toc-number">2.1.3.</span> <span class="toc-text">2.2.3 Stress</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Component-Design-Criteria"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Component Design Criteria</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Fatigue-strength"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Fatigue strength</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-sigma-N-Fatigue-Curve"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 $\sigma-N$ Fatigue Curve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-Equal-life-Curve-A’G’C"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 Equal life Curve A’G’C</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-Comprehensive-influence-coefficient"><span class="toc-number">2.3.3.</span> <span class="toc-text">2.3.3 Comprehensive influence coefficient</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-Component-AGC"><span class="toc-number">2.3.4.</span> <span class="toc-text">2.3.4 Component AGC</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Key"><span class="toc-number">3.</span> <span class="toc-text">3. Key</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Threaded-connection"><span class="toc-number">4.</span> <span class="toc-text">4. Threaded connection</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Parameter"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Parameter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Connection"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Connection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Force-analysis"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Force analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Strength"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Strength</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-Material"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-Allowable-stress"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 Allowable stress</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Belt-drive"><span class="toc-number">5.</span> <span class="toc-text">5.Belt drive</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Classification"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-V-Belt-Parameter"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 V-Belt Parameter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Force-Analysis"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Force Analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Stress-Analysis"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Stress Analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Design"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-Material"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-V-Pulley"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 V Pulley</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Gear"><span class="toc-number">6.</span> <span class="toc-text">6. Gear</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Material"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Force-Analysis"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Force Analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Design"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Design</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-1-Root-bending-fatigue-strength-Hard"><span class="toc-number">6.3.1.</span> <span class="toc-text">6.3.1 Root bending fatigue strength [Hard]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-2-Tooth-surface-contact-fatigue-strength-Soft"><span class="toc-number">6.3.2.</span> <span class="toc-text">6.3.2 Tooth surface contact fatigue strength [Soft]</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Design"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Design</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Worm-gear"><span class="toc-number">7.</span> <span class="toc-text">7.Worm gear</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-Classification"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Parameters"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 Parameters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Material"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-Strength-design"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 Strength design</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-Bearing"><span class="toc-number">8.</span> <span class="toc-text">8. Bearing</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-Classification"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-Rolling"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 Rolling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-Bearing-code"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 Bearing code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-Life"><span class="toc-number">8.4.</span> <span class="toc-text">8.4 Life</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-Accessories"><span class="toc-number">8.5.</span> <span class="toc-text">8.5 Accessories</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-Coupling"><span class="toc-number">9.</span> <span class="toc-text">9. Coupling</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Classification"><span class="toc-number">9.1.</span> <span class="toc-text">Classification</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-Axis"><span class="toc-number">10.</span> <span class="toc-text">10. Axis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-1-Classification"><span class="toc-number">10.1.</span> <span class="toc-text">10.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-2-Component"><span class="toc-number">10.2.</span> <span class="toc-text">10.2 Component</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-3-Calculation"><span class="toc-number">10.3.</span> <span class="toc-text">10.3 Calculation</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&text=Design of Mechanics - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&is_video=false&description=Design of Mechanics - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Design of Mechanics - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&title=Design of Mechanics - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/03/jxsj/&name=Design of Mechanics - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1. Semiconductor1.1 Type Intrinsic semiconductor  Si,silicon  charge carrier : electrons &amp;amp; electron hole   carrier too less    extrinsic semiconductor  N : add P phosphorus   electrons more    P :">
+<meta name="keywords" content="APS,EE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electrotechnology - Electronic Technology - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1. Semiconductor1.1 Type Intrinsic semiconductor  Si,silicon  charge carrier : electrons &amp;amp; electron hole   carrier too less    extrinsic semiconductor  N : add P phosphorus   electrons more    P :">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/carrier.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/n.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/p.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/pnpo.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/diode.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/zener.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/diodet.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/transistor.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/transistoru.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/transistoriu.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/transistoricu.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/amplifyc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/staticanalysis.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/dynamica.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/dynamicad.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/qh.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/ql.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/voltagedivision.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/voltagedivisionc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/voltagedivisions.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/commonc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/commoncda.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/differentialac.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/mosfet.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/mosfets.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/operationala.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/positivefa.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/negativefa.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/add1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/add2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/minus.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/localif.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/acdcf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/fbf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/spf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/directnf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/dcsupply.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/sphwrc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/spfwrc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/spbrc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/rcfilter.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/regulator.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/w7805.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/w117.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/digitals.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/logicgate.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/logicgc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/ttl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/ttlp.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/ttla.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/3sg.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/3sgt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/logicalgebra.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/logicst.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/carnotg.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/carnotgs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/logicdesign.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/adder.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/fulladder.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/encoder.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/8421.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/rs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/rsinf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/rs2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/rsc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/jk.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/jkq.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/d.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/t.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/dtot.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/digitalr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/shiftr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/counter.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/decimalc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/any.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/5551.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/5552.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Electrotechnology - Electronic Technology - APS">
+<meta name="twitter:description" content="1. Semiconductor1.1 Type Intrinsic semiconductor  Si,silicon  charge carrier : electrons &amp;amp; electron hole   carrier too less    extrinsic semiconductor  N : add P phosphorus   electrons more    P :">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs/carrier.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Electrotechnology - Electronic Technology - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/30/dzks/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/30/dgjs/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&text=Electrotechnology - Electronic Technology - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&is_video=false&description=Electrotechnology - Electronic Technology - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Electrotechnology - Electronic Technology - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&name=Electrotechnology - Electronic Technology - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Semiconductor"><span class="toc-number">1.</span> <span class="toc-text">1. Semiconductor</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Type"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-PN-Junction"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 PN Junction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Diodes"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Diodes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-Zener-diode"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Zener diode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-LED"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 LED</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-Photodiode"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 Photodiode</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Transistor"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Transistor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Principles"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1 Principles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Properties"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 Properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-Parameters-to-work-right"><span class="toc-number">1.4.3.</span> <span class="toc-text">1.4.3 Parameters to work right</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Amplifying-circuit"><span class="toc-number">2.</span> <span class="toc-text">2 Amplifying circuit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Common-emitter-amplifying-circuit"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Common emitter amplifying circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Static-analysis"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Static analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Dynamic-Analysis"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Dynamic Analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-Calculation"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 Calculation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-Draw"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 Draw</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Voltage-divider-bias-circuit"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Voltage divider bias circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-Common-collector-amplifier-circuit"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 Common collector amplifier circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-Differential-amplifier-circuit"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 Differential amplifier circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-MOSFET"><span class="toc-number">2.7.</span> <span class="toc-text">2.7 MOSFET</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Operational-Amplifier"><span class="toc-number">3.</span> <span class="toc-text">3. Operational Amplifier</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Application"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Add-and-Minus"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Add and Minus</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Feedback"><span class="toc-number">4.</span> <span class="toc-text">4. Feedback</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Type"><span class="toc-number">4.1.</span> <span class="toc-text">Type</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-DC-regulated-power-supply"><span class="toc-number">5.</span> <span class="toc-text">5 DC regulated power supply</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Rectifier-circuit"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Rectifier circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-RC-Filter"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 RC Filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Regulator-circuit"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Regulator circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-3-Terminal-Voltage-Regulator"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 3 Terminal Voltage Regulator</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Gate-circuit"><span class="toc-number">6.</span> <span class="toc-text">6. Gate circuit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Signal"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Signal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Logic-gate"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Logic gate</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Combination"><span class="toc-number">6.2.1.</span> <span class="toc-text">Combination</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-TTL-Gate-Circuit"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 TTL Gate Circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Tri-state-gate"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Tri-state gate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-Logical-algebra"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 Logical algebra</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-6-Logical-function"><span class="toc-number">6.6.</span> <span class="toc-text">6.6 Logical function</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-7-Design"><span class="toc-number">6.7.</span> <span class="toc-text">6.7 Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-8-Adder"><span class="toc-number">6.8.</span> <span class="toc-text">6.8 Adder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-7-Encoder-amp-Decoder"><span class="toc-number">6.9.</span> <span class="toc-text">6.7 Encoder &amp; Decoder</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Multivibrator"><span class="toc-number">7.</span> <span class="toc-text">7. Multivibrator</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-Bistablemultivibrator"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 Bistablemultivibrator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-1-RS"><span class="toc-number">7.1.1.</span> <span class="toc-text">7.1.1 RS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-2-JK"><span class="toc-number">7.1.2.</span> <span class="toc-text">7.1.2 JK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-3-D"><span class="toc-number">7.1.3.</span> <span class="toc-text">7.1.3 D</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-4-T"><span class="toc-number">7.1.4.</span> <span class="toc-text">7.1.4 T</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Register"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 Register</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Counter"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Counter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-1-Binary"><span class="toc-number">7.3.1.</span> <span class="toc-text">7.3.1 Binary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-2-Decimal"><span class="toc-number">7.3.2.</span> <span class="toc-text">7.3.2 Decimal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-3-74LS290"><span class="toc-number">7.3.3.</span> <span class="toc-text">7.3.3 74LS290</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-555"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 555</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Electrotechnology - Electronic Technology - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-30T13:36:16.000Z" itemprop="datePublished">2015-11-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/EE/">EE</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-Semiconductor"><a href="#1-Semiconductor" class="headerlink" title="1. Semiconductor"></a>1. Semiconductor</h1><h2 id="1-1-Type"><a href="#1-1-Type" class="headerlink" title="1.1 Type"></a>1.1 Type</h2><ul>
+<li><p>Intrinsic semiconductor</p>
+<ul>
+<li><p>Si,silicon</p>
+</li>
+<li><p>charge carrier : electrons &amp; electron hole</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\carrier.jpg" width="400px"></p>
+</li>
+<li><p>carrier too less</p>
+</li>
+</ul>
+</li>
+<li><p>extrinsic semiconductor</p>
+<ul>
+<li><p>N : add P phosphorus </p>
+<ul>
+<li>electrons more</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\n.jpg" width="200px"></p>
+</li>
+<li><p>P : add B boron</p>
+<ul>
+<li>holes more</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\p.jpg" width="200px"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-PN-Junction"><a href="#1-2-PN-Junction" class="headerlink" title="1.2 PN Junction"></a>1.2 PN Junction</h2><ul>
+<li>Forward bias : with current</li>
+<li>Reverse bias : approximal no current </li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\pnpo.jpg" width="350px"></p>
+<h2 id="1-3-Diodes"><a href="#1-3-Diodes" class="headerlink" title="1.3 Diodes"></a>1.3 Diodes</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\diode.jpg" width="200px"></p>
+<ul>
+<li>forward voltage : Si 0.7</li>
+<li><p>reverse voltage </p>
+</li>
+<li><p>use for protect, regulate voltage</p>
+</li>
+</ul>
+<h3 id="1-3-1-Zener-diode"><a href="#1-3-1-Zener-diode" class="headerlink" title="1.3.1 Zener diode"></a>1.3.1 Zener diode</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\zener.jpg" width="200px"></p>
+<h3 id="1-3-2-LED"><a href="#1-3-2-LED" class="headerlink" title="1.3.2 LED"></a>1.3.2 LED</h3><h3 id="1-3-3-Photodiode"><a href="#1-3-3-Photodiode" class="headerlink" title="1.3.3 Photodiode"></a>1.3.3 Photodiode</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\diodet.jpg" width="100px"></p>
+<h2 id="1-4-Transistor"><a href="#1-4-Transistor" class="headerlink" title="1.4 Transistor"></a>1.4 Transistor</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\transistor.jpg" width="400px"></p>
+<ul>
+<li>PNP</li>
+<li>NPN</li>
+<li>base</li>
+<li>collector</li>
+<li>emitter</li>
+</ul>
+<h3 id="1-4-1-Principles"><a href="#1-4-1-Principles" class="headerlink" title="1.4.1 Principles"></a>1.4.1 Principles</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\transistoru.jpg" width="300px"></p>
+<p>$\beta=\dfrac{I_{ce}}{I_{be}}$</p>
+<h3 id="1-4-2-Properties"><a href="#1-4-2-Properties" class="headerlink" title="1.4.2 Properties"></a>1.4.2 Properties</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\transistoriu.jpg" width="200px"></p>
+<ul>
+<li>Dead V :<ul>
+<li>Si : 0.5</li>
+<li>Ge : 0.1</li>
+</ul>
+</li>
+<li>$U_{BE}$<ul>
+<li>NPN Si  0.7V</li>
+<li>PNP Ge -0.3V</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\transistoricu.jpg" width="300px"></p>
+<ul>
+<li><p>Ib&lt;0</p>
+<ul>
+<li>none work</li>
+</ul>
+</li>
+<li><p>Ib&gt;0, Ube&gt;0.5</p>
+<ul>
+<li>linear area</li>
+<li>$I_C=\beta I_B$</li>
+<li>$U_{BE}=0.7V$</li>
+</ul>
+</li>
+<li><p>Ib&gt;0,Ube&lt;0.5</p>
+<ul>
+<li>$U_{BE}=0.7V$</li>
+<li>$U_{CE}=0.3V$</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-4-3-Parameters-to-work-right"><a href="#1-4-3-Parameters-to-work-right" class="headerlink" title="1.4.3 Parameters to work right"></a>1.4.3 Parameters to work right</h3><ul>
+<li>$I_{CM}$ : or $\beta$ decrease, still work</li>
+<li>$U_{CEO}$ : maximum between c/e</li>
+</ul>
+<h1 id="2-Amplifying-circuit"><a href="#2-Amplifying-circuit" class="headerlink" title="2 Amplifying circuit"></a>2 Amplifying circuit</h1><h2 id="2-1-Common-emitter-amplifying-circuit"><a href="#2-1-Common-emitter-amplifying-circuit" class="headerlink" title="2.1 Common emitter amplifying circuit"></a>2.1 Common emitter amplifying circuit</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\amplifyc.jpg" width="400px"></p>
+<p>Superposition Principle</p>
+<h2 id="2-2-Static-analysis"><a href="#2-2-Static-analysis" class="headerlink" title="2.2 Static analysis"></a>2.2 Static analysis</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\staticanalysis.jpg" width="300px"></p>
+<h2 id="2-3-Dynamic-Analysis"><a href="#2-3-Dynamic-Analysis" class="headerlink" title="2.3 Dynamic Analysis"></a>2.3 Dynamic Analysis</h2><h3 id="2-3-1-Calculation"><a href="#2-3-1-Calculation" class="headerlink" title="2.3.1 Calculation"></a>2.3.1 Calculation</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\dynamica.jpg" width="200px"></p>
+<ul>
+<li>$r_{be}=200+(1+\beta)\dfrac{26(\rm mV)}{I_E(m\rm mA)}\Omega$</li>
+<li>$I_E$ : emitter static value</li>
+<li>Gain : $A_u=-\beta\dfrac{R_C}{r_{be}}$</li>
+<li>Big input R : $R_B\/\/r_{be}$</li>
+<li>Small output R : $R_C$</li>
+</ul>
+<h3 id="2-3-2-Draw"><a href="#2-3-2-Draw" class="headerlink" title="2.3.2 Draw"></a>2.3.2 Draw</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\dynamicad.jpg" width="300px"></p>
+<ul>
+<li><p>Q too high$\rightarrow$Saturation distortion</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\qh.jpg" width="200px"></p>
+</li>
+<li><p>Q too low$\rightarrow$Cutoff distortion</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\ql.jpg" width="200px"></p>
+</li>
+</ul>
+<h2 id="2-4-Voltage-divider-bias-circuit"><a href="#2-4-Voltage-divider-bias-circuit" class="headerlink" title="2.4 Voltage divider bias circuit"></a>2.4 Voltage divider bias circuit</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\voltagedivision.jpg" width="300px"></p>
+<p>$R_E$ stabilize $I_C$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\voltagedivisionc.jpg" width="300px"></p>
+<p>$C_E$ stabilize Q</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\voltagedivisions.jpg" width="300px"></p>
+<h2 id="2-5-Common-collector-amplifier-circuit"><a href="#2-5-Common-collector-amplifier-circuit" class="headerlink" title="2.5 Common collector amplifier circuit"></a>2.5 Common collector amplifier circuit</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\commonc.jpg" width="200px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\commoncda.jpg" width="300px"></p>
+<h2 id="2-6-Differential-amplifier-circuit"><a href="#2-6-Differential-amplifier-circuit" class="headerlink" title="2.6 Differential amplifier circuit"></a>2.6 Differential amplifier circuit</h2><p>Zero drift, 2 direct connect</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\differentialac.jpg" width="250px"></p>
+<h2 id="2-7-MOSFET"><a href="#2-7-MOSFET" class="headerlink" title="2.7 MOSFET"></a>2.7 MOSFET</h2><p>metal-oxide-semiconductor field-effect transistor </p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\mosfet.jpg" width="300px"></p>
+<ul>
+<li>Source</li>
+<li>Gate</li>
+<li>Drain</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\mosfets.jpg" width="300px"></p>
+<h1 id="3-Operational-Amplifier"><a href="#3-Operational-Amplifier" class="headerlink" title="3. Operational Amplifier"></a>3. Operational Amplifier</h1><p>CF741</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\operationala.jpg" width="400px"></p>
+<h2 id="3-1-Application"><a href="#3-1-Application" class="headerlink" title="3.1 Application"></a>3.1 Application</h2><ul>
+<li><p>Positive-feedback applications</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\positivefa.jpg" width="400px"></p>
+</li>
+<li><p>Negative-feedback applications : inverting amplifier</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\negativefa.jpg" width="400px"></p>
+</li>
+</ul>
+<h2 id="3-2-Add-and-Minus"><a href="#3-2-Add-and-Minus" class="headerlink" title="3.2 Add and Minus"></a>3.2 Add and Minus</h2><p>Superposition Principle</p>
+<ul>
+<li>Add</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\add1.jpg" width="200px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\add2.jpg" width="250px"></p>
+<ul>
+<li>Minus</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\minus.jpg" width="200px"></p>
+<h1 id="4-Feedback"><a href="#4-Feedback" class="headerlink" title="4. Feedback"></a>4. Feedback</h1><p>Output connect with Input</p>
+<h2 id="Type"><a href="#Type" class="headerlink" title="Type"></a>Type</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\localif.jpg" width="300px"></p>
+<ul>
+<li>local feedback</li>
+<li>Interstage feedback</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\acdcf.jpg" width="300px"></p>
+<ul>
+<li>AC feedback<ul>
+<li>negative : decrease amplify factor, increase other like factor stable</li>
+</ul>
+</li>
+<li>DC feedback : stabilize Q</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\fbf.jpg" width="300px"></p>
+<ul>
+<li>series : compare with voltage</li>
+<li>parallel : compare with current</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\spf.jpg" width="400px"></p>
+<ul>
+<li>voltage : stable output v, decrease input R</li>
+<li>current :  stable output i, increase output R</li>
+<li>Negative feedback direct judgement</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\directnf.jpg" width="300px"></p>
+<h1 id="5-DC-regulated-power-supply"><a href="#5-DC-regulated-power-supply" class="headerlink" title="5 DC regulated power supply"></a>5 DC regulated power supply</h1><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\dcsupply.jpg" width="400px"></p>
+<h2 id="5-1-Rectifier-circuit"><a href="#5-1-Rectifier-circuit" class="headerlink" title="5.1 Rectifier circuit"></a>5.1 Rectifier circuit</h2><ul>
+<li><p>Single-phase half-wave rectifier circuit</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\sphwrc.jpg" width="250px"></p>
+<ul>
+<li>$U_O=\dfrac{\sqrt2}{\pi}U=0.45U$</li>
+<li>$I_D=I_O=0.45\dfrac{U}{R}$</li>
+<li>$U_{RM}=\sqrt2U$</li>
+</ul>
+</li>
+<li><p>Single-phase full-wave rectifier circuit</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\spfwrc.jpg" width="250px"></p>
+<ul>
+<li>$U_O=\dfrac{2\sqrt2}{\pi}U=0.9U$</li>
+<li>$I_O=0.9\dfrac{U}{R}\I_D=\dfrac{I_O}{2}$</li>
+<li>$U_{RM}=2\sqrt2U$</li>
+</ul>
+</li>
+<li><p>Single-phase bridge rectifier circuit</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\spbrc.jpg" width="300px"></p>
+<ul>
+<li>$U_O=\dfrac{2\sqrt2}{\pi}U=0.9U$</li>
+<li>$I_O=0.9\dfrac{U}{R}\I_D=\dfrac{I_O}{2}$</li>
+<li>$U_{RM}=\sqrt2U$</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-2-RC-Filter"><a href="#5-2-RC-Filter" class="headerlink" title="5.2 RC Filter"></a>5.2 RC Filter</h2><p>choose $\tau=RC\ge(3\sim5)\dfrac{T}{2}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\rcfilter.jpg" width="400px"></p>
+<h2 id="5-3-Regulator-circuit"><a href="#5-3-Regulator-circuit" class="headerlink" title="5.3 Regulator circuit"></a>5.3 Regulator circuit</h2><p>use zener  diodes</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\regulator.jpg" width="200px"></p>
+<h2 id="5-4-3-Terminal-Voltage-Regulator"><a href="#5-4-3-Terminal-Voltage-Regulator" class="headerlink" title="5.4 3 Terminal Voltage Regulator"></a>5.4 3 Terminal Voltage Regulator</h2><ul>
+<li>W7805 (W78XX)</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\w7805.jpg" width="300px"></p>
+<ul>
+<li>W117</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\w117.jpg" width="400px"></p>
+<h1 id="6-Gate-circuit"><a href="#6-Gate-circuit" class="headerlink" title="6. Gate circuit"></a>6. Gate circuit</h1><h2 id="6-1-Signal"><a href="#6-1-Signal" class="headerlink" title="6.1 Signal"></a>6.1 Signal</h2><ul>
+<li><p>analog signal</p>
+</li>
+<li><p>digital signal</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\digitals.jpg" width="200px"></p>
+<ul>
+<li>rectangular signal</li>
+<li>apex signal</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-2-Logic-gate"><a href="#6-2-Logic-gate" class="headerlink" title="6.2 Logic gate"></a>6.2 Logic gate</h2><ul>
+<li>and : Y=ABC</li>
+<li>or : Y=A+B+C</li>
+<li>not : $Y=\bar A$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\logicgate.jpg" width="400px"></p>
+<h3 id="Combination"><a href="#Combination" class="headerlink" title="Combination"></a>Combination</h3><ul>
+<li>nand : $Y=\overline{ABC}$</li>
+<li>nor : $Y=\overline{A+B+C}$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\logicgc.jpg" width="400px"></p>
+<h2 id="6-3-TTL-Gate-Circuit"><a href="#6-3-TTL-Gate-Circuit" class="headerlink" title="6.3 TTL Gate Circuit"></a>6.3 TTL Gate Circuit</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\ttl.jpg" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\ttlp.jpg" width="400px"></p>
+<p>$Y=\overline{AB}$</p>
+<ul>
+<li>74LS20 4in2gate</li>
+<li>74LS00 2in4gate</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\ttla.jpg" width="400px"></p>
+<h2 id="6-4-Tri-state-gate"><a href="#6-4-Tri-state-gate" class="headerlink" title="6.4 Tri-state gate"></a>6.4 Tri-state gate</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\3sg.jpg" width="300px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\3sgt.jpg" width="300px"></p>
+<h2 id="6-5-Logical-algebra"><a href="#6-5-Logical-algebra" class="headerlink" title="6.5 Logical algebra"></a>6.5 Logical algebra</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\logicalgebra.jpg" width="300px"></p>
+<h2 id="6-6-Logical-function"><a href="#6-6-Logical-function" class="headerlink" title="6.6 Logical function"></a>6.6 Logical function</h2><p>$$Y=(A,B,C\cdots)$$</p>
+<ul>
+<li><p>logic formula</p>
+</li>
+<li><p>logic state table</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\logicst.jpg" width="200px"></p>
+</li>
+<li><p>logic graph - carnot graph</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\carnotg.jpg" width="400px"></p>
+</li>
+<li><p>simplify</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\carnotgs.jpg" width="400px"></p>
+</li>
+</ul>
+<h2 id="6-7-Design"><a href="#6-7-Design" class="headerlink" title="6.7 Design"></a>6.7 Design</h2><ol>
+<li>Logic abstract</li>
+<li>Logic state table</li>
+<li>formula</li>
+<li>graph</li>
+</ol>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\logicdesign.jpg" width="400px"></p>
+<h2 id="6-8-Adder"><a href="#6-8-Adder" class="headerlink" title="6.8 Adder"></a>6.8 Adder</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\adder.jpg" width="300px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\fulladder.jpg" width="400px"></p>
+<h2 id="6-7-Encoder-amp-Decoder"><a href="#6-7-Encoder-amp-Decoder" class="headerlink" title="6.7 Encoder &amp; Decoder"></a>6.7 Encoder &amp; Decoder</h2><ul>
+<li><p>8line-3line encoder 3line-8line74LS138</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\encoder.jpg" width="300px"></p>
+</li>
+<li><p>8421 decoder</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\8421.jpg" width="200px"></p>
+</li>
+<li><p>74LS147 binary$\rightarrow$decimal</p>
+</li>
+</ul>
+<h1 id="7-Multivibrator"><a href="#7-Multivibrator" class="headerlink" title="7. Multivibrator"></a>7. Multivibrator</h1><h2 id="7-1-Bistablemultivibrator"><a href="#7-1-Bistablemultivibrator" class="headerlink" title="7.1 Bistablemultivibrator"></a>7.1 Bistablemultivibrator</h2><h3 id="7-1-1-RS"><a href="#7-1-1-RS" class="headerlink" title="7.1.1 RS"></a>7.1.1 RS</h3><ul>
+<li>type1 [$\rm \overline{SR}$ NAND latch]</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\rs.jpg" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\rsinf.jpg" width="400px"></p>
+<ul>
+<li><p>type2 [SR NOR latch]</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\rs2.jpg" width="400px"></p>
+</li>
+<li><p>controllable [Gated SR latch]</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\rsc.jpg" width="400px"></p>
+</li>
+</ul>
+<h3 id="7-1-2-JK"><a href="#7-1-2-JK" class="headerlink" title="7.1.2 JK"></a>7.1.2 JK</h3><p>2 controllable RS</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\jk.jpg" width="400px"></p>
+<p>1 question : 1 change  in CP=1</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\jkq.jpg" width="200px"></p>
+<ul>
+<li>if $Q_{n-1}=0$ : S=J, R=0,$Q_n=1/Q_n=Q_{n-1}$</li>
+<li>if $Q_{n-1}=0$ : S=J, R=0,$Q_n=1/Q_n=Q_{n-1}$</li>
+</ul>
+<h3 id="7-1-3-D"><a href="#7-1-3-D" class="headerlink" title="7.1.3 D"></a>7.1.3 D</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\d.jpg" width="400px"></p>
+<h3 id="7-1-4-T"><a href="#7-1-4-T" class="headerlink" title="7.1.4 T"></a>7.1.4 T</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\t.jpg" width="400px"></p>
+<p>T=1, T’ latch</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\dtot.jpg" width="300px"></p>
+<h2 id="7-2-Register"><a href="#7-2-Register" class="headerlink" title="7.2 Register"></a>7.2 Register</h2><p>temporarily save data </p>
+<ul>
+<li><p>digital r</p>
+<ul>
+<li>parallel input</li>
+<li>parallel output</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\digitalr.jpg" width="300px"></p>
+</li>
+<li><p>shift r</p>
+<ul>
+<li>serial input</li>
+<li>parallel output</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\shiftr.jpg" width="300px"></p>
+</li>
+</ul>
+<h2 id="7-3-Counter"><a href="#7-3-Counter" class="headerlink" title="7.3 Counter"></a>7.3 Counter</h2><h3 id="7-3-1-Binary"><a href="#7-3-1-Binary" class="headerlink" title="7.3.1 Binary"></a>7.3.1 Binary</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\counter.jpg" width="400px"></p>
+<h3 id="7-3-2-Decimal"><a href="#7-3-2-Decimal" class="headerlink" title="7.3.2 Decimal"></a>7.3.2 Decimal</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\decimalc.jpg" width="400px"></p>
+<h3 id="7-3-3-74LS290"><a href="#7-3-3-74LS290" class="headerlink" title="7.3.3 74LS290"></a>7.3.3 74LS290</h3><p>binary quinary decimal</p>
+<p>any</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\any.jpg" width="400px"></p>
+<h2 id="7-4-555"><a href="#7-4-555" class="headerlink" title="7.4 555"></a>7.4 555</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\5551.jpg" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/aps/dzjs\5552.jpg" width="400px"></p>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Semiconductor"><span class="toc-number">1.</span> <span class="toc-text">1. Semiconductor</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Type"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Type</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-PN-Junction"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 PN Junction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Diodes"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Diodes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-Zener-diode"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Zener diode</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-LED"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 LED</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-Photodiode"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 Photodiode</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Transistor"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Transistor</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Principles"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1 Principles</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Properties"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 Properties</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-Parameters-to-work-right"><span class="toc-number">1.4.3.</span> <span class="toc-text">1.4.3 Parameters to work right</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Amplifying-circuit"><span class="toc-number">2.</span> <span class="toc-text">2 Amplifying circuit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Common-emitter-amplifying-circuit"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Common emitter amplifying circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Static-analysis"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Static analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Dynamic-Analysis"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Dynamic Analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-Calculation"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 Calculation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-Draw"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 Draw</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Voltage-divider-bias-circuit"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Voltage divider bias circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-Common-collector-amplifier-circuit"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 Common collector amplifier circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-Differential-amplifier-circuit"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 Differential amplifier circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-MOSFET"><span class="toc-number">2.7.</span> <span class="toc-text">2.7 MOSFET</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Operational-Amplifier"><span class="toc-number">3.</span> <span class="toc-text">3. Operational Amplifier</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Application"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Application</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Add-and-Minus"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Add and Minus</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Feedback"><span class="toc-number">4.</span> <span class="toc-text">4. Feedback</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Type"><span class="toc-number">4.1.</span> <span class="toc-text">Type</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-DC-regulated-power-supply"><span class="toc-number">5.</span> <span class="toc-text">5 DC regulated power supply</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Rectifier-circuit"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Rectifier circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-RC-Filter"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 RC Filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Regulator-circuit"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Regulator circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-3-Terminal-Voltage-Regulator"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 3 Terminal Voltage Regulator</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Gate-circuit"><span class="toc-number">6.</span> <span class="toc-text">6. Gate circuit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Signal"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Signal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Logic-gate"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Logic gate</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Combination"><span class="toc-number">6.2.1.</span> <span class="toc-text">Combination</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-TTL-Gate-Circuit"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 TTL Gate Circuit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Tri-state-gate"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Tri-state gate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-Logical-algebra"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 Logical algebra</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-6-Logical-function"><span class="toc-number">6.6.</span> <span class="toc-text">6.6 Logical function</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-7-Design"><span class="toc-number">6.7.</span> <span class="toc-text">6.7 Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-8-Adder"><span class="toc-number">6.8.</span> <span class="toc-text">6.8 Adder</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-7-Encoder-amp-Decoder"><span class="toc-number">6.9.</span> <span class="toc-text">6.7 Encoder &amp; Decoder</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Multivibrator"><span class="toc-number">7.</span> <span class="toc-text">7. Multivibrator</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-Bistablemultivibrator"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 Bistablemultivibrator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-1-RS"><span class="toc-number">7.1.1.</span> <span class="toc-text">7.1.1 RS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-2-JK"><span class="toc-number">7.1.2.</span> <span class="toc-text">7.1.2 JK</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-3-D"><span class="toc-number">7.1.3.</span> <span class="toc-text">7.1.3 D</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-4-T"><span class="toc-number">7.1.4.</span> <span class="toc-text">7.1.4 T</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Register"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 Register</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Counter"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Counter</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-1-Binary"><span class="toc-number">7.3.1.</span> <span class="toc-text">7.3.1 Binary</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-2-Decimal"><span class="toc-number">7.3.2.</span> <span class="toc-text">7.3.2 Decimal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-3-74LS290"><span class="toc-number">7.3.3.</span> <span class="toc-text">7.3.3 74LS290</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-555"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 555</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&text=Electrotechnology - Electronic Technology - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&is_video=false&description=Electrotechnology - Electronic Technology - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Electrotechnology - Electronic Technology - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&title=Electrotechnology - Electronic Technology - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dzjs/&name=Electrotechnology - Electronic Technology - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

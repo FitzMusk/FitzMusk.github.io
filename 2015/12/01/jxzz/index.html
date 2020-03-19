@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1. 机械加工方法 车削Turning、铣削、刨削、钻削和镗削、磨削  齿面加工：传动链：主运动、展成运动、轴向进给传动、差动传动链   主切削运动cutting、工件进给运动feeding    2. 金属切削原理与刀具2.1 主运动、进给运动 2.2 Cutting parameters Cutting speed $v$ $v=\frac{\pi d_w n}{1000\times 60}$">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fundamental of Machinery Manufacturing Technology - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1. 机械加工方法 车削Turning、铣削、刨削、钻削和镗削、磨削  齿面加工：传动链：主运动、展成运动、轴向进给传动、差动传动链   主切削运动cutting、工件进给运动feeding    2. 金属切削原理与刀具2.1 主运动、进给运动 2.2 Cutting parameters Cutting speed $v$ $v=\frac{\pi d_w n}{1000\times 60}$">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/cmjg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/qxyd.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/qxyl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/cd.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/ckpm.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jd.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/bxq.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/qxlx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/djms.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/msqx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/qxsys.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jcdh1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jcdh2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/cc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/mc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/zt.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/zc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/xc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/xc2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/xc3.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jgzx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jjfl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lddw.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lddw2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/yswc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/mgfx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/zzwc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gd2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gdgm.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gdg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gddm.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gdd.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/wcfy.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jgwc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/ztfb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gynlxs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lt0.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lt1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lt2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jzf.png">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fundamental of Machinery Manufacturing Technology - APS">
+<meta name="twitter:description" content="1. 机械加工方法 车削Turning、铣削、刨削、钻削和镗削、磨削  齿面加工：传动链：主运动、展成运动、轴向进给传动、差动传动链   主切削运动cutting、工件进给运动feeding    2. 金属切削原理与刀具2.1 主运动、进给运动 2.2 Cutting parameters Cutting speed $v$ $v=\frac{\pi d_w n}{1000\times 60}$">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/cmjg.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Fundamental of Machinery Manufacturing Technology - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/12/01/jzks/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/12/01/jxzysy/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&text=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&is_video=false&description=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fundamental of Machinery Manufacturing Technology - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&name=Fundamental of Machinery Manufacturing Technology - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-机械加工方法"><span class="toc-number">1.</span> <span class="toc-text">1. 机械加工方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-金属切削原理与刀具"><span class="toc-number">2.</span> <span class="toc-text">2. 金属切削原理与刀具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-主运动、进给运动"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 主运动、进给运动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Cutting-parameters"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Cutting parameters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Tool"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Tool</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-参考平面-amp-标注角度"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 参考平面 &amp; 标注角度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-刀具材料Material"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 刀具材料Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-切屑Chip"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 切屑Chip</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-切削力Cutting-force"><span class="toc-number">2.7.</span> <span class="toc-text">2.7 切削力Cutting force</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-寿命Life"><span class="toc-number">2.8.</span> <span class="toc-text">2.8 寿命Life</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-Choose-parameters-V-c-、-f-、-a-p"><span class="toc-number">2.9.</span> <span class="toc-text">2.9 Choose parameters $V_c$、$f$、$a_p$</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Metal-cutting-machine-tool"><span class="toc-number">3.</span> <span class="toc-text">3. Metal cutting machine tool</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Composition"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Parameter"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Parameter</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Fixture"><span class="toc-number">4.</span> <span class="toc-text">4. Fixture</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-定位location夹紧Clamp"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 定位location夹紧Clamp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-夹具分类"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 夹具分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Composition"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-六点定位原理Six-point-positioning-principle"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 六点定位原理Six-point positioning principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-夹紧装置组成"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 夹紧装置组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-典型夹紧机构"><span class="toc-number">4.6.</span> <span class="toc-text">4.7 典型夹紧机构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Quality-analysis-and-control"><span class="toc-number">5.</span> <span class="toc-text">5. Quality analysis and control</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-加工精度Precision"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 加工精度Precision</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-工艺系统"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 工艺系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-原始误差Original-error"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 原始误差Original error</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-机床误差Machine-tool-error"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 机床误差Machine tool error</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-工艺系统受力变形对加工精度影响Deformation"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 工艺系统受力变形对加工精度影响Deformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-加工误差综合分析Manufacturing-error-analysis"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 加工误差综合分析Manufacturing error analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-Surface-quality"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 Surface quality</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-8-一些例题"><span class="toc-number">5.8.</span> <span class="toc-text">5.8 一些例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-工艺规程设计procedures"><span class="toc-number">6.</span> <span class="toc-text">6. 工艺规程设计procedures</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-生产类型-Types"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 生产类型 Types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-制造系统三流"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 制造系统三流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-基准"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 基准</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-加工余量working-allowance"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 加工余量working allowance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-尺寸链dimension-chain"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 尺寸链dimension chain</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Fundamental of Machinery Manufacturing Technology - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-12-01T09:16:31.000Z" itemprop="datePublished">2015-12-01</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-机械加工方法"><a href="#1-机械加工方法" class="headerlink" title="1. 机械加工方法"></a>1. 机械加工方法</h1><ul>
+<li><p>车削Turning、铣削、刨削、钻削和镗削、磨削</p>
+</li>
+<li><p>齿面加工：传动链：主运动、展成运动、轴向进给传动、差动传动链</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/cmjg.png" width="500"></p>
+</li>
+<li><p>主切削运动cutting、工件进给运动feeding</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/qxyd.png" width="500"></p>
+<h1 id="2-金属切削原理与刀具"><a href="#2-金属切削原理与刀具" class="headerlink" title="2. 金属切削原理与刀具"></a>2. 金属切削原理与刀具</h1><h2 id="2-1-主运动、进给运动"><a href="#2-1-主运动、进给运动" class="headerlink" title="2.1 主运动、进给运动"></a>2.1 主运动、进给运动</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/qxyl.png" width="250"></p>
+<h2 id="2-2-Cutting-parameters"><a href="#2-2-Cutting-parameters" class="headerlink" title="2.2 Cutting parameters"></a>2.2 Cutting parameters</h2><ul>
+<li>Cutting speed $v$ $v=\frac{\pi d_w n}{1000\times 60}$</li>
+<li>Feeding rate  $f$ $v_f=nf=nzf_z$</li>
+<li>Back cutting depth $a_p$  $a_p=\frac{d_w-d_m}{2}$（待加工、已加工）</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/cd.png" width="400"></p>
+<h2 id="2-3-Tool"><a href="#2-3-Tool" class="headerlink" title="2.3 Tool"></a>2.3 Tool</h2><p>前面Top、主后刀面principal flank surface、副后刀面auxiliary flank surface、主切削刃principal cutting edge、副切削刃auxiliary cutting edge、刀尖Nose</p>
+<h2 id="2-4-参考平面-amp-标注角度"><a href="#2-4-参考平面-amp-标注角度" class="headerlink" title="2.4 参考平面 &amp; 标注角度"></a>2.4 参考平面 &amp; 标注角度</h2><p>切削平面tool cutting edge plane $P_s$ 、基面 reference plane $P_r $、正交平面orthogonal plane $ P_o $，前角rake angle $ \gamma _o $、<br>后角 flank angle $\alpha_o $、主偏角tool cutting edge angle  $\kappa_r$、副偏角tool minor cutting edge angle $\kappa_r’$、刃倾角cutting edge inclination angle $\lambda_s$。</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/ckpm.png" width="300"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jd.png" width="300"></p>
+<h2 id="2-5-刀具材料Material"><a href="#2-5-刀具材料Material" class="headerlink" title="2.5 刀具材料Material"></a>2.5 刀具材料Material</h2><ul>
+<li><p>碳素工具钢carbon tool steel</p>
+</li>
+<li><p>合金工具钢alloy tool steel</p>
+</li>
+<li>高速钢high speed steel</li>
+<li>硬质合金钢hard alloy steel<ul>
+<li>红 K: YG 钨钴WCo</li>
+<li>黄 M: YW 钨W</li>
+<li>蓝 P: YT 钨钴钛WCoTi</li>
+<li>陶瓷、金刚石</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-6-切屑Chip"><a href="#2-6-切屑Chip" class="headerlink" title="2.6 切屑Chip"></a>2.6 切屑Chip</h2><ul>
+<li>变形区</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\bxq.png" width="500"></p>
+<ul>
+<li>切削类型Type</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\qxlx.png" width="400"></p>
+<ul>
+<li>积屑瘤Built-up edge like tumour<ul>
+<li>塑性、切削速度不高、形成连续切屑</li>
+<li>高速、低速宽刀刃、增大前角、换材料</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-7-切削力Cutting-force"><a href="#2-7-切削力Cutting-force" class="headerlink" title="2.7 切削力Cutting force"></a>2.7 切削力Cutting force</h2><p>克服塑性变形、弹性变形、摩擦力，主切削力main cutting force$ F_c$、进给力feeding force $F_f$、切深抗力 $F_p$。</p>
+<h2 id="2-8-寿命Life"><a href="#2-8-寿命Life" class="headerlink" title="2.8 寿命Life"></a>2.8 寿命Life</h2><p>磨损abrasion、破损breakage (脆性、塑性) VB(作为刀具磨钝标准)、刀具寿命 (总寿命)</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/djms.png" width="200"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/msqx.png" width="300"></p>
+<h2 id="2-9-Choose-parameters-V-c-、-f-、-a-p"><a href="#2-9-Choose-parameters-V-c-、-f-、-a-p" class="headerlink" title="2.9 Choose parameters $V_c$、$f$、$a_p$"></a>2.9 Choose parameters $V_c$、$f$、$a_p$</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\qxsys.png" width="400"></p>
+<h1 id="3-Metal-cutting-machine-tool"><a href="#3-Metal-cutting-machine-tool" class="headerlink" title="3. Metal cutting machine tool"></a>3. Metal cutting machine tool</h1><h2 id="3-1-Composition"><a href="#3-1-Composition" class="headerlink" title="3.1 Composition"></a>3.1 Composition</h2><p>动力源Power、执行机构actuating mechanism、控制系统control system、传动系统drive system</p>
+<h2 id="3-2-Parameter"><a href="#3-2-Parameter" class="headerlink" title="3.2 Parameter"></a>3.2 Parameter</h2><p>Size, kinetic, dynamic尺寸参数、运动参数、动力参数</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\jcdh1.png" width="500"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\jcdh2.png" width="500"></p>
+<p>3.3 车床、磨床、钻床、铣床、加工中心</p>
+<ul>
+<li>车床Turning lathe</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\cc.png" width="400"></p>
+<ul>
+<li>磨床grinding machine</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\mc.png" width="300"></p>
+<ul>
+<li>钻床drilling machine</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\zt.png" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\zc.png" width="400"></p>
+<ul>
+<li>铣床milling maching</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\xc.png" width="300"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\xc2.png" width="250"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\xc3.png" width="300"></p>
+<ul>
+<li><p>加工中心Machining center</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\jgzx.png" width="400"></p>
+</li>
+</ul>
+<h1 id="4-Fixture"><a href="#4-Fixture" class="headerlink" title="4. Fixture"></a>4. Fixture</h1><p><strong>定义</strong>：使工件在机床上相对刀具占有正确的位置的辅助装置</p>
+<h2 id="4-1-定位location夹紧Clamp"><a href="#4-1-定位location夹紧Clamp" class="headerlink" title="4.1 定位location夹紧Clamp"></a>4.1 定位location夹紧Clamp</h2><p>（确定位置）（保持位置不变）</p>
+<h2 id="4-2-夹具分类"><a href="#4-2-夹具分类" class="headerlink" title="4.2 夹具分类"></a>4.2 夹具分类</h2><ul>
+<li>general</li>
+<li>adjustable</li>
+<li>combined</li>
+<li>special</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\jjfl.png" width="300"></p>
+<h2 id="4-3-Composition"><a href="#4-3-Composition" class="headerlink" title="4.3 Composition"></a>4.3 Composition</h2><p>定位元件location part、夹紧装置clamping part、引导元件guide part、夹具体fixture body</p>
+<h2 id="4-4-六点定位原理Six-point-positioning-principle"><a href="#4-4-六点定位原理Six-point-positioning-principle" class="headerlink" title="4.4 六点定位原理Six-point positioning principle"></a>4.4 六点定位原理Six-point positioning principle</h2><p>total完全定位和不完全定位、过定位over-constrained和under position欠定位</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\lddw.png" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\lddw2.png" width="400"></p>
+<h2 id="4-5-夹紧装置组成"><a href="#4-5-夹紧装置组成" class="headerlink" title="4.5 夹紧装置组成"></a>4.5 夹紧装置组成</h2><p>力源power、中间传力机构force transfer mechanism、夹紧元件clamp part</p>
+<h2 id="4-7-典型夹紧机构"><a href="#4-7-典型夹紧机构" class="headerlink" title="4.7 典型夹紧机构"></a>4.7 典型夹紧机构</h2><p>friction angle</p>
+<ul>
+<li><p>斜楔夹紧wedge：升角小，夹紧力大，自锁性好，夹紧行程大（双升角、先大后小）$\alpha &lt; \phi_1 +\phi_2$</p>
+</li>
+<li><p>螺旋加紧</p>
+</li>
+<li>偏心夹紧：偏心轮</li>
+</ul>
+<h1 id="5-Quality-analysis-and-control"><a href="#5-Quality-analysis-and-control" class="headerlink" title="5. Quality analysis and control"></a>5. Quality analysis and control</h1><h2 id="5-1-加工精度Precision"><a href="#5-1-加工精度Precision" class="headerlink" title="5.1 加工精度Precision"></a>5.1 加工精度Precision</h2><p>形状精度、位置精度、尺寸精度 shape, position, size</p>
+<h2 id="5-2-工艺系统"><a href="#5-2-工艺系统" class="headerlink" title="5.2 工艺系统"></a>5.2 工艺系统</h2><p>机床、夹具、刀具、工件</p>
+<ul>
+<li>因：工艺系统误差 (so call 原始误差)</li>
+<li>果：加工误差</li>
+</ul>
+<h2 id="5-3-原始误差Original-error"><a href="#5-3-原始误差Original-error" class="headerlink" title="5.3 原始误差Original error"></a>5.3 原始误差Original error</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\yswc.png" width="400"></p>
+<h2 id="5-4-机床误差Machine-tool-error"><a href="#5-4-机床误差Machine-tool-error" class="headerlink" title="5.4 机床误差Machine tool error"></a>5.4 机床误差Machine tool error</h2><ul>
+<li><p>slide way导轨误差: $a:\Delta R\approx \frac{\sigma_z^2}{2R}$ ，$b: \Delta R=\sigma _y$</p>
+<p>加工表面法向为Y，切向为Z，Y为敏感方向</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\mgfx.png" width="300"></p>
+</li>
+<li><p>spindle 主轴误差：纯轴向运动 $\Delta x$，纯径向移动 $\Delta r$，纯角度摆动 $\Delta \gamma$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\zzwc.png" width="400"></p>
+<p>提高精度：高精度轴承、高装配精度、高速主轴部件平衡，轴承<br>预紧。</p>
+</li>
+<li><p>transmission chain传动链误差：$\Delta \phi_{1n} =K_1\Delta \phi_1$， $K_q=\frac{1}{24}i_{差}i_{分}$$<br>提高精度：缩短传动链、降速传动、提高传动件制造和装夹精度、<br>传动误差补偿装置</p>
+</li>
+</ul>
+<h2 id="5-5-工艺系统受力变形对加工精度影响Deformation"><a href="#5-5-工艺系统受力变形对加工精度影响Deformation" class="headerlink" title="5.5 工艺系统受力变形对加工精度影响Deformation"></a>5.5 工艺系统受力变形对加工精度影响Deformation</h2><p>Stiffness刚度：$k = \frac{F_y}{y}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gd2.png" width="300"></p>
+<ul>
+<li><p>Point受力点位置变化：</p>
+<ol>
+<li><p>若刚度很高<br><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gdgm.png" width="350"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\gdg.png" width="500"></p>
+</li>
+<li><p>刚度很低</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gddm.png" width="200"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\gdd.png" width="500"></p>
+</li>
+<li><p>总：$y = y_{系统} + y_{工件}$</p>
+</li>
+</ol>
+</li>
+<li><p>切削力变化–误差复映error reflection</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\wcfy.png" width="300"></p>
+</li>
+</ul>
+<p>$\Delta_{工件} = y_1 − y_2 =\frac{C}{K_{系统}}(a_{p1} − a_{p2})$,</p>
+<p>$\Delta_{毛坯} = a_{p1} − a_{p2}$,<br>$\Delta_{工件}=\frac{C}{K_{系统}}\Delta_{毛坯}$,<br>所以, 误差复映系数 ($\epsilon&lt;1$ ): $\epsilon_总 = \epsilon_1\epsilon_2\epsilon_3 \dots$</p>
+<p>$\epsilon = \frac{\Delta_{工件}}{\Delta_{毛坯}} =\frac{C}{K_{系统}}$</p>
+<h2 id="5-6-加工误差综合分析Manufacturing-error-analysis"><a href="#5-6-加工误差综合分析Manufacturing-error-analysis" class="headerlink" title="5.6 加工误差综合分析Manufacturing error analysis"></a>5.6 加工误差综合分析Manufacturing error analysis</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz\jgwc.png" width="300"></p>
+<ul>
+<li><p>System 系统性误差：constant常值系统误差、variable变值系统误差</p>
+</li>
+<li><p>random随机误差：正态分布gaussian normal<br><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/ztfb.png" width="200"></p>
+</li>
+<li><p>qualified area合格区域：$6\sigma$，公差带 $T \ge 6\sigma$</p>
+</li>
+<li><p>craft coefficient:<br>$C_{pk}=C_p-\frac{E}{3\sigma}=\frac{T}{6\sigma}-\frac{E}{3\sigma}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/gynlxs.png" width="400"></p>
+</li>
+</ul>
+<h2 id="5-7-Surface-quality"><a href="#5-7-Surface-quality" class="headerlink" title="5.7 Surface quality"></a>5.7 Surface quality</h2><ul>
+<li>几何形状特征：表面粗糙度、表面波度</li>
+<li>物理化学性能变化：冷作硬化、金相组织变化、残余应力</li>
+</ul>
+<h2 id="5-8-一些例题"><a href="#5-8-一些例题" class="headerlink" title="5.8 一些例题"></a>5.8 一些例题</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lt0.png" width="500"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lt1.png" width="500"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/lt2.png" width="500"></p>
+<h1 id="6-工艺规程设计procedures"><a href="#6-工艺规程设计procedures" class="headerlink" title="6. 工艺规程设计procedures"></a>6. 工艺规程设计procedures</h1><h2 id="6-1-生产类型-Types"><a href="#6-1-生产类型-Types" class="headerlink" title="6.1 生产类型 Types"></a>6.1 生产类型 Types</h2><p>单件生产、小批量生产、大批量生产</p>
+<p>$$N = Q_n(1 + a)(1 + b)$$</p>
+<p>N 产品年产 n 每台零件 a 备品率 b 废品率</p>
+<h2 id="6-2-制造系统三流"><a href="#6-2-制造系统三流" class="headerlink" title="6.2 制造系统三流"></a>6.2 制造系统三流</h2><p>物质流matter flow、信息流、资金流money flow</p>
+<h2 id="6-3-基准"><a href="#6-3-基准" class="headerlink" title="6.3 基准"></a>6.3 基准</h2><ul>
+<li>精基准：基准重合、统一基准、互为基准、自为基准</li>
+<li>粗基准：重要表面、自为基准、便于装夹、只用一次</li>
+</ul>
+<h2 id="6-4-加工余量working-allowance"><a href="#6-4-加工余量working-allowance" class="headerlink" title="6.4 加工余量working allowance"></a>6.4 加工余量working allowance</h2><ul>
+<li><p>单边最小余量<br>$$Z_{bmin} = T_a + R_{ya} + H_a + |\vec{e_a} + \vec{\epsilon_b}|$$</p>
+</li>
+<li><p>双边最小余量（外圆、内孔）<br>$$2Z_{bmin} = T_a + 2(R_{ya} + H_a + |\vec{e_a} +\vec{\epsilon_b}|)$$<br>双顶尖外圆$$\Rightarrow T_a + 2(R_{ya} + H_a + |\vec{e_a}|)$$<br>浮动镗孔/研磨打磨外圆内孔$$\Rightarrow T_a + 2(R_{ya} + H_a)$$</p>
+</li>
+</ul>
+<h2 id="6-5-尺寸链dimension-chain"><a href="#6-5-尺寸链dimension-chain" class="headerlink" title="6.5 尺寸链dimension chain"></a>6.5 尺寸链dimension chain</h2><p><strong>定义</strong>：相互联系connected、按一定顺序order、构成封闭形式closed的一组尺寸（相关尺寸）<br>封闭环closed component、组成环partial（增环increasing component、减环decreasing）</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/aps/jxzz/jzf.png" width="500"></p>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-机械加工方法"><span class="toc-number">1.</span> <span class="toc-text">1. 机械加工方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-金属切削原理与刀具"><span class="toc-number">2.</span> <span class="toc-text">2. 金属切削原理与刀具</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-主运动、进给运动"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 主运动、进给运动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Cutting-parameters"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Cutting parameters</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Tool"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Tool</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-参考平面-amp-标注角度"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 参考平面 &amp; 标注角度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-刀具材料Material"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 刀具材料Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-切屑Chip"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 切屑Chip</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-切削力Cutting-force"><span class="toc-number">2.7.</span> <span class="toc-text">2.7 切削力Cutting force</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-寿命Life"><span class="toc-number">2.8.</span> <span class="toc-text">2.8 寿命Life</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-Choose-parameters-V-c-、-f-、-a-p"><span class="toc-number">2.9.</span> <span class="toc-text">2.9 Choose parameters $V_c$、$f$、$a_p$</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Metal-cutting-machine-tool"><span class="toc-number">3.</span> <span class="toc-text">3. Metal cutting machine tool</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Composition"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Parameter"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Parameter</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Fixture"><span class="toc-number">4.</span> <span class="toc-text">4. Fixture</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-定位location夹紧Clamp"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 定位location夹紧Clamp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-夹具分类"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 夹具分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Composition"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-六点定位原理Six-point-positioning-principle"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 六点定位原理Six-point positioning principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-夹紧装置组成"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 夹紧装置组成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-典型夹紧机构"><span class="toc-number">4.6.</span> <span class="toc-text">4.7 典型夹紧机构</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Quality-analysis-and-control"><span class="toc-number">5.</span> <span class="toc-text">5. Quality analysis and control</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-加工精度Precision"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 加工精度Precision</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-工艺系统"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 工艺系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-原始误差Original-error"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 原始误差Original error</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-机床误差Machine-tool-error"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 机床误差Machine tool error</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-工艺系统受力变形对加工精度影响Deformation"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 工艺系统受力变形对加工精度影响Deformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-加工误差综合分析Manufacturing-error-analysis"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 加工误差综合分析Manufacturing error analysis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-Surface-quality"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 Surface quality</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-8-一些例题"><span class="toc-number">5.8.</span> <span class="toc-text">5.8 一些例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-工艺规程设计procedures"><span class="toc-number">6.</span> <span class="toc-text">6. 工艺规程设计procedures</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-生产类型-Types"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 生产类型 Types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-制造系统三流"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 制造系统三流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-基准"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 基准</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-加工余量working-allowance"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 加工余量working allowance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-尺寸链dimension-chain"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 尺寸链dimension chain</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&text=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&is_video=false&description=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fundamental of Machinery Manufacturing Technology - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&title=Fundamental of Machinery Manufacturing Technology - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzz/&name=Fundamental of Machinery Manufacturing Technology - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

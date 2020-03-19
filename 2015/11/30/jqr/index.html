@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="It will mainly delivery contents of the world’s leading robotics and AI institutions and their specific research directions, fundamental concepts of robotics and AI, essential mathematics for robotic">
+<meta name="keywords" content="APS,Robotics">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fundamentals of Robotics and Artificial Intelligence - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="It will mainly delivery contents of the world’s leading robotics and AI institutions and their specific research directions, fundamental concepts of robotics and AI, essential mathematics for robotic">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/herb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/salto1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/salto2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/rotrans.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/euler.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/cyl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/sph.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/parameter.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/rotjoint.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/prisjoint.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/exa.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/table.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/symbol.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/logicr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/predicate.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/production.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/production2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/productions.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/semantic.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/semanticexa.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/frame.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/frameexa.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/reasoning.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/fuzzy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/fuzzytab.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/fuzzypid.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/andor.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/ann.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr/mse.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fundamentals of Robotics and Artificial Intelligence - APS">
+<meta name="twitter:description" content="It will mainly delivery contents of the world’s leading robotics and AI institutions and their specific research directions, fundamental concepts of robotics and AI, essential mathematics for robotic">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/herb.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Fundamentals of Robotics and Artificial Intelligence - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/30/jxsy/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/30/jdyhy/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&text=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&is_video=false&description=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fundamentals of Robotics and Artificial Intelligence - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&name=Fundamentals of Robotics and Artificial Intelligence - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Mainstream-institutions-of-robotics-and-AI-and"><span class="toc-number">1.</span> <span class="toc-text">1. Mainstream institutions of robotics and AI and</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-CMU-Carneige-Mellon-University-Robotics-Institute"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 CMU Carneige Mellon University- Robotics Institute</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-MIT-CSAIL"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 MIT-CSAIL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Stanford-SAIL"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Stanford- SAIL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Google"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Google</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Waseda-University"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Waseda University</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-Nagoya-University"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 Nagoya University</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Robotics-amp-AI"><span class="toc-number">2.</span> <span class="toc-text">2. Robotics &amp;AI</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-R-Concept"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 R-Concept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-R-Allpication"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 R-Allpication</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-AI-Concept"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 AI-Concept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Three-laws-of-Robotics"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Three laws of Robotics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-Example-of-Salto-to-Galago"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 Example of Salto to Galago</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Fundamental-mathematics-for-robotics"><span class="toc-number">3.</span> <span class="toc-text">3.  Fundamental mathematics for robotics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Vector-a-b-c-d"><span class="toc-number">3.1.</span> <span class="toc-text">3.1  Vector[a b c d]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Rotational-Transformation"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Rotational Transformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Robot-coordinates"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Robot coordinates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-DOF-degree-of-freedom"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 DOF degree of freedom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-Euler-Angle"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2 Euler Angle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-Coordinates"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3.3  Coordinates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Position-Kinematics"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Position Kinematics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-Velocity-Kinematics"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 Velocity Kinematics</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Knowledge-representation-and-reasoning"><span class="toc-number">4.</span> <span class="toc-text">4. Knowledge representation and reasoning</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Definition"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Definition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Knowledge-representation-methods"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Knowledge representation methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-Predicate-Logic"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1 Predicate Logic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-Production-representation"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2 Production representation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-3-Semantic-network-representation"><span class="toc-number">4.2.3.</span> <span class="toc-text">4.2.3 Semantic network representation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-4-The-frame-Representation"><span class="toc-number">4.2.4.</span> <span class="toc-text">4.2.4 The frame Representation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Deterministic-reasoning"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Deterministic reasoning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1-Definetion"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1 Definetion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2-Logic-basis"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2 Logic basis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-3-Natural-deductive-reasoning"><span class="toc-number">4.3.3.</span> <span class="toc-text">4.3.3 Natural deductive reasoning</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Uncertainty-knowledge-representation-and-reasoning"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Uncertainty knowledge representation and reasoning</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Search-to-slove"><span class="toc-number">5.</span> <span class="toc-text">5. Search to slove</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Artificial-Neural-Network"><span class="toc-number">6.</span> <span class="toc-text">6. Artificial Neural Network</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Fundamentals of Robotics and Artificial Intelligence - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-30T13:51:21.000Z" itemprop="datePublished">2015-11-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/Robotics/">Robotics</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>It will mainly delivery contents of <strong>the world’s leading robotics and AI institutions and their specific research directions</strong>, <strong>fundamental concepts of robotics and AI</strong>, essential <strong>mathematics for robotics</strong>, structure of robots (fundamental structure of different types of robots), robot kinematics and rigid multibody system dynamics, expression and reasoning of knowledge, problem solving on the basis of searching, artificial neural network and deep learning, basic control and system integration, AI used on robots, etc.</p>
+</blockquote>
+<h1 id="1-Mainstream-institutions-of-robotics-and-AI-and"><a href="#1-Mainstream-institutions-of-robotics-and-AI-and" class="headerlink" title="1. Mainstream institutions of robotics and AI and"></a>1. Mainstream institutions of robotics and AI and</h1><p>their characteristics</p>
+<h2 id="1-1-CMU-Carneige-Mellon-University-Robotics-Institute"><a href="#1-1-CMU-Carneige-Mellon-University-Robotics-Institute" class="headerlink" title="1.1 CMU Carneige Mellon University- Robotics Institute"></a>1.1 CMU Carneige Mellon University- Robotics Institute</h2><ul>
+<li><p>Manipulation, Locomotion, control,ML &amp; CV</p>
+</li>
+<li><p>HERE</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/herb.jpg" width="400"></p>
+</li>
+</ul>
+<h2 id="1-2-MIT-CSAIL"><a href="#1-2-MIT-CSAIL" class="headerlink" title="1.2 MIT-CSAIL"></a>1.2 MIT-CSAIL</h2><ul>
+<li>AI / System / Theory</li>
+<li>Artificial Muscle</li>
+</ul>
+<h2 id="1-3-Stanford-SAIL"><a href="#1-3-Stanford-SAIL" class="headerlink" title="1.3 Stanford- SAIL"></a>1.3 Stanford- SAIL</h2><ul>
+<li>CV &amp; NLP</li>
+</ul>
+<h2 id="1-4-Google"><a href="#1-4-Google" class="headerlink" title="1.4 Google"></a>1.4 Google</h2><ul>
+<li>AlphaGo</li>
+</ul>
+<h2 id="1-5-Waseda-University"><a href="#1-5-Waseda-University" class="headerlink" title="1.5 Waseda University"></a>1.5 Waseda University</h2><p>humanoid robot</p>
+<h2 id="1-6-Nagoya-University"><a href="#1-6-Nagoya-University" class="headerlink" title="1.6 Nagoya University"></a>1.6 Nagoya University</h2><p>surgical robots</p>
+<h1 id="2-Robotics-amp-AI"><a href="#2-Robotics-amp-AI" class="headerlink" title="2. Robotics &amp;AI"></a>2. Robotics &amp;AI</h1><h2 id="2-1-R-Concept"><a href="#2-1-R-Concept" class="headerlink" title="2.1 R-Concept"></a>2.1 R-Concept</h2><ul>
+<li>Mechanical Eng. <ul>
+<li>Eng. Physics Material science</li>
+<li>Design, Analysis, Manufacturing, Maintenance</li>
+</ul>
+</li>
+<li>Electrical Eng. <ul>
+<li>Electricity, Electronics, Electromagnetism</li>
+<li>Power, Drive, Sensor, Control</li>
+</ul>
+</li>
+<li>Computer Eng.<ul>
+<li>Theory, Experimentation, Eng.</li>
+<li>Computation, ML, CV,</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-R-Allpication"><a href="#2-2-R-Allpication" class="headerlink" title="2.2 R-Allpication"></a>2.2 R-Allpication</h2><ul>
+<li>Dangerous Enviroment</li>
+<li>Areas human can’t survive</li>
+<li>Manufacturing process</li>
+</ul>
+<h2 id="2-3-AI-Concept"><a href="#2-3-AI-Concept" class="headerlink" title="2.3 AI-Concept"></a>2.3 AI-Concept</h2><p>1.0 act like human</p>
+<ul>
+<li>Turing Test</li>
+</ul>
+<p>2.0 think like human</p>
+<ul>
+<li>cognitive science</li>
+<li>decision make, problem solve, learning</li>
+</ul>
+<p>3.0 think rationaly</p>
+<p>4.0 think intelligently</p>
+<h2 id="2-4-Three-laws-of-Robotics"><a href="#2-4-Three-laws-of-Robotics" class="headerlink" title="2.4 Three laws of Robotics"></a>2.4 Three laws of Robotics</h2><ul>
+<li>[Law 0] humanity the first</li>
+<li>[Law I]  no harm to human</li>
+<li>[Law II] obey the orders, under Law I</li>
+<li>[Law III] protect itself, under Law I &amp;II</li>
+</ul>
+<h2 id="2-5-Example-of-Salto-to-Galago"><a href="#2-5-Example-of-Salto-to-Galago" class="headerlink" title="2.5 Example of Salto to Galago"></a>2.5 Example of Salto to Galago</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/salto1.png" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/salto2.png" width="400"></p>
+<h1 id="3-Fundamental-mathematics-for-robotics"><a href="#3-Fundamental-mathematics-for-robotics" class="headerlink" title="3.  Fundamental mathematics for robotics"></a>3.  Fundamental mathematics for robotics</h1><h2 id="3-1-Vector-a-b-c-d"><a href="#3-1-Vector-a-b-c-d" class="headerlink" title="3.1  Vector[a b c d]"></a>3.1  Vector[a b c d]</h2><ul>
+<li>d: Scale</li>
+<li>$a\cdot b=xx+yy+zz$</li>
+<li>$a\times b=||$</li>
+<li>Plane: $P=[a\quad b\quad  c\quad d]$<ul>
+<li>to 0: $-\dfrac{d}{m}, m=\sqrt{a^2+b^2+c^2}$</li>
+</ul>
+</li>
+<li>Vector: $PV=0,on\PV&gt;0,above\PV&lt;0,under$</li>
+</ul>
+<p>$v=Hu\H=Trans(a, b, c)=\left(\begin{matrix}1&amp;0&amp;0&amp;a\0&amp;1&amp;0&amp;b\0&amp;0&amp;1&amp;c\0&amp;0&amp;0&amp;1\end{matrix}\right)$</p>
+<h2 id="3-2-Rotational-Transformation"><a href="#3-2-Rotational-Transformation" class="headerlink" title="3.2 Rotational Transformation"></a>3.2 Rotational Transformation</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/rotrans.png" width="400"></p>
+<h2 id="3-3-Robot-coordinates"><a href="#3-3-Robot-coordinates" class="headerlink" title="3.3 Robot coordinates"></a>3.3 Robot coordinates</h2><h3 id="3-3-1-DOF-degree-of-freedom"><a href="#3-3-1-DOF-degree-of-freedom" class="headerlink" title="3.3.1 DOF degree of freedom"></a>3.3.1 DOF degree of freedom</h3><p>$T_6=A_1 A_2 A_3 A_4 A_5A_6\\quad=\left(\begin{matrix}n_x&amp;o_x&amp;a_x&amp;p_x\n_y&amp;o_y&amp;a_y&amp;p_y\n_z&amp;o_z&amp;a_z&amp;p_z\0&amp;0&amp;0&amp;1\end{matrix}\right)$</p>
+<h3 id="3-3-2-Euler-Angle"><a href="#3-3-2-Euler-Angle" class="headerlink" title="3.3.2 Euler Angle"></a>3.3.2 Euler Angle</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\euler.jpg" width="300"></p>
+<p>$Euler(\varphi,\theta,\psi)=Rot(z,\varphi)Rot(y,\theta)Rot(z,\psi)$</p>
+<ul>
+<li>X: Yaw</li>
+<li>Y: Pitch</li>
+<li>Z: Roll</li>
+</ul>
+<h3 id="3-3-3-Coordinates"><a href="#3-3-3-Coordinates" class="headerlink" title="3.3.3  Coordinates"></a>3.3.3  Coordinates</h3><ul>
+<li><p>Cartesian Coordinate</p>
+<p>$T=T_{cart}=\left(\begin{matrix}1&amp;0&amp;0&amp;p_x\0&amp;1&amp;0&amp;p_y\0&amp;0&amp;1&amp;p_z\0&amp;0&amp;0&amp;1\end{matrix}\right)$</p>
+</li>
+<li><p>Cylindrical Coordinate</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\cyl.jpg" width="400"></p>
+</li>
+<li><p>Spherical Coordinate</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\sph.jpg" width="400"></p>
+</li>
+<li><p>Chain Coordinate</p>
+</li>
+</ul>
+<h2 id="3-4-Position-Kinematics"><a href="#3-4-Position-Kinematics" class="headerlink" title="3.4 Position Kinematics"></a>3.4 Position Kinematics</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\parameter.jpg" width="300"></p>
+<ul>
+<li><p>Rotate joints</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\rotjoint.jpg" width="400"></p>
+</li>
+<li><p>Prismatic joints</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\prisjoint.jpg" width="400"></p>
+</li>
+<li><p>Example</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\exa.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\table.jpg" width="300"></p>
+</li>
+</ul>
+<p>$A_n=Rot(z,\theta_n)Trans(0,0,d_n)Trans(a_n,0,0)Rot(x,a_n)$</p>
+<h2 id="3-5-Velocity-Kinematics"><a href="#3-5-Velocity-Kinematics" class="headerlink" title="3.5 Velocity Kinematics"></a>3.5 Velocity Kinematics</h2><p>$\dot{x}=J(q)\dot{q}\x=\left[\begin{matrix}v\w\end{matrix}\right]\\left[\begin{matrix}v\w\end{matrix}\right]=\left[\begin{matrix}J_{l1}&amp;J_{l2}&amp;\dots&amp;J_{ln}\J_{a1}&amp;J_{a2}&amp;\dots&amp;J_{an}\end{matrix}\right]\left[\begin{matrix}\dot{q_1}\\dot{q_2}\\dots\\dot{q_n}\end{matrix}\right]$</p>
+<h1 id="4-Knowledge-representation-and-reasoning"><a href="#4-Knowledge-representation-and-reasoning" class="headerlink" title="4. Knowledge representation and reasoning"></a>4. Knowledge representation and reasoning</h1><h2 id="4-1-Definition"><a href="#4-1-Definition" class="headerlink" title="4.1 Definition"></a>4.1 Definition</h2><ul>
+<li>Descriptive k</li>
+<li>Judgment k</li>
+<li><p>Procedural k</p>
+</li>
+<li><p>Object-level </p>
+</li>
+<li>Meta-level</li>
+</ul>
+<h2 id="4-2-Knowledge-representation-methods"><a href="#4-2-Knowledge-representation-methods" class="headerlink" title="4.2 Knowledge representation methods"></a>4.2 Knowledge representation methods</h2><h3 id="4-2-1-Predicate-Logic"><a href="#4-2-1-Predicate-Logic" class="headerlink" title="4.2.1 Predicate Logic"></a>4.2.1 Predicate Logic</h3><ul>
+<li>P, Q, R, S</li>
+<li>T, F</li>
+<li><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\symbol.jpg" width="400"></li>
+<li><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\logicr.jpg" width="400"></p>
+</li>
+<li><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\predicate.jpg" width="400"></p>
+</li>
+</ul>
+<h3 id="4-2-2-Production-representation"><a href="#4-2-2-Production-representation" class="headerlink" title="4.2.2 Production representation"></a>4.2.2 Production representation</h3><ul>
+<li><p>$P\rightarrow Q $: If P then Q</p>
+</li>
+<li><p>deterministic factual knowledge</p>
+<ul>
+<li>(object, property, value) </li>
+<li>(relationship, object1, object2)</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\production.jpg" width="400"></p>
+</li>
+<li><p>uncertainty factual knowledge</p>
+<ul>
+<li>(object, property, value, credibility)</li>
+<li>(relationship, object1, object2, credibility)</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\production2.jpg" width="400"></p>
+</li>
+<li><p>Production system components</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\productions.jpg" width="400"></p>
+</li>
+</ul>
+<h3 id="4-2-3-Semantic-network-representation"><a href="#4-2-3-Semantic-network-representation" class="headerlink" title="4.2.3 Semantic network representation"></a>4.2.3 Semantic network representation</h3><ul>
+<li><p>NLP Natural Language Processing</p>
+</li>
+<li><p>(Node 1, Arc, Node 2)</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\semantic.jpg" width="200"></p>
+</li>
+<li><p>Relationship</p>
+<ul>
+<li>Category: kind /  member</li>
+<li>Inclusive: part </li>
+<li>Attribute: have /can</li>
+<li>Time: before / after</li>
+<li>Locational</li>
+<li>Similarity</li>
+<li>Causal</li>
+<li>Composition</li>
+</ul>
+</li>
+<li><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\semanticexa.jpg" width="400"></p>
+</li>
+</ul>
+<h3 id="4-2-4-The-frame-Representation"><a href="#4-2-4-The-frame-Representation" class="headerlink" title="4.2.4 The frame Representation"></a>4.2.4 The frame Representation</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\frame.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\frameexa.jpg" width="400"></p>
+<h2 id="4-3-Deterministic-reasoning"><a href="#4-3-Deterministic-reasoning" class="headerlink" title="4.3 Deterministic reasoning"></a>4.3 Deterministic reasoning</h2><h3 id="4-3-1-Definetion"><a href="#4-3-1-Definetion" class="headerlink" title="4.3.1 Definetion"></a>4.3.1 Definetion</h3><ul>
+<li>Deductive r</li>
+<li>Inductive r</li>
+<li><p>Default r</p>
+</li>
+<li><p>Deterministic r</p>
+</li>
+<li><p>Uncertainly</p>
+</li>
+<li><p>Heuristic r</p>
+</li>
+<li>Non-heuristic</li>
+</ul>
+<h3 id="4-3-2-Logic-basis"><a href="#4-3-2-Logic-basis" class="headerlink" title="4.3.2 Logic basis"></a>4.3.2 Logic basis</h3><ul>
+<li>predicate logic</li>
+</ul>
+<h3 id="4-3-3-Natural-deductive-reasoning"><a href="#4-3-3-Natural-deductive-reasoning" class="headerlink" title="4.3.3 Natural deductive reasoning"></a>4.3.3 Natural deductive reasoning</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\reasoning.jpg" width="300"></p>
+<h2 id="4-4-Uncertainty-knowledge-representation-and-reasoning"><a href="#4-4-Uncertainty-knowledge-representation-and-reasoning" class="headerlink" title="4.4 Uncertainty knowledge representation and reasoning"></a>4.4 Uncertainty knowledge representation and reasoning</h2><ul>
+<li><p>Randomness</p>
+</li>
+<li><p>Fuzzy</p>
+<ul>
+<li><p>IF E THEN R (CF,$\lambda$)</p>
+<ul>
+<li>CF: Certainly Factor</li>
+</ul>
+</li>
+<li><p>Fuzzy logic control</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\fuzzy.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\fuzzytab.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\fuzzypid.jpg" width="400"></p>
+</li>
+</ul>
+</li>
+<li><p>Incompleteness of knowledge</p>
+</li>
+</ul>
+<h1 id="5-Search-to-slove"><a href="#5-Search-to-slove" class="headerlink" title="5. Search to slove"></a>5. Search to slove</h1><ul>
+<li><p>And-Or Graph</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\andor.jpg" width="400"></p>
+<p>decomposition the problem(TV)</p>
+</li>
+<li><p>TSP Traveling Salesman Problem</p>
+<ul>
+<li>each city once</li>
+<li>shortest route</li>
+</ul>
+</li>
+<li>GA Genetic Algorithm</li>
+<li>PSO Particle Swarm Optimization</li>
+</ul>
+<h1 id="6-Artificial-Neural-Network"><a href="#6-Artificial-Neural-Network" class="headerlink" title="6. Artificial Neural Network"></a>6. Artificial Neural Network</h1><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\ann.jpg" width="400"></p>
+<p>weight and biases to minimize the cost function</p>
+<ul>
+<li>neuro: number</li>
+<li>get the cost function: Gradient Descent</li>
+</ul>
+<ul>
+<li><p>Least-squares fitting (最小二乘法拟合)</p>
+<ul>
+<li><p>$z=Xw+e$</p>
+</li>
+<li><p>mean-square error(MSE-均方误差)</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/aps/jqr\mse.jpg" width="300"></p>
+</li>
+</ul>
+</li>
+<li><p>Adaptive linear systems</p>
+</li>
+<li>Non-linear adaptive units</li>
+<li>Single Neuron Neural Network</li>
+<li>BP Backpropagation Neural Network<ul>
+<li>3 layers (1 hidden)</li>
+<li>change the weight and biases from the result </li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Mainstream-institutions-of-robotics-and-AI-and"><span class="toc-number">1.</span> <span class="toc-text">1. Mainstream institutions of robotics and AI and</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-CMU-Carneige-Mellon-University-Robotics-Institute"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 CMU Carneige Mellon University- Robotics Institute</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-MIT-CSAIL"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 MIT-CSAIL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Stanford-SAIL"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Stanford- SAIL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Google"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Google</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Waseda-University"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Waseda University</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-Nagoya-University"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 Nagoya University</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Robotics-amp-AI"><span class="toc-number">2.</span> <span class="toc-text">2. Robotics &amp;AI</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-R-Concept"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 R-Concept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-R-Allpication"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 R-Allpication</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-AI-Concept"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 AI-Concept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Three-laws-of-Robotics"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Three laws of Robotics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-Example-of-Salto-to-Galago"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 Example of Salto to Galago</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Fundamental-mathematics-for-robotics"><span class="toc-number">3.</span> <span class="toc-text">3.  Fundamental mathematics for robotics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Vector-a-b-c-d"><span class="toc-number">3.1.</span> <span class="toc-text">3.1  Vector[a b c d]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Rotational-Transformation"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Rotational Transformation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Robot-coordinates"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Robot coordinates</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-DOF-degree-of-freedom"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 DOF degree of freedom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-Euler-Angle"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2 Euler Angle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-Coordinates"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3.3  Coordinates</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Position-Kinematics"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Position Kinematics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-Velocity-Kinematics"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 Velocity Kinematics</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Knowledge-representation-and-reasoning"><span class="toc-number">4.</span> <span class="toc-text">4. Knowledge representation and reasoning</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Definition"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Definition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Knowledge-representation-methods"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Knowledge representation methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-Predicate-Logic"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1 Predicate Logic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-Production-representation"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2 Production representation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-3-Semantic-network-representation"><span class="toc-number">4.2.3.</span> <span class="toc-text">4.2.3 Semantic network representation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-4-The-frame-Representation"><span class="toc-number">4.2.4.</span> <span class="toc-text">4.2.4 The frame Representation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Deterministic-reasoning"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Deterministic reasoning</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1-Definetion"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1 Definetion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2-Logic-basis"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2 Logic basis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-3-Natural-deductive-reasoning"><span class="toc-number">4.3.3.</span> <span class="toc-text">4.3.3 Natural deductive reasoning</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Uncertainty-knowledge-representation-and-reasoning"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Uncertainty knowledge representation and reasoning</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Search-to-slove"><span class="toc-number">5.</span> <span class="toc-text">5. Search to slove</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Artificial-Neural-Network"><span class="toc-number">6.</span> <span class="toc-text">6. Artificial Neural Network</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&text=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&is_video=false&description=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fundamentals of Robotics and Artificial Intelligence - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&title=Fundamentals of Robotics and Artificial Intelligence - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/&name=Fundamentals of Robotics and Artificial Intelligence - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

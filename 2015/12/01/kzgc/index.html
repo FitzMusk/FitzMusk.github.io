@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="控制工程 1. 概论1.1 工作原理 检测出输出量（被控制量）的实际值–测量反馈 将输出量的实际值与给定值（输入量）进行比较，得出偏差 用偏差值产生控制调节作用取消除偏差，使输出量维持期望的输出  1.2 系统的分类 反馈：开环系统、闭环系统 输入量的特征：恒值控制系统、随动系统（伺服系统） 传递信号：连续控制系统、离散数字控制系统 线性、非线性 定常、时变系统  1.3 基本要求：稳准快1.4">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fundamentals of Control Engineering - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="控制工程 1. 概论1.1 工作原理 检测出输出量（被控制量）的实际值–测量反馈 将输出量的实际值与给定值（输入量）进行比较，得出偏差 用偏差值产生控制调节作用取消除偏差，使输出量维持期望的输出  1.2 系统的分类 反馈：开环系统、闭环系统 输入量的特征：恒值控制系统、随动系统（伺服系统） 传递信号：连续控制系统、离散数字控制系统 线性、非线性 定常、时变系统  1.3 基本要求：稳准快1.4">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/znfkt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dldw.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/ddj.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dwmchs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dwsdhs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dwjsdhs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/wfdl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/jfdl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/lsfbh.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/fkt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/bhfz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/xhlt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/mylt1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/mylt2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/jbgs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/2lt1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/2lt2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/2lt3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/jbhjst.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/yjstxt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dwjyxy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dwxpxy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dwmcxy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/ejstxy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/qznjd.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/qyznxy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/ejmcxy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/xpxy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/syfxxn.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/3lt1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/3lt2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/3lt3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/3lt4.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/szgx.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nyk.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nys-1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nys1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nyts.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nyts-1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nys2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nys-2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nye.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/Bode.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/zxxwxt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/bhpyzb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/kbhpytx.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/kbhpytxt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/my.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dgd.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/4lt1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/4lt2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/4lt3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/lspj.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/hewzpj.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dqx.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/fzx.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/nsys.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/cy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/bodepd.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/xdwd.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/5lt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/pcwc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/pcwcgx.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/wtwcwtpc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/6lt1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/jtwcxs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/jtwcxs2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/jtwcxs3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/grxt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/gr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/fkff.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/dtwcxs.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/6lt2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/6lt3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/wcjfzb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/wcpfjfzb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/jz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/cqjz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/zhjz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/cqzhjz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/pidm.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/pid.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/pidjyf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/pidqdf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/fkjz1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/fkjz2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/plf.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fundamentals of Control Engineering - APS">
+<meta name="twitter:description" content="控制工程 1. 概论1.1 工作原理 检测出输出量（被控制量）的实际值–测量反馈 将输出量的实际值与给定值（输入量）进行比较，得出偏差 用偏差值产生控制调节作用取消除偏差，使输出量维持期望的输出  1.2 系统的分类 反馈：开环系统、闭环系统 输入量的特征：恒值控制系统、随动系统（伺服系统） 传递信号：连续控制系统、离散数字控制系统 线性、非线性 定常、时变系统  1.3 基本要求：稳准快1.4">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc/znfkt.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Fundamentals of Control Engineering - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/12/01/rgjc/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/12/01/jzks/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&text=Fundamentals of Control Engineering - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&is_video=false&description=Fundamentals of Control Engineering - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fundamentals of Control Engineering - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&name=Fundamentals of Control Engineering - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-概论"><span class="toc-number">1.</span> <span class="toc-text">1. 概论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-工作原理"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-系统的分类"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 系统的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-基本要求：稳准快"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 基本要求：稳准快</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-职能方块图"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 职能方块图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-控制系统的动态数学模型"><span class="toc-number">2.</span> <span class="toc-text">2. 控制系统的动态数学模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-基本"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 基本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-物理数学实例"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 物理数学实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-质量弹簧阻尼"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 质量弹簧阻尼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-电路网络"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 电路网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-电动机"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 电动机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-数学模型线性化：泰勒级数展开"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 数学模型线性化：泰勒级数展开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-拉氏变换"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 拉氏变换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-单位阶跃-1-t"><span class="toc-number">2.4.1.</span> <span class="toc-text">2.4.1 单位阶跃$1(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-正余弦-sinwt-cdot1-t-coswt-cdot1-t"><span class="toc-number">2.4.2.</span> <span class="toc-text">2.4.2 正余弦$sinwt\cdot1(t), coswt\cdot1(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-3-幂函数-t-n-cdot1-t"><span class="toc-number">2.4.3.</span> <span class="toc-text">2.4.3 幂函数$t^n\cdot1(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-4-单位脉冲函数-delta-t"><span class="toc-number">2.4.4.</span> <span class="toc-text">2.4.4 单位脉冲函数$\delta(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-5-单位速度函数"><span class="toc-number">2.4.5.</span> <span class="toc-text">2.4.5 单位速度函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-6-单位加速度函数"><span class="toc-number">2.4.6.</span> <span class="toc-text">2.4.6 单位加速度函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-拉式变化性质"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 拉式变化性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-叠加原理"><span class="toc-number">2.5.1.</span> <span class="toc-text">2.5.1 叠加原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-微分原理"><span class="toc-number">2.5.2.</span> <span class="toc-text">2.5.2 微分原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-3-积分定理"><span class="toc-number">2.5.3.</span> <span class="toc-text">2.5.3 积分定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-4-衰减定理"><span class="toc-number">2.5.4.</span> <span class="toc-text">2.5.4 衰减定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-5-延时定理"><span class="toc-number">2.5.5.</span> <span class="toc-text">2.5.5 延时定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-6-初值定理"><span class="toc-number">2.5.6.</span> <span class="toc-text">2.5.6 初值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-7-终值定理"><span class="toc-number">2.5.7.</span> <span class="toc-text">2.5.7 终值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-8-卷积"><span class="toc-number">2.5.8.</span> <span class="toc-text">2.5.8 卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-9-象函数"><span class="toc-number">2.5.9.</span> <span class="toc-text">2.5.9 象函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-拉式反变换"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 拉式反变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-传递函数"><span class="toc-number">2.7.</span> <span class="toc-text">2.7 传递函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-典型环节"><span class="toc-number">2.8.</span> <span class="toc-text">2.8 典型环节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-方块图"><span class="toc-number">2.9.</span> <span class="toc-text">2.9 方块图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-10-变换法则"><span class="toc-number">2.10.</span> <span class="toc-text">2.10 变换法则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-11-信号流图和梅逊公式"><span class="toc-number">2.11.</span> <span class="toc-text">2.11 信号流图和梅逊公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-12-基本公式"><span class="toc-number">2.12.</span> <span class="toc-text">2.12 基本公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-13-例题"><span class="toc-number">2.13.</span> <span class="toc-text">2.13 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-时域频域瞬态响应分析"><span class="toc-number">3.</span> <span class="toc-text">3. 时域频域瞬态响应分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-概念"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-基本环节瞬态"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 基本环节瞬态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-一阶系统瞬态响应：比例-积分"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 一阶系统瞬态响应：比例+积分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-二阶系统瞬态响应"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 二阶系统瞬态响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-二阶系统单位脉冲响应"><span class="toc-number">3.5.</span> <span class="toc-text">3.5  二阶系统单位脉冲响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-斜坡响应"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 斜坡响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-时域分析性能指标"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 时域分析性能指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-8-例题"><span class="toc-number">3.8.</span> <span class="toc-text">3.8 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-控制系统频率特性"><span class="toc-number">4.</span> <span class="toc-text">4. 控制系统频率特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-三种变化关系"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 三种变化关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-频率特性"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 频率特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-极坐标图、Nyquist曲线"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 极坐标图、Nyquist曲线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Bode图、对数坐标图"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Bode图、对数坐标图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-最小相位系统"><span class="toc-number">4.5.</span> <span class="toc-text">4.5  最小相位系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-频域指标"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 频域指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-M圆"><span class="toc-number">4.7.</span> <span class="toc-text">4.7 M圆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-8-动刚度"><span class="toc-number">4.8.</span> <span class="toc-text">4.8 动刚度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-9-例题"><span class="toc-number">4.9.</span> <span class="toc-text">4.9 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-稳定性分析"><span class="toc-number">5.</span> <span class="toc-text">5. 稳定性分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-概念"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-劳斯判据（闭环）"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 劳斯判据（闭环）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-赫尔维兹判据"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 赫尔维兹判据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-奈奎斯特判据（闭环）"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 奈奎斯特判据（闭环）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Bode图稳定性判定"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Bode图稳定性判定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-相对稳定"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 相对稳定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-例题"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-误差分析计算"><span class="toc-number">6.</span> <span class="toc-text">6. 误差分析计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-稳态误差"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 稳态误差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-偏差-varepsilon-t-和误差-e-t"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 偏差$\varepsilon(t)$和误差$e(t)$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-分析步骤"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 分析步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-稳态误差、稳态偏差"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 稳态误差、稳态偏差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-静态误差系数"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 静态误差系数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-6-干扰"><span class="toc-number">6.6.</span> <span class="toc-text">6.6 干扰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-7-减小误差"><span class="toc-number">6.7.</span> <span class="toc-text">6.7 减小误差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-8-前馈、顺馈、全跟踪、内模"><span class="toc-number">6.8.</span> <span class="toc-text">6.8 前馈、顺馈、全跟踪、内模</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-9-动态误差系数"><span class="toc-number">6.9.</span> <span class="toc-text">6.9 动态误差系数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-10-例题"><span class="toc-number">6.10.</span> <span class="toc-text">6.10 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-控制系统的综合校正"><span class="toc-number">7.</span> <span class="toc-text">7. 控制系统的综合校正</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-指标"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-校正（补偿、调节）"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 校正（补偿、调节）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-1-串联校正"><span class="toc-number">7.2.1.</span> <span class="toc-text">7.2.1 串联校正</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-2-PID调节（比例-积分-微分控制器）"><span class="toc-number">7.2.2.</span> <span class="toc-text">7.2.2 PID调节（比例-积分-微分控制器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-3-反馈矫正"><span class="toc-number">7.2.3.</span> <span class="toc-text">7.2.3 反馈矫正</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-频率法"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 频率法</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Fundamentals of Control Engineering - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-12-01T09:19:59.000Z" itemprop="datePublished">2015-12-01</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>控制工程</p>
+<h1 id="1-概论"><a href="#1-概论" class="headerlink" title="1. 概论"></a>1. 概论</h1><h2 id="1-1-工作原理"><a href="#1-1-工作原理" class="headerlink" title="1.1 工作原理"></a>1.1 工作原理</h2><ul>
+<li>检测出输出量（被控制量）的实际值–测量反馈</li>
+<li>将输出量的实际值与给定值（输入量）进行比较，得出偏差</li>
+<li>用偏差值产生控制调节作用取消除偏差，使输出量维持期望的输出</li>
+</ul>
+<h2 id="1-2-系统的分类"><a href="#1-2-系统的分类" class="headerlink" title="1.2 系统的分类"></a>1.2 系统的分类</h2><ul>
+<li>反馈：开环系统、闭环系统</li>
+<li>输入量的特征：恒值控制系统、随动系统（伺服系统）</li>
+<li>传递信号：连续控制系统、离散数字控制系统</li>
+<li>线性、非线性</li>
+<li>定常、时变系统</li>
+</ul>
+<h2 id="1-3-基本要求：稳准快"><a href="#1-3-基本要求：稳准快" class="headerlink" title="1.3 基本要求：稳准快"></a>1.3 基本要求：稳准快</h2><h2 id="1-4-职能方块图"><a href="#1-4-职能方块图" class="headerlink" title="1.4 职能方块图"></a>1.4 职能方块图</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\znfkt.jpg" width="400"></p>
+<h1 id="2-控制系统的动态数学模型"><a href="#2-控制系统的动态数学模型" class="headerlink" title="2. 控制系统的动态数学模型"></a>2. 控制系统的动态数学模型</h1><p>$f(输出量)=f(输入量)$</p>
+<h2 id="2-1-基本"><a href="#2-1-基本" class="headerlink" title="2.1 基本"></a>2.1 基本</h2><ul>
+<li>数学模型建立：解析法、实验法</li>
+<li>三域<ul>
+<li>时间域：微分方程、差分方程、状态方程</li>
+<li>复数域：传递函数、结构图</li>
+<li>频率域：频率特性</li>
+</ul>
+</li>
+<li>经典控制理论：传递函数</li>
+<li>现代控制理论：状态空间</li>
+</ul>
+<h2 id="2-2-物理数学实例"><a href="#2-2-物理数学实例" class="headerlink" title="2.2 物理数学实例"></a>2.2 物理数学实例</h2><h3 id="2-2-1-质量弹簧阻尼"><a href="#2-2-1-质量弹簧阻尼" class="headerlink" title="2.2.1 质量弹簧阻尼"></a>2.2.1 质量弹簧阻尼</h3><ul>
+<li>M</li>
+<li>弹性元件</li>
+<li>线性阻尼器</li>
+</ul>
+<p>$$f_i(t)-D\dot{y_0}(t)-ky_0(t)=M\ddot{y_0}(t)$$</p>
+<p>$\rightarrow$$M\ddot{y_0}(t)+D\dot{y_0}(t)+ky_0(t)=f_i(t)$</p>
+<h3 id="2-2-2-电路网络"><a href="#2-2-2-电路网络" class="headerlink" title="2.2.2 电路网络"></a>2.2.2 电路网络</h3><p>基尔霍夫定律和欧姆定律</p>
+<ul>
+<li>电容：$u(t)=\frac{1}{C}\int i(t)dt$, $R_L=jwL$</li>
+<li>电感：$u(t)=L\frac{di(t)}{dt}$, $R_C=-j\frac{1}{wC}$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dldw.jpg" width="300"></p>
+<p>$$u_i=Ri+L\frac{d}{dt}i+\frac{1}{c}\int idt$$</p>
+<p>$$u_0=\frac{1}{C}\int i(t)dt$$</p>
+<p>$\Rightarrow$$RC\frac{d}{dt}u_0+LC\frac{d^2}{dt^2}u_0+u_0=u_i$</p>
+<h3 id="2-2-3-电动机"><a href="#2-2-3-电动机" class="headerlink" title="2.2.3 电动机"></a>2.2.3 电动机</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\ddj.jpg" width="400"></p>
+<p>$$i_a(t)=\frac{J}{K_T}\frac{d^2\theta_0(t)}{dt^2}+\frac{D}{K_T}\frac{d\theta_0(t)}{dt}$$</p>
+<h2 id="2-3-数学模型线性化：泰勒级数展开"><a href="#2-3-数学模型线性化：泰勒级数展开" class="headerlink" title="2.3 数学模型线性化：泰勒级数展开"></a>2.3 数学模型线性化：泰勒级数展开</h2><p>$$f(x)=\frac{f(x_0)}{0!}+\frac{f’(x_0)}{1!}(x-x_0)+\frac{f’’(x_0)}{2!}(x-x_0)^2+\dots+\frac{f^{(n)}(x_0)}{n!}(x-x_0)^n+R_n(x)$$</p>
+<h2 id="2-4-拉氏变换"><a href="#2-4-拉氏变换" class="headerlink" title="2.4 拉氏变换"></a>2.4 拉氏变换</h2><p><strong>定义</strong>：</p>
+<ul>
+<li>$t&lt;0, x(t)=0$</li>
+<li>$t&gt;0, x(t)在有限个区间上分段连续$</li>
+<li>$\int^\infty_0x(t)e^{-\sigma t}dt&lt;\infty, \sigma\in R^+$</li>
+</ul>
+<p>$$X(s)=L[x(t)]\triangleq\int^\infty_0x(t)e^{-st}dt$$</p>
+<ul>
+<li>$X(s)$：象函数</li>
+<li>s：复变数，$[t]^{-1}$</li>
+<li>x(t)：原函数</li>
+<li>$\int^\infty_0e^{-st}dt$：拉普拉斯积分</li>
+</ul>
+<h3 id="2-4-1-单位阶跃-1-t"><a href="#2-4-1-单位阶跃-1-t" class="headerlink" title="2.4.1 单位阶跃$1(t)$"></a>2.4.1 单位阶跃$1(t)$</h3><p>$$1(t)=\begin{cases}<br>        0, &amp; t&gt;0\<br>        1, &amp; t&lt;0<br>    \end{cases}$$</p>
+<p>$$L[1(t)]=\int^\infty_0e^{-st}dt=\frac{1}{s}$$</p>
+<h3 id="2-4-2-正余弦-sinwt-cdot1-t-coswt-cdot1-t"><a href="#2-4-2-正余弦-sinwt-cdot1-t-coswt-cdot1-t" class="headerlink" title="2.4.2 正余弦$sinwt\cdot1(t), coswt\cdot1(t)$"></a>2.4.2 正余弦$sinwt\cdot1(t), coswt\cdot1(t)$</h3><p>$sin\theta=\frac{e^{j\theta}-e^{-j\theta}}{2j}, cos\theta=\frac{e^{j\theta}+e^{-j\theta}}{2}$</p>
+<p>$$L[sinwt\cdot1(t)]=\frac{w}{s^2+w^2}$$</p>
+<p>$$L[coswt\cdot1(t)]=\frac{s}{s^2+w^2}$$</p>
+<h3 id="2-4-3-幂函数-t-n-cdot1-t"><a href="#2-4-3-幂函数-t-n-cdot1-t" class="headerlink" title="2.4.3 幂函数$t^n\cdot1(t)$"></a>2.4.3 幂函数$t^n\cdot1(t)$</h3><p>$$L[t^n\cdot1(t)]=\int^\infty_0t^ne^{-st}dt=\frac{1}{S^{n+1}}\int^\infty_0u^ne^{u}du=\frac{n!}{s^{n+1}}$$</p>
+<h3 id="2-4-4-单位脉冲函数-delta-t"><a href="#2-4-4-单位脉冲函数-delta-t" class="headerlink" title="2.4.4 单位脉冲函数$\delta(t)$"></a>2.4.4 单位脉冲函数$\delta(t)$</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dwmchs.jpg" width="300"></p>
+<p>$$L[\delta(t)]=\int^\infty_0\lim\limits_{\varepsilon\rightarrow0}\frac{1}{\varepsilon}e^{-st}dt=1$$</p>
+<h3 id="2-4-5-单位速度函数"><a href="#2-4-5-单位速度函数" class="headerlink" title="2.4.5 单位速度函数"></a>2.4.5 单位速度函数</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dwsdhs.jpg" width="300"></p>
+<p>$$L[f(t)]=\int^\infty_0te^{-st}dt=\frac{1}{s^2}$$</p>
+<h3 id="2-4-6-单位加速度函数"><a href="#2-4-6-单位加速度函数" class="headerlink" title="2.4.6 单位加速度函数"></a>2.4.6 单位加速度函数</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dwjsdhs.jpg" width="300"></p>
+<p>$$L[f(t)]=\int^\infty_0\frac{1}{2}t^2e^{-st}dt=\frac{1}{s^3}$$</p>
+<h2 id="2-5-拉式变化性质"><a href="#2-5-拉式变化性质" class="headerlink" title="2.5 拉式变化性质"></a>2.5 拉式变化性质</h2><h3 id="2-5-1-叠加原理"><a href="#2-5-1-叠加原理" class="headerlink" title="2.5.1 叠加原理"></a>2.5.1 叠加原理</h3><p>$$L[ax_1(t)+bx_2(t)]=aX_1(s)+bX_2(s)$$</p>
+<h3 id="2-5-2-微分原理"><a href="#2-5-2-微分原理" class="headerlink" title="2.5.2 微分原理"></a>2.5.2 微分原理</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\wfdl.jpg" width="400"></p>
+<p>$$L[\frac{d}{dt}x(t)]=sX(s)-x(0^+)$$</p>
+<ul>
+<li><p>$L[\frac{d^n}{dt^n}x(t)]=s^nX(s)-s^{n-1}x(0^+)-s^{n-2}\dot x(0^+)-\dots-sx^{n-2}(0^+)-x^{n-1}(0^+)$</p>
+</li>
+<li><p>零初始条件，$\frac{d^n}{dt^n}x(t)\Leftrightarrow s^nX(s)$</p>
+</li>
+</ul>
+<h3 id="2-5-3-积分定理"><a href="#2-5-3-积分定理" class="headerlink" title="2.5.3 积分定理"></a>2.5.3 积分定理</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\jfdl.jpg" width="400"></p>
+<p>$$L[\int x(t)dt]=\frac{X(s)}{s}+\frac{x^{-1}(0+)}{s}$$</p>
+<ul>
+<li><p>$L[\int\dots\int x(t)(dt)^n]=\frac{X(s)}{s^n}+\frac{x^{-1}(0^+)}{s^n}+\frac{x^{-2}(0^+)}{s^{n-1}}+\dots+\frac{x^{-n}(0^+)}{s}$</p>
+</li>
+<li><p>零初始条件下，$\int\dots\int x(t)(dt)^n\Leftrightarrow \frac{X(s)}{s^n}$</p>
+</li>
+</ul>
+<h3 id="2-5-4-衰减定理"><a href="#2-5-4-衰减定理" class="headerlink" title="2.5.4 衰减定理"></a>2.5.4 衰减定理</h3><p>$$L[e^{-at}x(t)]=X(s+a)$$</p>
+<h3 id="2-5-5-延时定理"><a href="#2-5-5-延时定理" class="headerlink" title="2.5.5 延时定理"></a>2.5.5 延时定理</h3><p>条件：1. 限时 2.$f(t-\tau)=0,t&lt;\tau$</p>
+<p>$$L[f(t-a)\cdot1(t-a)]=e^{-as}X(s)$$</p>
+<h3 id="2-5-6-初值定理"><a href="#2-5-6-初值定理" class="headerlink" title="2.5.6 初值定理"></a>2.5.6 初值定理</h3><p>$$\lim\limits_{t\rightarrow0^+}x(t)=\lim\limits_{s\rightarrow\infty}X(s)$$</p>
+<h3 id="2-5-7-终值定理"><a href="#2-5-7-终值定理" class="headerlink" title="2.5.7 终值定理"></a>2.5.7 终值定理</h3><p>$$\lim\limits_{t\rightarrow\infty}x(t)=\lim\limits_{s\rightarrow0}X(s)$$</p>
+<h3 id="2-5-8-卷积"><a href="#2-5-8-卷积" class="headerlink" title="2.5.8 卷积"></a>2.5.8 卷积</h3><p>$$L[f(t)*g(t)]=F(s)\cdot G(s)$$</p>
+<ul>
+<li>$f(t)*g(t)=\int^t_0f(t-\tau)g(\tau)d\tau$</li>
+</ul>
+<h3 id="2-5-9-象函数"><a href="#2-5-9-象函数" class="headerlink" title="2.5.9 象函数"></a>2.5.9 象函数</h3><table>
+<thead>
+<tr>
+<th>$x(\frac{t}{a})$</th>
+<th>$aX(as)$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$tx(t)$</td>
+<td>$\frac{dX(s)}{ds}$</td>
+</tr>
+<tr>
+<td>$t^nx(t)$</td>
+<td>$(-1)^n\frac{d^nX(s)}{ds^n}$</td>
+</tr>
+<tr>
+<td>$\frac{x(t)}{t}$</td>
+<td>$\int^\infty_sX(s)ds$</td>
+</tr>
+<tr>
+<td>周期函数$x(t)$</td>
+<td>$\frac{1}{1-e^{-sT}}\int^T_0x(t)e^{-st}dt$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-6-拉式反变换"><a href="#2-6-拉式反变换" class="headerlink" title="2.6 拉式反变换"></a>2.6 拉式反变换</h2><p>$$x(t)=L^{-1}[x(s)]=\frac{1}{2\pi j}\int^{a+j\infty}_{a-j\infty}X(s)e^{st}ds$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\lsfbh.jpg" width="600"></p>
+<h2 id="2-7-传递函数"><a href="#2-7-传递函数" class="headerlink" title="2.7 传递函数"></a>2.7 传递函数</h2><p><strong>定义</strong>：零初始条件下，线性定常系统输出象函数$X_o(s)$与输入象函数$X_i(s)$之比</p>
+<p>$$\begin{eqnarray}G(s)<br>&amp;=&amp;\frac{X_0(s)}{X_i(s)}\<br>&amp;=&amp;\frac{b_0s^m+b_qs^{m-1}+\dots+b_m}{a_0s^n+a_1s^{n-1}+\dots+a_n}\<br>&amp;=&amp;\frac{b_0(s-z_1)(s-z_2)\dots(s-z_m)}{a_0(s-p_1)(s-p_2)\dots(s-p_n)}<br>\end{eqnarray}$$</p>
+<ul>
+<li>$N(s)=b_0s^m+b_qs^{m-1}+\dots+b_m$</li>
+<li>特征多项式$D(s)=a_0s^n+a_1s^{n-1}+\dots+a_n$</li>
+<li>$N(s)=0$，根为零点</li>
+<li>$D(s)=0$，根为极点，也是系统特征根</li>
+</ul>
+<h2 id="2-8-典型环节"><a href="#2-8-典型环节" class="headerlink" title="2.8 典型环节"></a>2.8 典型环节</h2><table>
+<thead>
+<tr>
+<th>比例</th>
+<th>微分</th>
+<th>一阶微分</th>
+<th>二阶微分</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$K$</td>
+<td>$s$</td>
+<td>$\tau s+1$</td>
+<td>$\tau^2s^2+2\xi\tau s+1$</td>
+</tr>
+<tr>
+<td>积分</td>
+<td>惯性</td>
+<td>振荡</td>
+<td>延迟</td>
+</tr>
+<tr>
+<td>$\dfrac{1}{s}$</td>
+<td>$\dfrac{1}{Ts+1}$</td>
+<td>$\dfrac{1}{T^2s^2+2\xi Ts+1}$</td>
+<td>$e^{-\tau s}$</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-9-方块图"><a href="#2-9-方块图" class="headerlink" title="2.9 方块图"></a>2.9 方块图</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\fkt.jpg" width="600"></p>
+<h2 id="2-10-变换法则"><a href="#2-10-变换法则" class="headerlink" title="2.10 变换法则"></a>2.10 变换法则</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\bhfz.jpg" width="500"></p>
+<h2 id="2-11-信号流图和梅逊公式"><a href="#2-11-信号流图和梅逊公式" class="headerlink" title="2.11 信号流图和梅逊公式"></a>2.11 信号流图和梅逊公式</h2><ul>
+<li><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\xhlt.jpg" width="600"></p>
+</li>
+<li><p>梅逊公式</p>
+<p>$$P=\frac{1}{\Delta}\sum_kP_k\Delta_k$$</p>
+<ul>
+<li>$\Delta$：特征式，$=1-\sum_a L_a+\sum_{b,c}L_bL_c-\sum_{d,e,f}L_dL_eL_f$<ul>
+<li>$\sum L_a$：所以不同回路传函积</li>
+<li>$\sum L_bL_c$：2互不接触回路传函积之和</li>
+<li>$\sum L_dL_eL_f$：3互不接触回路传函积之和</li>
+</ul>
+</li>
+<li>$P_k$：第k条前向通路传函</li>
+<li>$\Delta_k$：第k条前向通路特征式余因子，$\Delta(L_{k接触}=0)$</li>
+</ul>
+</li>
+<li><p>例题：</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\mylt1.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\mylt2.jpg" width="400"></p>
+</li>
+</ul>
+<h2 id="2-12-基本公式"><a href="#2-12-基本公式" class="headerlink" title="2.12 基本公式"></a>2.12 基本公式</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\jbgs.jpg" width="400"></p>
+<h2 id="2-13-例题"><a href="#2-13-例题" class="headerlink" title="2.13 例题"></a>2.13 例题</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\2lt1.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\2lt2.jpg" width="200"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\2lt3.jpg" width="200"></p>
+<h1 id="3-时域频域瞬态响应分析"><a href="#3-时域频域瞬态响应分析" class="headerlink" title="3. 时域频域瞬态响应分析"></a>3. 时域频域瞬态响应分析</h1><h2 id="3-1-概念"><a href="#3-1-概念" class="headerlink" title="3.1 概念"></a>3.1 概念</h2><ul>
+<li>瞬态响应：系统在某一输入信号作用下其输出量从初始状态到稳定状态的相应过程</li>
+<li>稳态响应：当某一信号输入时，系统在时间趋于无穷大时的输出状态</li>
+<li>稳态：静态</li>
+<li>瞬态响应：过渡过程</li>
+</ul>
+<h2 id="3-2-基本环节瞬态"><a href="#3-2-基本环节瞬态" class="headerlink" title="3.2 基本环节瞬态"></a>3.2 基本环节瞬态</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\jbhjst.jpg" width="500"></p>
+<h2 id="3-3-一阶系统瞬态响应：比例-积分"><a href="#3-3-一阶系统瞬态响应：比例-积分" class="headerlink" title="3.3 一阶系统瞬态响应：比例+积分"></a>3.3 一阶系统瞬态响应：比例+积分</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\yjstxt.jpg" width="600"></p>
+<p>$$\dfrac{x_o(s)}{x_i(s)}=\dfrac{1}{Ts+1}$$</p>
+<ul>
+<li><p>单位阶跃：$x_o(t)=(1-e^{\dfrac{1}{T}t}\cdot1(t))$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dwjyxy.jpg" width="500"></p>
+<ul>
+<li>系统稳定无振荡</li>
+<li>惯性环节时间常数T：至0.623时间</li>
+<li>调整时间$(3\sim4)T$：至稳态值$95\%\sim98\%$</li>
+<li>$t=0$ ，斜率$\frac{1}{T}$</li>
+</ul>
+</li>
+<li><p>单位斜坡：$x_o(t)=(t-T+Te^{-\frac{1}{T}t})\cdot1(t)$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dwxpxy.jpg" width="400"></p>
+</li>
+<li><p>单位脉冲：$x_o(t)=\frac{1}{T}e^{-\frac{1}{T}t}\cdot1(t)$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dwmcxy.jpg" width="400"></p>
+</li>
+</ul>
+<h2 id="3-4-二阶系统瞬态响应"><a href="#3-4-二阶系统瞬态响应" class="headerlink" title="3.4 二阶系统瞬态响应"></a>3.4 二阶系统瞬态响应</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\ejstxy.jpg" width="600"></p>
+<p>$$\dfrac{x_o(s)}{x_i(s)}=\dfrac{1}{T^2s^2+2\xi Ts+1}=\dfrac{w_n^2}{s^2+2\xi w_n+w_n^2}$$</p>
+<ul>
+<li><p>欠阻尼</p>
+<p>$$\dfrac{X_o(s)}{X_i(s)}=\dfrac{w_n^2}{(s+\xi w_n+jw_d)(s+\xi w_n-jw_d)}$$</p>
+<ul>
+<li><p>阻尼自振角频率：$w_d=w_n\sqrt{1-\xi^2}$</p>
+</li>
+<li><p>$\theta=arccos\xi=arctan\dfrac{\sqrt{1-\xi^2}}{\xi}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\qznjd.jpg" width="200"></p>
+</li>
+</ul>
+<p>$$x_o(t)=[1-\dfrac{e^{-\xi w_nt}}{\sqrt{1-\xi^2}}sin(w_dt+arctan\dfrac{\sqrt{1-\xi^2}}{\xi})]\cdot1(t)$$</p>
+</li>
+<li><p>临界、过阻尼、零阻尼、负阻尼</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\qyznxy.jpg" width="600"></p>
+</li>
+</ul>
+<h2 id="3-5-二阶系统单位脉冲响应"><a href="#3-5-二阶系统单位脉冲响应" class="headerlink" title="3.5  二阶系统单位脉冲响应"></a>3.5  二阶系统单位脉冲响应</h2><ul>
+<li><p>$0&lt;\xi&lt;1$，负阻尼，以$W_a$为角频率的衰减振荡，随$\xi\downarrow$，振荡幅度$\uparrow$</p>
+</li>
+<li><p>$\xi=1, \xi&gt;1$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\ejmcxy.jpg" width="300"></p>
+</li>
+</ul>
+<h2 id="3-6-斜坡响应"><a href="#3-6-斜坡响应" class="headerlink" title="3.6 斜坡响应"></a>3.6 斜坡响应</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\xpxy.jpg" width="600"></p>
+<h2 id="3-7-时域分析性能指标"><a href="#3-7-时域分析性能指标" class="headerlink" title="3.7 时域分析性能指标"></a>3.7 时域分析性能指标</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\syfxxn.jpg" width="500"></p>
+<ul>
+<li>【快】上升时间$t_r$：0.1-0.9所需时间，$x_o(t_r)=1\Rightarrow t_r=\frac{1}{w_n\sqrt{1-\xi^2}}(\pi-arccos\xi)$</li>
+<li><p>【快】峰值时间$t_p$：$\frac{dx_o(t)}{dt}=0\Rightarrow负阻尼t_p=\frac{\pi}{w_d}=\frac{\pi}{w_n\sqrt{1-\xi^2}}$，与$t_r$相差$\theta$</p>
+</li>
+<li><p>【稳】最大超调量$M_p=x_o(t_p)-1=e^{-\dfrac{\xi\pi}{\sqrt{1-\xi^2}}}$</p>
+</li>
+<li>【快】延迟时间$t_s$：负阻尼，包络线$F(t)=1\pm\dfrac{e^{-\xi w_nt}}{\sqrt{1-\xi^2}}$<ul>
+<li>$\pm5\%$：$t_s\approx\frac{-In0.05}{\xi w_n}\approx\frac{3}{\xi w_n}$</li>
+<li>$\pm2\%$：$t_s\approx\frac{-In0.02}{\xi w_n}\approx\frac{4}{\xi w_n}$</li>
+</ul>
+</li>
+<li>【快】延迟时间$t_d$：至0.5时间</li>
+<li>【稳】振荡次数：$t_s$内次数</li>
+</ul>
+<p>当$\xi$一定：</p>
+<ul>
+<li>快：$w_n\uparrow, t_s\downarrow$，$w_n$越大越好</li>
+<li>稳：$t_s=min, \xi=0.707$</li>
+</ul>
+<h2 id="3-8-例题"><a href="#3-8-例题" class="headerlink" title="3.8 例题"></a>3.8 例题</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\3lt1.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\3lt2.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\3lt3.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\3lt4.jpg" width="600"></p>
+<h1 id="4-控制系统频率特性"><a href="#4-控制系统频率特性" class="headerlink" title="4. 控制系统频率特性"></a>4. 控制系统频率特性</h1><h2 id="4-1-三种变化关系"><a href="#4-1-三种变化关系" class="headerlink" title="4.1 三种变化关系"></a>4.1 三种变化关系</h2><table>
+<thead>
+<tr>
+<th>傅里叶变换</th>
+<th>拉氏变换</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\int_{-\infty}^\infty f(x)e^{-jwt}dt$</td>
+<td>$\int^{+\infty}_0f(x)e^{-st}dt$</td>
+<td>$s=\sigma+jw$</td>
+</tr>
+<tr>
+<td>$\begin{eqnarray}X_0(s)&amp;=&amp;G(s)\cdot X_i(s)\&amp;=&amp;G(s)\frac{Aw}{s^2+w^2}\&amp;=&amp;\frac{k_1}{s-s_p}+\frac{k_1s+k_2}{(s-jw)(s+jw)}\end{eqnarray}$</td>
+<td>$x_0(t)=A</td>
+<td>G(jw)</td>
+<td>sin(wt+\varphi)$</td>
+<td>相角$\angle G(jw)$</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\szgx.jpg" width="300"></p>
+<h2 id="4-2-频率特性"><a href="#4-2-频率特性" class="headerlink" title="4.2 频率特性"></a>4.2 频率特性</h2><ul>
+<li>幅频特性$|G(jw)|$</li>
+<li>相频特性$\angle G(jw)$</li>
+<li>频率特性：$G(jw)=\sigma+jw$<ul>
+<li>$\sigma$：实频特性</li>
+<li>$w$：虚频特性</li>
+</ul>
+</li>
+<li>不能用终值定理</li>
+</ul>
+<h2 id="4-3-极坐标图、Nyquist曲线"><a href="#4-3-极坐标图、Nyquist曲线" class="headerlink" title="4.3 极坐标图、Nyquist曲线"></a>4.3 极坐标图、Nyquist曲线</h2><table>
+<thead>
+<tr>
+<th>$k$</th>
+<th>$G(jw)=k$</th>
+<th>$A=k\\angle=0^\circ$</th>
+<th><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nyk.jpg" width="300"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\frac{1}{s}$</td>
+<td>$G(jw)=\frac{1}{jw}$</td>
+<td>$A=\frac{1}{w}\\angle=-90^\circ$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nys-1.jpg" width="200"></td>
+</tr>
+<tr>
+<td>$s$</td>
+<td>$G(jw)=jw$</td>
+<td>$A=w\\angle=90^\circ$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nys1.jpg" width="200"></td>
+</tr>
+<tr>
+<td>$Ts+1$</td>
+<td>$G(jw)=Tjw+1$</td>
+<td>$A=\sqrt{1+T^2w^2}\\angle=arctan(Tw)$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nyts.jpg" width="200"></td>
+</tr>
+<tr>
+<td>$\frac{1}{Ts+1}$</td>
+<td>$G(jw)=\frac{1}{Tjw+1}$</td>
+<td>$A=\frac{1}{\sqrt{T^2w^2+1}}\\angle=-arctan(Tw)$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nyts-1.jpg" width="200"></td>
+</tr>
+<tr>
+<td>$Ts^2+2\xi Ts+1$</td>
+<td>$G(jw)=1-T^2w^2+2\xi T wj$</td>
+<td>$A=\sqrt{(1-\xi^2w^2)^2+(2\xi Tw)^2}\\angle=arc\frac{2\xi Tw}{1-T^2w^2}$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nys2.jpg" width="200"></td>
+</tr>
+<tr>
+<td>$\frac{1}{Ts^2+2\xi Ts+1}$</td>
+<td>$G(jw)=\frac{1}{1-T^2w^2+2\xi Twj}$</td>
+<td>$A=\frac{1}{\sqrt{(1-T^2w^2)^2+(2\xi Tw)^2}}\\angle=\begin{cases}-arctan\frac{2\xi Tw}{1-T^2w^2}, &amp;w\le\frac{1}{T}\-\pi-arctan\frac{2\xi Tw}{1-T^2w^2}, &amp;w&gt;\frac{1}{T}\end{cases}$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nys-2.jpg" width="200"></td>
+</tr>
+<tr>
+<td>$e^{-Ts}$</td>
+<td>$G(jw)=e^{-jwT}$</td>
+<td>$A=1\\angle=-wT$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nye.jpg" width="200"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>作图步骤</li>
+</ul>
+<ol>
+<li><p>$|G(jw)|=​$：相乘</p>
+<p>$\angle G(jw)=$：相加</p>
+</li>
+<li><p>$w=0 \&amp; w=+\infty, G(jw)$，起始：$\frac{1}{s}$相角，终点：分母阶次</p>
+</li>
+<li><p>与实轴交点$Im(G(jw))=0, \angle G(jw)=n\cdot 180^\circ$</p>
+</li>
+<li><p>与虚轴交点$Re(G(jw))=0, \angle G(jw)=n\cdot 90^\circ$</p>
+</li>
+<li><p>多点</p>
+</li>
+</ol>
+<h2 id="4-4-Bode图、对数坐标图"><a href="#4-4-Bode图、对数坐标图" class="headerlink" title="4.4 Bode图、对数坐标图"></a>4.4 Bode图、对数坐标图</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\Bode.jpg" width="600"></p>
+<ul>
+<li>作图步骤<ul>
+<li>幅频：<ol>
+<li>低频$\rightarrow k\cdot\frac{1}{s}, 20lgk-\lambda20lgjw$</li>
+<li>$w=\frac{1}{T}$之后叠加条件</li>
+<li>修正过0dB</li>
+</ol>
+</li>
+<li>相频：<ol>
+<li>$k, s, \frac{1}{s}$先不管</li>
+<li>叠加相角max</li>
+<li>修正$-\pi$转交频率</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-5-最小相位系统"><a href="#4-5-最小相位系统" class="headerlink" title="4.5  最小相位系统"></a>4.5  最小相位系统</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\zxxwxt.jpg" width="600"></p>
+<h2 id="4-6-频域指标"><a href="#4-6-频域指标" class="headerlink" title="4.6 频域指标"></a>4.6 频域指标</h2><ul>
+<li><p>开环：</p>
+<ul>
+<li>【快】$w_c$：开环剪切频率rad/s，$|G|=1$</li>
+</ul>
+</li>
+<li><p>闭环</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\bhpyzb.jpg" width="600"></p>
+<ul>
+<li>$W_r$：谐振角频率</li>
+<li>【稳】$M_r$：谐振峰值，$M_r=|G(jwr)|=\frac{\frac{1}{k}}{2\xi\sqrt{1-\xi^2}}$</li>
+<li>$w_m$：复现频率，允许误差显得最高频率<ul>
+<li>$0\sim w_m$：复现带宽</li>
+</ul>
+</li>
+<li>【快】$W_b$：闭环截止频率<ul>
+<li>$0\sim w_b$：系统带宽</li>
+</ul>
+</li>
+<li>$w_r=w_n\sqrt{1-2\xi^2}, 0\le\xi\le0.707$：</li>
+</ul>
+</li>
+<li><p>开闭环频域特性</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\kbhpytx.jpg" width="300"></p>
+<ul>
+<li><p>低频$|G|&gt;&gt;1, |\frac{x_0(jw)}{x_i(jw)}\approx1$</p>
+</li>
+<li><p>高频$|G|&lt;&lt;1, |\frac{x_0}{x_i}\approx|G(jw)|$</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\kbhpytxt.jpg" width="300"></p>
+<h2 id="4-7-M圆"><a href="#4-7-M圆" class="headerlink" title="4.7 M圆"></a>4.7 M圆</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\my.jpg" width="400"></p>
+<h2 id="4-8-动刚度"><a href="#4-8-动刚度" class="headerlink" title="4.8 动刚度"></a>4.8 动刚度</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dgd.jpg" width="600"></p>
+<h2 id="4-9-例题"><a href="#4-9-例题" class="headerlink" title="4.9 例题"></a>4.9 例题</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\4lt1.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\4lt2.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\4lt3.jpg" width="600"></p>
+<h1 id="5-稳定性分析"><a href="#5-稳定性分析" class="headerlink" title="5. 稳定性分析"></a>5. 稳定性分析</h1><h2 id="5-1-概念"><a href="#5-1-概念" class="headerlink" title="5.1 概念"></a>5.1 概念</h2><ul>
+<li>稳定分类：<ul>
+<li>稳定</li>
+<li>临界稳定：等幅振荡/恒定偏差</li>
+<li>不稳定</li>
+</ul>
+</li>
+<li>充要条件：特征根实部为负</li>
+</ul>
+<h2 id="5-2-劳斯判据（闭环）"><a href="#5-2-劳斯判据（闭环）" class="headerlink" title="5.2 劳斯判据（闭环）"></a>5.2 劳斯判据（闭环）</h2><p>$$\begin{cases}<br>\frac{X_0(s)}{N(s)}&amp;=&amp;<br>\frac{b_0s^m+b_qs^{m-1}+\dots+b_m}{a_0s^n+a_1s^{n-1}+\dots+a_n}\<br>N(s)&amp;=&amp;a_0(s-s_1)(s-s_2)\dots(s-s_n)<br>\end{cases}$$</p>
+<ul>
+<li>条件：<ul>
+<li>$a_i\ne0$<ul>
+<li>临界稳定：虚轴</li>
+<li>不稳定：实部为+</li>
+</ul>
+</li>
+<li>$a_i$符号相同</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\lspj.jpg" width="400"></p>
+<ul>
+<li><p>$b_1=0$，设$b_1=\varepsilon&gt;0$，很小，判断$\varepsilon\rightarrow0$，第一列是否为+</p>
+<ul>
+<li>是，临界稳定</li>
+<li>否，不稳定</li>
+</ul>
+</li>
+<li><p>n行全0，n-1行辅助方程$A(s)=s^{n-1}+a/bs^{n-3}+\dots+a/b$</p>
+<p>解$\frac{dA(s)}{ds}$的共轭虚根</p>
+</li>
+<li><p>坐标变换，$s_1=s-(-a)$，带入特征方程</p>
+</li>
+</ul>
+<h2 id="5-3-赫尔维兹判据"><a href="#5-3-赫尔维兹判据" class="headerlink" title="5.3 赫尔维兹判据"></a>5.3 赫尔维兹判据</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\hewzpj.jpg" width="400"></p>
+<ul>
+<li>劳斯判据和赫尔维兹判据<ul>
+<li>必须传递函数</li>
+<li>定性</li>
+<li>延迟环节无能</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-4-奈奎斯特判据（闭环）"><a href="#5-4-奈奎斯特判据（闭环）" class="headerlink" title="5.4 奈奎斯特判据（闭环）"></a>5.4 奈奎斯特判据（闭环）</h2><p>$$F(s)=K\dfrac{\Pi^m_{i=1}(s-z_i)}{\Pi^n_{j=1}(s-p_j)}, n\ge m$$</p>
+<ul>
+<li><p>上零点，下极点</p>
+</li>
+<li><p>充要条件：$F(s)=1+G(s)H(s)=0$，其零点为$\frac{X_o(s)}{X_i(s)}$极点，特征根全部有负实部</p>
+</li>
+<li><p>D曲线：</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dqx.jpg" width="600"></p>
+</li>
+<li><p>闭环稳定$\Leftrightarrow$开环乃氏图逆时针包围(-1,j0)的圈数=开环右极点个数</p>
+</li>
+<li><p>$Z=P-N$</p>
+<ul>
+<li>$Z=0$：稳定</li>
+<li>$Z&gt;0$：不稳</li>
+<li>$P$：开环右极点数，$p_j&gt;0$的个数</li>
+<li>$N$：逆时针包围圈数</li>
+</ul>
+</li>
+<li><p>半平面$Z_+=P-2N_1$</p>
+<ul>
+<li>$N_1$：一半乃氏图</li>
+</ul>
+</li>
+<li><p>辅助线</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\fzx.jpg" width="500"></p>
+</li>
+<li><p>延时稳定性</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\nsys.jpg" width="500"></p>
+<h2 id="5-5-Bode图稳定性判定"><a href="#5-5-Bode图稳定性判定" class="headerlink" title="5.5 Bode图稳定性判定"></a>5.5 Bode图稳定性判定</h2><ul>
+<li>$Z_+=P-2N_1$</li>
+<li><p>$L(w)\ge0$</p>
+</li>
+<li><p>$N_1=正负穿越之差$</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\cy.jpg" width="200"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\bodepd.jpg" width="600"></p>
+<h2 id="5-6-相对稳定"><a href="#5-6-相对稳定" class="headerlink" title="5.6 相对稳定"></a>5.6 相对稳定</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\xdwd.jpg" width="600"></p>
+<ul>
+<li>相位裕量$\gamma$<ul>
+<li>$\gamma=180^\circ+\phi(w_c)$<ul>
+<li>$w_c$：幅值穿越频率</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>幅值裕量$K_g$<ul>
+<li>$K_g=|\frac{1}{G(jw_g)}|$<ul>
+<li>$w_g$：相位穿越频率</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>稳定：$\gamma&gt;0, K_g&gt;1$，越大越稳</li>
+</ul>
+<h2 id="5-7-例题"><a href="#5-7-例题" class="headerlink" title="5.7 例题"></a>5.7 例题</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\5lt.jpg" width="400"></p>
+<h1 id="6-误差分析计算"><a href="#6-误差分析计算" class="headerlink" title="6. 误差分析计算"></a>6. 误差分析计算</h1><h2 id="6-1-稳态误差"><a href="#6-1-稳态误差" class="headerlink" title="6.1 稳态误差"></a>6.1 稳态误差</h2><ul>
+<li>输入</li>
+<li>干扰</li>
+<li>稳：前提</li>
+<li>准：$\leftarrow G(s)\leftarrow\varepsilon(s)$随$x_i(t)$变化但不影响</li>
+</ul>
+<h2 id="6-2-偏差-varepsilon-t-和误差-e-t"><a href="#6-2-偏差-varepsilon-t-和误差-e-t" class="headerlink" title="6.2 偏差$\varepsilon(t)$和误差$e(t)$"></a>6.2 偏差$\varepsilon(t)$和误差$e(t)$</h2><ul>
+<li><p>偏差$\varepsilon(t)$：输入信号与反馈信号比较的信号</p>
+</li>
+<li><p>误差$e(t)$：理想输出与实际输出之差</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\pcwc.jpg" width="400"></p>
+</li>
+</ul>
+<p>$$\begin{eqnarray}<br>E(s)&amp;=&amp;\mu(s)X_i(s)-X_o(s)\<br>\varepsilon(s)&amp;=&amp;X_i(s)-Y(s)\end{eqnarray}$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\pcwcgx.jpg" width="200"></p>
+<h2 id="6-3-分析步骤"><a href="#6-3-分析步骤" class="headerlink" title="6.3 分析步骤"></a>6.3 分析步骤</h2><ul>
+<li>稳定性判断$\rightarrow$中值定理</li>
+<li>极限：$e_{ss}=\lim_\limits{t\rightarrow\infty}e(t)$【稳态误差/静态误差】</li>
+<li>$\rightarrow E(s)$</li>
+</ul>
+<h2 id="6-4-稳态误差、稳态偏差"><a href="#6-4-稳态误差、稳态偏差" class="headerlink" title="6.4 稳态误差、稳态偏差"></a>6.4 稳态误差、稳态偏差</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\wtwcwtpc.jpg" width="400"></p>
+<ul>
+<li><p>单反馈：$E(s)=\frac{1}{1+G(s)}X_i(s), e_{ss}=\lim_\limits{s\rightarrow0}sE(s)$</p>
+</li>
+<li><p>非单：$$\varepsilon(s)=\frac{1}{1+G(s)H(s)}X_i(s), e_{ss}=\frac{\varepsilon_{ss}}{H}$$</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\6lt1.jpg" width="600"></p>
+<h2 id="6-5-静态误差系数"><a href="#6-5-静态误差系数" class="headerlink" title="6.5 静态误差系数"></a>6.5 静态误差系数</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\jtwcxs.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\jtwcxs2.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\jtwcxs3.jpg" width="400"></p>
+<h2 id="6-6-干扰"><a href="#6-6-干扰" class="headerlink" title="6.6 干扰"></a>6.6 干扰</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\grxt.jpg" width="300"><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\gr.jpg" width="400"></p>
+<h2 id="6-7-减小误差"><a href="#6-7-减小误差" class="headerlink" title="6.7 减小误差"></a>6.7 减小误差</h2><ul>
+<li>反馈通道精度，传感器</li>
+<li>输入：放大$k\uparrow, v\downarrow$</li>
+<li>干扰+积分器，$k\uparrow$</li>
+<li>顺馈</li>
+</ul>
+<h2 id="6-8-前馈、顺馈、全跟踪、内模"><a href="#6-8-前馈、顺馈、全跟踪、内模" class="headerlink" title="6.8 前馈、顺馈、全跟踪、内模"></a>6.8 前馈、顺馈、全跟踪、内模</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\fkff.jpg" width="600"></p>
+<h2 id="6-9-动态误差系数"><a href="#6-9-动态误差系数" class="headerlink" title="6.9 动态误差系数"></a>6.9 动态误差系数</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\dtwcxs.jpg" width="600"></p>
+<h2 id="6-10-例题"><a href="#6-10-例题" class="headerlink" title="6.10 例题"></a>6.10 例题</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\6lt2.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\6lt3.jpg" width="600"></p>
+<h1 id="7-控制系统的综合校正"><a href="#7-控制系统的综合校正" class="headerlink" title="7. 控制系统的综合校正"></a>7. 控制系统的综合校正</h1><h2 id="7-1-指标"><a href="#7-1-指标" class="headerlink" title="7.1 指标"></a>7.1 指标</h2><table>
+<thead>
+<tr>
+<th>时域指标</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$M_p$</td>
+<td>相对稳定性</td>
+<td>最大超调量（百分比）</td>
+</tr>
+<tr>
+<td>$t_s$</td>
+<td>快速性</td>
+<td>调整时间</td>
+</tr>
+<tr>
+<td>$t_p$</td>
+<td></td>
+<td>峰值时间</td>
+</tr>
+<tr>
+<td><strong>开环频域指标</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>先画图</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$w_c$</td>
+<td>开环剪切频率</td>
+<td>快速性</td>
+</tr>
+<tr>
+<td>$\gamma$</td>
+<td>相位裕量</td>
+<td>相对稳定性</td>
+</tr>
+<tr>
+<td>$K_g$</td>
+<td>幅值裕量</td>
+<td>相对稳定性</td>
+</tr>
+<tr>
+<td>$K_p$</td>
+<td>静态位置误差系数</td>
+<td>准确性</td>
+</tr>
+<tr>
+<td>$K_v$</td>
+<td>静态速度误差系数</td>
+<td>准确性</td>
+</tr>
+<tr>
+<td>$K_a$</td>
+<td>静态加速度误差系数</td>
+<td>准确性</td>
+</tr>
+<tr>
+<td><strong>闭环频域指标</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$w_r$</td>
+<td>谐振角频率</td>
+<td></td>
+</tr>
+<tr>
+<td>$M_r$</td>
+<td>相对谐振峰值</td>
+<td>$M_r=\frac{A_{max}}{A(0)}$</td>
+</tr>
+<tr>
+<td>$w_m$</td>
+<td>复现频率</td>
+<td></td>
+</tr>
+<tr>
+<td>$w_b$</td>
+<td>闭环截止频率</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>综合性能指标</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$I=\int^\infty_0e(t)dt$</td>
+<td>误差积分性能指标（无超调）</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\wcjfzb.jpg" width="200"></td>
+</tr>
+<tr>
+<td>$I=\int^\infty_0e^2dt$</td>
+<td>误差平方积分性能指标（振荡）</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\wcpfjfzb.jpg" width="300"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-2-校正（补偿、调节）"><a href="#7-2-校正（补偿、调节）" class="headerlink" title="7.2 校正（补偿、调节）"></a>7.2 校正（补偿、调节）</h2><p><strong>定义</strong>：给系统附加一些具有典型环节特性的电网络、运算部件或测量装置</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\jz.jpg" width="400"></p>
+<h3 id="7-2-1-串联校正"><a href="#7-2-1-串联校正" class="headerlink" title="7.2.1 串联校正"></a>7.2.1 串联校正</h3><ul>
+<li><p>超前</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\cqjz.jpg" width="600"></p>
+</li>
+<li><p>滞后</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\zhjz.jpg" width="600"></p>
+</li>
+<li><p>超前滞后</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\cqzhjz.jpg" width="600"></p>
+</li>
+</ul>
+<h3 id="7-2-2-PID调节（比例-积分-微分控制器）"><a href="#7-2-2-PID调节（比例-积分-微分控制器）" class="headerlink" title="7.2.2 PID调节（比例-积分-微分控制器）"></a>7.2.2 PID调节（比例-积分-微分控制器）</h3><ul>
+<li>原理简单</li>
+<li>适应性强</li>
+<li>鲁棒性强</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>P</th>
+<th>$G(s)=K_p$</th>
+<th>$K_p\uparrow, 偏差\downarrow, 稳定性\downarrow$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\pidm.jpg" width="200"></td>
+<td>$sin\psi=\lvert\dfrac{\frac{M_r}{M_r^2-1}}{\frac{M_r^2}{M_r^2-1}}\rvert=\frac{1}{M_r}$</td>
+<td>$M_r=\frac{1}{2\xi\sqrt{1-2\xi^2}}$</td>
+</tr>
+<tr>
+<td>I</td>
+<td>$G(s)=\frac{K_I}{s}$</td>
+<td>无差调节</td>
+</tr>
+<tr>
+<td>D</td>
+<td>$G(s)=K_Ds$</td>
+<td>变化趋势来调节</td>
+</tr>
+<tr>
+<td>PID</td>
+<td>$G(s)=K_p+\frac{K_I}{s}+K_Ds$</td>
+<td><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\pid.jpg" width="200"></td>
+</tr>
+<tr>
+<td>PI</td>
+<td>P：快速抵消干扰</td>
+<td>I：消除稳态误差</td>
+</tr>
+<tr>
+<td>PD</td>
+<td>提高稳定性，减小短期最大偏差，提高快速性</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>PID确定法</p>
+<ul>
+<li>经验法</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\pidjyf.jpg" width="250"></p>
+<ul>
+<li><p>齐格勒-尼柯尔斯法</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\pidqdf.jpg" width="600"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-2-3-反馈矫正"><a href="#7-2-3-反馈矫正" class="headerlink" title="7.2.3 反馈矫正"></a>7.2.3 反馈矫正</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\fkjz1.jpg" width="600"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\fkjz2.jpg" width="600"></p>
+<h2 id="7-3-频率法"><a href="#7-3-频率法" class="headerlink" title="7.3 频率法"></a>7.3 频率法</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/aps/kzgc\plf.jpg" width="600"> </p>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-概论"><span class="toc-number">1.</span> <span class="toc-text">1. 概论</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-工作原理"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 工作原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-系统的分类"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 系统的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-基本要求：稳准快"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 基本要求：稳准快</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-职能方块图"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 职能方块图</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-控制系统的动态数学模型"><span class="toc-number">2.</span> <span class="toc-text">2. 控制系统的动态数学模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-基本"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 基本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-物理数学实例"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 物理数学实例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-质量弹簧阻尼"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 质量弹簧阻尼</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-电路网络"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 电路网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-电动机"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 电动机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-数学模型线性化：泰勒级数展开"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 数学模型线性化：泰勒级数展开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-拉氏变换"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 拉氏变换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-1-单位阶跃-1-t"><span class="toc-number">2.4.1.</span> <span class="toc-text">2.4.1 单位阶跃$1(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-2-正余弦-sinwt-cdot1-t-coswt-cdot1-t"><span class="toc-number">2.4.2.</span> <span class="toc-text">2.4.2 正余弦$sinwt\cdot1(t), coswt\cdot1(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-3-幂函数-t-n-cdot1-t"><span class="toc-number">2.4.3.</span> <span class="toc-text">2.4.3 幂函数$t^n\cdot1(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-4-单位脉冲函数-delta-t"><span class="toc-number">2.4.4.</span> <span class="toc-text">2.4.4 单位脉冲函数$\delta(t)$</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-5-单位速度函数"><span class="toc-number">2.4.5.</span> <span class="toc-text">2.4.5 单位速度函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-6-单位加速度函数"><span class="toc-number">2.4.6.</span> <span class="toc-text">2.4.6 单位加速度函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-拉式变化性质"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 拉式变化性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-1-叠加原理"><span class="toc-number">2.5.1.</span> <span class="toc-text">2.5.1 叠加原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-2-微分原理"><span class="toc-number">2.5.2.</span> <span class="toc-text">2.5.2 微分原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-3-积分定理"><span class="toc-number">2.5.3.</span> <span class="toc-text">2.5.3 积分定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-4-衰减定理"><span class="toc-number">2.5.4.</span> <span class="toc-text">2.5.4 衰减定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-5-延时定理"><span class="toc-number">2.5.5.</span> <span class="toc-text">2.5.5 延时定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-6-初值定理"><span class="toc-number">2.5.6.</span> <span class="toc-text">2.5.6 初值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-7-终值定理"><span class="toc-number">2.5.7.</span> <span class="toc-text">2.5.7 终值定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-8-卷积"><span class="toc-number">2.5.8.</span> <span class="toc-text">2.5.8 卷积</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-9-象函数"><span class="toc-number">2.5.9.</span> <span class="toc-text">2.5.9 象函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-6-拉式反变换"><span class="toc-number">2.6.</span> <span class="toc-text">2.6 拉式反变换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-7-传递函数"><span class="toc-number">2.7.</span> <span class="toc-text">2.7 传递函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-8-典型环节"><span class="toc-number">2.8.</span> <span class="toc-text">2.8 典型环节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-9-方块图"><span class="toc-number">2.9.</span> <span class="toc-text">2.9 方块图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-10-变换法则"><span class="toc-number">2.10.</span> <span class="toc-text">2.10 变换法则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-11-信号流图和梅逊公式"><span class="toc-number">2.11.</span> <span class="toc-text">2.11 信号流图和梅逊公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-12-基本公式"><span class="toc-number">2.12.</span> <span class="toc-text">2.12 基本公式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-13-例题"><span class="toc-number">2.13.</span> <span class="toc-text">2.13 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-时域频域瞬态响应分析"><span class="toc-number">3.</span> <span class="toc-text">3. 时域频域瞬态响应分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-概念"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-基本环节瞬态"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 基本环节瞬态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-一阶系统瞬态响应：比例-积分"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 一阶系统瞬态响应：比例+积分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-二阶系统瞬态响应"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 二阶系统瞬态响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-二阶系统单位脉冲响应"><span class="toc-number">3.5.</span> <span class="toc-text">3.5  二阶系统单位脉冲响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-斜坡响应"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 斜坡响应</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-时域分析性能指标"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 时域分析性能指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-8-例题"><span class="toc-number">3.8.</span> <span class="toc-text">3.8 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-控制系统频率特性"><span class="toc-number">4.</span> <span class="toc-text">4. 控制系统频率特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-三种变化关系"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 三种变化关系</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-频率特性"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 频率特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-极坐标图、Nyquist曲线"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 极坐标图、Nyquist曲线</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Bode图、对数坐标图"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Bode图、对数坐标图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-最小相位系统"><span class="toc-number">4.5.</span> <span class="toc-text">4.5  最小相位系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-频域指标"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 频域指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-M圆"><span class="toc-number">4.7.</span> <span class="toc-text">4.7 M圆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-8-动刚度"><span class="toc-number">4.8.</span> <span class="toc-text">4.8 动刚度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-9-例题"><span class="toc-number">4.9.</span> <span class="toc-text">4.9 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-稳定性分析"><span class="toc-number">5.</span> <span class="toc-text">5. 稳定性分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-概念"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-劳斯判据（闭环）"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 劳斯判据（闭环）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-赫尔维兹判据"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 赫尔维兹判据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-奈奎斯特判据（闭环）"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 奈奎斯特判据（闭环）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Bode图稳定性判定"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Bode图稳定性判定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-相对稳定"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 相对稳定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-例题"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-误差分析计算"><span class="toc-number">6.</span> <span class="toc-text">6. 误差分析计算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-稳态误差"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 稳态误差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-偏差-varepsilon-t-和误差-e-t"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 偏差$\varepsilon(t)$和误差$e(t)$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-分析步骤"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 分析步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-稳态误差、稳态偏差"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 稳态误差、稳态偏差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-静态误差系数"><span class="toc-number">6.5.</span> <span class="toc-text">6.5 静态误差系数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-6-干扰"><span class="toc-number">6.6.</span> <span class="toc-text">6.6 干扰</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-7-减小误差"><span class="toc-number">6.7.</span> <span class="toc-text">6.7 减小误差</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-8-前馈、顺馈、全跟踪、内模"><span class="toc-number">6.8.</span> <span class="toc-text">6.8 前馈、顺馈、全跟踪、内模</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-9-动态误差系数"><span class="toc-number">6.9.</span> <span class="toc-text">6.9 动态误差系数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-10-例题"><span class="toc-number">6.10.</span> <span class="toc-text">6.10 例题</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-控制系统的综合校正"><span class="toc-number">7.</span> <span class="toc-text">7. 控制系统的综合校正</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-指标"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 指标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-校正（补偿、调节）"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 校正（补偿、调节）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-1-串联校正"><span class="toc-number">7.2.1.</span> <span class="toc-text">7.2.1 串联校正</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-2-PID调节（比例-积分-微分控制器）"><span class="toc-number">7.2.2.</span> <span class="toc-text">7.2.2 PID调节（比例-积分-微分控制器）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-3-反馈矫正"><span class="toc-number">7.2.3.</span> <span class="toc-text">7.2.3 反馈矫正</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-频率法"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 频率法</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&text=Fundamentals of Control Engineering - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&is_video=false&description=Fundamentals of Control Engineering - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fundamentals of Control Engineering - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&title=Fundamentals of Control Engineering - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/kzgc/&name=Fundamentals of Control Engineering - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

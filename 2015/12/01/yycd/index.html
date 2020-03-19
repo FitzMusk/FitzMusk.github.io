@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1.  概述1.1 压力取决于负载，速度取决于流量1.2 工作介质：液体1.3 传递动力：压力能1.4 液压系统组成Composition  能源Power：液压泵Hydraulic pump 执行Execute：液压缸hydraulic cylinder、液压马达hydraulic motor 控制调节Control：P、Q、Direction 辅助装置Auxiliary：油箱fuel tank">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hydraulic and Pneumatic - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1.  概述1.1 压力取决于负载，速度取决于流量1.2 工作介质：液体1.3 传递动力：压力能1.4 液压系统组成Composition  能源Power：液压泵Hydraulic pump 执行Execute：液压缸hydraulic cylinder、液压马达hydraulic motor 控制调节Control：P、Q、Direction 辅助装置Auxiliary：油箱fuel tank">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yyxtzc.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yytx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/bml.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ndmcdl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/nd.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zlsh.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/padwhs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yyyxz.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yyywrcd.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/xkld.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/dl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/bmdbs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/bxl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/clb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/clbllmd.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/clbky.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/clbjxl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/fdzt.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/fdcb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/fqfdcb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/xl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ypb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zsbxps.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zsbxzs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/jxzsb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/bmdxz.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yyg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yygjs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zsg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zyg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zlg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/clctzlg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/gtgg.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/hshsg.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/hczz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/pqzz.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/oxmfq.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/cxmfq.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/tzmfq.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ylf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ylffl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/qbtx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ylfdttx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/jyf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zdsdzjyf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/xdsdzjyf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/dcjyf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/dcjyfr.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/sxf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/sxfr.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/sxfyy.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/jlf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/jlfjs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zxydsjlf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ydsjlf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/mdxx.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/tsf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yljlf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/fltbf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/dzwlf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/dxf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zjdxf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/sxdxf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ykdxf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/zf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/hfhz.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/hxfjnb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/ljf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/xnq.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/xnqjs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/lyqfl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/lyqzb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/rjhq.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/jltshl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/rjtshl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/rjjlts.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/sdhjhl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/tyhl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/jyhl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/sxhl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/phhl.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/bltbf.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/tbhl.png">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hydraulic and Pneumatic - APS">
+<meta name="twitter:description" content="1.  概述1.1 压力取决于负载，速度取决于流量1.2 工作介质：液体1.3 传递动力：压力能1.4 液压系统组成Composition  能源Power：液压泵Hydraulic pump 执行Execute：液压缸hydraulic cylinder、液压马达hydraulic motor 控制调节Control：P、Q、Direction 辅助装置Auxiliary：油箱fuel tank">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd/yyxtzc.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Hydraulic and Pneumatic - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/12/01/jxylks/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/12/01/xm/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&text=Hydraulic and Pneumatic - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&is_video=false&description=Hydraulic and Pneumatic - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hydraulic and Pneumatic - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&name=Hydraulic and Pneumatic - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1.  概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-压力取决于负载，速度取决于流量"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 压力取决于负载，速度取决于流量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-工作介质：液体"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 工作介质：液体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-传递动力：压力能"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 传递动力：压力能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-液压系统组成Composition"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 液压系统组成Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-液压图像符号"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 液压图像符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-液压传动的特点"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 液压传动的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-液压传动装置"><span class="toc-number">1.7.</span> <span class="toc-text">1.7 液压传动装置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-液压油力学性质"><span class="toc-number">2.</span> <span class="toc-text">2. 液压油力学性质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-特点"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-受力"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 受力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-物理性质"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 物理性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-惯性Inertance"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 惯性Inertance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-粘性Stickness"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 粘性Stickness</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-可压缩性compressibility"><span class="toc-number">2.3.3.</span> <span class="toc-text">2.3.3 可压缩性compressibility</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-热膨胀性thermal-expansion"><span class="toc-number">2.3.4.</span> <span class="toc-text">2.3.4 热膨胀性thermal expansion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-液压油的选择"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 液压油的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-污染测定"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 污染测定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-力学"><span class="toc-number">3.</span> <span class="toc-text">3. 力学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-小孔"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 小孔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-流体力学"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 流体力学</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-泵、马达"><span class="toc-number">4.</span> <span class="toc-text">4. 泵、马达</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-概念"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-泵"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 泵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-分类"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-泵性能performance"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2 泵性能performance</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-马达"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 马达</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1-分类"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2-马达性能"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2  马达性能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-齿轮泵"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 齿轮泵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-1-流量脉动"><span class="toc-number">4.4.1.</span> <span class="toc-text">4.4.1 流量脉动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-2-困油Trapping-oil"><span class="toc-number">4.4.2.</span> <span class="toc-text">4.4.2 困油Trapping oil</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-3-齿轮泵径向力"><span class="toc-number">4.4.3.</span> <span class="toc-text">4.4.3 齿轮泵径向力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-4-轴向间隙"><span class="toc-number">4.4.4.</span> <span class="toc-text">4.4.4 轴向间隙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-5-泄露"><span class="toc-number">4.4.5.</span> <span class="toc-text">4.4.5 泄露</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-齿轮马达"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 齿轮马达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-叶片泵"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 叶片泵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-叶片马达"><span class="toc-number">4.7.</span> <span class="toc-text">4.7 叶片马达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-8-轴向柱塞泵"><span class="toc-number">4.8.</span> <span class="toc-text">4.8 轴向柱塞泵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-9-轴向柱塞马达"><span class="toc-number">4.9.</span> <span class="toc-text">4.9 轴向柱塞马达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-10-径向柱塞泵"><span class="toc-number">4.10.</span> <span class="toc-text">4.10 径向柱塞泵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-11-液压泵、马达选择"><span class="toc-number">4.10.1.</span> <span class="toc-text">4.11 液压泵、马达选择</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-液压缸"><span class="toc-number">5.</span> <span class="toc-text">5. 液压缸</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-概念"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-受力计算"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 受力计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-柱塞缸"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 柱塞缸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-增压缸"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 增压缸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-增力缸"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 增力缸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-液压缸结构"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 液压缸结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-密封装置Seal-ring"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 密封装置Seal ring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-1-O型"><span class="toc-number">5.7.1.</span> <span class="toc-text">5.7.1 O型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-2-唇型密封圈"><span class="toc-number">5.7.2.</span> <span class="toc-text">5.7.2 唇型密封圈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-3-同轴密封圈"><span class="toc-number">5.7.3.</span> <span class="toc-text">5.7.3 同轴密封圈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-控制阀Control-Valve"><span class="toc-number">6.</span> <span class="toc-text">6. 控制阀Control Valve</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-压力控制阀"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 压力控制阀</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-1-溢流阀Relief-valve"><span class="toc-number">6.1.1.</span> <span class="toc-text">6.1.1 溢流阀Relief valve</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-1-分类"><span class="toc-number">6.1.1.1.</span> <span class="toc-text">6.1.1.1 分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-2-静态特性"><span class="toc-number">6.1.1.2.</span> <span class="toc-text">6.1.1.2 静态特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-3-启闭特性"><span class="toc-number">6.1.1.3.</span> <span class="toc-text">6.1.1.3 启闭特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-4-动态特性"><span class="toc-number">6.1.1.4.</span> <span class="toc-text">6.1.1.4 动态特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-2-减压阀Pressure-reducing-valve"><span class="toc-number">6.1.2.</span> <span class="toc-text">6.1.2 减压阀Pressure reducing valve</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-1-定值减压阀Constant-pressure-reducing-valve"><span class="toc-number">6.1.2.1.</span> <span class="toc-text">6.1.2.1 定值减压阀Constant pressure reducing valve</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-2-定差减压阀"><span class="toc-number">6.1.2.2.</span> <span class="toc-text">6.1.2.2 定差减压阀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-3-顺序阀Sequence-valve"><span class="toc-number">6.1.2.3.</span> <span class="toc-text">6.1.2.3 顺序阀Sequence valve</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-4-平衡阀"><span class="toc-number">6.1.2.4.</span> <span class="toc-text">6.1.2.4 平衡阀</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-流量控制阀Flow-control-valve"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 流量控制阀Flow control valve</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-节流阀throttle-valve"><span class="toc-number">6.2.1.</span> <span class="toc-text">6.2.1 节流阀throttle valve</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-1-计算"><span class="toc-number">6.2.1.1.</span> <span class="toc-text">6.2.1.1 计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-2-阀芯"><span class="toc-number">6.2.1.2.</span> <span class="toc-text">6.2.1.2 阀芯</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-3-脉动现象"><span class="toc-number">6.2.1.3.</span> <span class="toc-text">6.2.1.3 脉动现象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-调速阀compensated-flow-control-valve"><span class="toc-number">6.2.2.</span> <span class="toc-text">6.2.2 调速阀compensated flow control valve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-3-同步阀Synchronous-valve"><span class="toc-number">6.2.3.</span> <span class="toc-text">6.2.3 同步阀Synchronous valve</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-方向控制阀Directional-control-valve"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 方向控制阀Directional control valve</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-1单向阀-check-one-way-valve"><span class="toc-number">6.3.1.</span> <span class="toc-text">6.3.1单向阀 check / one-way valve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-2-换向阀Directional-valve"><span class="toc-number">6.3.2.</span> <span class="toc-text">6.3.2 换向阀Directional valve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-3-机能表"><span class="toc-number">6.3.3.</span> <span class="toc-text">6.3.3 机能表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-逻辑阀"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 逻辑阀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-辅助装置"><span class="toc-number">7.</span> <span class="toc-text">7. 辅助装置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-蓄能器Energy-accumulator"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 蓄能器Energy accumulator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-滤油器Oil-filter"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 滤油器Oil filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-油箱Fuel-tank"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 油箱Fuel tank</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-热交换器"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 热交换器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-管路"><span class="toc-number">7.5.</span> <span class="toc-text">7.5 管路</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-液压回路"><span class="toc-number">8.</span> <span class="toc-text">8. 液压回路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-调速回路Flow-control-loop"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 调速回路Flow control loop</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-1-节流调速Throttle-speed-control-loop"><span class="toc-number">8.1.1.</span> <span class="toc-text">8.1.1 节流调速Throttle speed control loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-2-容积调速Volume-speed-control-loop"><span class="toc-number">8.1.2.</span> <span class="toc-text">8.1.2 容积调速Volume speed control loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-3-容积节流调速"><span class="toc-number">8.1.3.</span> <span class="toc-text">8.1.3 容积节流调速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-4-速度换接回路"><span class="toc-number">8.1.4.</span> <span class="toc-text">8.1.4 速度换接回路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-压力控制回路"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 压力控制回路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-1-调压回路"><span class="toc-number">8.2.1.</span> <span class="toc-text">8.2.1 调压回路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-2-减压回路"><span class="toc-number">8.2.2.</span> <span class="toc-text">8.2.2 减压回路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-顺序回路"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 顺序回路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-平衡回路"><span class="toc-number">8.4.</span> <span class="toc-text">8.4 平衡回路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-同步阀"><span class="toc-number">8.5.</span> <span class="toc-text">8.5 同步阀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-同步回路"><span class="toc-number">9.</span> <span class="toc-text">9. 同步回路</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Hydraulic and Pneumatic - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-12-01T09:24:42.000Z" itemprop="datePublished">2015-12-01</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.  概述"></a>1.  概述</h1><h2 id="1-1-压力取决于负载，速度取决于流量"><a href="#1-1-压力取决于负载，速度取决于流量" class="headerlink" title="1.1 压力取决于负载，速度取决于流量"></a>1.1 压力取决于负载，速度取决于流量</h2><h2 id="1-2-工作介质：液体"><a href="#1-2-工作介质：液体" class="headerlink" title="1.2 工作介质：液体"></a>1.2 工作介质：液体</h2><h2 id="1-3-传递动力：压力能"><a href="#1-3-传递动力：压力能" class="headerlink" title="1.3 传递动力：压力能"></a>1.3 传递动力：压力能</h2><h2 id="1-4-液压系统组成Composition"><a href="#1-4-液压系统组成Composition" class="headerlink" title="1.4 液压系统组成Composition"></a>1.4 液压系统组成Composition</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\yyxtzc.png" width="600"></p>
+<ul>
+<li>能源Power：液压泵Hydraulic pump</li>
+<li>执行Execute：液压缸hydraulic cylinder、液压马达hydraulic motor</li>
+<li>控制调节Control：P、Q、Direction</li>
+<li>辅助装置Auxiliary：油箱fuel tank、滤油器、油管</li>
+</ul>
+<h2 id="1-5-液压图像符号"><a href="#1-5-液压图像符号" class="headerlink" title="1.5 液压图像符号"></a>1.5 液压图像符号</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\yytx.png" width="400"></p>
+<h2 id="1-6-液压传动的特点"><a href="#1-6-液压传动的特点" class="headerlink" title="1.6 液压传动的特点"></a>1.6 液压传动的特点</h2><p>优点</p>
+<ul>
+<li>同功率下体积小、重量轻</li>
+<li>工作平稳</li>
+<li>调速方便、无级调速</li>
+<li>易于自动化【控制调节装置】</li>
+<li>过载保护比较好</li>
+</ul>
+<p>缺点</p>
+<ul>
+<li>无严格传动比【压缩泄露】</li>
+<li>较多能量损失</li>
+<li>受温度影响大</li>
+<li>精度要求高</li>
+<li>有故障难找</li>
+</ul>
+<h2 id="1-7-液压传动装置"><a href="#1-7-液压传动装置" class="headerlink" title="1.7 液压传动装置"></a>1.7 液压传动装置</h2><ul>
+<li>动力元件dynamic</li>
+<li>执行元件executing </li>
+<li>控制元件control</li>
+<li>辅助元件auxiliary</li>
+</ul>
+<h1 id="2-液压油力学性质"><a href="#2-液压油力学性质" class="headerlink" title="2. 液压油力学性质"></a>2. 液压油力学性质</h1><h2 id="2-1-特点"><a href="#2-1-特点" class="headerlink" title="2.1 特点"></a>2.1 特点</h2><ul>
+<li><p>连续介质：连绵不断、物理量连续</p>
+</li>
+<li><p>只有压力、无拉力</p>
+</li>
+<li><p>易于流动、不抗剪力</p>
+</li>
+</ul>
+<h2 id="2-2-受力"><a href="#2-2-受力" class="headerlink" title="2.2 受力"></a>2.2 受力</h2><ul>
+<li><p>质量力：$mg$</p>
+</li>
+<li><p>惯性力：$m\ddot{y}$</p>
+</li>
+<li><p>表面力：</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\bml.png" width="400"></p>
+</li>
+</ul>
+<h2 id="2-3-物理性质"><a href="#2-3-物理性质" class="headerlink" title="2.3 物理性质"></a>2.3 物理性质</h2><h3 id="2-3-1-惯性Inertance"><a href="#2-3-1-惯性Inertance" class="headerlink" title="2.3.1 惯性Inertance"></a>2.3.1 惯性Inertance</h3><p>$\rho=\frac{m}{V}$，[850-900]kg/m3</p>
+<ul>
+<li>$T\uparrow\rho \quad bissl \downarrow\P\uparrow, \rho\quad bissl \uparrow​$，几乎不变</li>
+</ul>
+<h3 id="2-3-2-粘性Stickness"><a href="#2-3-2-粘性Stickness" class="headerlink" title="2.3.2 粘性Stickness"></a>2.3.2 粘性Stickness</h3><p><strong>定义</strong>：液体内部摩擦力,阻止相对滑动、抗拒变形</p>
+<p>粘性指标</p>
+<ul>
+<li><p>dynamic动力粘度$\mu$：单位速度梯度下，单位面积产生的摩擦力，$Pa\cdot s(N\cdot s/m^2)$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ndmcdl.png" width="500"></p>
+</li>
+<li><p>kinetic 粘度$v=\dfrac{\mu}{\rho}, m^2/s$</p>
+<p>$St=cm^2/s, cSt=10^{-2}St=10^{-6}m$</p>
+</li>
+<li><p>相对粘度/恩式粘度$^\circ Et=\dfrac{t_1(200ml 液)}{t_2(200ml 水)}\quad ^\circ E_{20},^\circ E_{50}$</p>
+<p>$v=(7.31^\circ E-\dfrac{6.31}{^\circ E})\times 10^{-6}$</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\nd.png" width="600"></p>
+<h3 id="2-3-3-可压缩性compressibility"><a href="#2-3-3-可压缩性compressibility" class="headerlink" title="2.3.3 可压缩性compressibility"></a>2.3.3 可压缩性compressibility</h3><p><strong>定义</strong>：V体积增加$\Delta p$，体积小$\Delta V$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zlsh.png" width="500"></p>
+<p>$\beta=-\dfrac{1}{\Delta p}\dfrac{\Delta V}{V}=\dfrac{1}{dp}\dfrac{d\rho}{\rho}\quad \dfrac{1}{Pa}$</p>
+<ul>
+<li><strong>体积弹性模量</strong>$E=\frac{1}{\beta}=-V\dfrac{\Delta p}{\Delta V},\quad [纯液压油680MPa]$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\padwhs.png" width="400"></p>
+<ul>
+<li>液压弹簧效应：液压传动装置产生低速爬行</li>
+<li>加入气体：$k\downarrow\downarrow\rightarrow$平稳性、连续性$\downarrow$，噪声、振动</li>
+</ul>
+<h3 id="2-3-4-热膨胀性thermal-expansion"><a href="#2-3-4-热膨胀性thermal-expansion" class="headerlink" title="2.3.4 热膨胀性thermal expansion"></a>2.3.4 热膨胀性thermal expansion</h3><p><strong>定义</strong>：压力不变，单位温度变化，体积的变化率</p>
+<p>$\alpha_t=\dfrac{1}{\Delta t}\dfrac{\Delta V}{V}=-\dfrac{1}{\rho}\dfrac{d\rho}{dT},\quad (K^{-1}/^\circ C^{-1})$</p>
+<p>$[6.4\sim 7.2\times 10^{-4} K^{-1}]$</p>
+<h2 id="2-4-液压油的选择"><a href="#2-4-液压油的选择" class="headerlink" title="2.4 液压油的选择"></a>2.4 液压油的选择</h2><p>主要考虑粘度，以泵确定</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\yyyxz.png" width="600"></p>
+<h2 id="2-5-污染测定"><a href="#2-5-污染测定" class="headerlink" title="2.5 污染测定"></a>2.5 污染测定</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\yyywrcd.png" width="600"></p>
+<ul>
+<li>称重法</li>
+<li>颗粒计数<ul>
+<li>显微镜</li>
+<li>自动颗粒计算</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-力学"><a href="#3-力学" class="headerlink" title="3. 力学"></a>3. 力学</h1><h2 id="3-1-小孔"><a href="#3-1-小孔" class="headerlink" title="3.1 小孔"></a>3.1 小孔</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\xkld.png" width="500"></p>
+<p>$V=C_v\sqrt{\dfrac{2\Delta p}{\rho}}$</p>
+<ul>
+<li>$C_v=\dfrac{1}{\sqrt{\zeta+1}}$：速度系数</li>
+</ul>
+<p>$q=A_ev_e=C_dA_0\sqrt{\dfrac{2\Delta p}{\rho}}$</p>
+<ul>
+<li>$C_d =C_cC_v\流量系数=收缩系数\cdot速度系数$</li>
+<li>$A_0$：小孔截面</li>
+</ul>
+<h2 id="3-2-流体力学"><a href="#3-2-流体力学" class="headerlink" title="3.2 流体力学"></a>3.2 流体力学</h2><ul>
+<li><p>静力：$p=p_0+\rho g h$</p>
+</li>
+<li><p>连续性：$\rho_1q_1-\rho_2q_2=V\dfrac{d\rho}{dt}+\rho\dfrac{dV}{dt}$</p>
+</li>
+<li><p>能量方程</p>
+<ul>
+<li>理想：$z_1+\dfrac{P_1}{\rho g}+\dfrac{u_1^2}{2g}=z_2+\dfrac{P_2}{\rho g}+\dfrac{u_2^2}{2g}$</li>
+<li>实际：$z_1+\dfrac{P_1}{\rho g}+\dfrac{U_1^2}{2g}=z_2+\dfrac{P_2}{\rho g}+\dfrac{u_2^2}{2g}+h_w$<ul>
+<li>$h_w=(\alpha \frac{l}{d}+\zeta_{1}+\zeta_{2})\dfrac{v^2}{2g}$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>动量</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\dl.png" width="400"></p>
+</li>
+</ul>
+<h1 id="4-泵、马达"><a href="#4-泵、马达" class="headerlink" title="4. 泵、马达"></a>4. 泵、马达</h1><h2 id="4-1-概念"><a href="#4-1-概念" class="headerlink" title="4.1 概念"></a>4.1 概念</h2><ul>
+<li>泵：机械能$\rightarrow$压力能，动力元件</li>
+<li>马达：压力能$\rightarrow$旋转机械能，执行元件</li>
+</ul>
+<p>密封的体积变化</p>
+<h2 id="4-2-泵"><a href="#4-2-泵" class="headerlink" title="4.2 泵"></a>4.2 泵</h2><h3 id="4-2-1-分类"><a href="#4-2-1-分类" class="headerlink" title="4.2.1 分类"></a>4.2.1 分类</h3><ul>
+<li>齿轮泵gear pump：小Q，中低P（内/外啮合）</li>
+<li>叶片泵vane pump：大Q，中低P（单/双作用）</li>
+<li>柱塞泵plunger pump：Q范围大，高超高P（斜盘/斜轴）（轴向/径向）</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\bmdbs.png" width="600"></p>
+<h3 id="4-2-2-泵性能performance"><a href="#4-2-2-泵性能performance" class="headerlink" title="4.2.2 泵性能performance"></a>4.2.2 泵性能performance</h3><ul>
+<li><p>压力$\leftarrow$负载</p>
+<ul>
+<li>额定压力$\rightarrow$寿命、效率</li>
+<li>最大压力$\rightarrow$安全阀</li>
+</ul>
+</li>
+<li><p>流量$q_t=Vn,\quad L/min$</p>
+<p>泄露$q=q_t\eta_v$</p>
+<ul>
+<li>容积效率：$P\uparrow, \eta_v\downarrow\\eta_v=1-\dfrac{\Delta Q}{Q_0}$</li>
+</ul>
+</li>
+<li><p>转速$n$</p>
+<ul>
+<li>额定$\rightarrow$自吸，X（空气、气蚀）</li>
+<li>最高$\rightarrow$气蚀$\Rightarrow$噪声损坏</li>
+</ul>
+</li>
+<li><p>扭矩、功率</p>
+<p>$M_0=\dfrac{PQ}{2\pi n}=\dfrac{pnV}{2\pi n}=\dfrac{pV}{2\pi}$</p>
+<p>机械效率：$\eta_m=\dfrac{M_0}{M}$，压力损失+摩擦损失</p>
+</li>
+<li><p>效率</p>
+<p>$\eta=\eta_m\eta_v=\dfrac{PQ}{MW}$，先机后容</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\bxl.png" width="400"></p>
+<h2 id="4-3-马达"><a href="#4-3-马达" class="headerlink" title="4.3 马达"></a>4.3 马达</h2></li>
+</ul>
+<h3 id="4-3-1-分类"><a href="#4-3-1-分类" class="headerlink" title="4.3.1 分类"></a>4.3.1 分类</h3><ul>
+<li><p>常速</p>
+<ul>
+<li>定量：叶齿柱</li>
+<li>变量：叶齿柱</li>
+</ul>
+</li>
+<li>低速<ul>
+<li>单作用：柱塞</li>
+<li>多作用：传力</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-2-马达性能"><a href="#4-3-2-马达性能" class="headerlink" title="4.3.2  马达性能"></a>4.3.2  马达性能</h3><ul>
+<li><p>排量$V$：可变/不可变</p>
+</li>
+<li><p>转速$n=\dfrac{q\eta_v}{V}$</p>
+</li>
+<li><p>扭矩$T=\dfrac{\Delta pV}{2\pi}\eta_m$</p>
+</li>
+<li><p>效率</p>
+<p>$\eta_v=\dfrac{q_t}{q}$，制动性能</p>
+<p>$\eta_m=\dfrac{T}{T_t}$，起动性能</p>
+<p>$\eta=\eta_v\eta_m$，先容后机</p>
+</li>
+</ul>
+<h2 id="4-4-齿轮泵"><a href="#4-4-齿轮泵" class="headerlink" title="4.4 齿轮泵"></a>4.4 齿轮泵</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\clb.png" width="300"></p>
+<p>$Q=2\pi Zm^2b=\pi Dhb$</p>
+<ul>
+<li>$b$：宽</li>
+</ul>
+<h3 id="4-4-1-流量脉动"><a href="#4-4-1-流量脉动" class="headerlink" title="4.4.1 流量脉动"></a>4.4.1 流量脉动</h3><p>啮合过程压油腔容积变化不均</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\clbllmd.png" width="400"></p>
+<h3 id="4-4-2-困油Trapping-oil"><a href="#4-4-2-困油Trapping-oil" class="headerlink" title="4.4.2 困油Trapping oil"></a>4.4.2 困油Trapping oil</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\clbky.png" width="600"></p>
+<h3 id="4-4-3-齿轮泵径向力"><a href="#4-4-3-齿轮泵径向力" class="headerlink" title="4.4.3 齿轮泵径向力"></a>4.4.3 齿轮泵径向力</h3><ul>
+<li>液体压力：$F_1=\begin{array}{cc}主动轮&amp;0.75\从动轮&amp;0.85\end{array}pDB$<ul>
+<li>$D$：齿顶圆</li>
+</ul>
+</li>
+<li>传递扭矩：$F_2=\dfrac{T}{Rcos\alpha}$<ul>
+<li>$R$：节圆</li>
+<li>$\alpha$：啮合角</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\clbjxl.png" width="400"></p>
+<h3 id="4-4-4-轴向间隙"><a href="#4-4-4-轴向间隙" class="headerlink" title="4.4.4 轴向间隙"></a>4.4.4 轴向间隙</h3><ul>
+<li><p>滑动轴套</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\fdzt.png" width="200"></p>
+</li>
+<li><p>压力平衡式浮动侧板</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\fdcb.png" width="200"></p>
+</li>
+<li><p>分区压力平衡式浮动侧板</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\fqfdcb.png" width="200"></p>
+</li>
+</ul>
+<h3 id="4-4-5-泄露"><a href="#4-4-5-泄露" class="headerlink" title="4.4.5 泄露"></a>4.4.5 泄露</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\xl.png" width="400"></p>
+<h2 id="4-5-齿轮马达"><a href="#4-5-齿轮马达" class="headerlink" title="4.5 齿轮马达"></a>4.5 齿轮马达</h2><ul>
+<li>进出口孔径相同</li>
+<li>轴向间隙、卸荷槽$\rightarrow$正方转能用</li>
+<li>外泄漏油孔</li>
+<li>滚动轴承</li>
+</ul>
+<h2 id="4-6-叶片泵"><a href="#4-6-叶片泵" class="headerlink" title="4.6 叶片泵"></a>4.6 叶片泵</h2><ul>
+<li>流量均匀性好，容积效率高$\eta_v$高</li>
+<li>自吸能力差、转速不高，油污敏感</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ypb.png" width="600"></p>
+<h2 id="4-7-叶片马达"><a href="#4-7-叶片马达" class="headerlink" title="4.7 叶片马达"></a>4.7 叶片马达</h2><ul>
+<li>正反转，叶片径向放置</li>
+<li>叶片底部通高压油</li>
+</ul>
+<h2 id="4-8-轴向柱塞泵"><a href="#4-8-轴向柱塞泵" class="headerlink" title="4.8 轴向柱塞泵"></a>4.8 轴向柱塞泵</h2><ul>
+<li><p>斜盘</p>
+<ul>
+<li>点接触型</li>
+<li>滑靴型</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zsbxps.png" width="500"></p>
+<ul>
+<li>变量：改变$\gamma$<ul>
+<li>手动</li>
+<li>液控</li>
+<li>电控</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>斜轴</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zsbxzs.png" width="600"></p>
+</li>
+</ul>
+<h2 id="4-9-轴向柱塞马达"><a href="#4-9-轴向柱塞马达" class="headerlink" title="4.9 轴向柱塞马达"></a>4.9 轴向柱塞马达</h2><p>平均扭矩：$T=\dfrac{\Delta pq}{w}=\dfrac{\Delta pVn}{2\pi n}=\dfrac{\Delta p V}{2\pi}$</p>
+<ul>
+<li>高速</li>
+<li>低速大扭矩</li>
+</ul>
+<h2 id="4-10-径向柱塞泵"><a href="#4-10-径向柱塞泵" class="headerlink" title="4.10 径向柱塞泵"></a>4.10 径向柱塞泵</h2><ul>
+<li>曲轴式</li>
+<li>回转式</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\jxzsb.png" width="300"></p>
+<h3 id="4-11-液压泵、马达选择"><a href="#4-11-液压泵、马达选择" class="headerlink" title="4.11 液压泵、马达选择"></a>4.11 液压泵、马达选择</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\bmdxz.png" width="600"></p>
+<h1 id="5-液压缸"><a href="#5-液压缸" class="headerlink" title="5. 液压缸"></a>5. 液压缸</h1><h2 id="5-1-概念"><a href="#5-1-概念" class="headerlink" title="5.1 概念"></a>5.1 概念</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\yyg.png" width="600"></p>
+<h2 id="5-2-受力计算"><a href="#5-2-受力计算" class="headerlink" title="5.2 受力计算"></a>5.2 受力计算</h2><p>$F_1=p_1A_1-p_2A_2\v_1=\dfrac{Q_1}{A_1}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\yygjs.png" width="600"></p>
+<h2 id="5-3-柱塞缸"><a href="#5-3-柱塞缸" class="headerlink" title="5.3 柱塞缸"></a>5.3 柱塞缸</h2><p>单向运动、成对布置</p>
+<p>$F=\frac{\pi}{4}d^2p\v=\frac{Q}{\dfrac{\pi d^2}{4}}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zsg.png" width="400"></p>
+<h2 id="5-4-增压缸"><a href="#5-4-增压缸" class="headerlink" title="5.4 增压缸"></a>5.4 增压缸</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zyg.png" width="300"></p>
+<h2 id="5-5-增力缸"><a href="#5-5-增力缸" class="headerlink" title="5.5 增力缸"></a>5.5 增力缸</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zlg.png" width="200"></p>
+<p>$F=p_1(A_1+A_2)-p_22A_2=a(p_1A_1-p_2A_2)-p_1(A_1-A_2)\v=\dfrac{Q_出}{2A_2}=\dfrac{Q_入}{A_1+A_2}$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\clctzlg.png" width="300"></p>
+<h2 id="5-6-液压缸结构"><a href="#5-6-液压缸结构" class="headerlink" title="5.6 液压缸结构"></a>5.6 液压缸结构</h2><ul>
+<li><p>缸盖+缸筒：法兰、半环、螺纹、拉杆、焊接</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\gtgg.jpg" width="600"></p>
+</li>
+<li><p>活塞+活塞杆：锥销、螺纹、半环</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\hshsg.jpg" width="500"></p>
+</li>
+<li><p>缓冲装置：可调/变化</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\hczz.jpg" width="500"></p>
+</li>
+<li><p>排气：排气塞</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\pqzz.jpg" width="400"></p>
+</li>
+</ul>
+<h2 id="5-7-密封装置Seal-ring"><a href="#5-7-密封装置Seal-ring" class="headerlink" title="5.7 密封装置Seal ring"></a>5.7 密封装置Seal ring</h2><ul>
+<li><p>防止工作介质泄露，和外界污染侵入</p>
+</li>
+<li><p>要求</p>
+<ul>
+<li>可靠</li>
+<li>寿命长</li>
+<li>$\mu$小，$\mu_静\approx\mu_动$</li>
+<li>价廉易造</li>
+</ul>
+</li>
+</ul>
+<h3 id="5-7-1-O型"><a href="#5-7-1-O型" class="headerlink" title="5.7.1 O型"></a>5.7.1 O型</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\oxmfq.png" width="500"></p>
+<h3 id="5-7-2-唇型密封圈"><a href="#5-7-2-唇型密封圈" class="headerlink" title="5.7.2 唇型密封圈"></a>5.7.2 唇型密封圈</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\cxmfq.png" width="400"></p>
+<h3 id="5-7-3-同轴密封圈"><a href="#5-7-3-同轴密封圈" class="headerlink" title="5.7.3 同轴密封圈"></a>5.7.3 同轴密封圈</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\tzmfq.png" width="400"></p>
+<h1 id="6-控制阀Control-Valve"><a href="#6-控制阀Control-Valve" class="headerlink" title="6. 控制阀Control Valve"></a>6. 控制阀Control Valve</h1><ul>
+<li>压力</li>
+<li>流量</li>
+<li>方向</li>
+</ul>
+<h2 id="6-1-压力控制阀"><a href="#6-1-压力控制阀" class="headerlink" title="6.1 压力控制阀"></a>6.1 压力控制阀</h2><h3 id="6-1-1-溢流阀Relief-valve"><a href="#6-1-1-溢流阀Relief-valve" class="headerlink" title="6.1.1 溢流阀Relief valve"></a>6.1.1 溢流阀Relief valve</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ylf.png" width="200"></p>
+<h4 id="6-1-1-1-分类"><a href="#6-1-1-1-分类" class="headerlink" title="6.1.1.1 分类"></a>6.1.1.1 分类</h4><ul>
+<li>安全阀：常闭</li>
+<li>恒压阀：常开</li>
+</ul>
+<ul>
+<li>direct acting </li>
+<li>pilot operated</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ylffl.png" width="600"></p>
+<h4 id="6-1-1-2-静态特性"><a href="#6-1-1-2-静态特性" class="headerlink" title="6.1.1.2 静态特性"></a>6.1.1.2 静态特性</h4><p>许用流量：$Q_额=Q_{max}\Q_{min}=15\%+Q_额$</p>
+<p>$P_额=P_{max}$</p>
+<h4 id="6-1-1-3-启闭特性"><a href="#6-1-1-3-启闭特性" class="headerlink" title="6.1.1.3 启闭特性"></a>6.1.1.3 启闭特性</h4><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\qbtx.png" width="300"></p>
+<p>静态压力超调率：$\delta_p=\dfrac{\Delta p_T}{p_T}\times 100\%$</p>
+<p>$\Delta p_T=p_t-p_s$</p>
+<ul>
+<li>$p_T$：调整压力</li>
+<li>$p_S$：开启压力，</li>
+<li>$p_B$：闭合压力，$0.5\%\sim1\% q_H(额)$</li>
+</ul>
+<h4 id="6-1-1-4-动态特性"><a href="#6-1-1-4-动态特性" class="headerlink" title="6.1.1.4 动态特性"></a>6.1.1.4 动态特性</h4><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ylfdttx.png" width="600"></p>
+<h3 id="6-1-2-减压阀Pressure-reducing-valve"><a href="#6-1-2-减压阀Pressure-reducing-valve" class="headerlink" title="6.1.2 减压阀Pressure reducing valve"></a>6.1.2 减压阀Pressure reducing valve</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\jyf.png" width="200"></p>
+<h4 id="6-1-2-1-定值减压阀Constant-pressure-reducing-valve"><a href="#6-1-2-1-定值减压阀Constant-pressure-reducing-valve" class="headerlink" title="6.1.2.1 定值减压阀Constant pressure reducing valve"></a>6.1.2.1 定值减压阀Constant pressure reducing valve</h4><ul>
+<li><p>直动式</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zdsdzjyf.png" width="400"></p>
+<p>$p_cA=k(x_m-x),\quad x&lt;&lt;x_m\\approx kx_m$</p>
+</li>
+<li><p>先导式</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\xdsdzjyf.png" width="200"></p>
+</li>
+</ul>
+<h4 id="6-1-2-2-定差减压阀"><a href="#6-1-2-2-定差减压阀" class="headerlink" title="6.1.2.2 定差减压阀"></a>6.1.2.2 定差减压阀</h4><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\dcjyf.png" width="200"></p>
+<p>$$p_A-p_C=\dfrac{k(x_m+x)}{A}\approx\dfrac{kx_m}{A}$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\dcjyfr.png" width="300"></p>
+<h4 id="6-1-2-3-顺序阀Sequence-valve"><a href="#6-1-2-3-顺序阀Sequence-valve" class="headerlink" title="6.1.2.3 顺序阀Sequence valve"></a>6.1.2.3 顺序阀Sequence valve</h4><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\sxf.png" width="200"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\sxfr.png" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\sxfyy.png" width="400"></p>
+<h4 id="6-1-2-4-平衡阀"><a href="#6-1-2-4-平衡阀" class="headerlink" title="6.1.2.4 平衡阀"></a>6.1.2.4 平衡阀</h4><p>要求不高，顺序阀可做平衡阀</p>
+<ul>
+<li>缺点：圆柱面密封有泄露、控制活塞无阻尼</li>
+</ul>
+<p>一般多组合式</p>
+<h2 id="6-2-流量控制阀Flow-control-valve"><a href="#6-2-流量控制阀Flow-control-valve" class="headerlink" title="6.2 流量控制阀Flow control valve"></a>6.2 流量控制阀Flow control valve</h2><ul>
+<li>节流阀</li>
+<li>调速阀<ul>
+<li>减压节流</li>
+<li>溢流节流</li>
+</ul>
+</li>
+<li>同步阀</li>
+</ul>
+<h3 id="6-2-1-节流阀throttle-valve"><a href="#6-2-1-节流阀throttle-valve" class="headerlink" title="6.2.1 节流阀throttle valve"></a>6.2.1 节流阀throttle valve</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\jlf.png" width="200"></p>
+<h4 id="6-2-1-1-计算"><a href="#6-2-1-1-计算" class="headerlink" title="6.2.1.1 计算"></a>6.2.1.1 计算</h4><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\jlfjs.png" width="600"></p>
+<h4 id="6-2-1-2-阀芯"><a href="#6-2-1-2-阀芯" class="headerlink" title="6.2.1.2 阀芯"></a>6.2.1.2 阀芯</h4><ul>
+<li><p>轴向移动式【高压】</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zxydsjlf.png" width="300"></p>
+</li>
+<li><p>移动式【低压】</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ydsjlf.png" width="200"></p>
+</li>
+</ul>
+<h4 id="6-2-1-3-脉动现象"><a href="#6-2-1-3-脉动现象" class="headerlink" title="6.2.1.3 脉动现象"></a>6.2.1.3 脉动现象</h4><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\mdxx.png" width="500"></p>
+<h3 id="6-2-2-调速阀compensated-flow-control-valve"><a href="#6-2-2-调速阀compensated-flow-control-valve" class="headerlink" title="6.2.2 调速阀compensated flow control valve"></a>6.2.2 调速阀compensated flow control valve</h3><p>=减压阀+节流阀</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\tsf.png" width="600"></p>
+<ul>
+<li><p>溢流节流阀</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\yljlf.png" width="600"></p>
+</li>
+</ul>
+<h3 id="6-2-3-同步阀Synchronous-valve"><a href="#6-2-3-同步阀Synchronous-valve" class="headerlink" title="6.2.3 同步阀Synchronous valve"></a>6.2.3 同步阀Synchronous valve</h3><p>一个泵向多个不同负载元件同q或比例q</p>
+<ul>
+<li><p>分流</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\fltbf.png" width="600"></p>
+</li>
+<li><p>集流$\leftrightarrow$分流</p>
+</li>
+<li><p>单支稳流阀</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\dzwlf.png" width="400"></p>
+</li>
+</ul>
+<h2 id="6-3-方向控制阀Directional-control-valve"><a href="#6-3-方向控制阀Directional-control-valve" class="headerlink" title="6.3 方向控制阀Directional control valve"></a>6.3 方向控制阀Directional control valve</h2><h3 id="6-3-1单向阀-check-one-way-valve"><a href="#6-3-1单向阀-check-one-way-valve" class="headerlink" title="6.3.1单向阀 check / one-way valve"></a>6.3.1单向阀 check / one-way valve</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\dxf.png" width="600"></p>
+<ul>
+<li><p>直角式</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zjdxf.png" width="200"></p>
+</li>
+<li><p>梭形阀</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\sxdxf.png" width="400"></p>
+</li>
+<li><p>液控单向阀</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ykdxf.png" width="600"></p>
+</li>
+</ul>
+<h3 id="6-3-2-换向阀Directional-valve"><a href="#6-3-2-换向阀Directional-valve" class="headerlink" title="6.3.2 换向阀Directional valve"></a>6.3.2 换向阀Directional valve</h3><ul>
+<li><p>转阀</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\zf.png" width="400"></p>
+</li>
+<li><p>滑阀换组</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\hfhz.png" width="600"></p>
+</li>
+<li><p>分类</p>
+<ul>
+<li>机动</li>
+<li>电磁</li>
+</ul>
+</li>
+<li><p>性能指标</p>
+<ul>
+<li>压力损失：$Q_系\le Q_{公称}$</li>
+<li>压力冲击：封闭量F【开度K】</li>
+</ul>
+</li>
+</ul>
+<h3 id="6-3-3-机能表"><a href="#6-3-3-机能表" class="headerlink" title="6.3.3 机能表"></a>6.3.3 机能表</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\hxfjnb.png" width="600"></p>
+<h2 id="6-4-逻辑阀"><a href="#6-4-逻辑阀" class="headerlink" title="6.4 逻辑阀"></a>6.4 逻辑阀</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\ljf.png" width="600"></p>
+<h1 id="7-辅助装置"><a href="#7-辅助装置" class="headerlink" title="7. 辅助装置"></a>7. 辅助装置</h1><h2 id="7-1-蓄能器Energy-accumulator"><a href="#7-1-蓄能器Energy-accumulator" class="headerlink" title="7.1 蓄能器Energy accumulator"></a>7.1 蓄能器Energy accumulator</h2><ul>
+<li><p>作用</p>
+<ul>
+<li>辅助动力</li>
+<li>吸收冲击、降低噪声、消除压力脉动</li>
+<li>维持恒压、补充泄露</li>
+</ul>
+</li>
+<li><p>分类</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\xnq.png" width="300"></p>
+</li>
+<li><p>折合气压：$p_0=(0.8\sim 0.85)p$</p>
+<ul>
+<li>$p_0$：充气压力</li>
+<li>$p$：最低工作压力</li>
+</ul>
+</li>
+<li><p>设计</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\xnqjs.png" width="400"></p>
+</li>
+</ul>
+<h2 id="7-2-滤油器Oil-filter"><a href="#7-2-滤油器Oil-filter" class="headerlink" title="7.2 滤油器Oil filter"></a>7.2 滤油器Oil filter</h2><ul>
+<li><p>作用：过滤杂质、降低污染率</p>
+</li>
+<li><p>组成</p>
+<ul>
+<li>滤芯/滤网</li>
+<li>壳体/滑架</li>
+</ul>
+</li>
+<li><p>分类</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\lyqfl.png" width="300"></p>
+</li>
+<li><p>指标</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\lyqzb.png" width="400"></p>
+</li>
+</ul>
+<h2 id="7-3-油箱Fuel-tank"><a href="#7-3-油箱Fuel-tank" class="headerlink" title="7.3 油箱Fuel tank"></a>7.3 油箱Fuel tank</h2><ul>
+<li>作用<ul>
+<li>储存油液</li>
+<li>散发热量</li>
+<li>释放气体</li>
+<li>沉淀污物</li>
+</ul>
+</li>
+<li>分类<ul>
+<li>开式油箱【广】</li>
+<li>闭式油箱<ul>
+<li>隔离</li>
+<li>充气</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-4-热交换器"><a href="#7-4-热交换器" class="headerlink" title="7.4 热交换器"></a>7.4 热交换器</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\rjhq.png" width="500"></p>
+<h2 id="7-5-管路"><a href="#7-5-管路" class="headerlink" title="7.5 管路"></a>7.5 管路</h2><h1 id="8-液压回路"><a href="#8-液压回路" class="headerlink" title="8. 液压回路"></a>8. 液压回路</h1><h2 id="8-1-调速回路Flow-control-loop"><a href="#8-1-调速回路Flow-control-loop" class="headerlink" title="8.1 调速回路Flow control loop"></a>8.1 调速回路Flow control loop</h2><ul>
+<li>工作速度调节</li>
+<li>负载变、速度不变</li>
+<li>有力、转矩</li>
+<li>功率损失少</li>
+</ul>
+<h3 id="8-1-1-节流调速Throttle-speed-control-loop"><a href="#8-1-1-节流调速Throttle-speed-control-loop" class="headerlink" title="8.1.1 节流调速Throttle speed control loop"></a>8.1.1 节流调速Throttle speed control loop</h3><p>$\rightarrow$流量控制阀开度</p>
+<ul>
+<li>进口节流import</li>
+<li>出口节流export</li>
+<li>旁路节流sideway</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\jltshl.png" width="600"></p>
+<h3 id="8-1-2-容积调速Volume-speed-control-loop"><a href="#8-1-2-容积调速Volume-speed-control-loop" class="headerlink" title="8.1.2 容积调速Volume speed control loop"></a>8.1.2 容积调速Volume speed control loop</h3><p>泵【变/定】+马达【变/定】=3种</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\rjtshl.png" width="600"></p>
+<h3 id="8-1-3-容积节流调速"><a href="#8-1-3-容积节流调速" class="headerlink" title="8.1.3 容积节流调速"></a>8.1.3 容积节流调速</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\rjjlts.png" width="600"></p>
+<h3 id="8-1-4-速度换接回路"><a href="#8-1-4-速度换接回路" class="headerlink" title="8.1.4 速度换接回路"></a>8.1.4 速度换接回路</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\sdhjhl.png" width="600"></p>
+<h2 id="8-2-压力控制回路"><a href="#8-2-压力控制回路" class="headerlink" title="8.2 压力控制回路"></a>8.2 压力控制回路</h2><h3 id="8-2-1-调压回路"><a href="#8-2-1-调压回路" class="headerlink" title="8.2.1 调压回路"></a>8.2.1 调压回路</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\tyhl.png" width="600"></p>
+<h3 id="8-2-2-减压回路"><a href="#8-2-2-减压回路" class="headerlink" title="8.2.2 减压回路"></a>8.2.2 减压回路</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\jyhl.png" width="600"></p>
+<h2 id="8-3-顺序回路"><a href="#8-3-顺序回路" class="headerlink" title="8.3 顺序回路"></a>8.3 顺序回路</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\sxhl.png" width="600"></p>
+<h2 id="8-4-平衡回路"><a href="#8-4-平衡回路" class="headerlink" title="8.4 平衡回路"></a>8.4 平衡回路</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\phhl.png" width="600"></p>
+<h2 id="8-5-同步阀"><a href="#8-5-同步阀" class="headerlink" title="8.5 同步阀"></a>8.5 同步阀</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\bltbf.png" width="300"></p>
+<h1 id="9-同步回路"><a href="#9-同步回路" class="headerlink" title="9. 同步回路"></a>9. 同步回路</h1><p><img src="/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/aps/yycd\tbhl.png" width="600"></p>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-概述"><span class="toc-number">1.</span> <span class="toc-text">1.  概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-压力取决于负载，速度取决于流量"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 压力取决于负载，速度取决于流量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-工作介质：液体"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 工作介质：液体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-传递动力：压力能"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 传递动力：压力能</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-液压系统组成Composition"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 液压系统组成Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-液压图像符号"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 液压图像符号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-液压传动的特点"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 液压传动的特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-7-液压传动装置"><span class="toc-number">1.7.</span> <span class="toc-text">1.7 液压传动装置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-液压油力学性质"><span class="toc-number">2.</span> <span class="toc-text">2. 液压油力学性质</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-特点"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-受力"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 受力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-物理性质"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 物理性质</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-1-惯性Inertance"><span class="toc-number">2.3.1.</span> <span class="toc-text">2.3.1 惯性Inertance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-2-粘性Stickness"><span class="toc-number">2.3.2.</span> <span class="toc-text">2.3.2 粘性Stickness</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-3-可压缩性compressibility"><span class="toc-number">2.3.3.</span> <span class="toc-text">2.3.3 可压缩性compressibility</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-4-热膨胀性thermal-expansion"><span class="toc-number">2.3.4.</span> <span class="toc-text">2.3.4 热膨胀性thermal expansion</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-液压油的选择"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 液压油的选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-5-污染测定"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 污染测定</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-力学"><span class="toc-number">3.</span> <span class="toc-text">3. 力学</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-小孔"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 小孔</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-流体力学"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 流体力学</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-泵、马达"><span class="toc-number">4.</span> <span class="toc-text">4. 泵、马达</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-概念"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-泵"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 泵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-1-分类"><span class="toc-number">4.2.1.</span> <span class="toc-text">4.2.1 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-2-泵性能performance"><span class="toc-number">4.2.2.</span> <span class="toc-text">4.2.2 泵性能performance</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-马达"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 马达</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-1-分类"><span class="toc-number">4.3.1.</span> <span class="toc-text">4.3.1 分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-2-马达性能"><span class="toc-number">4.3.2.</span> <span class="toc-text">4.3.2  马达性能</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-齿轮泵"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 齿轮泵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-1-流量脉动"><span class="toc-number">4.4.1.</span> <span class="toc-text">4.4.1 流量脉动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-2-困油Trapping-oil"><span class="toc-number">4.4.2.</span> <span class="toc-text">4.4.2 困油Trapping oil</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-3-齿轮泵径向力"><span class="toc-number">4.4.3.</span> <span class="toc-text">4.4.3 齿轮泵径向力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-4-轴向间隙"><span class="toc-number">4.4.4.</span> <span class="toc-text">4.4.4 轴向间隙</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-5-泄露"><span class="toc-number">4.4.5.</span> <span class="toc-text">4.4.5 泄露</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-齿轮马达"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 齿轮马达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-6-叶片泵"><span class="toc-number">4.6.</span> <span class="toc-text">4.6 叶片泵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-7-叶片马达"><span class="toc-number">4.7.</span> <span class="toc-text">4.7 叶片马达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-8-轴向柱塞泵"><span class="toc-number">4.8.</span> <span class="toc-text">4.8 轴向柱塞泵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-9-轴向柱塞马达"><span class="toc-number">4.9.</span> <span class="toc-text">4.9 轴向柱塞马达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-10-径向柱塞泵"><span class="toc-number">4.10.</span> <span class="toc-text">4.10 径向柱塞泵</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-11-液压泵、马达选择"><span class="toc-number">4.10.1.</span> <span class="toc-text">4.11 液压泵、马达选择</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-液压缸"><span class="toc-number">5.</span> <span class="toc-text">5. 液压缸</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-概念"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-受力计算"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 受力计算</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-柱塞缸"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 柱塞缸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-增压缸"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 增压缸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-增力缸"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 增力缸</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-液压缸结构"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 液压缸结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-7-密封装置Seal-ring"><span class="toc-number">5.7.</span> <span class="toc-text">5.7 密封装置Seal ring</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-1-O型"><span class="toc-number">5.7.1.</span> <span class="toc-text">5.7.1 O型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-2-唇型密封圈"><span class="toc-number">5.7.2.</span> <span class="toc-text">5.7.2 唇型密封圈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-3-同轴密封圈"><span class="toc-number">5.7.3.</span> <span class="toc-text">5.7.3 同轴密封圈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-控制阀Control-Valve"><span class="toc-number">6.</span> <span class="toc-text">6. 控制阀Control Valve</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-压力控制阀"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 压力控制阀</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-1-溢流阀Relief-valve"><span class="toc-number">6.1.1.</span> <span class="toc-text">6.1.1 溢流阀Relief valve</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-1-分类"><span class="toc-number">6.1.1.1.</span> <span class="toc-text">6.1.1.1 分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-2-静态特性"><span class="toc-number">6.1.1.2.</span> <span class="toc-text">6.1.1.2 静态特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-3-启闭特性"><span class="toc-number">6.1.1.3.</span> <span class="toc-text">6.1.1.3 启闭特性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-1-4-动态特性"><span class="toc-number">6.1.1.4.</span> <span class="toc-text">6.1.1.4 动态特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-2-减压阀Pressure-reducing-valve"><span class="toc-number">6.1.2.</span> <span class="toc-text">6.1.2 减压阀Pressure reducing valve</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-1-定值减压阀Constant-pressure-reducing-valve"><span class="toc-number">6.1.2.1.</span> <span class="toc-text">6.1.2.1 定值减压阀Constant pressure reducing valve</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-2-定差减压阀"><span class="toc-number">6.1.2.2.</span> <span class="toc-text">6.1.2.2 定差减压阀</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-3-顺序阀Sequence-valve"><span class="toc-number">6.1.2.3.</span> <span class="toc-text">6.1.2.3 顺序阀Sequence valve</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-1-2-4-平衡阀"><span class="toc-number">6.1.2.4.</span> <span class="toc-text">6.1.2.4 平衡阀</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-流量控制阀Flow-control-valve"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 流量控制阀Flow control valve</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-1-节流阀throttle-valve"><span class="toc-number">6.2.1.</span> <span class="toc-text">6.2.1 节流阀throttle valve</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-1-计算"><span class="toc-number">6.2.1.1.</span> <span class="toc-text">6.2.1.1 计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-2-阀芯"><span class="toc-number">6.2.1.2.</span> <span class="toc-text">6.2.1.2 阀芯</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-2-1-3-脉动现象"><span class="toc-number">6.2.1.3.</span> <span class="toc-text">6.2.1.3 脉动现象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-2-调速阀compensated-flow-control-valve"><span class="toc-number">6.2.2.</span> <span class="toc-text">6.2.2 调速阀compensated flow control valve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-3-同步阀Synchronous-valve"><span class="toc-number">6.2.3.</span> <span class="toc-text">6.2.3 同步阀Synchronous valve</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-方向控制阀Directional-control-valve"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 方向控制阀Directional control valve</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-1单向阀-check-one-way-valve"><span class="toc-number">6.3.1.</span> <span class="toc-text">6.3.1单向阀 check / one-way valve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-2-换向阀Directional-valve"><span class="toc-number">6.3.2.</span> <span class="toc-text">6.3.2 换向阀Directional valve</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-3-机能表"><span class="toc-number">6.3.3.</span> <span class="toc-text">6.3.3 机能表</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-逻辑阀"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 逻辑阀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-辅助装置"><span class="toc-number">7.</span> <span class="toc-text">7. 辅助装置</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-蓄能器Energy-accumulator"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 蓄能器Energy accumulator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-滤油器Oil-filter"><span class="toc-number">7.2.</span> <span class="toc-text">7.2 滤油器Oil filter</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-油箱Fuel-tank"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 油箱Fuel tank</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-热交换器"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 热交换器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-管路"><span class="toc-number">7.5.</span> <span class="toc-text">7.5 管路</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-液压回路"><span class="toc-number">8.</span> <span class="toc-text">8. 液压回路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-调速回路Flow-control-loop"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 调速回路Flow control loop</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-1-节流调速Throttle-speed-control-loop"><span class="toc-number">8.1.1.</span> <span class="toc-text">8.1.1 节流调速Throttle speed control loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-2-容积调速Volume-speed-control-loop"><span class="toc-number">8.1.2.</span> <span class="toc-text">8.1.2 容积调速Volume speed control loop</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-3-容积节流调速"><span class="toc-number">8.1.3.</span> <span class="toc-text">8.1.3 容积节流调速</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-4-速度换接回路"><span class="toc-number">8.1.4.</span> <span class="toc-text">8.1.4 速度换接回路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-压力控制回路"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 压力控制回路</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-1-调压回路"><span class="toc-number">8.2.1.</span> <span class="toc-text">8.2.1 调压回路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-2-减压回路"><span class="toc-number">8.2.2.</span> <span class="toc-text">8.2.2 减压回路</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-顺序回路"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 顺序回路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-4-平衡回路"><span class="toc-number">8.4.</span> <span class="toc-text">8.4 平衡回路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-5-同步阀"><span class="toc-number">8.5.</span> <span class="toc-text">8.5 同步阀</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-同步回路"><span class="toc-number">9.</span> <span class="toc-text">9. 同步回路</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&text=Hydraulic and Pneumatic - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&is_video=false&description=Hydraulic and Pneumatic - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Hydraulic and Pneumatic - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&title=Hydraulic and Pneumatic - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/yycd/&name=Hydraulic and Pneumatic - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1. Mechanism structureMachinery is the summary of machine and mechanism 1.1 Basic contept Link : move unit Kinematic pair : connect the link Kinematic chain : Link+ KinematicP closed &amp;amp; open planar">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Theory of Machines and Mechanisms - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1. Mechanism structureMachinery is the summary of machine and mechanism 1.1 Basic contept Link : move unit Kinematic pair : connect the link Kinematic chain : Link+ KinematicP closed &amp;amp; open planar">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/diagram1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/diagram2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/diagram3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/ghgl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/kat.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/1link.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/2links.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/eom.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/edm.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/speedf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/flywheel.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/linkages.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/4bar.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/cm.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/sym.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/quickreturn.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/pressurea.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/cmdesign1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/cmdesign2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/cam.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/constantvc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/constantac.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/poly.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/cosc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/sinc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/camdesign.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/campa.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/law.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/involute.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/spur.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/gear.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/contact.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/gmethod.jpeg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/helical.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/egt.jpeg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Theory of Machines and Mechanisms - APS">
+<meta name="twitter:description" content="1. Mechanism structureMachinery is the summary of machine and mechanism 1.1 Basic contept Link : move unit Kinematic pair : connect the link Kinematic chain : Link+ KinematicP closed &amp;amp; open planar">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl/diagram1.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Theory of Machines and Mechanisms - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/30/jxzd/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/30/jxsy/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&text=Theory of Machines and Mechanisms - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&is_video=false&description=Theory of Machines and Mechanisms - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Theory of Machines and Mechanisms - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&name=Theory of Machines and Mechanisms - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Mechanism-structure"><span class="toc-number">1.</span> <span class="toc-text">1. Mechanism structure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Basic-contept"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Basic contept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Pair"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Pair</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Kinematic-diagram-of-mechanism"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Kinematic diagram of mechanism</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-DOF"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 DOF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Assur-group"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Assur group</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Kinematic-Analysis"><span class="toc-number">2.</span> <span class="toc-text">2. Kinematic Analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Instantaneous-center-of-velocity"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Instantaneous center of velocity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Vector-graphic-method"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Vector graphic method</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Balance"><span class="toc-number">3.</span> <span class="toc-text">3. Balance</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Rigid-rotor"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Rigid rotor</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Mechainery"><span class="toc-number">4.</span> <span class="toc-text">4. Mechainery</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Equation-of-motion"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Equation of motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Equivalent-dynamic-model"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Equivalent dynamic model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Speed-fluctuation"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Speed fluctuation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Linkage-mechanism-4-bar-linkages"><span class="toc-number">5.</span> <span class="toc-text">5. Linkage mechanism-4 bar linkages</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Basic-mode-of-4-bar-linkages"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Basic mode of 4 bar linkages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Other-mode"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Other mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Crank"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Crank ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Quick-return-motion"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Quick-return motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Pressure-angle"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Pressure angle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-Design"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 Design</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Cam-mechanism"><span class="toc-number">6.</span> <span class="toc-text">6.Cam mechanism</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Classification"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Motion"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Design"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Pressure-angle"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Pressure angle</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Gear-mechanism"><span class="toc-number">7.</span> <span class="toc-text">7.Gear mechanism</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-Classification"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Fundamental-Law-of-Gear-Tooth-Action"><span class="toc-number">7.2.</span> <span class="toc-text">7.2  Fundamental Law of Gear-Tooth Action</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Involute-Curve"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Involute Curve</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-Spur-Gear"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 Spur Gear</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-1-Standard-gear"><span class="toc-number">7.4.1.</span> <span class="toc-text">7.4.1 Standard gear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-2-Correct-Meshing"><span class="toc-number">7.4.2.</span> <span class="toc-text">7.4.2 Correct Meshing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-3-Contact-ratio"><span class="toc-number">7.4.3.</span> <span class="toc-text">7.4.3 Contact ratio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-4-Generating-method"><span class="toc-number">7.4.4.</span> <span class="toc-text">7.4.4 Generating method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-5-Modifying-method"><span class="toc-number">7.4.5.</span> <span class="toc-text">7.4.5 Modifying  method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-Helical-Gear"><span class="toc-number">7.5.</span> <span class="toc-text">7.5 Helical Gear</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-1-Correct-meshing"><span class="toc-number">7.5.1.</span> <span class="toc-text">7.5.1 Correct meshing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-2-Contact-Ratio"><span class="toc-number">7.5.2.</span> <span class="toc-text">7.5.2 Contact Ratio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-3-Virtual-gear"><span class="toc-number">7.5.3.</span> <span class="toc-text">7.5.3 Virtual gear</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-Gear-Train"><span class="toc-number">8.</span> <span class="toc-text">8.  Gear Train</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-Classification"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-Fixed-axis"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 Fixed axis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-Epicyclic-gt"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 Epicyclic gt</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Theory of Machines and Mechanisms - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-30T13:57:01.000Z" itemprop="datePublished">2015-11-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-Mechanism-structure"><a href="#1-Mechanism-structure" class="headerlink" title="1. Mechanism structure"></a>1. Mechanism structure</h1><p>Machinery is the summary of machine and mechanism</p>
+<h2 id="1-1-Basic-contept"><a href="#1-1-Basic-contept" class="headerlink" title="1.1 Basic contept"></a>1.1 Basic contept</h2><ul>
+<li>Link : move unit</li>
+<li>Kinematic pair : connect the link</li>
+<li>Kinematic chain : Link+ KinematicP<ul>
+<li>closed &amp; open</li>
+<li>planar &amp; spatial</li>
+</ul>
+</li>
+<li>Mechanism<ul>
+<li>Fixed link</li>
+<li>Driven link</li>
+<li>Driving link</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-Pair"><a href="#1-2-Pair" class="headerlink" title="1.2 Pair"></a>1.2 Pair</h2><ul>
+<li>DOF : f=6-s</li>
+<li>Constraint of kinematic pair : 1 - 5,to Class I - V pairs</li>
+<li>Pairing element </li>
+</ul>
+<p><strong>Classificatiton</strong></p>
+<ul>
+<li>High pair : point, line</li>
+<li>Low pair : face</li>
+</ul>
+<ul>
+<li><p>Closed </p>
+<ul>
+<li>form-closed</li>
+<li><p>force-closed</p>
+</li>
+<li><p>Revolute pair</p>
+</li>
+<li>Sliding pair</li>
+<li>Helical pair</li>
+<li>Spherical pair</li>
+</ul>
+</li>
+<li><p>Planar kinematic pair</p>
+</li>
+<li>Spatial kinematic pair</li>
+</ul>
+<h2 id="1-3-Kinematic-diagram-of-mechanism"><a href="#1-3-Kinematic-diagram-of-mechanism" class="headerlink" title="1.3 Kinematic diagram of mechanism"></a>1.3 Kinematic diagram of mechanism</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\diagram1.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\diagram2.jpg" width="400"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\diagram3.jpg" width="400"></p>
+<h2 id="1-4-DOF"><a href="#1-4-DOF" class="headerlink" title="1.4 DOF"></a>1.4 DOF</h2><p>$f=3n-(2p_l+p_h)$</p>
+<ul>
+<li>compound hinges</li>
+<li>passive dof : dont affect the mechanism 滚子</li>
+<li>redundant constraint 重复</li>
+</ul>
+<h2 id="1-5-Assur-group"><a href="#1-5-Assur-group" class="headerlink" title="1.5 Assur group"></a>1.5 Assur group</h2><p>DOF=0</p>
+<ul>
+<li>Binary group : 2l+3pl</li>
+<li>Tenary group : 4l+6pl</li>
+</ul>
+<p><strong>Substitute higher pair mechanism by lower pair mechanism</strong></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\ghgl.jpg" width="400"></p>
+<h1 id="2-Kinematic-Analysis"><a href="#2-Kinematic-Analysis" class="headerlink" title="2. Kinematic Analysis"></a>2. Kinematic Analysis</h1><h2 id="2-1-Instantaneous-center-of-velocity"><a href="#2-1-Instantaneous-center-of-velocity" class="headerlink" title="2.1 Instantaneous center of velocity"></a>2.1 Instantaneous center of velocity</h2><ul>
+<li>absolute</li>
+<li><p>relative</p>
+</li>
+<li><p>RP : at this</p>
+</li>
+<li>SP : $\infty$</li>
+<li><p>Ph</p>
+<ul>
+<li>Pure rolling : at touch p</li>
+<li>Not : at common normal</li>
+</ul>
+</li>
+<li><p>Kennedy-Aronhold theorem : 3 points velocity</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\kat.jpg" width="300"></p>
+<p>$P_{13}=P_{12}+P_{23}\\quad=P_{14}+P_{43}$</p>
+</li>
+</ul>
+<h2 id="2-2-Vector-graphic-method"><a href="#2-2-Vector-graphic-method" class="headerlink" title="2.2 Vector graphic method"></a>2.2 Vector graphic method</h2><ul>
+<li><p>One link</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\1link.jpg" width="400"></p>
+<ul>
+<li>velocity vector polygon of mechanism</li>
+<li>acceleration vector polygon</li>
+<li>velocity image of link</li>
+<li>acceleration image of link</li>
+</ul>
+</li>
+<li><p>Use same p on 2 links</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\2links.jpg" width="600"></p>
+</li>
+</ul>
+<h1 id="3-Balance"><a href="#3-Balance" class="headerlink" title="3. Balance"></a>3. Balance</h1><h2 id="3-1-Rigid-rotor"><a href="#3-1-Rigid-rotor" class="headerlink" title="3.1 Rigid rotor"></a>3.1 Rigid rotor</h2><ul>
+<li><p>static balance - single plane balance</p>
+<p>$F_I=mw^2r\\sum F=F_I+F_b=0$</p>
+<ul>
+<li>mass-radius product</li>
+</ul>
+</li>
+<li><p>dynamic balance - 2 plane balance</p>
+<p>$\sum F=0\\sum M=0$</p>
+</li>
+</ul>
+<h1 id="4-Mechainery"><a href="#4-Mechainery" class="headerlink" title="4. Mechainery"></a>4. Mechainery</h1><ul>
+<li><p>Starting period </p>
+<p>$W_d=W_r+E$</p>
+</li>
+<li><p>Steady motion period</p>
+<p>$W_d’=W_r’$</p>
+</li>
+<li><p>Stopping period</p>
+<p>$E=-W_r’$</p>
+</li>
+</ul>
+<h2 id="4-1-Equation-of-motion"><a href="#4-1-Equation-of-motion" class="headerlink" title="4.1 Equation of motion"></a>4.1 Equation of motion</h2><p>  <img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\eom.jpg" width="400"></p>
+<h2 id="4-2-Equivalent-dynamic-model"><a href="#4-2-Equivalent-dynamic-model" class="headerlink" title="4.2 Equivalent dynamic model"></a>4.2 Equivalent dynamic model</h2><ul>
+<li>equivalent moment of inertia</li>
+<li>equivalent moment</li>
+<li>equivalent link</li>
+<li>equivalent mass</li>
+<li><p>equivalent force</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\edm.jpg" width="400"></p>
+</li>
+</ul>
+<h2 id="4-3-Speed-fluctuation"><a href="#4-3-Speed-fluctuation" class="headerlink" title="4.3 Speed fluctuation"></a>4.3 Speed fluctuation</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\speedf.jpg" width="300"></p>
+<ul>
+<li><p>increment of work</p>
+</li>
+<li><p>decrement of work</p>
+</li>
+</ul>
+<ul>
+<li><p>Coefficient of non-uniformity of operating velocity of machinery</p>
+<p>$\delta=\dfrac{w_{max}-w_{min}}{w_m}$</p>
+</li>
+<li><p>Flywheel</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\flywheel.jpg" width="400"></p>
+</li>
+</ul>
+<h1 id="5-Linkage-mechanism-4-bar-linkages"><a href="#5-Linkage-mechanism-4-bar-linkages" class="headerlink" title="5. Linkage mechanism-4 bar linkages"></a>5. Linkage mechanism-4 bar linkages</h1><h2 id="5-1-Basic-mode-of-4-bar-linkages"><a href="#5-1-Basic-mode-of-4-bar-linkages" class="headerlink" title="5.1 Basic mode of 4 bar linkages"></a>5.1 Basic mode of 4 bar linkages</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\linkages.png" width="300"></p>
+<ul>
+<li>crank : 360, revolute pair of revolving motion</li>
+<li>rocker : some area, revolute pair of swing motion</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\4bar.jpg" width="200"></p>
+<ul>
+<li>Crank-rocker mechanism</li>
+<li>Double-crank mechanism<ul>
+<li>parallel-c m</li>
+<li>antip-c m</li>
+</ul>
+</li>
+<li>Double-rocker mechanism</li>
+</ul>
+<h2 id="5-2-Other-mode"><a href="#5-2-Other-mode" class="headerlink" title="5.2 Other mode"></a>5.2 Other mode</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\cm.jpg" width="200"></p>
+<ul>
+<li><p>Slider-crank m</p>
+<ul>
+<li><p>Offset sc m</p>
+</li>
+<li><p>Centric sc m</p>
+</li>
+<li><p>double sc m</p>
+</li>
+<li><p>scotch-yoke m </p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\sym.jpg" width="400"></p>
+</li>
+</ul>
+</li>
+<li><p>Guide-bar m</p>
+<ul>
+<li>Crank and rotating gb m</li>
+<li>Crank and swing  gb m</li>
+</ul>
+</li>
+<li><p>Crank and swing slider m</p>
+</li>
+</ul>
+<h2 id="5-3-Crank"><a href="#5-3-Crank" class="headerlink" title="5.3 Crank ?"></a>5.3 Crank ?</h2><ul>
+<li>$L_{min}+L_{max}\le \sum L_{rest}$</li>
+<li>Lmin near the revolute p</li>
+</ul>
+<h2 id="5-4-Quick-return-motion"><a href="#5-4-Quick-return-motion" class="headerlink" title="5.4 Quick-return motion"></a>5.4 Quick-return motion</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\quickreturn.jpg" width="400"></p>
+<ul>
+<li>Crank angle between the 2 limit position</li>
+<li>Coefficient of travel speed variation</li>
+</ul>
+<h2 id="5-5-Pressure-angle"><a href="#5-5-Pressure-angle" class="headerlink" title="5.5 Pressure angle"></a>5.5 Pressure angle</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\pressurea.jpg" width="400"></p>
+<ul>
+<li>$\gamma$ : transmission angle </li>
+<li>dead point : $\gamma=0$ , +flywheel, 2 different </li>
+</ul>
+<h2 id="5-6-Design"><a href="#5-6-Design" class="headerlink" title="5.6 Design"></a>5.6 Design</h2><ul>
+<li>analytic method</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\cmdesign1.jpg" width="400"></p>
+<ul>
+<li><p>Drawing</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\cmdesign2.jpg" width="400"></p>
+</li>
+</ul>
+<h1 id="6-Cam-mechanism"><a href="#6-Cam-mechanism" class="headerlink" title="6.Cam mechanism"></a>6.Cam mechanism</h1><ul>
+<li>Cam</li>
+<li>Follower</li>
+</ul>
+<h2 id="6-1-Classification"><a href="#6-1-Classification" class="headerlink" title="6.1 Classification"></a>6.1 Classification</h2><ul>
+<li>Plate cam</li>
+<li><p>Cylinder cam</p>
+</li>
+<li><p>Knife-edge follower</p>
+</li>
+<li>Roller f</li>
+<li><p>Flat-faced f</p>
+</li>
+<li><p>Force-drive cam m</p>
+</li>
+<li>Positive cam m</li>
+</ul>
+<h2 id="6-2-Motion"><a href="#6-2-Motion" class="headerlink" title="6.2 Motion"></a>6.2 Motion</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\cam.jpg" width="400"></p>
+<ul>
+<li>$r_0$ : base circle</li>
+<li>$h$ : actuating travel</li>
+<li><p>$\delta_0$ : Motion angle of at</p>
+<ul>
+<li>$\delta _{01}$ : far angle of repose</li>
+<li>$\delta_{0}’$ : motion angle for return travel</li>
+<li>$\delta_{02}$ : near angle of repose</li>
+</ul>
+</li>
+<li><p>Constant velocity curve : rigid impulse, order 1</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\constantvc.jpg" width="200"></p>
+</li>
+<li><p>Constant acceleration and deceleration motion curve : soft impulse, order 2</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\constantac.jpg" width="200"></p>
+</li>
+<li><p>Polynomial motion</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\poly.jpg" width="200"></p>
+</li>
+<li><p>Simple harmonic motion : soft impulse</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\cosc.jpg" width="300"></p>
+</li>
+<li><p>Sine acceleration motion</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\sinc.jpg" width="400"></p>
+</li>
+</ul>
+<h2 id="6-3-Design"><a href="#6-3-Design" class="headerlink" title="6.3 Design"></a>6.3 Design</h2><ol>
+<li>Cam pitch curve</li>
+<li>cam contour </li>
+</ol>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\camdesign.jpg" width="400"></p>
+<h2 id="6-4-Pressure-angle"><a href="#6-4-Pressure-angle" class="headerlink" title="6.4 Pressure angle"></a>6.4 Pressure angle</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\campa.jpg" width="300"></p>
+<p>$F=G/[\cos(\alpha+\varphi_1)-(l+2b/l)\sin(\alpha+\varphi_1)\tan\varphi_2]$</p>
+<h1 id="7-Gear-mechanism"><a href="#7-Gear-mechanism" class="headerlink" title="7.Gear mechanism"></a>7.Gear mechanism</h1><h2 id="7-1-Classification"><a href="#7-1-Classification" class="headerlink" title="7.1 Classification"></a>7.1 Classification</h2><ul>
+<li>parallel axis</li>
+<li>intersecting axis</li>
+<li><p>interlaced shaft</p>
+</li>
+<li><p>spur</p>
+</li>
+<li>helical</li>
+<li><p>spiral bevel</p>
+</li>
+<li><p>External gear</p>
+</li>
+<li>Internal gear</li>
+</ul>
+<h2 id="7-2-Fundamental-Law-of-Gear-Tooth-Action"><a href="#7-2-Fundamental-Law-of-Gear-Tooth-Action" class="headerlink" title="7.2  Fundamental Law of Gear-Tooth Action"></a>7.2  Fundamental Law of Gear-Tooth Action</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\law.jpg" width="300"></p>
+<p>Velocity Ratio: $i_{12}=\dfrac{w_1}{w_2}=\dfrac{O_2P}{O_1P}$</p>
+<ul>
+<li>Pitch piont</li>
+<li>Pitch circle</li>
+<li>Pitch line</li>
+</ul>
+<h2 id="7-3-Involute-Curve"><a href="#7-3-Involute-Curve" class="headerlink" title="7.3 Involute Curve"></a>7.3 Involute Curve</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\involute.jpg" width="400"></p>
+<ul>
+<li>generating line BK=arc AB</li>
+<li>B : instantaneous center</li>
+<li>BK is tangent to circle</li>
+<li>no involute curve in the base circle</li>
+</ul>
+<p><strong>involute function </strong>: $\theta_k=tan\alpha_k-a_k$</p>
+<ul>
+<li>$\theta$ : evolving angle</li>
+<li>$\alpha$ : pressure angle</li>
+</ul>
+<p><strong>Feature</strong> </p>
+<ul>
+<li>i constant</li>
+<li>force along the line of action啮合线</li>
+<li>separability</li>
+</ul>
+<h2 id="7-4-Spur-Gear"><a href="#7-4-Spur-Gear" class="headerlink" title="7.4 Spur Gear"></a>7.4 Spur Gear</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\spur.jpeg" width="400"></p>
+<ul>
+<li>$r_a$ : addendum circle</li>
+<li>$r_f$ : dedendum circle</li>
+<li>$s$ : tooth thickness</li>
+<li>$e$ : space width</li>
+<li>$p=e+s$ : circular pitch<ul>
+<li>reference circle</li>
+</ul>
+</li>
+<li>$h_a$ : addendum</li>
+<li>$h_f$ : dedendum</li>
+<li>$h=h_a+h_f$ : tooth depth</li>
+</ul>
+<h3 id="7-4-1-Standard-gear"><a href="#7-4-1-Standard-gear" class="headerlink" title="7.4.1 Standard gear"></a>7.4.1 Standard gear</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\gear.png" width="600"></p>
+<ul>
+<li>$z$ : number of teeth</li>
+<li>$m=\dfrac{p}{\pi}$ : module</li>
+<li>$d=mz$ : diameter of reference circle</li>
+<li>$\alpha=20^\circ$ : pressure angle, </li>
+<li>$r_b=rcos\alpha$</li>
+<li>$e=s=\pi m/2$</li>
+<li>$c=c^*m$ : Clearance</li>
+<li>$h_a^*=1$ : addendum factor, $h_a=h_a^*m$</li>
+<li>$c^*=0.25$ : clearance factor, $h_f=(h_a^*+c^*)m​$</li>
+<li>$a=m(z_1+z_2)/2=r_1+r_2​$ : $a\uparrow,\alpha’&gt;\alpha,c’&gt;c,a\downarrow​$ can’t assemble</li>
+</ul>
+<h3 id="7-4-2-Correct-Meshing"><a href="#7-4-2-Correct-Meshing" class="headerlink" title="7.4.2 Correct Meshing"></a>7.4.2 Correct Meshing</h3><ul>
+<li>$m_1=m_2$</li>
+<li>$\alpha_1=\alpha_2$</li>
+</ul>
+<h3 id="7-4-3-Contact-ratio"><a href="#7-4-3-Contact-ratio" class="headerlink" title="7.4.3 Contact ratio"></a>7.4.3 Contact ratio</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\contact.jpg" width="200"></p>
+<p>$B_1B_2&lt;N_1N_2$</p>
+<p>$\varepsilon_\alpha=\dfrac{B_1B_2}{p_b}\ge[\varepsilon_\alpha]$</p>
+<ul>
+<li>1.1-1.4</li>
+<li>$p_b=pcos\alpha$</li>
+<li>$\varepsilon_\alpha=[z_1(tan\alpha_{a1}-tan\alpha’)+z_2(tang\alpha_{a2}-tan\alpha’)]/2/\pi$</li>
+</ul>
+<h3 id="7-4-4-Generating-method"><a href="#7-4-4-Generating-method" class="headerlink" title="7.4.4 Generating method"></a>7.4.4 Generating method</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\gmethod.jpeg" width="400"></p>
+<p>Tooth cutting : number of teeth too less</p>
+<p>$z_{min}=\dfrac{2h_a^*}{sin^2\alpha}$</p>
+<h3 id="7-4-5-Modifying-method"><a href="#7-4-5-Modifying-method" class="headerlink" title="7.4.5 Modifying  method"></a>7.4.5 Modifying  method</h3><p>To use less 17, then $s\neq e$,modified gear</p>
+<p>also, too small and not enough strength</p>
+<ul>
+<li>$x$ : modification coefficient</li>
+<li>$s=(\frac{\pi}{2}+2xtan\alpha)m$ </li>
+<li>$e=(\frac{\pi}{2}-2xtan\alpha)m$</li>
+<li>$h_f=(h_a^*+c^*-x)m$</li>
+<li>$h_a=(h_a^*+x)m$</li>
+</ul>
+<p><strong>Equal displacement gear</strong></p>
+<ul>
+<li>small, positive</li>
+<li>bigger, negtive</li>
+</ul>
+<h2 id="7-5-Helical-Gear"><a href="#7-5-Helical-Gear" class="headerlink" title="7.5 Helical Gear"></a>7.5 Helical Gear</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\helical.jpg" width="400"></p>
+<ul>
+<li>$\beta$ : helix angle</li>
+<li>Normal plane<ul>
+<li>$m_n=m_t\cos\beta$</li>
+<li>$p_n= \pi m_n=\pi m_t\cos\beta$</li>
+<li>$\tan\alpha_n=\tan\alpha_t\cos\beta$</li>
+<li>$d=zm_t=zm_n/\cos\beta$</li>
+<li>$a=m_n(z_1+z_2)/\cos\beta$</li>
+</ul>
+</li>
+<li>$\tan\beta_b=\tan\beta\cos\alpha_t$</li>
+</ul>
+<h3 id="7-5-1-Correct-meshing"><a href="#7-5-1-Correct-meshing" class="headerlink" title="7.5.1 Correct meshing"></a>7.5.1 Correct meshing</h3><ul>
+<li>$\beta_1=\beta_2$</li>
+<li>$m_{n1}=m_{n2}$</li>
+<li>$\alpha_{n1}=\alpha_{n2}$</li>
+</ul>
+<h3 id="7-5-2-Contact-Ratio"><a href="#7-5-2-Contact-Ratio" class="headerlink" title="7.5.2 Contact Ratio"></a>7.5.2 Contact Ratio</h3><p>$\varepsilon_\gamma=\varepsilon_\alpha+\varepsilon_\beta$ :thumbsup:</p>
+<ul>
+<li>$\varepsilon_\alpha=[z_1(tan\alpha_{at1}-tan\alpha_t’)+z_2(tang\alpha_{at2}-tan\alpha_t’)]/(2\pi)$</li>
+<li>$\varepsilon_\beta=B\sin\beta/(\pi m_n)$</li>
+</ul>
+<h3 id="7-5-3-Virtual-gear"><a href="#7-5-3-Virtual-gear" class="headerlink" title="7.5.3 Virtual gear"></a>7.5.3 Virtual gear</h3><p>$z_v=z/\cos^3\beta\Rightarrow\quad z_{min}=z_{vmin}\cos^3\beta$:thumbsup: </p>
+<h1 id="8-Gear-Train"><a href="#8-Gear-Train" class="headerlink" title="8.  Gear Train"></a>8.  Gear Train</h1><h2 id="8-1-Classification"><a href="#8-1-Classification" class="headerlink" title="8.1 Classification"></a>8.1 Classification</h2><ul>
+<li>fixed axis gt</li>
+<li>epicyclic gt<ul>
+<li>sun gear</li>
+<li>planetary gear</li>
+<li>planetary carrier</li>
+<li>DOF=2 : differential gt</li>
+<li>DOF=1 : planetary gt</li>
+</ul>
+</li>
+<li>compound planetary gt</li>
+</ul>
+<h2 id="8-2-Fixed-axis"><a href="#8-2-Fixed-axis" class="headerlink" title="8.2 Fixed axis"></a>8.2 Fixed axis</h2><p>$i=\dfrac{\sum z_{DrivenGears}}{\sum z_{DriveGears}}$</p>
+<ul>
+<li>+,-</li>
+</ul>
+<h2 id="8-3-Epicyclic-gt"><a href="#8-3-Epicyclic-gt" class="headerlink" title="8.3 Epicyclic gt"></a>8.3 Epicyclic gt</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/aps/jxyl\egt.jpeg" width="600"></p>
+<p>+$w_H\Rightarrow$ inverted gt</p>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Mechanism-structure"><span class="toc-number">1.</span> <span class="toc-text">1. Mechanism structure</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Basic-contept"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Basic contept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Pair"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Pair</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Kinematic-diagram-of-mechanism"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Kinematic diagram of mechanism</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-DOF"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 DOF</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Assur-group"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Assur group</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Kinematic-Analysis"><span class="toc-number">2.</span> <span class="toc-text">2. Kinematic Analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Instantaneous-center-of-velocity"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Instantaneous center of velocity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Vector-graphic-method"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Vector graphic method</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Balance"><span class="toc-number">3.</span> <span class="toc-text">3. Balance</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Rigid-rotor"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Rigid rotor</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Mechainery"><span class="toc-number">4.</span> <span class="toc-text">4. Mechainery</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Equation-of-motion"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Equation of motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Equivalent-dynamic-model"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Equivalent dynamic model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Speed-fluctuation"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Speed fluctuation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Linkage-mechanism-4-bar-linkages"><span class="toc-number">5.</span> <span class="toc-text">5. Linkage mechanism-4 bar linkages</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Basic-mode-of-4-bar-linkages"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Basic mode of 4 bar linkages</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Other-mode"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Other mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Crank"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Crank ?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Quick-return-motion"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Quick-return motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Pressure-angle"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Pressure angle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-6-Design"><span class="toc-number">5.6.</span> <span class="toc-text">5.6 Design</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Cam-mechanism"><span class="toc-number">6.</span> <span class="toc-text">6.Cam mechanism</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Classification"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Motion"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Motion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Design"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-Pressure-angle"><span class="toc-number">6.4.</span> <span class="toc-text">6.4 Pressure angle</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-Gear-mechanism"><span class="toc-number">7.</span> <span class="toc-text">7.Gear mechanism</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#7-1-Classification"><span class="toc-number">7.1.</span> <span class="toc-text">7.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-2-Fundamental-Law-of-Gear-Tooth-Action"><span class="toc-number">7.2.</span> <span class="toc-text">7.2  Fundamental Law of Gear-Tooth Action</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-3-Involute-Curve"><span class="toc-number">7.3.</span> <span class="toc-text">7.3 Involute Curve</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-4-Spur-Gear"><span class="toc-number">7.4.</span> <span class="toc-text">7.4 Spur Gear</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-1-Standard-gear"><span class="toc-number">7.4.1.</span> <span class="toc-text">7.4.1 Standard gear</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-2-Correct-Meshing"><span class="toc-number">7.4.2.</span> <span class="toc-text">7.4.2 Correct Meshing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-3-Contact-ratio"><span class="toc-number">7.4.3.</span> <span class="toc-text">7.4.3 Contact ratio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-4-Generating-method"><span class="toc-number">7.4.4.</span> <span class="toc-text">7.4.4 Generating method</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-5-Modifying-method"><span class="toc-number">7.4.5.</span> <span class="toc-text">7.4.5 Modifying  method</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-5-Helical-Gear"><span class="toc-number">7.5.</span> <span class="toc-text">7.5 Helical Gear</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-1-Correct-meshing"><span class="toc-number">7.5.1.</span> <span class="toc-text">7.5.1 Correct meshing</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-2-Contact-Ratio"><span class="toc-number">7.5.2.</span> <span class="toc-text">7.5.2 Contact Ratio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-3-Virtual-gear"><span class="toc-number">7.5.3.</span> <span class="toc-text">7.5.3 Virtual gear</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-Gear-Train"><span class="toc-number">8.</span> <span class="toc-text">8.  Gear Train</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#8-1-Classification"><span class="toc-number">8.1.</span> <span class="toc-text">8.1 Classification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-2-Fixed-axis"><span class="toc-number">8.2.</span> <span class="toc-text">8.2 Fixed axis</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-3-Epicyclic-gt"><span class="toc-number">8.3.</span> <span class="toc-text">8.3 Epicyclic gt</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&text=Theory of Machines and Mechanisms - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&is_video=false&description=Theory of Machines and Mechanisms - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Theory of Machines and Mechanisms - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&title=Theory of Machines and Mechanisms - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxyl/&name=Theory of Machines and Mechanisms - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

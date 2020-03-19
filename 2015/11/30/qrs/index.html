@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Basic conceptsDefinitionAny device contains microprocessor,like digital clock, hand phone, electric appliance Short History Embedded system : MIT Whirlwind   flight simulation 1940s   Embedded device">
+<meta name="keywords" content="APS,EM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Embedded System - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="Basic conceptsDefinitionAny device contains microprocessor,like digital clock, hand phone, electric appliance Short History Embedded system : MIT Whirlwind   flight simulation 1940s   Embedded device">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/EMconstruct.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/SPI.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/i2cinf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/i2cqs.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/sh.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/dcb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/pcbzb.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/smg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/ddsmg.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/smgsj.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/osi.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/osics.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/osigcsj.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/phylj.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/ytwz.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/ipszb.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/transport.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/tcpip.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/cs1.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/cs2.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/udp.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/http.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/httprequest.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/httpack.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/tcpip.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Embedded System - APS">
+<meta name="twitter:description" content="Basic conceptsDefinitionAny device contains microprocessor,like digital clock, hand phone, electric appliance Short History Embedded system : MIT Whirlwind   flight simulation 1940s   Embedded device">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/EMconstruct.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Embedded System - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/12/01/jxsjks/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/30/ltlx/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&text=Embedded System - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&is_video=false&description=Embedded System - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Embedded System - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&name=Embedded System - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basic-concepts"><span class="toc-number">1.</span> <span class="toc-text">Basic concepts</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition"><span class="toc-number">1.1.</span> <span class="toc-text">Definition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Short-History"><span class="toc-number">1.2.</span> <span class="toc-text">Short History</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Main-Properties"><span class="toc-number">1.3.</span> <span class="toc-text">Main Properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Composition"><span class="toc-number">1.4.</span> <span class="toc-text">Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Programming"><span class="toc-number">1.5.</span> <span class="toc-text">Programming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Communication-technology"><span class="toc-number">1.6.</span> <span class="toc-text">Communication technology</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Components"><span class="toc-number">2.</span> <span class="toc-text">Components</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Resistance-value"><span class="toc-number">2.1.</span> <span class="toc-text">Resistance value</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PCB-Print-Circuit-Board"><span class="toc-number">3.</span> <span class="toc-text">PCB Print Circuit Board</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CCL-Copper-clad-plate"><span class="toc-number">3.1.</span> <span class="toc-text">CCL Copper-clad plate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Layer-definetion"><span class="toc-number">3.2.</span> <span class="toc-text">Layer definetion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Make-PCB"><span class="toc-number">3.3.</span> <span class="toc-text">Make PCB</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hand-welding"><span class="toc-number">4.</span> <span class="toc-text">Hand welding</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Standard"><span class="toc-number">4.1.</span> <span class="toc-text">Standard</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PCB-Design"><span class="toc-number">5.</span> <span class="toc-text">PCB Design</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Design-Flow-in-AltiumDesign"><span class="toc-number">5.1.</span> <span class="toc-text">Design Flow in AltiumDesign</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Schematic-diagram-design"><span class="toc-number">5.1.1.</span> <span class="toc-text">Schematic diagram design</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PCB-diagram-design"><span class="toc-number">5.1.2.</span> <span class="toc-text">PCB diagram design</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#All-Step"><span class="toc-number">5.2.</span> <span class="toc-text">All Step</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Digital-tube"><span class="toc-number">5.3.</span> <span class="toc-text">Digital tube</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Communication"><span class="toc-number">6.</span> <span class="toc-text">Communication</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-concepts-1"><span class="toc-number">6.1.</span> <span class="toc-text">Basic concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ISO-OSI-Open-System-Interconnection"><span class="toc-number">6.2.</span> <span class="toc-text">ISO OSI Open System Interconnection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Physical"><span class="toc-number">6.2.1.</span> <span class="toc-text">Physical</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-link"><span class="toc-number">6.2.2.</span> <span class="toc-text">Data-link</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network"><span class="toc-number">6.2.3.</span> <span class="toc-text">Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transport"><span class="toc-number">6.2.4.</span> <span class="toc-text">Transport</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TCP-Transmission-Control-Protocol-Reliable"><span class="toc-number">6.2.4.1.</span> <span class="toc-text">TCP Transmission Control Protocol[Reliable]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UDP-User-Datagram-Protocol-unreliable-no-response"><span class="toc-number">6.2.4.2.</span> <span class="toc-text">UDP User Datagram Protocol[unreliable, no response]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Application"><span class="toc-number">6.2.5.</span> <span class="toc-text">Application</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP-Protocol"><span class="toc-number">6.3.</span> <span class="toc-text">TCP/IP Protocol</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ESP8266"><span class="toc-number">7.</span> <span class="toc-text">ESP8266</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Embedded System - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-30T14:02:29.000Z" itemprop="datePublished">2015-11-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/EM/">EM</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Basic-concepts"><a href="#Basic-concepts" class="headerlink" title="Basic concepts"></a>Basic concepts</h1><h2 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h2><p>Any device contains microprocessor,like digital clock, hand phone, electric appliance</p>
+<h2 id="Short-History"><a href="#Short-History" class="headerlink" title="Short History"></a>Short History</h2><ul>
+<li><p>Embedded system : MIT Whirlwind </p>
+<ul>
+<li>flight simulation</li>
+<li>1940s</li>
+</ul>
+</li>
+<li><p>Embedded device : calculator</p>
+<ul>
+<li>first Intel 4004</li>
+<li>1970s</li>
+</ul>
+</li>
+</ul>
+<h2 id="Main-Properties"><a href="#Main-Properties" class="headerlink" title="Main Properties"></a>Main Properties</h2><ul>
+<li>Complicated and special calculation</li>
+<li>real-time feedback</li>
+<li>low power and energy consumption</li>
+<li>sensor information input</li>
+<li>direct control motor or relay</li>
+<li>communication between chips and outside</li>
+</ul>
+<h2 id="Composition"><a href="#Composition" class="headerlink" title="Composition"></a>Composition</h2><p>CPU, Flash, memory, I/O port,  function module (beeper, digital tube), Auxiliary circuit( connecting ), power</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/EMconstruct.png" width="400px"></p>
+<h2 id="Programming"><a href="#Programming" class="headerlink" title="Programming"></a>Programming</h2><ul>
+<li>Clock, interrupter and other function part initialize</li>
+<li>communication inter chip or with outside program</li>
+<li>power manage program</li>
+<li>system application algorithm</li>
+</ul>
+<h2 id="Communication-technology"><a href="#Communication-technology" class="headerlink" title="Communication technology"></a>Communication technology</h2><ul>
+<li><p>Inter chips</p>
+<ul>
+<li><p>SPI (4 lines) Serial Peripheral Interface</p>
+<ul>
+<li>1 to multiple</li>
+<li>full duplex</li>
+<li>SDI : data in</li>
+<li>SDO</li>
+<li>SCLK : clock</li>
+<li>CS : 片选</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/SPI.jpg" width="400px"></p>
+</li>
+<li><p>I2C ( 2 lines, half duplex )   ( synchronous serial ) 8/10bit</p>
+<ul>
+<li>SDA</li>
+<li>SCL</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/i2cinf.jpg" width="400px"></p>
+<ul>
+<li><p>传输步骤</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/i2cqs.png" width="400px"></p>
+<ol>
+<li>Master发起START</li>
+<li>Master发送I2C addr ( 7bit ) 和w操作0 ( 1bit ) , 等待ACK</li>
+<li>Slave发送ACK</li>
+<li>Master发送reg addr ( 8bit ) , 等待ACK</li>
+<li>Slave发送ACK</li>
+<li>Master发送data ( 8bit ) , 即要写入寄存器中的数据, 等待ACK</li>
+<li>Slave发送ACK</li>
+<li>第6步和第7步可以重复多次, 即顺序写多个寄存器</li>
+<li>Master发起STOP</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>RS232 ( asynchronous ) </p>
+</li>
+</ul>
+</li>
+<li><p>Outside </p>
+<ul>
+<li>RS232 : 3-15V 1,-3~-15 0</li>
+<li>RS422 : 差分</li>
+<li>RS485 : 差分,  2-6 1, -2～-6 0</li>
+<li>CAN</li>
+<li>Ethernet</li>
+<li>USB</li>
+</ul>
+</li>
+</ul>
+<h1 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h1><ul>
+<li>circuit symbol</li>
+<li>electronic parameter</li>
+<li>footprint</li>
+</ul>
+<h2 id="Resistance-value"><a href="#Resistance-value" class="headerlink" title="Resistance value"></a>Resistance value</h2><ul>
+<li><p>resistor color ring 4/5/6</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/sh.jpg" width="400px"></p>
+</li>
+<li><p>Digital symbol<br>“XXn” : $XX\times 10^n {\rm\Omega}$<br>R: decimal point</p>
+</li>
+<li><p>Footprint<br>Paster ( length, width$\mu m$ ) </p>
+<ul>
+<li>1mil=0.0254mm, round up</li>
+<li>0603 60 and 30mil<br>| inch |  mm  |<br>| :–: | :–: |<br>| 0201 | 0603 |<br>| 0402 | 1005 |<br>|  03  |  08  |<br>|  04  |  10  |<br>|  05  |  12  |<br>|  06  |  16  |<br>|  08  |  20  |<br>|  10  |  25  |<br>|  12  |  32  |<br>|  18  |  48  |<br>|  20  |  50  |<br>|  25  |  64  |</li>
+</ul>
+</li>
+</ul>
+<h1 id="PCB-Print-Circuit-Board"><a href="#PCB-Print-Circuit-Board" class="headerlink" title="PCB Print Circuit Board"></a>PCB Print Circuit Board</h1><p>Electronic connection between components</p>
+<ul>
+<li>printed wiring</li>
+<li>boding pad</li>
+<li>through hole</li>
+</ul>
+<h2 id="CCL-Copper-clad-plate"><a href="#CCL-Copper-clad-plate" class="headerlink" title="CCL Copper-clad plate"></a>CCL Copper-clad plate</h2><p>sheet copper on insulating material</p>
+<ul>
+<li>single sided board</li>
+<li>double sided board</li>
+<li>multilayer boards</li>
+</ul>
+<h2 id="Layer-definetion"><a href="#Layer-definetion" class="headerlink" title="Layer definetion"></a>Layer definetion</h2><ul>
+<li><p>Double layer</p>
+<ol>
+<li>GTO Gerber Top Overlay : text explain</li>
+<li>GTS Gerber Top Solder : green oil</li>
+<li>GTL Gerber Top Layer : electronic connect</li>
+<li>GBL Gerber Bottom Layer </li>
+<li>GBS Gerber Bottom Solder</li>
+<li>GBL Gerber Bottom Layer </li>
+<li>GKO Gerber KeepOut : shape forming</li>
+<li>DRL : drill hole</li>
+</ol>
+</li>
+<li><p>Multilayer +Midlayer Internlayer<br><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/dcb.png" width="400px"></p>
+<ol>
+<li>Midlayer 1 G1 : 1st electronic connect</li>
+<li>Midlayern Gn  :  nth electronic connect</li>
+<li>Internlayer 1 GP1  :  1st information connect</li>
+<li>Internlayer n  GPn  : nth information connect</li>
+</ol>
+</li>
+</ul>
+<h2 id="Make-PCB"><a href="#Make-PCB" class="headerlink" title="Make PCB"></a>Make PCB</h2><ul>
+<li>film push</li>
+<li>develop</li>
+<li>exposure</li>
+<li>etching board</li>
+<li>wipe out</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/pcbzb.jpg" width="400px"></p>
+<h1 id="Hand-welding"><a href="#Hand-welding" class="headerlink" title="Hand welding"></a>Hand welding</h1><ul>
+<li>Soldering iron<ul>
+<li>cleaning sponge</li>
+</ul>
+</li>
+<li>solder wire<ul>
+<li>rosin</li>
+<li>solder wick : remove redundant soldering tin</li>
+<li>heat gun</li>
+</ul>
+</li>
+<li>tweezer</li>
+</ul>
+<h2 id="Standard"><a href="#Standard" class="headerlink" title="Standard"></a>Standard</h2><p>surface smooth and blink, the cross section like moon</p>
+<h1 id="PCB-Design"><a href="#PCB-Design" class="headerlink" title="PCB Design"></a>PCB Design</h1><p>EDA Electronic Design Automation Softeware: Altium Designer :au:</p>
+<p>Cadence Allegro,OrCAD :us:</p>
+<p>EAGLE :de:</p>
+<h2 id="Design-Flow-in-AltiumDesign"><a href="#Design-Flow-in-AltiumDesign" class="headerlink" title="Design Flow in AltiumDesign"></a>Design Flow in AltiumDesign</h2><h3 id="Schematic-diagram-design"><a href="#Schematic-diagram-design" class="headerlink" title="Schematic diagram design"></a>Schematic diagram design</h3><ol>
+<li>New project</li>
+<li>graph size choose A4, A3</li>
+<li>Set up component symbol library, choose component</li>
+<li>Circuit design, draw schematic diagram</li>
+<li>check design rule</li>
+<li>choose footprint</li>
+<li>create BOM Bill of Material</li>
+</ol>
+<h3 id="PCB-diagram-design"><a href="#PCB-diagram-design" class="headerlink" title="PCB diagram design"></a>PCB diagram design</h3><ol>
+<li>draw new footprint</li>
+<li>Design PCB shape, size[Keepout Layer]<ol>
+<li>选择单位尺寸</li>
+<li>选Keepout Layer</li>
+<li>Place命令绘制边框</li>
+<li>Design-&gt;Board Shape制作</li>
+</ol>
+</li>
+<li>Input Schematic file information : Design-&gt;Input Changeds From…</li>
+<li>Layout [modularity, functionalization]</li>
+<li>set up wiring rule</li>
+<li>manual[first choose layer], automatic</li>
+<li>Draw symbol description ( Overlay layer ) </li>
+</ol>
+<h2 id="All-Step"><a href="#All-Step" class="headerlink" title="All Step"></a>All Step</h2><ol start="0">
+<li>建立PCB项目(.PCBPRJ)</li>
+<li>设计电路图(.SCHDOC)</li>
+<li>为电路图中所有元器件选择适合的封装</li>
+<li>确定PCB板形状, 尺寸和非布线区域(固定位置等)(.PCBDOC)</li>
+<li>编译导入元器件,并分别设置各个模块中 元件在板上的位置</li>
+<li>手动/自动/半自动布线(电源地点/线可不布)</li>
+<li>生成敷铜层</li>
+<li>增添接地点</li>
+<li>在上下OVERLAYER层添加文字图形说明</li>
+<li>将生成的 FOOL.PCBDOC文件送出,生产样品(打样)</li>
+<li>焊接制作PCB板,测试功能正确性和完整性。若有问题则返回1重新开始</li>
+<li>设计完成后根据设计记录文件写出相关设计技术文档</li>
+</ol>
+<h2 id="Digital-tube"><a href="#Digital-tube" class="headerlink" title="Digital tube"></a>Digital tube</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/smg.png" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/ddsmg.png" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/smgsj.png" width="400px"></p>
+<h1 id="Communication"><a href="#Communication" class="headerlink" title="Communication"></a>Communication</h1><h2 id="Basic-concepts-1"><a href="#Basic-concepts-1" class="headerlink" title="Basic concepts"></a>Basic concepts</h2><ul>
+<li>definition : object use information to communicate</li>
+<li>Object : any creature or functional system</li>
+<li>Communication way<ul>
+<li>human language</li>
+<li>Computer Protocol<ul>
+<li>protocol format</li>
+<li>sequence progress</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="ISO-OSI-Open-System-Interconnection"><a href="#ISO-OSI-Open-System-Interconnection" class="headerlink" title="ISO OSI Open System Interconnection"></a>ISO OSI Open System Interconnection</h2><table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td>User port</td>
+<td>HTTP / FTP / DNS</td>
+</tr>
+<tr>
+<td>Presentation</td>
+<td>data encode/decode</td>
+<td>ASCII / JPEG / MP3</td>
+</tr>
+<tr>
+<td>Session</td>
+<td>distinguish data</td>
+<td>NETBIOS, WINSOCK</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>reliable/unreliable data transmission</td>
+<td>TCP / UDP</td>
+</tr>
+<tr>
+<td>Network</td>
+<td>routing</td>
+<td>IP,ARP</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>bit$\rightarrow$frame</td>
+<td>SDLC / HDLC</td>
+</tr>
+<tr>
+<td>Physical</td>
+<td>send bit flow</td>
+<td>232</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs\osi.jpg" width="500px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs\osics.jpg" width="500px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs\osigcsj.jpg" width="500px"></p>
+<h3 id="Physical"><a href="#Physical" class="headerlink" title="Physical"></a>Physical</h3><p>transmission media</p>
+<ul>
+<li><p>wireless, wired ( optical fiber /twisted-pair ) </p>
+</li>
+<li><p>连接器类型</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs\phylj.jpg" width="400px"></p>
+</li>
+<li><p>Protocol : RS232</p>
+</li>
+</ul>
+<h3 id="Data-link"><a href="#Data-link" class="headerlink" title="Data-link"></a>Data-link</h3><ul>
+<li><p>point to point </p>
+</li>
+<li><p>framing : end with wrong check</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/ytwz.png" width="400px"></p>
+</li>
+<li><p>检错FCS Frame Check Sequence</p>
+<ul>
+<li>奇偶校验位Parity Bit</li>
+<li>校验和Checksum</li>
+<li>CRC Cyclic Redundancy Check</li>
+</ul>
+</li>
+<li><p>透明传输 转译ESCape字符</p>
+</li>
+<li><p>7E$\rightarrow$7D 5E</p>
+</li>
+<li>7D$\rightarrow$7D 5D</li>
+</ul>
+<h3 id="Network"><a href="#Network" class="headerlink" title="Network"></a>Network</h3><p>Routing way</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/ipszb.png" width="400px"></p>
+<ul>
+<li>版本 : 4 Bit<ul>
+<li>v4 : 4个字节</li>
+<li>v6 : 16个字节, 128 Bit</li>
+</ul>
+</li>
+<li>首部长度 : 4 Bit</li>
+<li>区分服务</li>
+<li>总长度</li>
+<li>标识</li>
+<li>生存时间Time To Live : 8 Bit</li>
+<li>协议 : <ul>
+<li>TCP</li>
+<li>UDP</li>
+<li>ARP</li>
+<li>OSPF(Open Shortest Path First开放式最短路径优先 ) </li>
+</ul>
+</li>
+<li>首部检验和 : 16Bit+</li>
+<li>源地址 : 255.255.255.255 点分十进制</li>
+<li>目的地址 : </li>
+</ul>
+<h3 id="Transport"><a href="#Transport" class="headerlink" title="Transport"></a>Transport</h3><p>Process, Task communication</p>
+<p>Port to port communication</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/transport.png" width="500px"></p>
+<p>端口号</p>
+<p>1024-65535, [IP,PORT]</p>
+<ul>
+<li>动态分配</li>
+<li><p>其他方式 : pipe管道通信, 共享内存</p>
+</li>
+<li><p>熟知端口号 : 0-1023</p>
+<ul>
+<li>80 : 服务器–总台, <ul>
+<li>开新进程 : 连接copy版</li>
+</ul>
+</li>
+<li>21 : 邮件</li>
+</ul>
+</li>
+<li>登记端口号 : 1024-49151</li>
+<li>客户端口号 : 49152-65535</li>
+<li>DOS攻击</li>
+<li>用完导到另一个服务器</li>
+</ul>
+<h4 id="TCP-Transmission-Control-Protocol-Reliable"><a href="#TCP-Transmission-Control-Protocol-Reliable" class="headerlink" title="TCP Transmission Control Protocol[Reliable]"></a>TCP Transmission Control Protocol[Reliable]</h4><ul>
+<li><p>打电话, 双方</p>
+</li>
+<li><p>基于连接</p>
+</li>
+<li><p>全双工 : 同时相互发送</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/tcpip.png" width="400px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/cs1.png" width="500px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/cs2.png" width="500px"></p>
+<h4 id="UDP-User-Datagram-Protocol-unreliable-no-response"><a href="#UDP-User-Datagram-Protocol-unreliable-no-response" class="headerlink" title="UDP User Datagram Protocol[unreliable, no response]"></a>UDP User Datagram Protocol[unreliable, no response]</h4><ul>
+<li>信, 到达时间和与否不知道</li>
+<li>效率高</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs/udp.png" width="400px"></p>
+<h3 id="Application"><a href="#Application" class="headerlink" title="Application"></a>Application</h3><ul>
+<li><p>DNS</p>
+</li>
+<li><p>FTP</p>
+</li>
+<li><p>TELNET</p>
+</li>
+<li><p>SSH</p>
+</li>
+<li><p>SMTP</p>
+</li>
+<li><p>HTTP HyperText Transfer Protocol</p>
+<p><img src="aps\qrs\http.png" width="500px"></p>
+<p><img src="aps\qrs\httprequest.jpg" width="500px"></p>
+<p><img src="aps\qrs\httpack.jpg" width="500px"></p>
+</li>
+</ul>
+<ul>
+<li><p>EMail</p>
+<ul>
+<li>Send: SMTP<ul>
+<li>To:</li>
+<li>Subject:</li>
+<li>Cc:</li>
+<li>From:</li>
+<li>Date:</li>
+<li>Reply- To:</li>
+</ul>
+</li>
+<li>Read: POP3, IMAP<h2 id="TCP-IP-Protocol"><a href="#TCP-IP-Protocol" class="headerlink" title="TCP/IP Protocol"></a>TCP/IP Protocol</h2></li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/aps/qrs\tcpip.jpg" width="500px"></p>
+<h1 id="ESP8266"><a href="#ESP8266" class="headerlink" title="ESP8266"></a>ESP8266</h1><ul>
+<li>netassist.exe</li>
+<li>uartassist.exe</li>
+</ul>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Basic-concepts"><span class="toc-number">1.</span> <span class="toc-text">Basic concepts</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition"><span class="toc-number">1.1.</span> <span class="toc-text">Definition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Short-History"><span class="toc-number">1.2.</span> <span class="toc-text">Short History</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Main-Properties"><span class="toc-number">1.3.</span> <span class="toc-text">Main Properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Composition"><span class="toc-number">1.4.</span> <span class="toc-text">Composition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Programming"><span class="toc-number">1.5.</span> <span class="toc-text">Programming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Communication-technology"><span class="toc-number">1.6.</span> <span class="toc-text">Communication technology</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Components"><span class="toc-number">2.</span> <span class="toc-text">Components</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Resistance-value"><span class="toc-number">2.1.</span> <span class="toc-text">Resistance value</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PCB-Print-Circuit-Board"><span class="toc-number">3.</span> <span class="toc-text">PCB Print Circuit Board</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#CCL-Copper-clad-plate"><span class="toc-number">3.1.</span> <span class="toc-text">CCL Copper-clad plate</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Layer-definetion"><span class="toc-number">3.2.</span> <span class="toc-text">Layer definetion</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Make-PCB"><span class="toc-number">3.3.</span> <span class="toc-text">Make PCB</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hand-welding"><span class="toc-number">4.</span> <span class="toc-text">Hand welding</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Standard"><span class="toc-number">4.1.</span> <span class="toc-text">Standard</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#PCB-Design"><span class="toc-number">5.</span> <span class="toc-text">PCB Design</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Design-Flow-in-AltiumDesign"><span class="toc-number">5.1.</span> <span class="toc-text">Design Flow in AltiumDesign</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Schematic-diagram-design"><span class="toc-number">5.1.1.</span> <span class="toc-text">Schematic diagram design</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PCB-diagram-design"><span class="toc-number">5.1.2.</span> <span class="toc-text">PCB diagram design</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#All-Step"><span class="toc-number">5.2.</span> <span class="toc-text">All Step</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Digital-tube"><span class="toc-number">5.3.</span> <span class="toc-text">Digital tube</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Communication"><span class="toc-number">6.</span> <span class="toc-text">Communication</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-concepts-1"><span class="toc-number">6.1.</span> <span class="toc-text">Basic concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ISO-OSI-Open-System-Interconnection"><span class="toc-number">6.2.</span> <span class="toc-text">ISO OSI Open System Interconnection</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Physical"><span class="toc-number">6.2.1.</span> <span class="toc-text">Physical</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Data-link"><span class="toc-number">6.2.2.</span> <span class="toc-text">Data-link</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Network"><span class="toc-number">6.2.3.</span> <span class="toc-text">Network</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Transport"><span class="toc-number">6.2.4.</span> <span class="toc-text">Transport</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TCP-Transmission-Control-Protocol-Reliable"><span class="toc-number">6.2.4.1.</span> <span class="toc-text">TCP Transmission Control Protocol[Reliable]</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UDP-User-Datagram-Protocol-unreliable-no-response"><span class="toc-number">6.2.4.2.</span> <span class="toc-text">UDP User Datagram Protocol[unreliable, no response]</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Application"><span class="toc-number">6.2.5.</span> <span class="toc-text">Application</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP-Protocol"><span class="toc-number">6.3.</span> <span class="toc-text">TCP/IP Protocol</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ESP8266"><span class="toc-number">7.</span> <span class="toc-text">ESP8266</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&text=Embedded System - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&is_video=false&description=Embedded System - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Embedded System - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&title=Embedded System - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/qrs/&name=Embedded System - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

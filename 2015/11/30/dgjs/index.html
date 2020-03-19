@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="1. Circuit built for power or signal transmission  real to ideal    closed circuit open circuit short circuit  1.1 Basic Components U : Voltage, V $V_x$ : Electric potential to some point R :  linear">
+<meta name="keywords" content="APS,EE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electrotechnology(Electrical Technology) - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="1. Circuit built for power or signal transmission  real to ideal    closed circuit open circuit short circuit  1.1 Basic Components U : Voltage, V $V_x$ : Electric potential to some point R :  linear">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/resistance.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/powers.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/currents.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/superpositionp.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/thevenint.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/inductance.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/F:/Aktualisierung/Uni/aps/dgjs/rc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/F:/Aktualisierung/Uni/aps/dgjs/zeroi.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/F:/Aktualisierung/Uni/aps/dgjs/zeros.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/transienta.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/phasor.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/phasorc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/impedance.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/ypower.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/phasev.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/load.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/load3.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/saturation.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/hysteresis.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/ampere.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/ironcc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/ironcce.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/transformer.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/3phaset.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/yy.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/ytriangle.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/autotransformer.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/vt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/ct.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/transformersp.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/mechanicalp.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/uinf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/rinf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/scms1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/combinations.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/button.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/accc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/thermalr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/scmsc.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/scmfbrc.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Electrotechnology(Electrical Technology) - APS">
+<meta name="twitter:description" content="1. Circuit built for power or signal transmission  real to ideal    closed circuit open circuit short circuit  1.1 Basic Components U : Voltage, V $V_x$ : Electric potential to some point R :  linear">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs/resistance.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Electrotechnology(Electrical Technology) - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/30/dzjs/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/30/cllx/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&text=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&is_video=false&description=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Electrotechnology(Electrical Technology) - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&name=Electrotechnology(Electrical Technology) - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Circuit"><span class="toc-number">1.</span> <span class="toc-text">1. Circuit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Basic-Components"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Basic Components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Power"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Power</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Kirchhoff"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Kirchhoff</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Superposition-principle"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Superposition principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Thevenin’s-Theorem-amp-Norton-Theorem"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Thevenin’s Theorem &amp; Norton Theorem</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Transient-analysis"><span class="toc-number">2.</span> <span class="toc-text">2. Transient analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-RLC"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 RLC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-RC"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 RC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-First-Order-Response"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 First Order Response</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Sinusoidal-alternating-current"><span class="toc-number">3.</span> <span class="toc-text">3. Sinusoidal alternating current</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Basic-concepts"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Basic concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Phasor-Diagrams"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Phasor Diagrams</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Impedance"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Impedance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Three-phase-electric-power"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Three-phase electric power</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-1-Y-Configuration"><span class="toc-number">3.4.1.</span> <span class="toc-text">3.4.1  Y Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-2-Load"><span class="toc-number">3.4.2.</span> <span class="toc-text">3.4.2 Load</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Transformer"><span class="toc-number">4.</span> <span class="toc-text">4. Transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Concepts"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Material"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Ampere-loop-theorem"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Ampere loop theorem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Iron-core-coil"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Iron core coil</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-Transformer"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 Transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-1-3-phases-transformer"><span class="toc-number">4.5.1.</span> <span class="toc-text">4.5.1 3 phases transformer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-2-Y-Y-Y-Triangle"><span class="toc-number">4.5.2.</span> <span class="toc-text">4.5.2 Y/Y Y/Triangle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-3-Load"><span class="toc-number">4.5.3.</span> <span class="toc-text">4.5.3 Load</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-4-Parameters"><span class="toc-number">4.5.4.</span> <span class="toc-text">4.5.4 Parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-5-Special-Transformer"><span class="toc-number">4.5.5.</span> <span class="toc-text">4.5.5 Special Transformer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-6-Series-and-parallel"><span class="toc-number">4.5.6.</span> <span class="toc-text">4.5.6 Series and parallel</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Three-phase-asynchronous-motor"><span class="toc-number">5.</span> <span class="toc-text">5. Three-phase asynchronous motor</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Principle"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Mechanical-properties"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Mechanical properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Influence"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Influence</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Control"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-1-Starting"><span class="toc-number">5.4.1.</span> <span class="toc-text">5.4.1 Starting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-2-Speed-regulation"><span class="toc-number">5.4.2.</span> <span class="toc-text">5.4.2 Speed regulation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-3-Stop"><span class="toc-number">5.4.3.</span> <span class="toc-text">5.4.3 Stop</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Relay"><span class="toc-number">6.</span> <span class="toc-text">6. Relay</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Types"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Squirrel-cage-motor-starting-control-circuit"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Squirrel cage motor starting control circuit</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Electrotechnology(Electrical Technology) - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-30T13:33:15.000Z" itemprop="datePublished">2015-11-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/EE/">EE</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="1-Circuit"><a href="#1-Circuit" class="headerlink" title="1. Circuit"></a>1. Circuit</h1><ul>
+<li><p>built for power or signal transmission</p>
+</li>
+<li><p>real to ideal</p>
+</li>
+</ul>
+<ul>
+<li>closed circuit</li>
+<li>open circuit</li>
+<li>short circuit</li>
+</ul>
+<h2 id="1-1-Basic-Components"><a href="#1-1-Basic-Components" class="headerlink" title="1.1 Basic Components"></a>1.1 Basic Components</h2><ul>
+<li>U : Voltage, V</li>
+<li>$V_x$ : <strong>Electric potential</strong> to some point</li>
+<li>R :  linear resistance, Ohm $\Omega$<ul>
+<li>series : sum</li>
+<li>parallel  : $\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\cdots$</li>
+<li><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\resistance.jpg" width="400px"></li>
+</ul>
+</li>
+<li>I : Current, Ampere A</li>
+<li>P :  Power, Watt<ul>
+<li>>0 load</li>
+<li>&lt;0 power supply</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-Power"><a href="#1-2-Power" class="headerlink" title="1.2 Power"></a>1.2 Power</h2><ul>
+<li><p>power source : Electromotive force</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\powers.jpg" width="400px"></p>
+</li>
+<li><p>current source</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\currents.jpg" width="400px"></p>
+</li>
+</ul>
+<h2 id="1-3-Kirchhoff"><a href="#1-3-Kirchhoff" class="headerlink" title="1.3 Kirchhoff"></a>1.3 Kirchhoff</h2><ul>
+<li>KCL current law : node $\sum i=0$</li>
+<li><p>KVL voltage law : circle $\sum u=0$</p>
+</li>
+<li><p>Branch Current Method : use KCL and KVL</p>
+<ul>
+<li>KCL : node-1 个</li>
+<li>KVL : branch 个</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-Superposition-principle"><a href="#1-4-Superposition-principle" class="headerlink" title="1.4 Superposition principle"></a>1.4 Superposition principle</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\superpositionp.jpg" width="400px"></p>
+<h2 id="1-5-Thevenin’s-Theorem-amp-Norton-Theorem"><a href="#1-5-Thevenin’s-Theorem-amp-Norton-Theorem" class="headerlink" title="1.5 Thevenin’s Theorem &amp; Norton Theorem"></a>1.5 Thevenin’s Theorem &amp; Norton Theorem</h2><ul>
+<li><p>TT : Any combination of batteries and resistances with two terminals to power source and resistence</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\thevenint.jpg" width="500px"></p>
+</li>
+<li><p>NT : to current source</p>
+</li>
+</ul>
+<h1 id="2-Transient-analysis"><a href="#2-Transient-analysis" class="headerlink" title="2. Transient analysis"></a>2. Transient analysis</h1><h2 id="2-1-RLC"><a href="#2-1-RLC" class="headerlink" title="2.1 RLC"></a>2.1 RLC</h2><ul>
+<li><p>$L=\dfrac{\Psi({\rm Flux})}{i}$ : inductance, Henry H</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\inductance.jpg" width="100px"></p>
+<ul>
+<li>$\Psi=n\Phi$Flux Weber, Wb</li>
+<li>$e=-L\dfrac{di}{dt}=u$</li>
+<li>$W=\int\limits^t_0pdt=\int\limits^t_0uidt\=\int\limits^i_0Lidi=\frac{1}{2}Li^2$</li>
+<li>save energy to magnetic </li>
+</ul>
+</li>
+<li><p>$C=\dfrac{q}{u}$ : capacitance,  Farad F</p>
+<ul>
+<li>$i=C\dfrac{du}{dt}$</li>
+<li>$W=\frac{1}{2}Cu^2$</li>
+<li>save to the Electric field energy</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-RC"><a href="#2-2-RC" class="headerlink" title="2.2 RC"></a>2.2 RC</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/F:/Aktualisierung/Uni/aps/dgjs/rc.jpg" width="500px"></p>
+<ul>
+<li><p>Zero input response : power=0</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/F:/Aktualisierung/Uni/aps/dgjs/zeroi.jpg" width="100px"></p>
+<ul>
+<li><p>Differential equation : $RC\dfrac{du_c}{dt}+u_c=0$</p>
+</li>
+<li><p>$u_c=\exp(-\dfrac{t}{RC})$</p>
+</li>
+<li><p>Time constant : $\tau=RC$</p>
+</li>
+<li>>5$\tau$ stable</li>
+</ul>
+</li>
+<li><p>Zero state response : energy storage element u/i=0</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/F:/Aktualisierung/Uni/aps/dgjs/zeros.jpg" width="200px"></p>
+<ul>
+<li>$RC\frac{du_c}{t}+u_c=U$</li>
+<li>$u_c=K-\exp(-\dfrac{t}{RC})$, K putin</li>
+<li>$u_c=U-\exp(-\dfrac{t}{RC})$</li>
+</ul>
+</li>
+</ul>
+<p>RL  : $\tau=\dfrac{L}{R}$</p>
+<h2 id="2-3-First-Order-Response"><a href="#2-3-First-Order-Response" class="headerlink" title="2.3 First Order Response"></a>2.3 First Order Response</h2><p>only 1 energy storage element</p>
+<p>$$x(t)=x(\infty)+[f(0_+)-f(\infty)]e^{-t/\tau}$$</p>
+<ul>
+<li>Initial condition : $i_L(0_+)=i_L(0_-)\u_c(0_+)=u_c(0_-)$</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\transienta.jpg" width="500px"></p>
+<h1 id="3-Sinusoidal-alternating-current"><a href="#3-Sinusoidal-alternating-current" class="headerlink" title="3. Sinusoidal alternating current"></a>3. Sinusoidal alternating current</h1><h2 id="3-1-Basic-concepts"><a href="#3-1-Basic-concepts" class="headerlink" title="3.1 Basic concepts"></a>3.1 Basic concepts</h2><p>$$e=E_m\sin(wt+\psi_e)\u=U_m\sin(wt+\psi_u)\i=I_m\sin(wt+\psi_i)$$</p>
+<ul>
+<li>w : angular frequency (unit : radians per second)</li>
+<li>$U_m/I_m$ : peak voltage/current</li>
+<li>$\psi$ : phase</li>
+<li>$\phi=\psi_1-\psi_2$ : phase shift<ul>
+<li>>0 : 2 lead 1, 1 lagging</li>
+<li>&lt;0 : 1 lead 2</li>
+<li>180 : mirror-image </li>
+</ul>
+</li>
+<li>Valid value<ul>
+<li>$A=\dfrac{A}{\sqrt{2}}$</li>
+</ul>
+</li>
+</ul>
+<h2 id="3-2-Phasor-Diagrams"><a href="#3-2-Phasor-Diagrams" class="headerlink" title="3.2 Phasor Diagrams"></a>3.2 Phasor Diagrams</h2><p>use complex number</p>
+<p>$$u=U_m\sin(wt+\psi)\Longleftrightarrow\dot{U_m}=U_me^{j\psi}=U_m\angle\psi$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\phasor.jpg" width="300px"></p>
+<ul>
+<li>$R =R\angle 0$<ul>
+<li>real power :$P=U^2/R$</li>
+</ul>
+</li>
+<li>L : $X_L$<ul>
+<li>$\dfrac{U_m}{I_m}\angle90=jX_L=jwL$</li>
+<li>P=0</li>
+<li>reactive power : $Q=I^2X_L$ (unit : var$</li>
+</ul>
+</li>
+<li>C  : $X_C$<ul>
+<li>$\dfrac{U_m}{I_m}\angle-90=-jX_C=\dfrac{1}{jwC}$</li>
+<li>P=0</li>
+<li>$Q=-I^2X_C$</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\phasorc.jpg" width="500px"></p>
+<h2 id="3-3-Impedance"><a href="#3-3-Impedance" class="headerlink" title="3.3 Impedance"></a>3.3 Impedance</h2><p>$$Z=R+jX, {\rm unit :} \Omega$$</p>
+<ul>
+<li>series : same with resistance</li>
+<li>parallel : same with resistance</li>
+</ul>
+<p>$$P=UI\cos\phi$$</p>
+<ul>
+<li>$\cos\phi$ : Power factor, $\Uparrow$ effective</li>
+<li>parallel C on L</li>
+</ul>
+<p>$$Q=I^2X=I^2(X_L-X_C)=UI\sin\phi$$</p>
+<p>$$S=UI=\sqrt{P^2+Q^2}$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\impedance.jpg" width="400px"></p>
+<h2 id="3-4-Three-phase-electric-power"><a href="#3-4-Three-phase-electric-power" class="headerlink" title="3.4 Three-phase electric power"></a>3.4 Three-phase electric power</h2><p>phase differ 120 degree</p>
+<p>$$u_1=U_m\sin wt\u_2=U_m\sin (wt-120)\u_3=U_m\sin(wt+120)$$</p>
+<p>$$\dot{U_1}=U\angle 0\\dot{U_2}=U\angle 120\\dot{U_3}=U\angle -120$$</p>
+<h3 id="3-4-1-Y-Configuration"><a href="#3-4-1-Y-Configuration" class="headerlink" title="3.4.1  Y Configuration"></a>3.4.1  Y Configuration</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\ypower.jpg" width="400px"></p>
+<ul>
+<li><p>4 wires : 3 phase and 1 neutral(0)</p>
+</li>
+<li><p>phase voltage : phase to 0</p>
+</li>
+<li><p>line voltage : phase 12, 23, 31</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\phasev.jpg" width="250px"></p>
+</li>
+</ul>
+<h3 id="3-4-2-Load"><a href="#3-4-2-Load" class="headerlink" title="3.4.2 Load"></a>3.4.2 Load</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\load.jpg" width="300px"></p>
+<ul>
+<li><p>1 phase load</p>
+</li>
+<li><p>3 phases load</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\load3.jpg" width="300px"></p>
+<ul>
+<li><p>when parity</p>
+<p>$P=3U_pI_p\cos\phi_p=\sqrt 3U_LI_L\cos\phi_p$</p>
+<p>p means load</p>
+</li>
+<li><p>$Q=\sqrt 3U_LI_L\sin\phi_p$</p>
+</li>
+<li><p>$S=3U_pI_p=\sqrt 3U_LI_L$</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-Transformer"><a href="#4-Transformer" class="headerlink" title="4. Transformer"></a>4. Transformer</h1><h2 id="4-1-Concepts"><a href="#4-1-Concepts" class="headerlink" title="4.1 Concepts"></a>4.1 Concepts</h2><ul>
+<li><p>B : Magnetic Induction, 1 Teslas= 1 Wb/m2</p>
+</li>
+<li><p>H : magnetic field, 1 Amperes per meter A/m</p>
+</li>
+<li><p>$\Phi$ : magnetic flux, 1 Weber =1 Vs</p>
+</li>
+<li><p>$\mu=B/H$ : magnetic permeability</p>
+<ul>
+<li>$\mu_0=4\pi\times10^{-7} {\rm H/m}$ : vaccum </li>
+<li>$\mu_r=\frac{\mu}{\mu_0}$ : relative</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-Material"><a href="#4-2-Material" class="headerlink" title="4.2 Material"></a>4.2 Material</h2><ul>
+<li><p>Saturation</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\saturation.jpg" width="300px"></p>
+<ul>
+<li>non magnetic material : linear</li>
+<li>magnetic material : non-linears</li>
+</ul>
+</li>
+<li><p>Hysteresis : B  lagging change after H when AC</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\hysteresis.jpg" width="150px"></p>
+</li>
+</ul>
+<h2 id="4-3-Ampere-loop-theorem"><a href="#4-3-Ampere-loop-theorem" class="headerlink" title="4.3 Ampere loop theorem"></a>4.3 Ampere loop theorem</h2><p>$$\oint Hdl=\sum I$$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\ampere.jpg" width="200px"></p>
+<p>$$H_x=\dfrac{NI}{2\pi x}$$</p>
+<h2 id="4-4-Iron-core-coil"><a href="#4-4-Iron-core-coil" class="headerlink" title="4.4 Iron core coil"></a>4.4 Iron core coil</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\ironcc.jpg" width="250px"></p>
+<p>$e=-N\dfrac{\Phi}{dt}\e_\sigma=-N\dfrac{d\Phi_\sigma}{dt}=-L_\sigma\dfrac{di}{dt}$</p>
+<ul>
+<li>$\Phi_\sigma$ : Leakage flux</li>
+</ul>
+<p>$\Downarrow u=-e-e_\sigma+Ri$</p>
+<p>$e=-N\frac{d}{dt}(\Phi\sin wt)=2\pi fN\Phi_m\sin(wt-90)$</p>
+<p>$U\approx E=4.44fN\Phi_m$</p>
+<p>$P=UI\cos \phi=I^2R+\Delta P_{Fe}$</p>
+<ul>
+<li>$\Delta P_{Fe}=\Delta P_h+\Delta P_e$<ul>
+<li>$\Delta P_h$ hysteresis $\rightarrow$heat</li>
+<li>$\Delta P_e$ vortex</li>
+</ul>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\ironcce.jpg" width="400px"></p>
+<h2 id="4-5-Transformer"><a href="#4-5-Transformer" class="headerlink" title="4.5 Transformer"></a>4.5 Transformer</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\transformer.jpg" width="300px"></p>
+<ul>
+<li>core</li>
+<li>primary winding</li>
+<li>secondary winding</li>
+</ul>
+<p>when 0 load</p>
+<p>$$\dfrac{U_1}{U_2}\approx\dfrac{E_1}{E_2}=\dfrac{N_1}{N_2}=K$$</p>
+<h3 id="4-5-1-3-phases-transformer"><a href="#4-5-1-3-phases-transformer" class="headerlink" title="4.5.1 3 phases transformer"></a>4.5.1 3 phases transformer</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\3phaset.jpg" width="400px"></p>
+<h3 id="4-5-2-Y-Y-Y-Triangle"><a href="#4-5-2-Y-Y-Y-Triangle" class="headerlink" title="4.5.2 Y/Y Y/Triangle"></a>4.5.2 Y/Y Y/Triangle</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\yy.jpg" width="400px"><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\ytriangle.jpg" width="400px"></p>
+<h3 id="4-5-3-Load"><a href="#4-5-3-Load" class="headerlink" title="4.5.3 Load"></a>4.5.3 Load</h3><p>$|Z_1|=K^2|Z_2|$</p>
+<h3 id="4-5-4-Parameters"><a href="#4-5-4-Parameters" class="headerlink" title="4.5.4 Parameters"></a>4.5.4 Parameters</h3><ul>
+<li>$U_{1N},U_{2N}$</li>
+<li>$I_{1N},I_{2N}$</li>
+</ul>
+<h3 id="4-5-5-Special-Transformer"><a href="#4-5-5-Special-Transformer" class="headerlink" title="4.5.5 Special Transformer"></a>4.5.5 Special Transformer</h3><ul>
+<li><p>Autotransformer</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\autotransformer.jpg" width="200px"></p>
+</li>
+<li><p>VT Voltage t</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\vt.jpg" width="400px"></p>
+</li>
+<li><p>CT Current t</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\ct.jpg" width="400px"></p>
+</li>
+</ul>
+<h3 id="4-5-6-Series-and-parallel"><a href="#4-5-6-Series-and-parallel" class="headerlink" title="4.5.6 Series and parallel"></a>4.5.6 Series and parallel</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\transformersp.jpg" width="400px"></p>
+<h1 id="5-Three-phase-asynchronous-motor"><a href="#5-Three-phase-asynchronous-motor" class="headerlink" title="5. Three-phase asynchronous motor"></a>5. Three-phase asynchronous motor</h1><h2 id="5-1-Principle"><a href="#5-1-Principle" class="headerlink" title="5.1 Principle"></a>5.1 Principle</h2><p>$$n_0=\dfrac{60f_1}{p}$$</p>
+<ul>
+<li>slip rate : $s=\dfrac{n_0-n}{n_0}$</li>
+</ul>
+<h2 id="5-2-Mechanical-properties"><a href="#5-2-Mechanical-properties" class="headerlink" title="5.2 Mechanical properties"></a>5.2 Mechanical properties</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\mechanicalp.jpg" width="300px"></p>
+<ul>
+<li>rated torque $T_N=9550\dfrac{P_{2N}(\rm KW)}{n_N(\rm r/min)}$</li>
+<li>max torque $T_{max}$<ul>
+<li>$s=s_m$</li>
+<li>Overload coefficient : $\lambda=\dfrac{T_{max}}{T_N}$</li>
+</ul>
+</li>
+<li>starting torque $T_{st}$<ul>
+<li>n=0</li>
+<li>s=1</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-3-Influence"><a href="#5-3-Influence" class="headerlink" title="5.3 Influence"></a>5.3 Influence</h2><ul>
+<li><p>$U_1$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\uinf.jpg" width="200px"></p>
+</li>
+<li><p>$R_2$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\rinf.jpg" width="200px"></p>
+</li>
+</ul>
+<h2 id="5-4-Control"><a href="#5-4-Control" class="headerlink" title="5.4 Control"></a>5.4 Control</h2><h3 id="5-4-1-Starting"><a href="#5-4-1-Starting" class="headerlink" title="5.4.1 Starting"></a>5.4.1 Starting</h3><ul>
+<li><p>direct</p>
+</li>
+<li><p>low voltage (Squirrel cage motor)</p>
+<ul>
+<li><p>Y-$\Delta$ </p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\scms1.jpg" width="300px"></p>
+</li>
+<li><p>auto coupling</p>
+<ul>
+<li>$I_{st}’=x^2I_{st},T_{st}’=x^2T_{st},$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>add resistance (wound rotor induction motor)</p>
+</li>
+</ul>
+<h3 id="5-4-2-Speed-regulation"><a href="#5-4-2-Speed-regulation" class="headerlink" title="5.4.2 Speed regulation"></a>5.4.2 Speed regulation</h3><p>$n=(1-s)n_0=(1-s)\dfrac{60f_1}{p}$</p>
+<ul>
+<li>f</li>
+<li>p</li>
+<li>s</li>
+</ul>
+<h3 id="5-4-3-Stop"><a href="#5-4-3-Stop" class="headerlink" title="5.4.3 Stop"></a>5.4.3 Stop</h3><ul>
+<li>power</li>
+<li>reverse </li>
+<li>feedback</li>
+</ul>
+<h1 id="6-Relay"><a href="#6-Relay" class="headerlink" title="6. Relay"></a>6. Relay</h1><h2 id="6-1-Types"><a href="#6-1-Types" class="headerlink" title="6.1 Types"></a>6.1 Types</h2><ul>
+<li><p>Combination Switch</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\combinations.jpg" width="100px"></p>
+</li>
+<li><p>button</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\button.jpg" width="300px"></p>
+<ul>
+<li>Normally closed button</li>
+<li>normally open button</li>
+<li>combination</li>
+</ul>
+</li>
+<li><p>Air Conditioner Contactor</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\accc.jpg" width="300px"></p>
+</li>
+<li><p>Intermediate relay :  for information PLC</p>
+</li>
+<li><p>thermal relay</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\thermalr.jpg" width="200px"></p>
+</li>
+</ul>
+<h2 id="6-2-Squirrel-cage-motor-starting-control-circuit"><a href="#6-2-Squirrel-cage-motor-starting-control-circuit" class="headerlink" title="6.2 Squirrel cage motor starting control circuit"></a>6.2 Squirrel cage motor starting control circuit</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\scmsc.jpg" width="400px"></p>
+<ul>
+<li>SB1 stop</li>
+<li>SB2 start</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/aps/dgjs\scmfbrc.jpg" width="400px"></p>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Circuit"><span class="toc-number">1.</span> <span class="toc-text">1. Circuit</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Basic-Components"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Basic Components</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Power"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Power</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Kirchhoff"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Kirchhoff</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Superposition-principle"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Superposition principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-Thevenin’s-Theorem-amp-Norton-Theorem"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 Thevenin’s Theorem &amp; Norton Theorem</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Transient-analysis"><span class="toc-number">2.</span> <span class="toc-text">2. Transient analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-RLC"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 RLC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-RC"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 RC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-First-Order-Response"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 First Order Response</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Sinusoidal-alternating-current"><span class="toc-number">3.</span> <span class="toc-text">3. Sinusoidal alternating current</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Basic-concepts"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Basic concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Phasor-Diagrams"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Phasor Diagrams</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Impedance"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Impedance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Three-phase-electric-power"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Three-phase electric power</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-1-Y-Configuration"><span class="toc-number">3.4.1.</span> <span class="toc-text">3.4.1  Y Configuration</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-2-Load"><span class="toc-number">3.4.2.</span> <span class="toc-text">3.4.2 Load</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Transformer"><span class="toc-number">4.</span> <span class="toc-text">4. Transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Concepts"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Concepts</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Material"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Material</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-3-Ampere-loop-theorem"><span class="toc-number">4.3.</span> <span class="toc-text">4.3 Ampere loop theorem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-4-Iron-core-coil"><span class="toc-number">4.4.</span> <span class="toc-text">4.4 Iron core coil</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-5-Transformer"><span class="toc-number">4.5.</span> <span class="toc-text">4.5 Transformer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-1-3-phases-transformer"><span class="toc-number">4.5.1.</span> <span class="toc-text">4.5.1 3 phases transformer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-2-Y-Y-Y-Triangle"><span class="toc-number">4.5.2.</span> <span class="toc-text">4.5.2 Y/Y Y/Triangle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-3-Load"><span class="toc-number">4.5.3.</span> <span class="toc-text">4.5.3 Load</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-4-Parameters"><span class="toc-number">4.5.4.</span> <span class="toc-text">4.5.4 Parameters</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-5-Special-Transformer"><span class="toc-number">4.5.5.</span> <span class="toc-text">4.5.5 Special Transformer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-6-Series-and-parallel"><span class="toc-number">4.5.6.</span> <span class="toc-text">4.5.6 Series and parallel</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Three-phase-asynchronous-motor"><span class="toc-number">5.</span> <span class="toc-text">5. Three-phase asynchronous motor</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Principle"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Mechanical-properties"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Mechanical properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Influence"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Influence</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Control"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Control</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-1-Starting"><span class="toc-number">5.4.1.</span> <span class="toc-text">5.4.1 Starting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-2-Speed-regulation"><span class="toc-number">5.4.2.</span> <span class="toc-text">5.4.2 Speed regulation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-3-Stop"><span class="toc-number">5.4.3.</span> <span class="toc-text">5.4.3 Stop</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Relay"><span class="toc-number">6.</span> <span class="toc-text">6. Relay</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Types"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Types</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Squirrel-cage-motor-starting-control-circuit"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Squirrel cage motor starting control circuit</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&text=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&is_video=false&description=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Electrotechnology(Electrical Technology) - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&title=Electrotechnology(Electrical Technology) - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/dgjs/&name=Electrotechnology(Electrical Technology) - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>

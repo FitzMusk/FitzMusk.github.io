@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Continuum : meaning the matter in the body is continuously distributed and fills the entire region of space it occupies. Fluid Particle :  macro small micro big enough have basic physical properties">
+<meta name="keywords" content="APS,ME">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Fluid Mechanics - APS">
+<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/index.html">
+<meta property="og:site_name" content="Immortality">
+<meta property="og:description" content="Continuum : meaning the matter in the body is continuously distributed and fills the entire region of space it occupies. Fluid Particle :  macro small micro big enough have basic physical properties">
+<meta property="og:locale" content="en,">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/nifl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/fluidt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/force.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/euler.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/potentialf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/measurep.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/ftoplane.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/ftocylinder.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/lagrange.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/field.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/fieldt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/particled.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/streaml.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/streamlf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/stationodd.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/kinetice.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/momentum.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/continuouse.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/odf.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/eulere.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/nse.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/bernoulli.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/head.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/realbernoulli.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/pitot.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/venturi.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/pi.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/reynold.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/reynoldn.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/reynoldt.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/loss.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/turbulent.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/turbulentr.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/frictionhl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/localhl.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/basicwo.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/thinwso.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/thinwbo.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/thickwso.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/bumpc.jpg">
+<meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Fluid Mechanics - APS">
+<meta name="twitter:description" content="Continuum : meaning the matter in the body is continuously distributed and fills the entire region of space it occupies. Fluid Particle :  macro small micro big enough have basic physical properties">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx/nifl.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Fluid Mechanics - APS</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="banner">
+<div id="blogtitel" class="blogtitel">Immortality</div>
+<ul id="wrapper" class="wrapper">
+  <div class="sun">
+    <div class="star"></div>
+  </div>
+  <div class="mercury">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="venus">
+    <div class="planet">
+      <div class="shadow"></div>
+    </div>
+  </div>
+  <div class="earth">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="mars">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+  <div class="jupiter">
+    <div class="planet"><div class="shadow"></div></div>
+  </div>
+</ul>
+</div>
+<script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.26.3'><\/script>".replace("HOST", location.hostname));
+//]]>
+</script>
+
+    <div class="background">
+      
+        <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2015/11/30/qrs/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover='$("#i-prev").toggle();' onmouseout='$("#i-prev").toggle();'></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/11/30/lllx/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover='$("#i-next").toggle();' onmouseout='$("#i-next").toggle();'></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover='$("#i-top").toggle();' onmouseout='$("#i-top").toggle();'></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover='$("#i-share").toggle();' onmouseout='$("#i-share").toggle();' onclick='$("#share").toggle();return false;'></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&text=Fluid Mechanics - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&is_video=false&description=Fluid Mechanics - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fluid Mechanics - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&name=Fluid Mechanics - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Physical-properties"><span class="toc-number">1.</span> <span class="toc-text">1 Physical properties</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Density"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Density</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Specific-volume"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Specific volume</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Compressibility-amp-Swelling"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Compressibility &amp; Swelling</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-Equation-of-state"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Equation of state</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-Coefficient-of-expansion"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Coefficient of expansion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-Compression-ratio"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 Compression ratio</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Viscosity"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Viscosity</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Newtons’s-inner-friction-law"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1 Newtons’s inner friction law</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Different-fluid"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 Different fluid</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-dynamic-viscosity"><span class="toc-number">1.4.3.</span> <span class="toc-text">1.4.3 dynamic viscosity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-4-kinematic-viscosity"><span class="toc-number">1.4.4.</span> <span class="toc-text">1.4.4 kinematic viscosity</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Hydrostatics"><span class="toc-number">2.</span> <span class="toc-text">2 Hydrostatics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Force-on-the-balanced-fluid"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Force on the balanced fluid</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Mass-force"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 Mass force</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-Surface-force"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 Surface force</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Differential-Equation"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Differential Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Euler-equations"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 Euler equations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Potential-function"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 Potential function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-Isobaric-Surface"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 Isobaric Surface</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Static-pressure"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Static pressure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Calculation"><span class="toc-number">2.3.1.</span> <span class="toc-text">Calculation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Force-to-the-Wall-surface"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Force to the Wall surface</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Fluid-Dynamics"><span class="toc-number">3.</span> <span class="toc-text">3 Fluid Dynamics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Lagrange"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Lagrange</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Euler"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Euler</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Field"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 Field</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-Type"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2 Type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-Controlled-body"><span class="toc-number">3.2.3.</span> <span class="toc-text">3.2.3 Controlled body</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Fluid-motion"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Fluid motion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-Particle-derivative"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 Particle derivative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-Path-line-amp-Stream-line"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2 Path line &amp; Stream line</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-Flow-rate"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3.3 Flow rate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-4-Average-velocity-amp-Kinetic-energy-amp-Momentum"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.3.4 Average velocity &amp; Kinetic energy &amp; Momentum</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Continuous-equation"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Continuous equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-Ideal-fluid-dynamic-differential-equation–-Euler-equation"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 Ideal fluid dynamic differential equation– Euler equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-Real-fluid-dynamic-differential-equation-–-N-S-equation"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 Real fluid dynamic differential equation – N-S equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-Bernoulli-equation"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 Bernoulli equation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-1-Ideal"><span class="toc-number">3.7.1.</span> <span class="toc-text">3.7.1 Ideal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-2-Real"><span class="toc-number">3.7.2.</span> <span class="toc-text">3.7.2 Real</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-3-Application"><span class="toc-number">3.7.3.</span> <span class="toc-text">3.7.3 Application</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Similar-principle-amp-Dimensional-analysis"><span class="toc-number">4.</span> <span class="toc-text">4 Similar principle &amp; Dimensional analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Similar-principle"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Similar principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Dimensional-analysis"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Dimensional analysis</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Flow-in-tube"><span class="toc-number">5.</span> <span class="toc-text">5 Flow in tube</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Reynolds-number"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Reynolds number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Laminar-flow-in-round-tube"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Laminar flow in round tube</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Turbulent-flow-in-round-tube"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Turbulent flow in round tube</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Frictional-head-loss"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Frictional head loss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Local-head-loss"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Local head loss</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Orifice-outflow"><span class="toc-number">6.</span> <span class="toc-text">6 Orifice outflow</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Thin-wall"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Thin wall</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-1-Small-orifice"><span class="toc-number">6.1.1.</span> <span class="toc-text">6.1.1 Small orifice</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-2-Big-orifice"><span class="toc-number">6.1.2.</span> <span class="toc-text">6.1.2 Big orifice</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Thick-wall"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Thick wall</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Cavitation"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Cavitation</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+      
+      <div class="content index width mx-auto px2 my4">
+          
+          <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Fluid Mechanics - APS
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五维生物</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2015-11-30T14:01:16.000Z" itemprop="datePublished">2015-11-30</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/APS/">APS</a>, <a class="tag-link" href="/tags/ME/">ME</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+      | visited <span id="busuanzi_value_page_pv"></span> times
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <ul>
+<li><strong>Continuum</strong> : meaning the matter in the body is continuously distributed and fills the entire region of space it occupies.</li>
+<li><strong>Fluid Particle</strong> : <ul>
+<li>macro small</li>
+<li>micro big enough</li>
+<li>have basic physical properties</li>
+</ul>
+</li>
+</ul>
+<h1 id="1-Physical-properties"><a href="#1-Physical-properties" class="headerlink" title="1 Physical properties"></a>1 Physical properties</h1><h2 id="1-1-Density"><a href="#1-1-Density" class="headerlink" title="1.1 Density"></a>1.1 Density</h2><p>$$\rho=\dfrac{m}{V}$$</p>
+<ul>
+<li>kg/m3</li>
+<li>kg</li>
+<li>m3</li>
+</ul>
+<p><strong>Relative Density</strong> : $d=\dfrac{\rho}{\rho_w}$</p>
+<ul>
+<li>to water 4 degree</li>
+<li>mercury : 12.59</li>
+<li>oil : 0.85-0.9</li>
+</ul>
+<h2 id="1-2-Specific-volume"><a href="#1-2-Specific-volume" class="headerlink" title="1.2 Specific volume"></a>1.2 Specific volume</h2><p>$$v=\dfrac{V}{m}=\dfrac{1}{\rho}$$</p>
+<ul>
+<li>m3/kg</li>
+</ul>
+<h2 id="1-3-Compressibility-amp-Swelling"><a href="#1-3-Compressibility-amp-Swelling" class="headerlink" title="1.3 Compressibility &amp; Swelling"></a>1.3 Compressibility &amp; Swelling</h2><h3 id="1-3-1-Equation-of-state"><a href="#1-3-1-Equation-of-state" class="headerlink" title="1.3.1 Equation of state"></a>1.3.1 Equation of state</h3><p>$$pv=R_gT$$</p>
+<ul>
+<li>p Pa</li>
+<li>v specific volume</li>
+<li>$R_g=\dfrac{pV}{nT}=\dfrac{8314}{M}$ J/(kg K) : gas constant</li>
+<li>T K</li>
+</ul>
+<h3 id="1-3-2-Coefficient-of-expansion"><a href="#1-3-2-Coefficient-of-expansion" class="headerlink" title="1.3.2 Coefficient of expansion"></a>1.3.2 Coefficient of expansion</h3><p>  $$\alpha_V=\dfrac{1}{V}\dfrac{dV}{dt}$$</p>
+<ul>
+<li>for ideal gas : $\alpha_V=\dfrac{1}{T}$</li>
+<li>Unit : $K^{-1}$</li>
+</ul>
+<h3 id="1-3-3-Compression-ratio"><a href="#1-3-3-Compression-ratio" class="headerlink" title="1.3.3 Compression ratio"></a>1.3.3 Compression ratio</h3><p>  $$\kappa_T=-\dfrac{1}{V}\dfrac{dV}{dp}$$</p>
+<ul>
+<li>Unit : $Pa^{-1}$</li>
+</ul>
+<ul>
+<li><p>Bulk modulus</p>
+<p>$$K=\dfrac{1}{\kappa_T}$$</p>
+</li>
+<li><p><strong>Incompressible fluid</strong> : $\kappa_T$</p>
+</li>
+</ul>
+<h2 id="1-4-Viscosity"><a href="#1-4-Viscosity" class="headerlink" title="1.4 Viscosity"></a>1.4 Viscosity</h2><h3 id="1-4-1-Newtons’s-inner-friction-law"><a href="#1-4-1-Newtons’s-inner-friction-law" class="headerlink" title="1.4.1 Newtons’s inner friction law"></a>1.4.1 Newtons’s inner friction law</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\nifl.jpg" width="200px"></p>
+<h3 id="1-4-2-Different-fluid"><a href="#1-4-2-Different-fluid" class="headerlink" title="1.4.2 Different fluid"></a>1.4.2 Different fluid</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\fluidt.jpg" width="300px"></p>
+<ul>
+<li>plastic</li>
+<li>pseudoplastic</li>
+<li>newtonian</li>
+<li>dilatant</li>
+<li>ideal </li>
+</ul>
+<h3 id="1-4-3-dynamic-viscosity"><a href="#1-4-3-dynamic-viscosity" class="headerlink" title="1.4.3 dynamic viscosity"></a>1.4.3 dynamic viscosity</h3><p>$$\mu=\dfrac{\tau}{dv/dy}$$</p>
+<ul>
+<li>Unit : $Pa\cdot s$</li>
+</ul>
+<h3 id="1-4-4-kinematic-viscosity"><a href="#1-4-4-kinematic-viscosity" class="headerlink" title="1.4.4 kinematic viscosity"></a>1.4.4 kinematic viscosity</h3><p>$$v=\dfrac{\mu}{\rho}$$</p>
+<ul>
+<li>Unit : m2/s</li>
+</ul>
+<p><strong>ideal fluid</strong> : no viscosity</p>
+<h1 id="2-Hydrostatics"><a href="#2-Hydrostatics" class="headerlink" title="2 Hydrostatics"></a>2 Hydrostatics</h1><h2 id="2-1-Force-on-the-balanced-fluid"><a href="#2-1-Force-on-the-balanced-fluid" class="headerlink" title="2.1 Force on the balanced fluid"></a>2.1 Force on the balanced fluid</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\force.jpg" width="300px"></p>
+<h3 id="2-1-1-Mass-force"><a href="#2-1-1-Mass-force" class="headerlink" title="2.1.1 Mass force"></a>2.1.1 Mass force</h3><p>$\propto m$</p>
+<p>unit mass force : $\vec{f}=f_x\vec i+f_y\vec j+f_z\vec k\=\dfrac{F_x}{m}\vec i+\dfrac{F_y}{m}\vec j+\dfrac{F_z}{m}\vec k$</p>
+<h3 id="2-1-2-Surface-force"><a href="#2-1-2-Surface-force" class="headerlink" title="2.1.2 Surface force"></a>2.1.2 Surface force</h3><p>have something to do with S</p>
+<p>Surface Stress</p>
+<ul>
+<li>normal stress  : $p=\dfrac{dP}{dA}$</li>
+<li>shear stress : $\tau=\dfrac{T}{A}$</li>
+</ul>
+<h2 id="2-2-Differential-Equation"><a href="#2-2-Differential-Equation" class="headerlink" title="2.2 Differential Equation"></a>2.2 Differential Equation</h2><h3 id="2-2-1-Euler-equations"><a href="#2-2-1-Euler-equations" class="headerlink" title="2.2.1 Euler equations"></a>2.2.1 Euler equations</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\euler.jpg" width="400px"></p>
+<p>$$\begin{cases}f_x-\dfrac{1}{\rho}\dfrac{\partial P}{\partial x}&amp;=0\f_y-\dfrac{1}{\rho}\dfrac{\partial P}{\partial y}&amp;=0\f_z-\dfrac{1}{\rho}\dfrac{\partial P}{\partial z}&amp;=0\end{cases}$$</p>
+<h3 id="2-2-2-Potential-function"><a href="#2-2-2-Potential-function" class="headerlink" title="2.2.2 Potential function"></a>2.2.2 Potential function</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\potentialf.jpg" width="300px"></p>
+<p>$$dp=-\rho dW$$</p>
+<h3 id="2-2-3-Isobaric-Surface"><a href="#2-2-3-Isobaric-Surface" class="headerlink" title="2.2.3 Isobaric Surface"></a>2.2.3 Isobaric Surface</h3><p>$$f_xdx+f_ydy+f_zdz=0$$</p>
+<ul>
+<li>constant potential surface : $dW=0$</li>
+<li>perpendicular to the mass force : $\vec{a_m}\cdot d\vec{s}=0$</li>
+<li>two insoluble fluid interface is isobaric surface</li>
+</ul>
+<h2 id="2-3-Static-pressure"><a href="#2-3-Static-pressure" class="headerlink" title="2.3 Static pressure"></a>2.3 Static pressure</h2><p>Incompressible fliud</p>
+<p>$dp=-\rho dW=-\rho gdz$</p>
+<p>$\downarrow \rho=C$</p>
+<p>$dz+\dfrac{dp}{\rho g}=0$</p>
+<p>$$z+\dfrac{p}{\rho g}=c$$</p>
+<h3 id="Calculation"><a href="#Calculation" class="headerlink" title="Calculation"></a>Calculation</h3><ul>
+<li><p>Absolute pressure : $p$</p>
+</li>
+<li><p>Vacuum pressure / Measuring pressure: $p_m$</p>
+</li>
+<li><p>Local pressure : $p_a$</p>
+</li>
+</ul>
+<p>$p&gt;p_a,\quad p=p_a+p_m\p&lt;p_a,\quad p=p_a-p_m$</p>
+<ul>
+<li>manometer</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\measurep.jpg" width="300px"></p>
+<h2 id="2-4-Force-to-the-Wall-surface"><a href="#2-4-Force-to-the-Wall-surface" class="headerlink" title="2.4 Force to the Wall surface"></a>2.4 Force to the Wall surface</h2><ul>
+<li><p>plane</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\ftoplane.jpg" width="300px"></p>
+</li>
+<li><p>cylinder</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\ftocylinder.jpg" width="200px"></p>
+</li>
+</ul>
+<h1 id="3-Fluid-Dynamics"><a href="#3-Fluid-Dynamics" class="headerlink" title="3 Fluid Dynamics"></a>3 Fluid Dynamics</h1><h2 id="3-1-Lagrange"><a href="#3-1-Lagrange" class="headerlink" title="3.1 Lagrange"></a>3.1 Lagrange</h2><p>describe each particle path</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\lagrange.jpg" width="400px"></p>
+<h2 id="3-2-Euler"><a href="#3-2-Euler" class="headerlink" title="3.2 Euler"></a>3.2 Euler</h2><p>describe all  the particle transient parameter at same time, adapt to fluid parcel</p>
+<h3 id="3-2-1-Field"><a href="#3-2-1-Field" class="headerlink" title="3.2.1 Field"></a>3.2.1 Field</h3><ul>
+<li>velocity</li>
+<li>pressure</li>
+<li>density</li>
+<li>temperature</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\field.jpg" width="300px"></p>
+<h3 id="3-2-2-Type"><a href="#3-2-2-Type" class="headerlink" title="3.2.2 Type"></a>3.2.2 Type</h3><ul>
+<li><p>Constant field : with time no change</p>
+</li>
+<li><p>Uniform field : with position no change</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\fieldt.jpg" width="300px"></p>
+</li>
+</ul>
+<h3 id="3-2-3-Controlled-body"><a href="#3-2-3-Controlled-body" class="headerlink" title="3.2.3 Controlled body"></a>3.2.3 Controlled body</h3><p>a space has constant position in coordinate, with any shape</p>
+<h2 id="3-3-Fluid-motion"><a href="#3-3-Fluid-motion" class="headerlink" title="3.3 Fluid motion"></a>3.3 Fluid motion</h2><h3 id="3-3-1-Particle-derivative"><a href="#3-3-1-Particle-derivative" class="headerlink" title="3.3.1 Particle derivative"></a>3.3.1 Particle derivative</h3><p> relationship between all physical quantities and time </p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\particled.jpg" width="300px"></p>
+<h3 id="3-3-2-Path-line-amp-Stream-line"><a href="#3-3-2-Path-line-amp-Stream-line" class="headerlink" title="3.3.2 Path line &amp; Stream line"></a>3.3.2 Path line &amp; Stream line</h3><ul>
+<li><p>P : lagrange particle moving path</p>
+</li>
+<li><p>S : fluid filed $\rightarrow$velocity field</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\streaml.jpg" width="200px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\streamlf.jpg" width="300px"></p>
+<p>$$\dfrac{dx}{v_x}=\dfrac{dy}{v_y}=\dfrac{dz}{v_z}=t$$</p>
+<ul>
+<li><p>Properties</p>
+<ul>
+<li><p>constant shape, particle moving path same with stream line</p>
+</li>
+<li><p>dont converge except at station and odd point</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\stationodd.jpg" width="400px"></p>
+</li>
+</ul>
+</li>
+<li><p>stream tube</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-3-3-Flow-rate"><a href="#3-3-3-Flow-rate" class="headerlink" title="3.3.3 Flow rate"></a>3.3.3 Flow rate</h3><p>unit time through some controlled surface</p>
+<p>$$dq_v=vdA​$$</p>
+<p>net flow rate : closed surface</p>
+<p>$$q_v=\oiint\limits_A\vec v\vec n dA​$$</p>
+<h3 id="3-3-4-Average-velocity-amp-Kinetic-energy-amp-Momentum"><a href="#3-3-4-Average-velocity-amp-Kinetic-energy-amp-Momentum" class="headerlink" title="3.3.4 Average velocity &amp; Kinetic energy &amp; Momentum"></a>3.3.4 Average velocity &amp; Kinetic energy &amp; Momentum</h3><ul>
+<li>$\bar u=\dfrac{q_v}{A}​$</li>
+<li><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\kinetice.jpg" width="400px"></li>
+<li><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\momentum.jpg" width="400px"></li>
+<li>laminar : $\alpha=2,\beta=\frac{4}{3}$</li>
+<li>turbulent  : $\alpha=1.06\approx1,\beta=1.02 \approx1$</li>
+</ul>
+<h2 id="3-4-Continuous-equation"><a href="#3-4-Continuous-equation" class="headerlink" title="3.4 Continuous equation"></a>3.4 Continuous equation</h2><p>law of conservation of mass</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\continuouse.jpg" width="300px"></p>
+<ul>
+<li><p>one dimensional flow</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\odf.jpg" width="200px"></p>
+</li>
+</ul>
+<h2 id="3-5-Ideal-fluid-dynamic-differential-equation–-Euler-equation"><a href="#3-5-Ideal-fluid-dynamic-differential-equation–-Euler-equation" class="headerlink" title="3.5 Ideal fluid dynamic differential equation– Euler equation"></a>3.5 Ideal fluid dynamic differential equation– Euler equation</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\eulere.jpg" width="400px"></p>
+<p>$$f-\dfrac{1}{\rho}\bigtriangledown p=\dfrac{\partial u}{\partial t}+(u\bigtriangledown)u$$</p>
+<ul>
+<li>constant flow : $\dfrac{\partial u_x}{\partial t}=0$, same in y z</li>
+<li>still : $u_x=u_y=u_z=0$</li>
+</ul>
+<h2 id="3-6-Real-fluid-dynamic-differential-equation-–-N-S-equation"><a href="#3-6-Real-fluid-dynamic-differential-equation-–-N-S-equation" class="headerlink" title="3.6 Real fluid dynamic differential equation – N-S equation"></a>3.6 Real fluid dynamic differential equation – N-S equation</h2><ul>
+<li><p>with viscosity</p>
+</li>
+<li><p>Navier Stokes equation</p>
+</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\nse.jpg" width="400px"></p>
+<h2 id="3-7-Bernoulli-equation"><a href="#3-7-Bernoulli-equation" class="headerlink" title="3.7 Bernoulli equation"></a>3.7 Bernoulli equation</h2><h3 id="3-7-1-Ideal"><a href="#3-7-1-Ideal" class="headerlink" title="3.7.1 Ideal"></a>3.7.1 Ideal</h3><p>under N-S</p>
+<ul>
+<li>incompressible ideal stable flow</li>
+<li>along stream line intergal</li>
+<li>mass force only gravity</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\bernoulli.jpg" width="300px"></p>
+<p>$\rho$ is constant</p>
+<p>$$z+\dfrac{p}{\rho g}+\dfrac{v^2}{2g}=C$$</p>
+<ul>
+<li>z : elevation head</li>
+<li>$\dfrac{p}{\rho g}$ : pressure head</li>
+<li>$\dfrac{v^2}{2g}$ : velocity head</li>
+<li>sum : total head</li>
+</ul>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\head.jpg" width="300px"></p>
+<h3 id="3-7-2-Real"><a href="#3-7-2-Real" class="headerlink" title="3.7.2 Real"></a>3.7.2 Real</h3><p>$h_v$ : head loss</p>
+<ul>
+<li>$h_f=\lambda\dfrac{l}{d}\dfrac{U^2}{2g}$ : frictional head loss<ul>
+<li>$\lambda$ : frictional loss factor</li>
+<li>U : average velocity at each section</li>
+</ul>
+</li>
+<li>$h_j=\zeta\dfrac{U^2}{2g}$ : local head loss</li>
+</ul>
+<p>$\sum h_v=\sum h_f+\sum h_j$</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\realbernoulli.jpg" width="300px"></p>
+<h3 id="3-7-3-Application"><a href="#3-7-3-Application" class="headerlink" title="3.7.3 Application"></a>3.7.3 Application</h3><ul>
+<li><p>Pitot tube</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\pitot.jpg" width="300px"></p>
+<p>$$\dfrac{p}{\rho g}+\dfrac{v^2}{2g}=\dfrac{p_0}{\rho g}$$</p>
+<ul>
+<li>B : station, u=0</li>
+</ul>
+</li>
+<li><p>Venturi flow meter</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\venturi.jpg" width="300px"></p>
+</li>
+</ul>
+<h1 id="4-Similar-principle-amp-Dimensional-analysis"><a href="#4-Similar-principle-amp-Dimensional-analysis" class="headerlink" title="4 Similar principle &amp; Dimensional analysis"></a>4 Similar principle &amp; Dimensional analysis</h1><h2 id="4-1-Similar-principle"><a href="#4-1-Similar-principle" class="headerlink" title="4.1 Similar principle"></a>4.1 Similar principle</h2><p>Mechanical similarity : real thing have ratio at some physical quantities with model</p>
+<ul>
+<li>geometry : l</li>
+<li>kinematic: v</li>
+<li>dynamic : f</li>
+</ul>
+<h2 id="4-2-Dimensional-analysis"><a href="#4-2-Dimensional-analysis" class="headerlink" title="4.2 Dimensional analysis"></a>4.2 Dimensional analysis</h2><p>Buckingham theorem ($\pi$ theorem)</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\pi.jpg" width="400px"></p>
+<h1 id="5-Flow-in-tube"><a href="#5-Flow-in-tube" class="headerlink" title="5 Flow in tube"></a>5 Flow in tube</h1><h2 id="5-1-Reynolds-number"><a href="#5-1-Reynolds-number" class="headerlink" title="5.1 Reynolds number"></a>5.1 Reynolds number</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\reynold.jpg" width="300px"></p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\reynoldn.jpg" width="300px"></p>
+<ul>
+<li>laminar flow</li>
+<li>Turbulent flow</li>
+</ul>
+<p>$Re=\dfrac{ud}{v}=\dfrac{\rho ud}{\mu}$</p>
+<ul>
+<li><p>v : kinematic viscosity</p>
+</li>
+<li><p>$\mu$ : dynamic  viscosity</p>
+</li>
+<li><p>$d=\dfrac{4A}{x}$ : Hydraulic diameter</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\reynoldt.jpg" width="400px"></p>
+</li>
+</ul>
+<p>$Re_c$ : critical reynolds number</p>
+<ul>
+<li>upper : 2000 (round tube)</li>
+<li>lower : 13800 (round tube)</li>
+</ul>
+<h2 id="5-2-Laminar-flow-in-round-tube"><a href="#5-2-Laminar-flow-in-round-tube" class="headerlink" title="5.2 Laminar flow in round tube"></a>5.2 Laminar flow in round tube</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\loss.jpg" width="400px"></p>
+<h2 id="5-3-Turbulent-flow-in-round-tube"><a href="#5-3-Turbulent-flow-in-round-tube" class="headerlink" title="5.3 Turbulent flow in round tube"></a>5.3 Turbulent flow in round tube</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\turbulent.jpg" width="200px"></p>
+<p>Mixed length theory</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\turbulentr.jpg" width="400px"></p>
+<h2 id="5-4-Frictional-head-loss"><a href="#5-4-Frictional-head-loss" class="headerlink" title="5.4 Frictional head loss"></a>5.4 Frictional head loss</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\frictionhl.jpg" width="300px"></p>
+<h2 id="5-5-Local-head-loss"><a href="#5-5-Local-head-loss" class="headerlink" title="5.5 Local head loss"></a>5.5 Local head loss</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\localhl.jpg" width="400px"></p>
+<h1 id="6-Orifice-outflow"><a href="#6-Orifice-outflow" class="headerlink" title="6 Orifice outflow"></a>6 Orifice outflow</h1><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\basicwo.jpg" width="200px"></p>
+<h2 id="6-1-Thin-wall"><a href="#6-1-Thin-wall" class="headerlink" title="6.1 Thin wall"></a>6.1 Thin wall</h2><h3 id="6-1-1-Small-orifice"><a href="#6-1-1-Small-orifice" class="headerlink" title="6.1.1 Small orifice"></a>6.1.1 Small orifice</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\thinwso.jpg" width="300px"></p>
+<h3 id="6-1-2-Big-orifice"><a href="#6-1-2-Big-orifice" class="headerlink" title="6.1.2 Big orifice"></a>6.1.2 Big orifice</h3><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\thinwbo.jpg" width="200px"></p>
+<h2 id="6-2-Thick-wall"><a href="#6-2-Thick-wall" class="headerlink" title="6.2 Thick wall"></a>6.2 Thick wall</h2><p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\thickwso.jpg" width="200px"></p>
+<h2 id="6-3-Cavitation"><a href="#6-3-Cavitation" class="headerlink" title="6.3 Cavitation"></a>6.3 Cavitation</h2><p>v high p low, solution of air in the fluid decrease, air comes out, even fluid vaporize.</p>
+<ul>
+<li><p>mechanical injury</p>
+</li>
+<li><p>bump</p>
+<p><img src="/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/aps/ltlx\bumpc.jpg" width="400px"></p>
+<ul>
+<li>low height</li>
+<li>less head loss</li>
+<li>low speed</li>
+<li>big d</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+</article>
+
+    
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+        
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+    <script src="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.9/js/Valine.min.js"></script>
+
+    
+
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'true' == 'true',
+            verify: 'false' == 'true',
+            appId: "Lj0uGwtP1sb8bRIJxIOeltB5-gzGzoHsz",
+            appKey: "BBC85RxSsrsvvsb2HikdKK8V",
+            avatar: "hide",
+            // visitor: "true",
+            recordIP: true,
+            placeholder: "请在这里书写你想说的话~",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+		console.log("Valine done!")
+		 
+    </script>
+    <!-- Valine Comments end -->
+ 
+    </div>
+
+
+
+
+
+      
+      
+       <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-Physical-properties"><span class="toc-number">1.</span> <span class="toc-text">1 Physical properties</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-Density"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 Density</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-Specific-volume"><span class="toc-number">1.2.</span> <span class="toc-text">1.2 Specific volume</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-Compressibility-amp-Swelling"><span class="toc-number">1.3.</span> <span class="toc-text">1.3 Compressibility &amp; Swelling</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-1-Equation-of-state"><span class="toc-number">1.3.1.</span> <span class="toc-text">1.3.1 Equation of state</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-2-Coefficient-of-expansion"><span class="toc-number">1.3.2.</span> <span class="toc-text">1.3.2 Coefficient of expansion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-3-Compression-ratio"><span class="toc-number">1.3.3.</span> <span class="toc-text">1.3.3 Compression ratio</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-Viscosity"><span class="toc-number">1.4.</span> <span class="toc-text">1.4 Viscosity</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-1-Newtons’s-inner-friction-law"><span class="toc-number">1.4.1.</span> <span class="toc-text">1.4.1 Newtons’s inner friction law</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-2-Different-fluid"><span class="toc-number">1.4.2.</span> <span class="toc-text">1.4.2 Different fluid</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-3-dynamic-viscosity"><span class="toc-number">1.4.3.</span> <span class="toc-text">1.4.3 dynamic viscosity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-4-kinematic-viscosity"><span class="toc-number">1.4.4.</span> <span class="toc-text">1.4.4 kinematic viscosity</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-Hydrostatics"><span class="toc-number">2.</span> <span class="toc-text">2 Hydrostatics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-1-Force-on-the-balanced-fluid"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 Force on the balanced fluid</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-1-Mass-force"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 Mass force</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-2-Surface-force"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 Surface force</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2-Differential-Equation"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 Differential Equation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-1-Euler-equations"><span class="toc-number">2.2.1.</span> <span class="toc-text">2.2.1 Euler equations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-2-Potential-function"><span class="toc-number">2.2.2.</span> <span class="toc-text">2.2.2 Potential function</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-3-Isobaric-Surface"><span class="toc-number">2.2.3.</span> <span class="toc-text">2.2.3 Isobaric Surface</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-3-Static-pressure"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 Static pressure</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Calculation"><span class="toc-number">2.3.1.</span> <span class="toc-text">Calculation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-4-Force-to-the-Wall-surface"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 Force to the Wall surface</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-Fluid-Dynamics"><span class="toc-number">3.</span> <span class="toc-text">3 Fluid Dynamics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#3-1-Lagrange"><span class="toc-number">3.1.</span> <span class="toc-text">3.1 Lagrange</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-2-Euler"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 Euler</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-1-Field"><span class="toc-number">3.2.1.</span> <span class="toc-text">3.2.1 Field</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-2-Type"><span class="toc-number">3.2.2.</span> <span class="toc-text">3.2.2 Type</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-3-Controlled-body"><span class="toc-number">3.2.3.</span> <span class="toc-text">3.2.3 Controlled body</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-3-Fluid-motion"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 Fluid motion</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-1-Particle-derivative"><span class="toc-number">3.3.1.</span> <span class="toc-text">3.3.1 Particle derivative</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-2-Path-line-amp-Stream-line"><span class="toc-number">3.3.2.</span> <span class="toc-text">3.3.2 Path line &amp; Stream line</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-3-Flow-rate"><span class="toc-number">3.3.3.</span> <span class="toc-text">3.3.3 Flow rate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-4-Average-velocity-amp-Kinetic-energy-amp-Momentum"><span class="toc-number">3.3.4.</span> <span class="toc-text">3.3.4 Average velocity &amp; Kinetic energy &amp; Momentum</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-4-Continuous-equation"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 Continuous equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-5-Ideal-fluid-dynamic-differential-equation–-Euler-equation"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 Ideal fluid dynamic differential equation– Euler equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-6-Real-fluid-dynamic-differential-equation-–-N-S-equation"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 Real fluid dynamic differential equation – N-S equation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-7-Bernoulli-equation"><span class="toc-number">3.7.</span> <span class="toc-text">3.7 Bernoulli equation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-1-Ideal"><span class="toc-number">3.7.1.</span> <span class="toc-text">3.7.1 Ideal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-2-Real"><span class="toc-number">3.7.2.</span> <span class="toc-text">3.7.2 Real</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-3-Application"><span class="toc-number">3.7.3.</span> <span class="toc-text">3.7.3 Application</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-Similar-principle-amp-Dimensional-analysis"><span class="toc-number">4.</span> <span class="toc-text">4 Similar principle &amp; Dimensional analysis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#4-1-Similar-principle"><span class="toc-number">4.1.</span> <span class="toc-text">4.1 Similar principle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-2-Dimensional-analysis"><span class="toc-number">4.2.</span> <span class="toc-text">4.2 Dimensional analysis</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-Flow-in-tube"><span class="toc-number">5.</span> <span class="toc-text">5 Flow in tube</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#5-1-Reynolds-number"><span class="toc-number">5.1.</span> <span class="toc-text">5.1 Reynolds number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-2-Laminar-flow-in-round-tube"><span class="toc-number">5.2.</span> <span class="toc-text">5.2 Laminar flow in round tube</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-3-Turbulent-flow-in-round-tube"><span class="toc-number">5.3.</span> <span class="toc-text">5.3 Turbulent flow in round tube</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-4-Frictional-head-loss"><span class="toc-number">5.4.</span> <span class="toc-text">5.4 Frictional head loss</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-5-Local-head-loss"><span class="toc-number">5.5.</span> <span class="toc-text">5.5 Local head loss</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-Orifice-outflow"><span class="toc-number">6.</span> <span class="toc-text">6 Orifice outflow</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-1-Thin-wall"><span class="toc-number">6.1.</span> <span class="toc-text">6.1 Thin wall</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-1-Small-orifice"><span class="toc-number">6.1.1.</span> <span class="toc-text">6.1.1 Small orifice</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-2-Big-orifice"><span class="toc-number">6.1.2.</span> <span class="toc-text">6.1.2 Big orifice</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-Thick-wall"><span class="toc-number">6.2.</span> <span class="toc-text">6.2 Thick wall</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-Cavitation"><span class="toc-number">6.3.</span> <span class="toc-text">6.3 Cavitation</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&text=Fluid Mechanics - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&is_video=false&description=Fluid Mechanics - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Fluid Mechanics - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&title=Fluid Mechanics - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/ltlx/&name=Fluid Mechanics - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick='$("#toc-footer").toggle();return false;'><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick='$("#share-footer").toggle();return false;'><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick='$("#nav-footer").toggle();return false;'><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+      
+      <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2020 五维生物, <span id="busuanzi_container_site_pv">Visited <span id="busuanzi_value_site_pv"></span> times.</span>
+  </div>
+  <!-- <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/comment/">Comment</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/log/">Log</a></li>
+        
+      </ul>
+    </nav>
+  </div> -->
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+  
+<div class="footer-right">
+  <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+    <script>
+        var now = new Date(); 
+        function createtime() {
+            var grt= new Date("05/18/2019 13:11:59");//此处修改你的建站时间或者网站上线时间 
+            now.setTime(now.getTime()+250); 
+            days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+            if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+            mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+            snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+            document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+            document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+        } 
+    setInterval("createtime()",250);
+    </script>
+</div>
+</footer>
+
+      <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-113357132-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'cationvac·';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+      <!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css"> -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.91/css/APlayer.min.css">
+
+<script src="//cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@1.4/js/APlayer.min.js"></script> -->
+
+<div class="aplayer"
+
+    data-id="2805124029"
+
+    data-mini="true"
+
+    data-server="netease"
+
+    data-type="playlist"
+
+    data-fixed="true"
+
+    data-listFolded="true"
+
+    data-autoplay="false"
+
+    data-loop="all"
+
+    data-order="random"
+
+    data-preload="false"
+
+    data-volume="1"
+
+    data-mutex="true"
+
+    data-lrcType="0"
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/meting@1.2/dist/Meting.min.js"></script>
+
+     
+</body>
+
+</html>
