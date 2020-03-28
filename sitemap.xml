@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/about/index.html</loc>
+    
+    <lastmod>2020-03-28T00:55:58.522Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2020/03/19/hebrew1/</loc>
     
     <lastmod>2020-03-19T04:32:18.601Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2019/06/05/ksyds/</loc>
     
     <lastmod>2019-09-27T06:49:26.754Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/about/index.html</loc>
-    
-    <lastmod>2019-09-21T07:00:52.698Z</lastmod>
     
   </url>
   
