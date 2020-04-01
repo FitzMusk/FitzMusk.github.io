@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/"/>
-  <updated>2020-04-01T08:27:56.301Z</updated>
+  <updated>2020-04-01T08:34:45.505Z</updated>
   <id>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/</id>
   
   <author>
@@ -21,23 +21,25 @@
     <link href="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2020/04/01/test/"/>
     <id>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2020/04/01/test/</id>
     <published>2020-04-01T05:05:20.000Z</published>
-    <updated>2020-04-01T08:27:56.301Z</updated>
+    <updated>2020-04-01T08:34:45.505Z</updated>
     
-    <content type="html"><![CDATA[<p>elfkjkhdgkgvdyu vsilciljkz,ndms fv</p><p>fdvnbjsyftliuaekhfv,x cnm<br>‘;bv sjvcmxd<br>‘bvfdj, cxmnn<br>‘dvnbskjdfxdv<br>xmnkn </p>]]></content>
+    <content type="html"><![CDATA[<p>elfkjkhdgkgvdyu vsilciljkz,ndms fv</p><p>fdvnbjsyftliuaekhfv,x cnm<br>‘;bv sjvcmxd<br>‘bvfdj, cxmnn<br>‘dvnbskjdfxdv<br>xmnkn<br>图片</p><p>js脚本放在这</p>]]></content>
     
     <summary type="html">
     
       
       
         &lt;p&gt;elfkjkhdgkgvdyu vsilciljkz,ndms fv&lt;/p&gt;
-&lt;p&gt;fdvnbjsyftliuaekhfv,x cnm&lt;br&gt;‘;bv sjvcmxd&lt;br&gt;‘bvfdj, cxmnn&lt;br&gt;‘dvnbskjdfxdv&lt;br&gt;xmnkn &lt;/p&gt;
+&lt;p&gt;fdvnbjsyftliuaekhfv,x cnm&lt;br&gt;‘;bv sjvcmxd&lt;br&gt;‘bvfdj, cxmnn&lt;br&gt;‘dvnbskjdfxdv&lt;br&gt;xmnkn&lt;br&gt;图片&lt;/p&gt;
 
       
     
     </summary>
     
     
-      <category term="Cancer, Medical" scheme="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/tags/Cancer-Medical/"/>
+      <category term="Cancer" scheme="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/tags/Cancer/"/>
+    
+      <category term="Medical" scheme="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/tags/Medical/"/>
     
   </entry>
   
