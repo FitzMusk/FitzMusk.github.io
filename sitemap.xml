@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2020/05/01/2020IGEM/</loc>
+    
+    <lastmod>2020-05-08T01:34:16.238Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2020/04/01/test/</loc>
+    
+    <lastmod>2020-04-07T09:58:04.261Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/medical/index.html</loc>
     
-    <lastmod>2020-04-05T14:21:26.510Z</lastmod>
+    <lastmod>2020-04-07T08:21:18.259Z</lastmod>
     
   </url>
   
@@ -72,13 +86,6 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2018/11/20/NewStart/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2019/03/22/The-Crowd/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
@@ -86,7 +93,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2018/12/19/WPME/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/ckks/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -100,14 +107,21 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/22/ckjs/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2018/12/19/WPME/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/ckks/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/11/26/crim/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/22/ckjs/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -128,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/11/26/crim/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/cllx/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -149,21 +163,14 @@
   </url>
   
   <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2018/11/20/NewStart/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2019/03/29/diary193/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/22/djtd/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/cllx/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -177,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/gk/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/22/djtd/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -191,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/fbhs/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/gk/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/gcjxzdhznh/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/fbhs/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -212,14 +219,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2019/03/12/gre/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/hhx/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/gcjxzdhznh/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -233,7 +233,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jdyhy/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/hhx/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -247,14 +247,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/01/01/jglx/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2019/03/12/gre/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -268,21 +261,14 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxylks/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jqr/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxsy/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxsjks/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jdyhy/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -296,28 +282,28 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxzd/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxsjks/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jzks/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxsy/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzysy/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/01/01/jglx/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxylks/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -331,7 +317,21 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2019/01/10/laozi/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/30/jxzd/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jxzysy/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/jzks/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -345,7 +345,14 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/12/28/life/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2019/01/10/laozi/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -366,14 +373,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/09/14/sanger/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/12/28/life/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -387,7 +387,21 @@
   </url>
   
   <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/rgjc/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/12/01/tour/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/09/14/sanger/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -401,13 +415,6 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2018/01/31/tour2/</loc>
-    
-    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/wjkz/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
@@ -415,7 +422,14 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/xm/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2018/01/31/tour2/</loc>
+    
+    <lastmod>2019-04-18T16:57:32.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/12/23/yyws/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
@@ -429,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2017/12/23/yyws/</loc>
+    <loc>https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/12/01/xm/</loc>
     
     <lastmod>2019-04-18T16:57:32.000Z</lastmod>
     
