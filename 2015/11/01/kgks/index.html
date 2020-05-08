@@ -10,28 +10,28 @@
 <meta name="keywords" content="APS,ME">
 <meta property="og:type" content="article">
 <meta property="og:title" content="The Design of Control Engineering Fundamentals - APS">
-<meta property="og:url" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/index.html">
+<meta property="og:url" content="https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/index.html">
 <meta property="og:site_name" content="INMORTALIDAD">
 <meta property="og:description" content="倒立摆LQR设计  Linear Quadratic Regulator for Inverted Pendulum on a car1. 概念 直线一级 环形 平面倒立摆 复合倒立摆  2. 实验物品 3. 设计思路 3.1 对象小车，倒立摆 3.2 简化模型  拉格朗日方程 $\dfrac{d}{dt}(\dfrac{\partial T}{\partial \dot{q_j}})-\dfra">
 <meta property="og:locale" content="en,">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/syy.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/sysl.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/dlbmx.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/bl.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/sdhc.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/ztkj1.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/ztkj2.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zpj.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zpj2.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/lqrjg.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zb.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/lqrsimu.jpg">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zzsj.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/syy.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/sysl.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/dlbmx.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/bl.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/sdhc.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/ztkj1.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/ztkj2.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zpj.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zpj2.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/lqrjg.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zb.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/lqrsimu.jpg">
+<meta property="og:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/zzsj.jpg">
 <meta property="og:updated_time" content="2019-04-18T16:57:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Design of Control Engineering Fundamentals - APS">
 <meta name="twitter:description" content="倒立摆LQR设计  Linear Quadratic Regulator for Inverted Pendulum on a car1. 概念 直线一级 环形 平面倒立摆 复合倒立摆  2. 实验物品 3. 设计思路 3.1 对象小车，倒立摆 3.2 简化模型  拉格朗日方程 $\dfrac{d}{dt}(\dfrac{\partial T}{\partial \dot{q_j}})-\dfra">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/syy.jpg">
+<meta name="twitter:image" content="https://github.com/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/aps/kgks/syy.jpg">
     
     
         
@@ -140,16 +140,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&text=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&is_video=false&description=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=The Design of Control Engineering Fundamentals - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&name=The Design of Control Engineering Fundamentals - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&text=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&is_video=false&description=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The Design of Control Engineering Fundamentals - APS&body=Check out this article: https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&name=The Design of Control Engineering Fundamentals - APS&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -320,16 +320,16 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&text=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&is_video=false&description=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=The Design of Control Engineering Fundamentals - APS&body=Check out this article: https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://cdn.jsdelivr.net/gh/FitzMusk/cdn@v2.94/2015/11/01/kgks/&name=The Design of Control Engineering Fundamentals - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&text=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&is_video=false&description=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The Design of Control Engineering Fundamentals - APS&body=Check out this article: https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&title=The Design of Control Engineering Fundamentals - APS"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://github.com/FitzMusk/FitzMusk.github.io/blob/master/2015/11/01/kgks/&name=The Design of Control Engineering Fundamentals - APS&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
