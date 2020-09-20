@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-06-16T02:34:24.276Z</updated>
+  <updated>2020-09-20T02:09:13.738Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Antifragile Notes</title>
+    <link href="http://yoursite.com/2020/09/20/antifra/"/>
+    <id>http://yoursite.com/2020/09/20/antifra/</id>
+    <published>2020-09-20T02:07:54.000Z</published>
+    <updated>2020-09-20T02:09:13.738Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="反脆弱"><a href="#反脆弱" class="headerlink" title="反脆弱"></a>反脆弱</h1><p>Antifragile： Things That Gain From Disorder</p><h2 id="反脆弱性介绍"><a href="#反脆弱性介绍" class="headerlink" title="反脆弱性介绍"></a>反脆弱性介绍</h2><h3 id="命名的必要性"><a href="#命名的必要性" class="headerlink" title="命名的必要性"></a>命名的必要性</h3><ul><li>我们知道的事情：比我们认为的要多，比我们能说清楚的要更多。</li></ul><h3 id="随处可见的过度补偿和过度反应"><a href="#随处可见的过度补偿和过度反应" class="headerlink" title="随处可见的过度补偿和过度反应"></a>随处可见的过度补偿和过度反应</h3><ul><li><p>领域独立就是领域依赖</p><ul><li>人类总是无法脱离他们通常熟悉的环境来理解事物</li></ul></li><li><p>创新</p><ul><li>创新和成熟源自最初的创新必要性，但却超越了满足这种必要性的状态（最初发明或发明尝试带来的意外副作用）。</li><li>对挫折的过度反应所释放出来的多余能量成就了创新！</li></ul></li><li><p>过度反应</p><ul><li><p>往往隐藏在最不可能的地方</p><ul><li>长途飞行后最好去健身房锻炼以消除疲劳</li><li><p>白色噪音</p><ul><li>毒物效应</li></ul></li><li><p>If你急着要完成某事，不妨交给办公室里任务最繁忙(或第二繁忙)的那个人去做。</p></li></ul></li><li><p>大多数人的空闲时间都会被浪费掉，因为空闲时间会让他们无所事事、懒惰、无心向学，而一旦他们忙起来，他们往往会在其它任务上也更为积极。</p></li></ul></li><li><p>信息的反脆弱性</p><ul><li>湮灭信息的努力比宣传信息的努力更能增缺信息的力量。</li><li>那些不修边幅的人往往是在声誉上具有强韧性，甚至反脆弱性的；而那些胡子刮得干干净净，甚至在海滩上也得衣冠楚楚的人则极易收到有关他们的信息的影响。</li><li>给我们带来最大收益的并不是那些曾试图帮助我们（比如提供”建议“）的人，而是那些曾努力伤害我们但最终未能如愿的人。</li></ul></li></ul><h3 id="压力"><a href="#压力" class="headerlink" title="压力"></a>压力</h3><ul><li><p>压力源即信息</p><ul><li><p>骨骼</p><ul><li>我们更应该通过提重物而非使用健身器来强健骨骼。</li></ul></li><li><p>压力两种类型</p><ul><li>人类在急性刺激比慢性刺激下表现得更出色，尤其是在急性刺激后给予较长的恢复期，这将使得压力源成为信息的传导渠道。</li></ul></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;反脆弱&quot;&gt;&lt;a href=&quot;#反脆弱&quot; class=&quot;headerlink&quot; title=&quot;反脆弱&quot;&gt;&lt;/a&gt;反脆弱&lt;/h1&gt;&lt;p&gt;Antifragile： Things That Gain From Disorder&lt;/p&gt;
+&lt;h2 id=&quot;反脆弱性介绍&quot;&gt;&lt;a
+      
+    
+    </summary>
+    
+      <category term="Book" scheme="http://yoursite.com/categories/Book/"/>
+    
+    
+      <category term="book" scheme="http://yoursite.com/tags/book/"/>
+    
+      <category term="读书笔记" scheme="http://yoursite.com/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Book Notes" scheme="http://yoursite.com/tags/Book-Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>DartNotes</title>
@@ -269,9 +299,9 @@
       <category term="Book" scheme="http://yoursite.com/categories/Book/"/>
     
     
-      <category term="psychology" scheme="http://yoursite.com/tags/psychology/"/>
-    
       <category term="book" scheme="http://yoursite.com/tags/book/"/>
+    
+      <category term="psychology" scheme="http://yoursite.com/tags/psychology/"/>
     
   </entry>
   
@@ -351,13 +381,13 @@
     
       <category term="Not a Serious Diary" scheme="http://yoursite.com/tags/Not-a-Serious-Diary/"/>
     
-      <category term="stm32" scheme="http://yoursite.com/tags/stm32/"/>
-    
       <category term="2019" scheme="http://yoursite.com/tags/2019/"/>
     
       <category term="1" scheme="http://yoursite.com/tags/1/"/>
     
       <category term="jpeg" scheme="http://yoursite.com/tags/jpeg/"/>
+    
+      <category term="stm32" scheme="http://yoursite.com/tags/stm32/"/>
     
       <category term="software" scheme="http://yoursite.com/tags/software/"/>
     
@@ -452,9 +482,9 @@
       <category term="Book" scheme="http://yoursite.com/categories/Book/"/>
     
     
-      <category term="book" scheme="http://yoursite.com/tags/book/"/>
-    
       <category term="language" scheme="http://yoursite.com/tags/language/"/>
+    
+      <category term="book" scheme="http://yoursite.com/tags/book/"/>
     
   </entry>
   
@@ -483,6 +513,8 @@
     
       <category term="Not a Serious Diary" scheme="http://yoursite.com/tags/Not-a-Serious-Diary/"/>
     
+      <category term="stm32" scheme="http://yoursite.com/tags/stm32/"/>
+    
       <category term="daily" scheme="http://yoursite.com/tags/daily/"/>
     
       <category term="think of chaos" scheme="http://yoursite.com/tags/think-of-chaos/"/>
@@ -494,8 +526,6 @@
       <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
       <category term="CSS" scheme="http://yoursite.com/tags/CSS/"/>
-    
-      <category term="stm32" scheme="http://yoursite.com/tags/stm32/"/>
     
   </entry>
   
@@ -588,35 +618,6 @@
       <category term="ThinkOfChaos" scheme="http://yoursite.com/tags/ThinkOfChaos/"/>
     
       <category term="life" scheme="http://yoursite.com/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>叶隐闻书 - Book Review</title>
-    <link href="http://yoursite.com/2017/12/23/yyws/"/>
-    <id>http://yoursite.com/2017/12/23/yyws/</id>
-    <published>2017-12-23T12:13:23.000Z</published>
-    <updated>2019-04-18T16:57:32.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="忠勇忍仁"><a href="#忠勇忍仁" class="headerlink" title="忠勇忍仁"></a>忠勇忍仁</h1><h1 id="2017-12初"><a href="#2017-12初" class="headerlink" title="2017.12初"></a>2017.12初</h1><h2 id="導讀"><a href="#導讀" class="headerlink" title="導讀"></a>導讀</h2><ul><li>可如今不同了，無論多有本事、多有見識，只要出身下級武士，就沒有前途，來到這個世上的出身就已經決定了壹切，太平令人窒息。</li><li>太平就是穩，有錢有權的不肯放手，0到1之間的比例都可以存活的話，為什麽自己不多壹些。</li></ul><h2 id="P20"><a href="#P20" class="headerlink" title="-P20"></a>-P20</h2><ul><li>常朝說：為了容貌適宜，“最好不斷地照鏡子”，作為武士的教養，“胭脂之粉，還是經常裝入懷裏的比較好。倘若遭遇萬壹，於醉醒或睡醒之時，臉色有時會壹塌糊塗”。作為武士，不能骯臟難看地死，死如落花壹瞬，平素就要留意。</li><li>死之美，淩厲淒美。</li></ul><h2 id="P23"><a href="#P23" class="headerlink" title="-P23"></a>-P23</h2><ul><li><p>但是，武士的愛，不會輕易地宣泄出來，常朝說“戀的極致就是忍戀”，他們都是忍者。</p><blockquote><p>莫名搞笑。傻楞壹根經的武士形象倒是很明確，生死都可棄，愛戀不過生命中的繁花壹朵。</p></blockquote></li></ul><h2 id="P18-39"><a href="#P18-39" class="headerlink" title="P18 39."></a>P18 39.</h2><ul><li><p>人這種東西，到了老髦之際，對自己曾經得意的事兒就會毫不掩飾地張揚出來，作出這幅老糊塗的樣子。因此，我把這種人稱為“奉公老髦”，縱使對人有益，這種老髦也是危險的。老人還是不要走出來為妙，結局也才會好。</p><blockquote><p>歷史教訓。</p></blockquote></li></ul><h2 id="P23-48"><a href="#P23-48" class="headerlink" title="P23 48."></a>P23 48.</h2><ul><li><p>人有了壹次過錯就被拋棄，就再也沒有機會發揮作用了。可是，犯了錯誤後懊悔不已的人，反而會更加謹慎謙恭，變得非常有用。</p><blockquote><p>私人認為，這需要此人全心的懊悔，但凡有氣，都會再錯。其次，更加謙恭建立在環境對此人有極大的威懾力的前提下。<br>P34 72.</p></blockquote></li><li><p>時間也是人收入和支出的費用，所以請求別人幫忙時，也是承蒙人家將自己生命必要的部分送給自己，那與死乞白賴地要錢沒什麽兩樣，因此能自己做的事，最好不求別人。</p></li></ul><h1 id="2017-12-19"><a href="#2017-12-19" class="headerlink" title="2017.12.19"></a>2017.12.19</h1><h2 id="P48-123"><a href="#P48-123" class="headerlink" title="P48 123."></a>P48 123.</h2><ul><li>唯剛者靠得住，靠得住方為剛者。</li></ul><h2 id="P49-124"><a href="#P49-124" class="headerlink" title="P49 124."></a>P49 124.</h2><ul><li>不要放縱自己的眼睛八方打量，心無著落喋喋不休，愚蠢萬方。心如座鐘、氣定神閑才是最重要的。</li></ul><h2 id="P54-151"><a href="#P54-151" class="headerlink" title="P54 151."></a>P54 151.</h2><ul><li><p>從前遇到的各方人士，講話都很謹慎，字斟局酌，悠悠道來，從容不迫，哪像今天的人壹樣壹股腦兒地倒豆子。</p><blockquote><p>不知者不多言，知者細言。</p></blockquote></li></ul><h2 id="P54-152"><a href="#P54-152" class="headerlink" title="P54 152."></a>P54 152.</h2><ul><li>人的性格盡管多樣，可壹到六十歲，幾乎沒有不老糊塗的；自認為沒有老糊塗，就正是已老糊塗的證據——壹鼎稱之為總有理的老糊塗。</li></ul><h1 id="2017-12-20"><a href="#2017-12-20" class="headerlink" title="2017.12.20"></a>2017.12.20</h1><h2 id="P55-153"><a href="#P55-153" class="headerlink" title="P55 153."></a>P55 153.</h2><ul><li><p>新生事物，即使是好事，也會有壞事伴隨而來。</p><blockquote><p>福兮禍依。</p></blockquote></li></ul><h2 id="P61-169"><a href="#P61-169" class="headerlink" title="P61 169."></a>P61 169.</h2><ul><li><p>做事越是過火越做，反而不會失敗。千萬記住！</p><blockquote><p>膽大才能嘗試，不試不能成功。</p></blockquote></li></ul><h2 id="P64-175"><a href="#P64-175" class="headerlink" title="P64 175."></a>P64 175.</h2><ul><li><p>人的壹生確實是短暫，要心無旁騖才能成功，不要為紛雜的事物所迷惑。舍棄萬事，玄心壹事，才是最高境界。</p><blockquote><p>當今更是如此，消息的繁雜，不僅影響連續的思考，也影響有規律的生活。</p></blockquote></li></ul><h1 id="2018-2-2"><a href="#2018-2-2" class="headerlink" title="2018.2.2"></a>2018.2.2</h1><h2 id="P65-179"><a href="#P65-179" class="headerlink" title="P65 179."></a>P65 179.</h2><ul><li>智慧和聰明，很多時候是有害的。</li></ul><h2 id="P72-12"><a href="#P72-12" class="headerlink" title="P72 12."></a>P72 12.</h2><ul><li>諫言和異見都是馬後炮，於惡事發生之後，其效驗薄弱，甚至使惡名流傳。得病了，就要吃藥，但如果平素善於養生，也就不患病了。病氣發了，然後才想起養生，就不如平素的養生簡單易行。在惡事還未發生以前，就把平時註意到的異常情況以不露痕跡的方式提出來，和平素養生的道理壹樣。</li></ul><h2 id="P73-15"><a href="#P73-15" class="headerlink" title="P73 15."></a>P73 15.</h2><ul><li>如哢嚓壹聲切斷，除眼前的壹瞬，便空無壹物。壹瞬壹瞬地重疊起來，就是壹生。只此壹念，除此之外，再也沒什麽可以著急上火的事了，也沒什麽要到處尋求的事了，只要守著這壹瞬過日子。</li></ul><h2 id="P74-16"><a href="#P74-16" class="headerlink" title="P74 16."></a>P74 16.</h2><ul><li><p>想把當代恢復到百年前的良好風俗，是不可能的。在哪個時代就做好哪個時代的事，這才是最重要的。懷戀昔風的人，錯誤就在於與當代不合拍；那種只認為當世風俗好而討厭昔風的人，又是沒有抓住刀柄，只抓住了刀身，不懂根本與末節。</p><blockquote><p>傳承和復現之異？</p></blockquote></li></ul><h2 id="P80-37"><a href="#P80-37" class="headerlink" title="P80 37."></a>P80 37.</h2><ul><li>諺語雲“水漲船高”。有才能的人、有壹技致長的人，壹遇難題，那種超越困難之心就會彈跳起來，畏難的人就不壹樣。</li></ul><h2 id="P94-76"><a href="#P94-76" class="headerlink" title="P94 76."></a>P94 76.</h2><ul><li>人的壹生轉瞬即逝，若能做自己喜歡的事，就再好不過了，恍若穿行在夢幻般的人世間，做著自己不喜歡的事，痛苦地過日子是愚蠢的。但采取厭世的態度，話題多半有害，所以在年輕人中間，絕對不要喋喋不休，這算是壹個秘訣吧。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;忠勇忍仁&quot;&gt;&lt;a href=&quot;#忠勇忍仁&quot; class=&quot;headerlink&quot; title=&quot;忠勇忍仁&quot;&gt;&lt;/a&gt;忠勇忍仁&lt;/h1&gt;&lt;h1 id=&quot;2017-12初&quot;&gt;&lt;a href=&quot;#2017-12初&quot; class=&quot;headerlink&quot; title=&quot;2
-      
-    
-    </summary>
-    
-      <category term="Book" scheme="http://yoursite.com/categories/Book/"/>
-    
-    
-      <category term="book" scheme="http://yoursite.com/tags/book/"/>
-    
-      <category term="bushido" scheme="http://yoursite.com/tags/bushido/"/>
-    
-      <category term="japan" scheme="http://yoursite.com/tags/japan/"/>
     
   </entry>
   

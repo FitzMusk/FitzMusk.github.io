@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Antifragile Notes</title>
+      <link href="/2020/09/20/antifra/"/>
+      <url>/2020/09/20/antifra/</url>
+      
+        <content type="html"><![CDATA[<h1 id="反脆弱"><a href="#反脆弱" class="headerlink" title="反脆弱"></a>反脆弱</h1><p>Antifragile： Things That Gain From Disorder</p><h2 id="反脆弱性介绍"><a href="#反脆弱性介绍" class="headerlink" title="反脆弱性介绍"></a>反脆弱性介绍</h2><h3 id="命名的必要性"><a href="#命名的必要性" class="headerlink" title="命名的必要性"></a>命名的必要性</h3><ul><li>我们知道的事情：比我们认为的要多，比我们能说清楚的要更多。</li></ul><h3 id="随处可见的过度补偿和过度反应"><a href="#随处可见的过度补偿和过度反应" class="headerlink" title="随处可见的过度补偿和过度反应"></a>随处可见的过度补偿和过度反应</h3><ul><li><p>领域独立就是领域依赖</p><ul><li>人类总是无法脱离他们通常熟悉的环境来理解事物</li></ul></li><li><p>创新</p><ul><li>创新和成熟源自最初的创新必要性，但却超越了满足这种必要性的状态（最初发明或发明尝试带来的意外副作用）。</li><li>对挫折的过度反应所释放出来的多余能量成就了创新！</li></ul></li><li><p>过度反应</p><ul><li><p>往往隐藏在最不可能的地方</p><ul><li>长途飞行后最好去健身房锻炼以消除疲劳</li><li><p>白色噪音</p><ul><li>毒物效应</li></ul></li><li><p>If你急着要完成某事，不妨交给办公室里任务最繁忙(或第二繁忙)的那个人去做。</p></li></ul></li><li><p>大多数人的空闲时间都会被浪费掉，因为空闲时间会让他们无所事事、懒惰、无心向学，而一旦他们忙起来，他们往往会在其它任务上也更为积极。</p></li></ul></li><li><p>信息的反脆弱性</p><ul><li>湮灭信息的努力比宣传信息的努力更能增缺信息的力量。</li><li>那些不修边幅的人往往是在声誉上具有强韧性，甚至反脆弱性的；而那些胡子刮得干干净净，甚至在海滩上也得衣冠楚楚的人则极易收到有关他们的信息的影响。</li><li>给我们带来最大收益的并不是那些曾试图帮助我们（比如提供”建议“）的人，而是那些曾努力伤害我们但最终未能如愿的人。</li></ul></li></ul><h3 id="压力"><a href="#压力" class="headerlink" title="压力"></a>压力</h3><ul><li><p>压力源即信息</p><ul><li><p>骨骼</p><ul><li>我们更应该通过提重物而非使用健身器来强健骨骼。</li></ul></li><li><p>压力两种类型</p><ul><li>人类在急性刺激比慢性刺激下表现得更出色，尤其是在急性刺激后给予较长的恢复期，这将使得压力源成为信息的传导渠道。</li></ul></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Book </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> book </tag>
+            
+            <tag> 读书笔记 </tag>
+            
+            <tag> Book Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DartNotes</title>
       <link href="/2020/06/16/DartNotes/"/>
       <url>/2020/06/16/DartNotes/</url>
@@ -226,9 +255,9 @@
       
         <tags>
             
-            <tag> psychology </tag>
-            
             <tag> book </tag>
+            
+            <tag> psychology </tag>
             
         </tags>
       
@@ -305,13 +334,13 @@
             
             <tag> Not a Serious Diary </tag>
             
-            <tag> stm32 </tag>
-            
             <tag> 2019 </tag>
             
             <tag> 1 </tag>
             
             <tag> jpeg </tag>
+            
+            <tag> stm32 </tag>
             
             <tag> software </tag>
             
@@ -398,9 +427,9 @@
       
         <tags>
             
-            <tag> book </tag>
-            
             <tag> language </tag>
+            
+            <tag> book </tag>
             
         </tags>
       
@@ -429,6 +458,8 @@
             
             <tag> Not a Serious Diary </tag>
             
+            <tag> stm32 </tag>
+            
             <tag> daily </tag>
             
             <tag> think of chaos </tag>
@@ -440,8 +471,6 @@
             <tag> hexo </tag>
             
             <tag> CSS </tag>
-            
-            <tag> stm32 </tag>
             
         </tags>
       
